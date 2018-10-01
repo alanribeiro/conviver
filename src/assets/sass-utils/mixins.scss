@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+/* -------------------- CONVIVER GRADIENT -------------------- */
+
+@mixin conviver-gradient {
+  background: $primary-color;
+  background: -webkit-linear-gradient(legacy-direction($gradient-direction), $primary-color, $primary-color-light);
+  background: linear-gradient($gradient-direction, $primary-color, $primary-color-light);
+}
+
+/* ------------------------ KEYFRAME ------------------------ */
+
+@mixin keyframe($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+/* ----------------------- MEDIA QUERY ----------------------- */
+
+@mixin mqMaxWidth($width) {
+  @if map_has_key($width-breakpoints, $width) {
+    $width: map_get($width-breakpoints, $width);
+    
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+  }
+}
+
+/* ------------------------- Z-INDEX ------------------------- */
+
+@function z($element, $list:"") {
+  @if $list == "" {
+    $list: $z-indexes;
+  }
+
+  $z-index: index($list, $element);
+
+  @if $z-index {
+    @return $z-index;
+  }
+
+  @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+  @return null;
+}

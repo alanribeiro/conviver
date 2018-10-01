@@ -1,0 +1,63 @@
+/* -------------------- COLORS -------------------- */
+
+$white: #FFFFFF;
+$gray-DD: #DDDDDD;
+$gray-AA: #AAAAAA;
+$gray-70: #707070;
+$gray-33: #333333;
+$black: #000000;
+
+$primary-color: #650ECE;
+$primary-color-light: #880ECE;
+$error-color: #FF0C0C;
+$border-color: $gray-DD;
+$divider-color: $gray-DD;
+$disabled-color: $gray-DD;
+$placeholder-color: $gray-AA;
+
+$page-title-color: $gray-70;
+$page-subtitle-color: $gray-70;
+$title-color: $gray-70;
+$common-text-color: $gray-33;
+$seconday-button-title-color: $gray-70;
+$error-feedback-text-color: $error-color;
+$section-title-color: $primary-color;
+
+/* ------------------ FONT FAMILIES ------------------ */
+
+$font-regular: 'HKGrotesk-Regular';
+$font-medium: 'HKGrotesk-Medium';
+$font-bold: 'HKGrotesk-Bold';
+
+$page-title-font-family: $font-bold;
+$title-font-family: $font-bold;
+$button-title-font-family: $font-bold;
+$price-font-family: $font-bold;
+$selectable-item-title-font-family: $font-bold;
+$page-subtitle-font-family: $font-regular;
+$common-text-font-family: $font-regular;
+$secondary-button-title-font-family: $font-regular;
+$selectable-item-description-font-family: $font-regular;
+
+/* ------------------ FONT SIZES ------------------ */
+
+$font-size-big: 24px;
+$font-size-medium: 20px;
+$default-font-size: 16px;
+$font-size-small: 14px;
+$font-size-extra-small: 12px;
+
+$page-title-font-size: $font-size-big;
+$title-font-size: $font-size-medium;
+$button-title-font-size: $default-font-size;
+$common-text-font-size: $default-font-size;
+$avatar-name-font-size: $font-size-small;
+$error-feedback-font-size: $font-size-small;
+$page-subtitle-font-size: $font-size-small;
+$input-font-size: $font-size-small;
+$section-title-font-size: $font-size-extra-small;
+
+/* -------------------- OTHERS -------------------- */
+
+$gradient-direction: -30deg;
+$default-border-radius: 20px;

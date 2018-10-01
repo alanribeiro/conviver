@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/sass-utils/fonts.scss';
+@import './assets/sass-utils/variables.scss';
+@import './assets/sass-utils/mixins.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-regular;
+  font-size: $common-text-font-size;
+}
