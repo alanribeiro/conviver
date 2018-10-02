@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { CoButtonComponent } from './atoms/co-button/co-button.component';
 import { CoSectionTitleComponent } from './atoms/co-section-title/co-section-title.component';
+import { CoRoundedButtonComponent } from './atoms/co-rounded-button/co-rounded-button.component';
 
 registerLocaleData(en);
 
@@ -26,7 +27,8 @@ registerLocaleData(en);
     CoPageSubtitleComponent,
     CoPageHeaderComponent,
     CoButtonComponent,
-    CoSectionTitleComponent
+    CoSectionTitleComponent,
+    CoRoundedButtonComponent
   ],
   imports: [
     BrowserModule,
