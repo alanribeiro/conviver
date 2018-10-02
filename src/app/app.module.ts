@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { CoButtonComponent } from './atoms/co-button/co-button.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
     StyleguideComponent,
     CoPageTitleComponent,
     CoPageSubtitleComponent,
-    CoPageHeaderComponent
+    CoPageHeaderComponent,
+    CoButtonComponent
   ],
   imports: [
     BrowserModule,

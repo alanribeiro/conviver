@@ -1,11 +1,18 @@
 @import './variables.scss';
 
-/* -------------------- CONVIVER GRADIENT -------------------- */
+/* ----------------------- FLEX BOX ------------------------ */
+@mixin centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-@mixin conviver-gradient {
+/* ----------------------- GRADIENTS ----------------------- */
+
+@mixin default-gradient {
   background: $primary-color;
-  background: -webkit-linear-gradient(legacy-direction($gradient-direction), $primary-color, $primary-color-light);
-  background: linear-gradient($gradient-direction, $primary-color, $primary-color-light);
+  background: -webkit-linear-gradient(legacy-direction($gradient-direction), secondary-color, $primary-color);
+  background: linear-gradient($gradient-direction, $secondary-color, $primary-color);
 }
 
 /* ------------------------ KEYFRAME ------------------------ */
@@ -22,7 +29,48 @@
   }
   @keyframes #{$name} {
     @content;
-  } 
+  }
+}
+
+/* ----------------------- ANIMATION ------------------------ */
+
+@mixin animation ($animation, $duration, $delay, $iteration-count, $timing-function) {
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-timing-function: $timing-function;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-delay: $delay;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-timing-function: $timing-function;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-name: $animation;
+  -o-animation-duration: $duration;
+  -o-animation-delay: $delay;
+  -o-animation-iteration-count: $iteration-count;
+  -o-animation-timing-function: $timing-function;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration-count;
+  animation-timing-function: $timing-function;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+/* ----------------------- TRANSITION ----------------------- */
+
+@mixin transition($property: all, $duration: $default-animation-duration, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
 }
 
 /* ----------------------- MEDIA QUERY ----------------------- */
