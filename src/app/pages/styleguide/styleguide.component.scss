@@ -1,6 +1,13 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
 .container {
   width: 910px;
   margin: auto;
   padding: 40px 30px;
   box-sizing: border-box;
+
+  @include mqMaxWidth('lg') {
+    width: 100vw;
+  }
 }
