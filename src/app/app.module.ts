@@ -14,6 +14,7 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { CoButtonComponent } from './atoms/co-button/co-button.component';
+import { CoSectionTitleComponent } from './atoms/co-section-title/co-section-title.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
     CoPageTitleComponent,
     CoPageSubtitleComponent,
     CoPageHeaderComponent,
-    CoButtonComponent
+    CoButtonComponent,
+    CoSectionTitleComponent
   ],
   imports: [
     BrowserModule,
