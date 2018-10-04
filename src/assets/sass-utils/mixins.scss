@@ -11,7 +11,7 @@
 
 @mixin default-gradient {
   background: $primary-color;
-  background: -webkit-linear-gradient(legacy-direction($gradient-direction), secondary-color, $primary-color);
+  background: -webkit-linear-gradient(legacy-direction($gradient-direction), $secondary-color, $primary-color);
   background: linear-gradient($gradient-direction, $secondary-color, $primary-color);
 }
 
