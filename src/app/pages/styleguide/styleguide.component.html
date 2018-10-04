@@ -4,35 +4,36 @@
     [subtitle]="'Essa página vai servir para colocarmos os componentes que forem sendo feitos.'">
   </co-page-header>
 
-  <co-section-title [title]="'co-button'"></co-section-title>
+  <section>
+    <co-section-title [title]="'co-button'"></co-section-title>
+    <co-button
+      [title]="'Entrar'"
+      [margin]="true">
+    </co-button>
+    <co-button
+      [title]="'Avançar'"
+      [icon]="'arrow-right'"
+      [margin]="true">
+    </co-button>
+    <co-button
+      [title]="'Avançar'"
+      [icon]="'arrow-right'"
+      [type]="'disabled'"
+      [margin]="true">
+    </co-button>
+    <co-button
+      [title]="'Adicionar despesa'"
+      [icon]="'plus'"
+      [type]="'secondary'"
+      [margin]="true">
+    </co-button>
+  </section>
 
-  <co-button
-    [title]="'Entrar'"
-    [margin]="true">
-  </co-button>
-  
-  <co-button
-    [title]="'Avançar'"
-    [icon]="'arrow-right'"
-    [margin]="true">
-  </co-button>
+  <section>
+    <co-section-title [title]="'co-rounded-button'"></co-section-title>
+    <co-rounded-button [icon]="'arrow-left'"></co-rounded-button>
+    <co-rounded-button [icon]="'message'"></co-rounded-button>
+  </section>
 
-  <co-button
-    [title]="'Avançar'"
-    [icon]="'arrow-right'"
-    [type]="'disabled'"
-    [margin]="true">
-  </co-button>
-
-  <co-button
-    [title]="'Adicionar despesa'"
-    [icon]="'plus'"
-    [type]="'secondary'"
-    [margin]="true">
-  </co-button>
-
-  <co-section-title [title]="'co-rounded-button'"></co-section-title>
-
-  <co-rounded-button [icon]="'arrow-left'"></co-rounded-button>
-  <co-rounded-button [icon]="'message'"></co-rounded-button>
+  <co-menu-item [title]="'Procurar'" [withNotification]="true"></co-menu-item>
 </article>
