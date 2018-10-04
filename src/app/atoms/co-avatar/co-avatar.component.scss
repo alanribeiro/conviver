@@ -1,0 +1,39 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-avatar {
+  margin: 0 40px;
+  
+  &__photo {
+    margin: auto;
+    background-color: gray;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-size: cover;
+
+    &--small {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--medium {
+      width: 64px;
+      height: 64px;
+    }
+
+    &--big {
+      width: 75px;
+      height: 75px;
+    }
+
+    &--enormous {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__title {
+    font-family: $avatar-font-family;
+    font-size: $avatar-font-size;
+    text-align: center;
+  }
+}

@@ -18,6 +18,7 @@ import { CoSectionTitleComponent } from './atoms/co-section-title/co-section-tit
 import { CoRoundedButtonComponent } from './atoms/co-rounded-button/co-rounded-button.component';
 import { CoMenuItemComponent } from './atoms/co-menu-item/co-menu-item.component';
 import { CoMenuItemsComponent } from './molecules/co-menu-items/co-menu-items.component';
+import { CoAvatarComponent } from './atoms/co-avatar/co-avatar.component';
 
 registerLocaleData(en);
 
@@ -32,7 +33,8 @@ registerLocaleData(en);
     CoSectionTitleComponent,
     CoRoundedButtonComponent,
     CoMenuItemComponent,
-    CoMenuItemsComponent
+    CoMenuItemsComponent,
+    CoAvatarComponent
   ],
   imports: [
     BrowserModule,
