@@ -6,6 +6,19 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: $font-regular;
-  font-size: $common-text-font-size;
+}
+
+.container {
+  width: 910px;
+  margin: auto;
+  padding: 0px 30px;
+  box-sizing: border-box;
+
+  @include mqMaxWidth('lg') {
+    width: 100vw;
+  }
+
+  @include mqMaxWidth('md') {
+    padding: 0px 21px;
+  }
 }

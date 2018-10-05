@@ -9,10 +9,10 @@
 
 /* ----------------------- GRADIENTS ----------------------- */
 
-@mixin default-gradient {
+@mixin default-gradient($direction: $gradient-direction) {
   background: $primary-color;
-  background: -webkit-linear-gradient(legacy-direction($gradient-direction), $secondary-color, $primary-color);
-  background: linear-gradient($gradient-direction, $secondary-color, $primary-color);
+  background: -webkit-linear-gradient(legacy-direction($direction), $secondary-color, $primary-color);
+  background: linear-gradient($direction, $secondary-color, $primary-color);
 }
 
 /* ------------------------ KEYFRAME ------------------------ */
