@@ -1,0 +1,8 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-mobile-menu-button {
+  height: 70px;
+  border: none;
+  background: transparent;
+  @include flexbox(flex, center, center);
+}

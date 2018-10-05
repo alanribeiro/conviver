@@ -13,6 +13,7 @@ $secondary-color: #CE0EA8;
 $error-color: #FF0C0C;
 
 $border-color: $gray-DD;
+$input-border-color: $gray-AA;
 $divider-color: $gray-DD;
 $disabled-color: $gray-DD;
 $placeholder-color: $gray-AA;
@@ -27,6 +28,7 @@ $section-title-color: $primary-color;
 $primary-button-title-color: $white;
 $rounded-button-color: $gray-70;
 $rounded-button-hover-color: $primary-color;
+$menu-item-color: $white;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -73,7 +75,8 @@ $default-margin: 7.5px;
 /* ----------------- BREAKPOINTS ------------------ */
 
 $width-breakpoints: (
-  'lg': 910px
+  'lg': 910px,
+  'md': 740px
 );
 
 /* -------------------- OTHERS -------------------- */

@@ -1,33 +1,32 @@
+<co-main-header></co-main-header>
 <article class="container">
-  <co-page-header
-    [title]="'Styleguide'"
-    [subtitle]="'Essa página vai servir para colocarmos os componentes que forem sendo feitos.'">
-  </co-page-header>
+    <co-page-header [title]="'Styleguide'" [subtitle]="'Essa página vai servir para colocarmos os componentes que forem sendo feitos.'">
+    </co-page-header>
 
-  <section>
-    <co-section-title [title]="'co-button'"></co-section-title>
-    <co-button
-      [title]="'Entrar'"
-      [margin]="true">
-    </co-button>
-    <co-button
-      [title]="'Avançar'"
-      [icon]="'arrow-right'"
-      [margin]="true">
-    </co-button>
-    <co-button
-      [title]="'Avançar'"
-      [icon]="'arrow-right'"
-      [type]="'disabled'"
-      [margin]="true">
-    </co-button>
-    <co-button
-      [title]="'Adicionar despesa'"
-      [icon]="'plus'"
-      [type]="'secondary'"
-      [margin]="true">
-    </co-button>
-  </section>
+    <section>
+        <co-section-title [title]="'co-button'"></co-section-title>
+        <co-button
+        [title]="'Entrar'"
+        [margin]="true">
+        </co-button>
+        <co-button
+        [title]="'Avançar'"
+        [icon]="'arrow-right'"
+        [margin]="true">
+        </co-button>
+        <co-button
+        [title]="'Avançar'"
+        [icon]="'arrow-right'"
+        [type]="'disabled'"
+        [margin]="true">
+        </co-button>
+        <co-button
+        [title]="'Adicionar despesa'"
+        [icon]="'plus'"
+        [type]="'secondary'"
+        [margin]="true">
+        </co-button>
+    </section>
 
   <section>
     <co-section-title [title]= "'co-stepper-dots-dot'"></co-section-title>
@@ -41,12 +40,39 @@
     <co-rounded-button [icon]="'message'"></co-rounded-button>
   </section>
 
-  <co-menu-items [itens]="['Procurar', 'Meus anúncios', 'Mensagens', 'Notificações']"></co-menu-items>
+    <section class="avatars">
+        <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
+        <co-avatar [title]="'Caíque'" [genre]="'male'"></co-avatar>
+        <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
+        <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
+    </section>
 
-  <section class="avatars">
-    <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
-    <co-avatar [title]="'Caíque'" [genre]="'male'"></co-avatar>
-    <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
-    <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
-  </section>
+    <co-menu-items [itens]="['Procurar', 'Meus anúncios', 'Mensagens', 'Notificações']"></co-menu-items>
+
+    <section class="avatars">
+        <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
+        <co-avatar [title]="'Caíque'" [genre]="'male'"></co-avatar>
+        <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
+        <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
+    </section>
+    
+    <co-section-title [title]="'Inputs'"></co-section-title>
+
+    <co-select 
+        [placeholder]="'Estado'" 
+        [options]="[
+            {value: 'CE', label: 'CE'}, 
+            {value: 'SP', label: 'SP'}, 
+            {value: 'RJ', label: 'RJ'}]"
+        [margin]="true">
+    </co-select>
+
+    <co-select 
+        [placeholder]="'Estado'" 
+        [options]="[
+            {value: 'MT', label: 'MT'}, 
+            {value: 'MG', label: 'MG'}, 
+            {value: 'RS', label: 'RS'}]"
+        [fullWidth]="true">
+    </co-select>
 </article>

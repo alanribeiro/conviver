@@ -1,0 +1,8 @@
+<nz-select 
+    class="co-select" 
+    nzShowSearch 
+    nzPlaceHolder={{placeholder}} 
+    [(ngModel)]="selectedValue"
+    [ngClass]="{'co-select--fullWidth': fullWidth, 'co-select--margin': margin}">
+    <nz-option *ngFor="let option of options" nzValue="{{option.value}}" nzLabel="{{option.label}}"></nz-option>
+</nz-select>

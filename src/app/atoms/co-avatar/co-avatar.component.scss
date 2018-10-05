@@ -1,13 +1,10 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-avatar {
-  margin: 0 40px;
-  
   &__photo {
     margin: auto;
     background-color: gray;
     border-radius: 50%;
-    margin-bottom: 15px;
     background-size: cover;
 
     &--small {
@@ -28,6 +25,10 @@
     &--enormous {
       width: 150px;
       height: 150px;
+    }
+
+    &--with-title {
+      margin-bottom: 15px;
     }
   }
 
