@@ -1,0 +1,13 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-select {
+    min-width: 135px;
+
+    &--fullWidth {
+        width: 100%;
+    }
+
+    &--margin {
+        margin: $default-margin;
+    }
+}
