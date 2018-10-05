@@ -8,12 +8,9 @@ import { Component, Input } from '@angular/core';
 export class CoSelectComponent {
 
   @Input() placeholder:string;
-  @Input() options:Array<String>;
+  @Input() options:Array<{value:string, label:string}>;
   selectedValue:string;
 
-  constructor() {
-    this.placeholder = "Estado";
-    this.options = [];
-   }
+  constructor() {}
 
 }
