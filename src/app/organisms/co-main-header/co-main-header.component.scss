@@ -1,0 +1,41 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-main-header {
+  height: 70px;
+  @include default-gradient(30deg);
+
+  &__container {
+    height: 100%;
+    @include flexbox(flex, space-between, center);
+
+    &__mobile-menu-button,
+    &__notification-button {
+      display: none;
+
+      @include mqMaxWidth('md') {
+        display: block;
+      }
+    }
+
+    &__logo {
+      height: 33px;
+    }
+
+    &__menu {
+      @include flexbox(flex, initial, center);
+
+      &__avatar {
+        margin-left: 20px;
+      }
+
+      @include mqMaxWidth('md') {
+        display: none;
+      }
+    }
+
+    @include mqMaxWidth('md') {
+      @include flexbox(flex, space-between, center);
+    }
+  }
+}
