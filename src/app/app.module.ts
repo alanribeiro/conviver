@@ -23,6 +23,8 @@ import { CoMainHeaderComponent } from './organisms/co-main-header/co-main-header
 import { CoMobileMenuButtonComponent } from './atoms/co-mobile-menu-button/co-mobile-menu-button.component';
 import { CoNotificationButtonComponent } from './atoms/co-notification-button/co-notification-button.component';
 import { CoSelectComponent } from './atoms/co-select/co-select.component';
+import { CoRateComponent } from './atoms/co-rate/co-rate.component';
+import { CoDividerComponent } from './atoms/co-divider/co-divider.component';
 
 registerLocaleData(en);
 
@@ -42,7 +44,9 @@ registerLocaleData(en);
     CoMainHeaderComponent,
     CoMobileMenuButtonComponent,
     CoNotificationButtonComponent,
-    CoSelectComponent
+    CoSelectComponent,
+    CoRateComponent,
+    CoDividerComponent
   ],
   imports: [
     BrowserModule,

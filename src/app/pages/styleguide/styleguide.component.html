@@ -34,14 +34,7 @@
         <co-rounded-button [icon]="'message'"></co-rounded-button>
     </section>
 
-    <section class="avatars">
-        <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
-        <co-avatar [title]="'Caíque'" [genre]="'male'"></co-avatar>
-        <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
-        <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
-    </section>
-
-    <co-menu-items [itens]="['Procurar', 'Meus anúncios', 'Mensagens', 'Notificações']"></co-menu-items>
+    <co-section-title [title]="'co-avatar'"></co-section-title>
 
     <section class="avatars">
         <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
@@ -50,7 +43,7 @@
         <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
     </section>
     
-    <co-section-title [title]="'Inputs'"></co-section-title>
+    <co-section-title [title]="'co-select'"></co-section-title>
 
     <co-select 
         [placeholder]="'Estado'" 
@@ -69,4 +62,10 @@
             {value: 'RS', label: 'RS'}]"
         [fullWidth]="true">
     </co-select>
+
+    <co-section-title [title]="'co-rate'"></co-section-title>
+
+    <co-rate [rate]="2.5"></co-rate>
+
+    <co-divider></co-divider>
 </article>
