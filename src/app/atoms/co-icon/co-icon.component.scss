@@ -1,0 +1,12 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-icon {
+    width: 150px;
+}
+
+@include mqMaxWidth('lg') {
+    .co-icon {
+    width: 125px;
+    }
+}
