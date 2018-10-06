@@ -25,6 +25,7 @@ import { CoNotificationButtonComponent } from './atoms/co-notification-button/co
 import { CoSelectComponent } from './atoms/co-select/co-select.component';
 import { CoRateComponent } from './atoms/co-rate/co-rate.component';
 import { CoDividerComponent } from './atoms/co-divider/co-divider.component';
+import { CoStepperDotsDotComponent } from './atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
 
 registerLocaleData(en);
 
@@ -46,7 +47,8 @@ registerLocaleData(en);
     CoNotificationButtonComponent,
     CoSelectComponent,
     CoRateComponent,
-    CoDividerComponent
+    CoDividerComponent,
+    CoStepperDotsDotComponent
   ],
   imports: [
     BrowserModule,
