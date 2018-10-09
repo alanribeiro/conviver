@@ -11,6 +11,6 @@
     &--activated{
         width: 18px;
         height: 18px;
-        @include default-gradient;
+        @include default-gradient(312);
     }
 }
