@@ -1,7 +1,7 @@
 @import '../../../assets/sass-utils/variables.scss';
 @import '../../../assets/sass-utils/mixins.scss';
 
-.dot{
+.co-dot{
     border-radius: 50%;
     display: inline-block;
     width: 12px;
@@ -11,6 +11,6 @@
     &--activated{
         width: 18px;
         height: 18px;
-        @include default-gradient(312);
+        @include default-gradient;
     }
 }
