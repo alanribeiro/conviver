@@ -6,8 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./co-stepper-dots-dot.component.scss']
 })
 export class CoStepperDotsDotComponent{
-  @Input() active : boolean = true;
+  @Input() active : boolean;
 
-  constructor() { }
+  constructor() {
+    this.active = true;
+   }
 
 }
