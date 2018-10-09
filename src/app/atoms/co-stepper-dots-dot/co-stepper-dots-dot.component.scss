@@ -1,18 +1,15 @@
 @import '../../../assets/sass-utils/variables.scss';
 
-.Dot{
+.dot{
     border-radius: 50%;
     display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: $gray-DD;
 
     &--activated{
         width: 18px;
         height: 18px;
         background-image: linear-gradient(312deg, $primary-color, $primary-color-light);
-    }
-
-    &--deactivated{
-        width: 12px;
-        height: 12px;
-        background-color: $gray-DD;
     }
 }
