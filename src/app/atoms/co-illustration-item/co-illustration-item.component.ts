@@ -10,8 +10,7 @@ export class CoIllustrationItemComponent {
   @Input() title:string;
 
   constructor() {
-    this.icon = ''; //Nem precisa, mas fiz só pra tentar
-    this.title = '';
-   }
+  
+  }
 
 }

@@ -1,27 +1,16 @@
 @import '../../../assets/sass-utils/variables.scss';
 @import '../../../assets/sass-utils/mixins.scss';
 
-
-.area {
+.co-illustration-item {
     width: 100px;
     height: 78.5px;
-    display: inline-table;
-    
-    &__icon{
-        width: 36px;
-        height: 36px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 7px;
-    }
+    margin: 5px;
+
+    @include flexbox(inline-flex, center, center, column);
 
     &__title{
         font-family: $title-illustration-font-family;
         font-size: $title-illustration-item;
-        margin-top: 13px;
-        margin-bottom: 6,5px;
-        text-align: center;
     }
 }
 
