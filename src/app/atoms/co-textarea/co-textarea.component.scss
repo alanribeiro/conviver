@@ -1,0 +1,18 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-textarea {
+    width: 373px;
+    resize: none;
+    border: solid 1px $border-color; 
+    font-family: $common-text-font-family;
+    padding: 12px 20px;
+    font-size: $input-font-size;
+
+    &--fullWidth {
+        width: 100%;
+    }
+
+    &--error {
+        border: solid 1px $error-feedback-text-color;  
+    }
+}
