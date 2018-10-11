@@ -28,6 +28,8 @@ import { CoDividerComponent } from './atoms/co-divider/co-divider.component';
 import { CoStepperDotsDotComponent } from './atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
 import { CoIllustrationItemComponent } from './atoms/co-illustration-item/co-illustration-item.component';
 import { CoAdvertisementAddressComponent } from './atoms/co-advertisement-address/co-advertisement-address.component';
+import { CoAdvertisementAdditionalInfoComponent } from './atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
+import { CoTextareaComponent } from './atoms/co-textarea/co-textarea.component';
 
 registerLocaleData(en);
 
@@ -52,7 +54,9 @@ registerLocaleData(en);
     CoDividerComponent,
     CoStepperDotsDotComponent,
     CoIllustrationItemComponent,
-    CoAdvertisementAddressComponent
+    CoAdvertisementAddressComponent,
+    CoAdvertisementAdditionalInfoComponent,
+    CoTextareaComponent
   ],
   imports: [
     BrowserModule,
