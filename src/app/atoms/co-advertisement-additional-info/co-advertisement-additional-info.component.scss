@@ -1,9 +1,7 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-advertisement-additional-info {
-    width: 260px;
-    height: 16px;
-    font-size: $font-size-extra-small;
-    line-height: 1.25;
-    color: #858585;
+    font-family: $advertisement-additional-info-font-family;
+    font-size: $advertisement-additional-info-font-size;
+    color: $advertisement-additional-info-text-color;
 }
