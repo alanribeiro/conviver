@@ -1,0 +1,12 @@
+<div class="co-avatar">
+  <div
+    class="co-avatar__photo"
+    [ngStyle]="{'background-image': 'url(' + photo + ')'}"
+    [ngClass]="{
+      'co-avatar__photo--small': size == 'small',
+      'co-avatar__photo--medium': size == 'medium',
+      'co-avatar__photo--big': size == 'big',
+      'co-avatar__photo--enormous': size == 'enormous',
+      'co-avatar__photo--with-title': title != undefined }"></div>
+  <div *ngIf="title != undefined" class="co-avatar__title">{{title}}</div>
+</div>

@@ -1,6 +1,6 @@
-.container {
-  width: 910px;
-  margin: auto;
-  padding: 40px 30px;
-  box-sizing: border-box;
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.avatars {
+  display: flex;
 }

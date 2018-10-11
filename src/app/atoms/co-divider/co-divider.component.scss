@@ -1,0 +1,7 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-divider {
+    border: 0;
+    border-top: 1px solid $divider-color;
+    margin: 20px 0;
+}
