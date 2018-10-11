@@ -1,10 +1,11 @@
 @import './variables.scss';
 
 /* ----------------------- FLEX BOX ------------------------ */
-@mixin flexbox($display, $justify-content, $align-items) {
+@mixin flexbox($display, $justify-content, $align-items, $flex-direction: row) {
   display: $display;
   justify-content: $justify-content;
   align-items: $align-items;
+  flex-direction: $flex-direction;
 }
 
 /* ----------------------- GRADIENTS ----------------------- */
