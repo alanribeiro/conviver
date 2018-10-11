@@ -11,7 +11,7 @@ export class CoLogoComponent {
   @Input() color:string;
 
   constructor() {
-    this.type = 'horizontal'
-    this.color = 'white'
+    this.type = 'horizontal';
+    this.color = 'white';
   }
 }
