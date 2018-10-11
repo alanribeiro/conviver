@@ -1,10 +1,9 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-textarea {
-    width: 373px;
     resize: none;
     border: solid 1px $border-color; 
-    font-family: $common-text-font-family;
+    font-family: $input-fontfamily;
     padding: 12px 20px;
     font-size: $input-font-size;
 
