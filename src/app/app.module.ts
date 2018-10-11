@@ -29,6 +29,7 @@ import { CoStepperDotsDotComponent } from './atoms/co-stepper-dots-dot/co-steppe
 import { CoIllustrationItemComponent } from './atoms/co-illustration-item/co-illustration-item.component';
 import { CoAdvertisementAddressComponent } from './atoms/co-advertisement-address/co-advertisement-address.component';
 import { CoAdvertisementAdditionalInfoComponent } from './atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
+import { CoTextareaComponent } from './atoms/co-textarea/co-textarea.component';
 
 registerLocaleData(en);
 
@@ -54,7 +55,8 @@ registerLocaleData(en);
     CoStepperDotsDotComponent,
     CoIllustrationItemComponent,
     CoAdvertisementAddressComponent,
-    CoAdvertisementAdditionalInfoComponent
+    CoAdvertisementAdditionalInfoComponent,
+    CoTextareaComponent
   ],
   imports: [
     BrowserModule,
