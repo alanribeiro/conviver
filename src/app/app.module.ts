@@ -26,6 +26,7 @@ import { CoSelectComponent } from './atoms/co-select/co-select.component';
 import { CoRateComponent } from './atoms/co-rate/co-rate.component';
 import { CoDividerComponent } from './atoms/co-divider/co-divider.component';
 import { CoStepperDotsDotComponent } from './atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
+import { CoErrorFeedbackComponent } from './atoms/co-error-feedback/co-error-feedback.component';
 
 registerLocaleData(en);
 
@@ -48,7 +49,8 @@ registerLocaleData(en);
     CoSelectComponent,
     CoRateComponent,
     CoDividerComponent,
-    CoStepperDotsDotComponent
+    CoStepperDotsDotComponent,
+    CoErrorFeedbackComponent
   ],
   imports: [
     BrowserModule,
