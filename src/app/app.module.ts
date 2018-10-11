@@ -30,6 +30,7 @@ import { CoIllustrationItemComponent } from './atoms/co-illustration-item/co-ill
 import { CoAdvertisementAddressComponent } from './atoms/co-advertisement-address/co-advertisement-address.component';
 import { CoAdvertisementAdditionalInfoComponent } from './atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
 import { CoTextareaComponent } from './atoms/co-textarea/co-textarea.component';
+import { CoLogoComponent } from './atoms/co-logo/co-logo.component';
 
 registerLocaleData(en);
 
@@ -56,7 +57,8 @@ registerLocaleData(en);
     CoIllustrationItemComponent,
     CoAdvertisementAddressComponent,
     CoAdvertisementAdditionalInfoComponent,
-    CoTextareaComponent
+    CoTextareaComponent,
+    CoLogoComponent
   ],
   imports: [
     BrowserModule,
