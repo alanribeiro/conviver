@@ -4,6 +4,23 @@
     </co-page-header>
 
     <section>
+      <co-section-title [title]="'co-stepper-dots-dot'"></co-section-title>
+      <co-stepper-dots-dot>
+        
+      </co-stepper-dots-dot>
+    </section>
+
+    <section>
+        <co-section-title [title]="'co-illustration-item'"></co-section-title>
+        <co-illustration-item [icon]="'flower'" [title]="'Vegetariano'">
+        </co-illustration-item>
+        <co-illustration-item [icon]="'flower'" [title]="'Vegetariano'">
+        </co-illustration-item>
+        <co-illustration-item [icon]="'flower'" [title]="'Vegetariano'">
+            </co-illustration-item>
+    </section>
+
+    <section>
         <co-section-title [title]="'co-button'"></co-section-title>
         <co-button
         [title]="'Entrar'"
@@ -68,4 +85,8 @@
     <co-rate [rate]="2.5"></co-rate>
 
     <co-divider></co-divider>
+
+    <co-section-title [title]="'co-advertisement-address'"></co-section-title>
+
+    <co-advertisement-address [city]="'Quixadá'" [state]="'CE'" [country]="'Brasil'"></co-advertisement-address>
 </article>
