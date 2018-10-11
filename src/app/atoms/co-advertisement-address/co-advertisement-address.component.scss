@@ -1,10 +1,7 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-advertisement-address {
-    width: 260px;
-    height: 17px;
-    font-size: $font-size-small;
-    font-family: $font-bold;
-    line-height: 1.21;
-    color: #858585;
+    font-size: $adversitement-address-font-size;
+    font-family: $advertisement-address-font-family;
+    color: $advertisement-address-text-color;
 }
