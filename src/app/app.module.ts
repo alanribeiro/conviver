@@ -27,6 +27,7 @@ import { CoRateComponent } from './atoms/co-rate/co-rate.component';
 import { CoDividerComponent } from './atoms/co-divider/co-divider.component';
 import { CoStepperDotsDotComponent } from './atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
 import { CoIllustrationItemComponent } from './atoms/co-illustration-item/co-illustration-item.component';
+import { CoAdvertisementAddressComponent } from './atoms/co-advertisement-address/co-advertisement-address.component';
 
 registerLocaleData(en);
 
@@ -50,7 +51,8 @@ registerLocaleData(en);
     CoRateComponent,
     CoDividerComponent,
     CoStepperDotsDotComponent,
-    CoIllustrationItemComponent
+    CoIllustrationItemComponent,
+    CoAdvertisementAddressComponent
   ],
   imports: [
     BrowserModule,
