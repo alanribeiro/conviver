@@ -1,0 +1,30 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-price{
+    font-family: $price-font-family;
+
+    &__notation{
+        &--small {
+            font-size: $font-size-extra-small;
+        }
+
+        &--big {
+            font-size: $default-font-size;
+        }
+        
+    }
+
+    &--small{
+        font-size: $font-size-small;
+        color: $small-font-price;
+    }
+
+    &--big{
+        font-size: $font-size-big;
+        color: $big-font-price;
+    }
+
+    &--colored{
+        color: $colored-font-price;
+    }
+}
