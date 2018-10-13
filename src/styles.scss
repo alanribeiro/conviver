@@ -57,4 +57,12 @@
     height: 40px;
     padding: 0 20px;
   }
+
+  &-input:hover, &-input:focus {
+    border: 1px solid $tertiary-color;
+  }
+
+  &-input::placeholder {
+    font-family: $font-regular;
+  }
 }
