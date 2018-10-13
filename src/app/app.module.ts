@@ -31,6 +31,7 @@ import { CoAdvertisementAddressComponent } from './atoms/co-advertisement-addres
 import { CoAdvertisementAdditionalInfoComponent } from './atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
 import { CoTextareaComponent } from './atoms/co-textarea/co-textarea.component';
 import { CoLogoComponent } from './atoms/co-logo/co-logo.component';
+import { CoAdvertisementThumbnailComponent } from './atoms/co-advertisement-thumbnail/co-advertisement-thumbnail.component';
 
 registerLocaleData(en);
 
@@ -58,7 +59,8 @@ registerLocaleData(en);
     CoAdvertisementAddressComponent,
     CoAdvertisementAdditionalInfoComponent,
     CoTextareaComponent,
-    CoLogoComponent
+    CoLogoComponent,
+    CoAdvertisementThumbnailComponent
   ],
   imports: [
     BrowserModule,
