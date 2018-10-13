@@ -98,4 +98,14 @@
       }
     }
   }
+
+  &-checkbox-input:focus+.ant-checkbox-inner{
+    border-color: $primary-color-light;
+  }
+  
+  &-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary-color-light;
+    border-color: $primary-color-light;
+  }
+  
 }
