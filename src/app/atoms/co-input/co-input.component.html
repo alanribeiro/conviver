@@ -1,0 +1,9 @@
+<input nz-input
+  class="co-input"
+  type="{{type}}"
+  placeholder="{{placeholder}}"
+  [(ngModel)]="value"
+  [ngClass]="{
+    'co-input--fullWidth': fullWidth,
+    'co-input--error': error
+  }">
