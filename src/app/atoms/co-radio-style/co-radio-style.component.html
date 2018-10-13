@@ -1,0 +1,5 @@
+<div>
+  <nz-radio-group [(ngModel)]="radioValue" [nzButtonStyle]="'solid'">
+    <label *ngFor="let option of options" nz-radio-button nzValue="{{option.value}}">{{option.label}}</label>
+  </nz-radio-group>
+</div>

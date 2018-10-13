@@ -37,6 +37,7 @@ import { CoStepperDotsComponent } from './molecules/co-stepper-dots/co-stepper-d
 import { CoInputComponent } from './atoms/co-input/co-input.component';
 import { CoTitleComponent } from './atoms/co-title/co-title.component';
 import { CoPriceComponent } from './atoms/co-price/co-price.component';
+import { CoRadioStyleComponent } from './atoms/co-radio-style/co-radio-style.component';
 
 registerLocaleData(en);
 
@@ -70,7 +71,8 @@ registerLocaleData(en);
     CoStepperDotsComponent,
     CoInputComponent,
     CoTitleComponent,
-    CoPriceComponent
+    CoPriceComponent,
+    CoRadioStyleComponent
   ],
   imports: [
     BrowserModule,

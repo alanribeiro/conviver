@@ -80,6 +80,15 @@
         [fullWidth]="true">
     </co-select>
 
+    <co-section-title [title]="'co-radio-style'"></co-section-title>
+    <co-radio-style
+        [options]="[
+            {label: 'Masculino', value: 'masculino'},
+            {label: 'Feminino', value: 'feminino'},
+            {label: 'Outro', value: 'outro'}
+        ]">
+    </co-radio-style>
+
     <co-section-title [title]="'co-rate'"></co-section-title>
 
     <co-rate [rate]="2.5"></co-rate>
