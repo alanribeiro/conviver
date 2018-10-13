@@ -38,6 +38,7 @@ import { CoInputComponent } from './atoms/co-input/co-input.component';
 import { CoTitleComponent } from './atoms/co-title/co-title.component';
 import { CoPriceComponent } from './atoms/co-price/co-price.component';
 import { CoRadioStyleComponent } from './atoms/co-radio-style/co-radio-style.component';
+import { CoAdvertisementComponent } from './molecules/co-advertisement/co-advertisement.component';
 
 registerLocaleData(en);
 
@@ -72,7 +73,8 @@ registerLocaleData(en);
     CoInputComponent,
     CoTitleComponent,
     CoPriceComponent,
-    CoRadioStyleComponent
+    CoRadioStyleComponent,
+    CoAdvertisementComponent
   ],
   imports: [
     BrowserModule,
