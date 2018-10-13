@@ -35,6 +35,7 @@ import { CoIllustrationItemListComponent } from './molecules/co-illustration-ite
 import { CoAdvertisementThumbnailComponent } from './atoms/co-advertisement-thumbnail/co-advertisement-thumbnail.component';
 import { CoStepperDotsComponent } from './molecules/co-stepper-dots/co-stepper-dots.component';
 import { CoInputComponent } from './atoms/co-input/co-input.component';
+import { CoTitleComponent } from './atoms/co-title/co-title.component';
 
 registerLocaleData(en);
 
@@ -66,7 +67,8 @@ registerLocaleData(en);
     CoIllustrationItemListComponent,
     CoAdvertisementThumbnailComponent,
     CoStepperDotsComponent,
-    CoInputComponent
+    CoInputComponent,
+    CoTitleComponent
   ],
   imports: [
     BrowserModule,
