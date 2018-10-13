@@ -65,4 +65,37 @@
   &-input::placeholder {
     font-family: $font-regular;
   }
+
+  &-radio {
+    &-button-wrapper {
+      height: 40px;
+      line-height: 38px;
+
+      &:first-child {
+        padding-left: 20px;
+        border-radius: $default-border-radius 0 0 $default-border-radius;
+      }
+
+      &:last-child {
+        padding-right: 20px;
+        border-radius: 0 $default-border-radius $default-border-radius 0;
+      }
+
+      &:hover {
+        color: $radio-style-checked-color;
+      }
+    }
+
+    &-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: $radio-style-checked-text-color;
+      border-color: $radio-style-checked-color;
+      background-color: $radio-style-checked-color;
+
+      &:hover {
+        color: $radio-style-checked-text-color;
+        border-color: $radio-style-checked-color;
+        background-color: $radio-style-checked-color;
+      }
+    }
+  }
 }
