@@ -40,6 +40,7 @@ import { CoPriceComponent } from './atoms/co-price/co-price.component';
 import { CoRadioStyleComponent } from './atoms/co-radio-style/co-radio-style.component';
 import { CoAdvertisementComponent } from './molecules/co-advertisement/co-advertisement.component';
 import { CoCheckboxComponent } from './atoms/co-checkbox/co-checkbox.component';
+import { CoErrorFeedbackComponent } from './atoms/co-error-feedback/co-error-feedback.component';
 
 registerLocaleData(en);
 
@@ -76,7 +77,8 @@ registerLocaleData(en);
     CoPriceComponent,
     CoRadioStyleComponent,
     CoAdvertisementComponent,
-    CoCheckboxComponent
+    CoCheckboxComponent,
+    CoErrorFeedbackComponent,
   ],
   imports: [
     BrowserModule,
