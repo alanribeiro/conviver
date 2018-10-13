@@ -63,7 +63,7 @@ registerLocaleData(en);
     CoAdvertisementAdditionalInfoComponent,
     CoTextareaComponent,
     CoLogoComponent,
-    CoIllustrationItemListComponent
+    CoIllustrationItemListComponent,
     CoAdvertisementThumbnailComponent,
     CoStepperDotsComponent,
     CoInputComponent
