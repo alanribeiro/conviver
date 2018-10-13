@@ -1,0 +1,10 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement {
+    width: 260px;
+    margin-right: 30px;
+
+    &__bottom-info {
+        @include flexbox(flex, space-between, center);
+    }
+}

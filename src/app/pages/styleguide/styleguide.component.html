@@ -121,7 +121,20 @@
 
     <co-title [title]="'Em instantes, você poderá encontrar a pessoa perfeita para morar com você.'"></co-title>
     
-    <co-price [colored]="'false'" [size]="'small'" [price]="'550,00'"></co-price>
-    <co-price [colored]="'false'" [size]="'big'" [price]="'550,00'"></co-price>
-    <co-price [colored]="'true'" [size]="'big'" [price]="'550,00'"></co-price>
+    <co-price [colored]="false" [size]="'small'" [price]="550.00"></co-price>
+    <co-price [colored]="false" [size]="'big'" [price]="550.00"></co-price>
+    <co-price [colored]="true" [size]="'big'" [price]="550.00"></co-price>
+
+    <co-section-title [title]="'co-advertisement'"></co-section-title>
+
+    <co-advertisement [advertisement]="{
+        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
+        city: 'Quixadá',
+        state: 'CE',
+        country: 'Brasil',
+        propertyType: 'Apartamento',
+        numberOfPlaces: 1,
+        rate: 3,
+        price: 550
+    }"></co-advertisement>
 </article>
