@@ -59,11 +59,18 @@
         <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
         <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
     </section>
+
+    <co-section-title [title]="'co-input'"></co-section-title>
+    <div style="width: 300px">
+        <co-input [placeholder]="'Placeholder'"></co-input>
+        <co-input [placeholder]="'Type password'" [type]="'password'"></co-input>
+        <co-input [placeholder]="'Error'" [error]="true"></co-input>
+    </div>
     
     <co-section-title [title]="'co-select'"></co-section-title>
 
     <co-select 
-        [placeholder]="'Estado'" 
+        [placeholder]="'Estado'"
         [options]="[
             {value: 'CE', label: 'CE'}, 
             {value: 'SP', label: 'SP'}, 
@@ -103,4 +110,6 @@
     <co-section-title [title]="'co-advertisement-thumbnail'"></co-section-title>
 
     <co-advertisement-thumbnail [thumbnail]="'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg'"></co-advertisement-thumbnail>
+    <co-section-title [title]="'co-stepper-dots'"></co-section-title>
+    <co-stepper-dots [quantity]="5" [activeDot]="2"></co-stepper-dots>
 </article>

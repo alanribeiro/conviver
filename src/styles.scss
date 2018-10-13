@@ -51,4 +51,10 @@
   &-rate {
     color: $primary-color;
   }
+
+  &-input {
+    border-radius: $default-border-radius;
+    height: 40px;
+    padding: 0 20px;
+  }
 }

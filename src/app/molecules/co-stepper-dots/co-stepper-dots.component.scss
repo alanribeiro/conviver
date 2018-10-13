@@ -1,0 +1,6 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-stepper-dots {
+  margin: 40px 0;
+  @include flexbox(flex, center, center);
+}
