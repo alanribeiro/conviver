@@ -41,6 +41,7 @@ import { CoRadioStyleComponent } from './atoms/co-radio-style/co-radio-style.com
 import { CoAdvertisementComponent } from './molecules/co-advertisement/co-advertisement.component';
 import { CoCheckboxComponent } from './atoms/co-checkbox/co-checkbox.component';
 import { CoErrorFeedbackComponent } from './atoms/co-error-feedback/co-error-feedback.component';
+import { CoSelectableItemComponent } from './atoms/co-selectable-item/co-selectable-item.component';
 
 registerLocaleData(en);
 
@@ -79,6 +80,7 @@ registerLocaleData(en);
     CoAdvertisementComponent,
     CoCheckboxComponent,
     CoErrorFeedbackComponent,
+    CoSelectableItemComponent,
   ],
   imports: [
     BrowserModule,
