@@ -18,7 +18,5 @@ export class CoSelectableItemComponent {
 
    selectableToggle(){
      this.active = !this.active;
-     console.log("Testando")
-     console.log(this.active)
    }
 }
