@@ -43,6 +43,7 @@ import { CoCheckboxComponent } from './atoms/co-checkbox/co-checkbox.component';
 import { CoErrorFeedbackComponent } from './atoms/co-error-feedback/co-error-feedback.component';
 import { CoSocialButtonComponent } from './atoms/co-social-button/co-social-button.component';
 import { CoUploadComponent } from './atoms/co-upload/co-upload.component';
+import { CoSelectableItemComponent } from './atoms/co-selectable-item/co-selectable-item.component';
 
 registerLocaleData(en);
 
@@ -82,7 +83,8 @@ registerLocaleData(en);
     CoCheckboxComponent,
     CoErrorFeedbackComponent,
     CoSocialButtonComponent,
-    CoUploadComponent
+    CoUploadComponent,
+    CoSelectableItemComponent
   ],
   imports: [
     BrowserModule,
