@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -43,8 +44,17 @@ import { CoCheckboxComponent } from './atoms/co-checkbox/co-checkbox.component';
 import { CoErrorFeedbackComponent } from './atoms/co-error-feedback/co-error-feedback.component';
 import { CoSocialButtonComponent } from './atoms/co-social-button/co-social-button.component';
 import { CoUploadComponent } from './atoms/co-upload/co-upload.component';
+import { CoMobileMenuItemComponent } from './atoms/co-mobile-menu-item/co-mobile-menu-item.component';
+import { CoMobileMenuItemListComponent } from './molecules/co-mobile-menu-item-list/co-mobile-menu-item-list.component';
+import { CoInsigniaComponent } from './atoms/co-insignia/co-insignia.component';
+import { CoMobileMenuUserComponent } from './molecules/co-mobile-menu-user/co-mobile-menu-user.component';
 
 registerLocaleData(en);
+
+const Routes: Routes = [{
+  path: '',
+  component: StyleguideComponent
+}];
 
 @NgModule({
   declarations: [
@@ -82,7 +92,11 @@ registerLocaleData(en);
     CoCheckboxComponent,
     CoErrorFeedbackComponent,
     CoSocialButtonComponent,
-    CoUploadComponent
+    CoUploadComponent,
+    CoMobileMenuItemComponent,
+    CoMobileMenuItemListComponent,
+    CoInsigniaComponent,
+    CoMobileMenuUserComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +104,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    RouterModule.forRoot(Routes)
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-mobile-menu-user {
+    text-align: center;
+
+    &__insignia {
+        transform: translateY(-70%);
+    }
+
+    &__name {
+        margin-top: -10px;
+        font: $font-size-medium $font-bold;
+    }
+
+    &__adress {
+        font: $font-size-small $font-regular;
+        color: $gray-70;
+    }
+}
