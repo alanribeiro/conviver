@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'co-divider',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class CoDividerComponent {
 
-  constructor() {}
+  @Input() context:string;
+
+  constructor() {
+    this.context = "default";
+  }
 
 }
