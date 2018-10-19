@@ -1,0 +1,13 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-mobile-menu {
+    background-color: $mobile-menu-background;
+    padding: 20px;
+    min-height: 100vh;
+    width: 80vw;
+
+    &__menu-user {
+        padding-bottom: 30px;
+    }
+}

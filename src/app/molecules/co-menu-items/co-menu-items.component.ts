@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CoMenuItemsComponent {
 
-  @Input() itens:Array<string>;
+  @Input() items:Array<string>;
 
   constructor() { }
 

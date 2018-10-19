@@ -8,7 +8,7 @@ import { MainHeaderService } from '../../services/main-header/main-header.servic
 })
 export class CoMainHeaderComponent implements OnInit {
 
-  menuItems:any;
+  menuItems: any;
 
   constructor(private mainHeaderService:MainHeaderService) { }
 

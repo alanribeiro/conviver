@@ -1,0 +1,15 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-mobile-menu-item {
+    @include flexbox(flex, space-between, center);
+    list-style: none;
+    padding: 15px;
+    color: $menu-item-color;
+
+    &__text {
+        font: $font-size-small $mobile-menu-item-font-family;
+        flex-grow: 1;
+        margin-left: 15px;
+    }
+}

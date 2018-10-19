@@ -12,6 +12,7 @@ $primary-color: #650ECE;
 $primary-color-light: #880ECE;
 $secondary-color: #CE0EA8;
 $tertiary-color: #00C4DF;
+$quaternary-color: #EA154E;
 $error-color: #FF7200;
 $facebook-color: #4267b2;
 $google-color:#ea4335;
@@ -45,6 +46,10 @@ $colored-font-price: $primary-color;
 $radio-style-checked-color: $primary-color;
 $radio-style-checked-text-color: $white;
 $boder-social-button: $gray-70;
+$mobile-menu-background: $primary-color;
+$mobile-menu-user: $gray-FA;
+$mobile-menu-user-location: $gray-AA;
+$badge-color: $quaternary-color;
 $selectable-item-title-color: $white;
 $selectable-item-description-color: $white;
 $selectable-item-hoverMessage-color: $white;
@@ -72,6 +77,7 @@ $advertisement-address-font-family: $font-bold;
 $advertisement-additional-info-font-family: $font-regular;
 $input-fontfamily: $font-regular;
 $error-feedback-font-family: $font-regular;
+$mobile-menu-item-font-family: $font-bold;
 $divider-context-login-font-family: $font-regular;
 
 /* ------------------ FONT SIZES ------------------ */

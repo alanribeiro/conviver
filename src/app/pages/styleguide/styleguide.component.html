@@ -150,6 +150,31 @@
     <co-social-button [socialNetwork]="'Facebook'"></co-social-button>
     
     <co-upload></co-upload>
+
+    <co-section-title [title]="'co-mobile-menu-item'"></co-section-title>
+
+    <co-mobile-menu-item [title]="'Teste'" [icon]="'message'" [notifications]=3 [url]="'teste'"></co-mobile-menu-item>
+    <co-mobile-menu-item [title]="'Teste'" [icon]="'message'" [notifications]=0></co-mobile-menu-item>
+
+    <co-section-title [title]="'co-mobile-menu-item-list'"></co-section-title>
+
+    <co-mobile-menu-item-list [items]="[
+    {
+        title: 'Item 1', icon: 'message', notifications: 2, url: 'item1'
+    }, {
+        title: 'Item 2', icon: 'message', notifications: 7, url: 'item2'
+    }]">
+    </co-mobile-menu-item-list>
+
+    <co-section-title [title]="'co-insignia'"></co-section-title>
+    <co-insignia [level]="1"></co-insignia>
+
+    <co-section-title [title]="'co-mobile-menu-user'"></co-section-title>
+    <co-mobile-menu-user [photo]="'photo'" [name]="'Sebastiana Alencar'" [level]="1" [adress]="'Quixadá - Ceará, Brasil'"></co-mobile-menu-user>
+    <co-section-title [title]="'co-mobile-menu'"></co-section-title>
+
+    <co-mobile-menu [open]=true></co-mobile-menu>
+   
     <co-section-title [title]="'co-selectable-item'"></co-section-title>
     <co-selectable-item 
         [size]="'big'" 
@@ -176,6 +201,5 @@
         [icon]="'flower'" 
         [title]="'Vegetariano'">
     </co-selectable-item>
-
 
 </article>
