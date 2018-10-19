@@ -48,6 +48,7 @@ import { CoMobileMenuItemComponent } from './atoms/co-mobile-menu-item/co-mobile
 import { CoMobileMenuItemListComponent } from './molecules/co-mobile-menu-item-list/co-mobile-menu-item-list.component';
 import { CoInsigniaComponent } from './atoms/co-insignia/co-insignia.component';
 import { CoMobileMenuUserComponent } from './molecules/co-mobile-menu-user/co-mobile-menu-user.component';
+import { CoMobileMenuComponent } from './organisms/co-mobile-menu/co-mobile-menu.component';
 
 registerLocaleData(en);
 
@@ -96,7 +97,8 @@ const Routes: Routes = [{
     CoMobileMenuItemComponent,
     CoMobileMenuItemListComponent,
     CoInsigniaComponent,
-    CoMobileMenuUserComponent
+    CoMobileMenuUserComponent,
+    CoMobileMenuComponent
   ],
   imports: [
     BrowserModule,
