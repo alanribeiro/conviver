@@ -1,0 +1,12 @@
+<div class="co-selectable-item" (click)="selectableToggle()"
+[ngClass]="{
+    'co-selectable-item--small': size == 'small',
+    'co-selectable-item--big': size == 'big',
+    'co-selectable-item--big--active': active,
+    'co-selectable-item--small--active': active}">
+  <img class="co-selectable-item__icon" [src]="'../../../assets/images/icons/' + icon + '.png'">
+  <div class="co-selectable-item__title" 
+  [ngClass]="{'co-selectable-item__title--active': active}">{{title}}</div>
+  <div *ngIf="size == 'big'" class="co-selectable-item--big__hoverMessage" 
+  [ngClass]="{'co-selectable-item--big__hoverMessage--active': active}">{{hoverMessage}}</div>
+</div>
