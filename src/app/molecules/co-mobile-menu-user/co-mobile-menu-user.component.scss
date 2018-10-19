@@ -10,12 +10,12 @@
     &__name {
         margin-top: -10px;
         font: $font-size-medium $font-bold;
-        color: $gray-FA;
+        color: $mobile-menu-user;
     }
 
     &__adress {
         margin-top: 5px;
         font: $font-size-small $font-regular;
-        color: $gray-AA;
+        color: $mobile-menu-user-location;
     }
 }
