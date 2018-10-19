@@ -8,9 +8,7 @@
 
     <nz-badge
       *ngIf="notifications > 0"
-      [nzCount]=notifications
-      [nzStyle]="{
-        boxShadow: none
-      }"></nz-badge>
+      [nzOverflowCount] = 10
+      [nzCount]=notifications></nz-badge>
   </li>
 </a>

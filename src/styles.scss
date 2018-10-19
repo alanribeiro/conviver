@@ -52,6 +52,13 @@
     color: $primary-color;
   }
 
+  &-badge {
+    &-count {
+      box-shadow: none;
+      background-color: $quaternary-color;
+    }
+  }
+
   &-input {
     border-radius: $default-border-radius;
     height: 40px;
