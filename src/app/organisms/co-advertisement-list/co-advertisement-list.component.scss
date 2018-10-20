@@ -1,0 +1,7 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement-list {
+    @include flexbox(flex, flex-start, center);
+    flex-wrap: wrap;
+}
