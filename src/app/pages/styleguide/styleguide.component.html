@@ -202,4 +202,64 @@
         [title]="'Vegetariano'">
     </co-selectable-item>
 
+    <co-section-title [title]="'co-advertisement-list'"></co-section-title>
+
+    <co-advertisement-list [itemsList]="[
+    {
+        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
+        city: 'Quixadá',
+        state: 'CE',
+        country: 'Brasil',
+        propertyType: 'Apartamento',
+        numberOfPlaces: 1,
+        rate: 3,
+        price: 550
+    }, {
+        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
+        city: 'Quixadá',
+        state: 'CE',
+        country: 'Brasil',
+        propertyType: 'Apartamento',
+        numberOfPlaces: 1,
+        rate: 3,
+        price: 550
+    }]"></co-advertisement-list>
+
+    <co-section-title [title]="'co-section'"></co-section-title>
+
+    <co-section [title]="'Seção Teste'"></co-section>
+
+    <co-section-title [title]="'co-card'"></co-section-title>
+
+    <co-card></co-card>
+
+    <co-section-title [title]="'co-card-announce'"></co-section-title>
+
+    <co-card-announce
+        [icon]="'flower'"
+        [description]="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae, quo reprehenderit neque iste consequuntur eveniet quidem, voluptatem quis soluta obcaecati sunt vel consectetur aut, laboriosam accusamus voluptates ipsum magni!'"
+        [buttonTitle]="'alo'"
+        [buttonURL]="'rumbora'"></co-card-announce>
+
+    <co-section-title [title]="'co-establishment-item'"></co-section-title>
+
+    <co-establishment-item [icon]="'flower'" [establishmentName]="'Flor'" [establishmentType]="'Planta'" [establishmentDistance]="'45m'" [url]="'teste'"></co-establishment-item>
+
+    <co-section-title [title]="'co-establishment-item-list'"></co-section-title>
+
+    <co-establishment-item-list [itemsList]="[
+    {
+        icon: 'flower',
+        establishmentType: 'Jardim',
+        establishmentName: 'Calendula',
+        establishmentDistance: '40m',
+        url: 'string'
+    }, {
+        icon: 'flower',
+        establishmentType: 'Academia',
+        establishmentName: 'Fit It',
+        establishmentDistance: '450m',
+        url: 'string'
+    }]"></co-establishment-item-list>
+
 </article>
