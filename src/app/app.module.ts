@@ -50,6 +50,12 @@ import { CoInsigniaComponent } from './atoms/co-insignia/co-insignia.component';
 import { CoMobileMenuUserComponent } from './molecules/co-mobile-menu-user/co-mobile-menu-user.component';
 import { CoMobileMenuComponent } from './organisms/co-mobile-menu/co-mobile-menu.component';
 import { CoSelectableItemComponent } from './atoms/co-selectable-item/co-selectable-item.component';
+import { CoAdvertisementListComponent } from './organisms/co-advertisement-list/co-advertisement-list.component';
+import { CoSectionComponent } from './molecules/co-section/co-section.component';
+import { CoCardComponent } from './atoms/co-card/co-card.component';
+import { CoCardAnnounceComponent } from './molecules/co-card-announce/co-card-announce.component';
+import { CoEstablishmentItemComponent } from './atoms/co-establishment-item/co-establishment-item.component';
+import { CoEstablishmentItemListComponent } from './molecules/co-establishment-item-list/co-establishment-item-list.component';
 
 registerLocaleData(en);
 
@@ -99,8 +105,14 @@ const Routes: Routes = [{
     CoMobileMenuItemListComponent,
     CoInsigniaComponent,
     CoMobileMenuUserComponent,
-    CoMobileMenuComponent
-    CoSelectableItemComponent
+    CoMobileMenuComponent,
+    CoSelectableItemComponent,
+    CoAdvertisementListComponent,
+    CoSectionComponent,
+    CoCardComponent,
+    CoCardAnnounceComponent,
+    CoEstablishmentItemComponent,
+    CoEstablishmentItemListComponent
   ],
   imports: [
     BrowserModule,
