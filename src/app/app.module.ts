@@ -99,7 +99,7 @@ const Routes: Routes = [{
     CoMobileMenuItemListComponent,
     CoInsigniaComponent,
     CoMobileMenuUserComponent,
-    CoMobileMenuComponent
+    CoMobileMenuComponent,
     CoSelectableItemComponent
   ],
   imports: [
