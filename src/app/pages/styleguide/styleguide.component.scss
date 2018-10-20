@@ -1,6 +1,35 @@
 @import '../../../assets/sass-utils/mixins.scss';
 @import '../../../assets/sass-utils/variables.scss';
 
+section {
+  margin-bottom: 20px;
+}
+
+.paging-buttons {
+  &__row-1 {
+    @include flexbox(flex, space-between, center);
+    margin-bottom: 5px;
+  }
+
+  &__row-2 {
+    @include flexbox(flex, space-around, center);
+  }
+}
+
 .avatars {
-  display: flex;
+  @include flexbox(flex, space-between, flex-start);
+}
+
+.forms {
+  &__row {
+    display: flex;
+
+    &__column {
+      width: 50%;
+
+      div:last-child {
+        padding-right: 30px;
+      }
+    }
+  }
 }

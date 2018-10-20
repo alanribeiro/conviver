@@ -1,0 +1,6 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.co-paging-buttons {
+  @include flexbox(flex, center, center);
+}
