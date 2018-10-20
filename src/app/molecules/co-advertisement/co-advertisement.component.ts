@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class CoAdvertisementComponent {
 
-  @Input() advertisement:Object;
+  @Input() advertisement: Object;
 
   constructor() {}
 

@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./co-mobile-menu.component.scss']
 })
 
-export class CoMobileMenuComponent {
+export class CoMobileMenuComponent implements OnInit {
 
   firstItemsList: any;
   secondItemsList: any;
@@ -23,7 +23,6 @@ export class CoMobileMenuComponent {
   getItems() {
     this.coMobileMenuService.getMobileMenuItems().subscribe(
       (data: any) => {
-        console.log(data.firstList);
         this.firstItemsList = data.firstList;
         this.secondItemsList = data.secondList;
       }

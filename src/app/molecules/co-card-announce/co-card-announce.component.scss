@@ -1,0 +1,12 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-card-announce {
+    @include flexbox(flex, center, center);
+    flex-direction: column;
+    text-align: center;
+
+    &__description {
+        margin-bottom: 20px;
+        text-align: center;
+    } 
+}

@@ -6,8 +6,14 @@
     padding: 20px;
     min-height: 100vh;
     width: 80vw;
+    transform: translateX(-80vw);
+    transition: 1.5s;
 
     &__menu-user {
         padding-bottom: 30px;
+    }
+
+    &__active {
+        transform: translateX(0);
     }
 }
