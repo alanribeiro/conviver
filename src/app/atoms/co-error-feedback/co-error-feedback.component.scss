@@ -1,7 +1,8 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-error-feedback{
-    font-family: $error-feedback-font-family;
-    font-size: $error-feedback-font-size;
-    color: $error-feedback-text-color;
+  font-family: $error-feedback-font-family;
+  font-size: $error-feedback-font-size;
+  color: $error-feedback-text-color;
+  text-align: center;
 }
