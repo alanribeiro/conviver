@@ -109,6 +109,8 @@ const Routes: Routes = [{
     CoMobileMenuComponent,
     CoSelectableItemComponent,
     CoPagingButtonsComponent
+    CoSelectableItemComponent
+    CoSelectableItemComponent,
     CoAdvertisementListComponent,
     CoSectionComponent,
     CoCardComponent,
