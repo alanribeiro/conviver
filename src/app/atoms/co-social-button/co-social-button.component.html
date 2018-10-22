@@ -1,4 +1,10 @@
-<button class="co-social-button">
+<button class="co-social-button"
+        [ngClass]="{
+        'co-social-button--google': socialNetwork == 'Google',
+        'co-social-button--facebook': socialNetwork == 'Facebook',
+        'co-social-button--full-width': fullWidth,
+        'co-social-buttom-margin': margin
+      }">
   <span class="co-social-button__icon-container">
     <svg style="width:24px;height:24px" viewBox="0 0 24 24" *ngIf="socialNetwork == 'Facebook'">
         <path fill="#4267b2" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />

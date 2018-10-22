@@ -1,9 +1,12 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-input {
-  margin: $default-margin;
-  
+
   &--error {
     border: 1px solid $input-error-border-color;
+  }
+
+  &--margin {
+    margin: $default-margin;
   }
 }

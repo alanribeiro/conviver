@@ -10,7 +10,7 @@ export class CoDividerComponent {
   @Input() context:string;
 
   constructor() {
-    this.context = "default";
+    this.context = 'default';
   }
 
 }
