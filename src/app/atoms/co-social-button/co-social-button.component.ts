@@ -7,9 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CoSocialButtonComponent {
 
-  @Input() socialNetwork:string;
+  @Input() socialNetwork: string;
+  @Input() fullWidth: boolean;
+  @Input() margin: boolean;
 
   constructor() {
-    
+    this.fullWidth = false;
+    this.margin = false;
   }
 }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -57,13 +56,10 @@ import { CoCardComponent } from './atoms/co-card/co-card.component';
 import { CoCardAnnounceComponent } from './molecules/co-card-announce/co-card-announce.component';
 import { CoEstablishmentItemComponent } from './atoms/co-establishment-item/co-establishment-item.component';
 import { CoEstablishmentItemListComponent } from './molecules/co-establishment-item-list/co-establishment-item-list.component';
+import { CoLoginCardComponent } from './organisms/co-login-card/co-login-card.component';
+import { LoginComponent } from './pages/login/login.component';
 
 registerLocaleData(en);
-
-const Routes: Routes = [{
-  path: '',
-  component: StyleguideComponent
-}];
 
 @NgModule({
   declarations: [
@@ -114,7 +110,9 @@ const Routes: Routes = [{
     CoCardComponent,
     CoCardAnnounceComponent,
     CoEstablishmentItemComponent,
-    CoEstablishmentItemListComponent
+    CoEstablishmentItemListComponent,
+    CoLoginCardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -122,10 +120,9 @@ const Routes: Routes = [{
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule,
-    RouterModule.forRoot(Routes)
+    NgZorroAntdModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

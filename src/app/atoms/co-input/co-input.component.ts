@@ -7,13 +7,17 @@ import { Component, Input } from '@angular/core';
 })
 export class CoInputComponent {
 
-  @Input() type:string;
-  @Input() placeholder:string;
+  @Input() type: string;
+  @Input() placeholder: string;
   @Input() error: boolean;
+  @Input() fullWidth: boolean;
+  @Input() margin: boolean;
 
   constructor() {
     this.type = 'text';
     this.error = false;
+    this.fullWidth = false;
+    this.margin = false;
   }
 
 }

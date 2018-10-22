@@ -7,11 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class CoLogoComponent {
 
-  @Input() type:string;
-  @Input() color:string;
+  @Input() type: string;
+  @Input() color: string;
+  @Input() width: string;
 
   constructor() {
     this.type = 'horizontal';
     this.color = 'white';
+    this.width = '100';
   }
 }
