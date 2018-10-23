@@ -16,6 +16,12 @@
   background: linear-gradient($direction, $secondary-color, $primary-color);
 }
 
+@mixin menu-gradient($direction: $gradient-direction) {
+  background: $primary-color;
+  background: -webkit-linear-gradient(legacy-direction($direction), $primary-color-light, $primary-color);
+  background: linear-gradient($direction, $primary-color-light, $primary-color);
+}
+
 /* ------------------------ KEYFRAME ------------------------ */
 
 @mixin keyframe($name) {

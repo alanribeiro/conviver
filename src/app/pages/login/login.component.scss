@@ -2,24 +2,19 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .login {
+    &__card {
     width: 100vw;
     min-height: 100vh;
     background: linear-gradient(79deg, rgba(101,14,206, 0.8), rgba(136,14,206,0.8)),
         url('https://images.pexels.com/photos/874629/pexels-photo-874629.jpeg');
     background-size: cover;
     @include flexbox(flex, center, center);
-    align-content: space-around;
-    flex-wrap: wrap;
+    }
 
     &__copyright {
-        flex-basis: 100%;
         font: $font-size-small $font-regular;
-        color: $text-light-color;
+        color: $text-default-color;
         text-align: center;
         margin-top: -30px;
-
-        @include mqMaxWidth('md') {
-            display: none;
-        }
     }
 }
