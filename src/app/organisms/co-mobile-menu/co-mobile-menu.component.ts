@@ -1,5 +1,5 @@
 import { CoMobileMenuService } from './../../services/co-mobile-menu/co-mobile-menu.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'co-mobile-menu',
@@ -12,12 +12,15 @@ export class CoMobileMenuComponent implements OnInit {
   firstItemsList: any;
   secondItemsList: any;
 
-  @Input() open: boolean;
+  isOpen = true;
 
   constructor(private coMobileMenuService: CoMobileMenuService) { }
 
   ngOnInit() {
     this.getItems();
+    this.coMobileMenuService.isOpen.subscribe(isOpen => {
+      this.isOpen = isOpen;
+    });
   }
 
   getItems() {

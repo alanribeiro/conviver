@@ -1,3 +1,4 @@
+<div (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
 <co-main-header></co-main-header>
 <article class="container">
 
@@ -220,7 +221,7 @@
     <co-mobile-menu-user [photo]="'photo'" [name]="'Sebastiana Alencar'" [level]="1" [adress]="'Quixadá - Ceará, Brasil'"></co-mobile-menu-user>
     <co-section-title [title]="'co-mobile-menu'"></co-section-title>
 
-    <co-mobile-menu [open]=true></co-mobile-menu>
+    <co-mobile-menu></co-mobile-menu>
    
     <co-section-title [title]="'co-selectable-item'"></co-section-title>
     <co-selectable-item 
@@ -314,3 +315,4 @@
     <co-login-card></co-login-card>
 
 </article>
+</div>
