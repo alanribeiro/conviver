@@ -1,9 +1,5 @@
 @import '../../../assets/sass-utils/mixins.scss';
 
 .co-establishment-item-list {
-    @include flexbox(flex, center, center);
-
-    &__padding {
-        padding: 20px;
-    }
+    @include flexbox(flex, initial, center);
 }

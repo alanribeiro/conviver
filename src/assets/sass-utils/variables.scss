@@ -49,15 +49,12 @@ $colored-font-price: $primary-color;
 $radio-style-checked-color: $primary-color;
 $radio-style-checked-text-color: $white;
 $boder-social-button: $gray-70;
-$mobile-menu-background: $primary-color;
-$mobile-menu-user: $gray-FA;
-$mobile-menu-user-location: $gray-AA;
+$mobile-menu-text-color: $white;
 $badge-color: $quaternary-color;
-$selectable-item-title-color: $white;
-$selectable-item-description-color: $white;
+$selectable-item-bg-hover-color: $primary-color-light;
+$selectable-item-title-hover-color: $white;
 $selectable-item-hoverMessage-color: $white;
-$establishment-item-color: $gray-70;
-$card-color: $gray-AA;
+$establishment-item-text-color: $gray-70;
 $background-color: $gray-FA;
 $text-light-color: $gray-FA;
 
@@ -82,15 +79,18 @@ $avatar-font-family: $font-bold;
 $title-illustration-font-family: $font-bold;
 $advertisement-address-font-family: $font-bold;
 $advertisement-additional-info-font-family: $font-regular;
-$input-fontfamily: $font-regular;
+$input-font-family: $font-regular;
 $error-feedback-font-family: $font-regular;
-$mobile-menu-item-font-family: $font-bold;
+$mobile-menu-user-location-font-size: $font-regular;
 $divider-context-login-font-family: $font-regular;
+$establishment-item-font-family: $font-regular;
+$establishment-item-type-font-family: $font-bold;
 
 /* ------------------ FONT SIZES ------------------ */
 
 $font-size-big: 24px;
 $font-size-medium: 20px;
+$font-size-mx: 18px;
 $default-font-size: 16px;
 $font-size-small: 14px;
 $font-size-extra-small: 12px;
@@ -105,12 +105,18 @@ $page-subtitle-font-size: $font-size-small;
 $input-font-size: $font-size-small;
 $section-title-font-size: $font-size-extra-small;
 $menu-item-font-size: $font-size-small;
-$title-illustration-item: $font-size-small;
+$mobile-menu-item-font-size: $default-font-size;
+$title-illustration-item-font-size: $font-size-small;
+$establishment-item-font-size: $font-size-extra-small;
+$establishment-item-type-font-size: $font-size-small;
 $advertisement-address-font-size: $font-size-small;
 $advertisement-additional-info-font-size: $font-size-extra-small;
 $error-feedback-font-size: $default-font-size;
 $divider-context-login-font-size: $default-font-size;
 $selectable-item-description-font-size: $font-size-extra-small;
+$mobile-menu-user-name: $font-size-mx;
+$mobile-menu-user-location: $font-size-extra-small;
+$icon-size: $font-size-mx;
 
 /* ------------------- MARGINS -------------------- */
 

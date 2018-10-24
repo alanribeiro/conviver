@@ -2,19 +2,19 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-establishment-item {
-    @include flexbox(flex, center, center);
-    flex-direction: column;
-    color: $establishment-item-color;
+  width: 110px;
+  margin: 0 5px;
+  color: $establishment-item-text-color;
+  font-size: $establishment-item-font-size;
+  font-family: $establishment-item-font-family;
+  @include flexbox(flex, center, center, column);
 
-    &__name {
-        font: $font-size-small $title-illustration-font-family;
-    }
+  &__type {
+    font-size: $establishment-item-type-font-size;
+    font-family: $establishment-item-type-font-family;
+  }
 
-    &__description, &__distance {
-        font: $font-size-small $common-text-font-family;
-    }
-
-    &__icon {
-        padding: 20px;
-    }
+  &__icon {
+    margin-bottom: 20px;
+  }
 }

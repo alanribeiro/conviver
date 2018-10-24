@@ -38,4 +38,10 @@
       @include flexbox(flex, space-between, center);
     }
   }
+
+  &__menu-mobile {
+    &__divider-container {
+      padding: 0 30px;
+    }
+  }
 }

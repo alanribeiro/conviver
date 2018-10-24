@@ -7,10 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CoMobileMenuUserComponent {
 
-  @Input() photo: string;
-  @Input() name: string;
-  @Input() level: number;
-  @Input() adress: string;
+  @Input() user:any;
 
   constructor() { }
 

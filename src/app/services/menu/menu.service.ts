@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class MainHeaderService {
+export class MenuService {
 
   menuItensUrl:string = 'assets/js-utils/menu-items.json';
 

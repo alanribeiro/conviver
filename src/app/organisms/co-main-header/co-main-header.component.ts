@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainHeaderService } from '../../services/main-header/main-header.service';
+import { MenuService } from '../../services/menu/menu.service';
 
 @Component({
   selector: 'co-main-header',
@@ -8,20 +8,42 @@ import { MainHeaderService } from '../../services/main-header/main-header.servic
 })
 export class CoMainHeaderComponent implements OnInit {
 
-  menuItems: any;
+  user:any;
 
-  constructor(private mainHeaderService:MainHeaderService) { }
+  menuMainItems:any;
+  menuOtherItems:any;
+  menuMobileOpen:boolean;
+
+  constructor(private menuService:MenuService) {
+    this.user = {
+      name: "Lionel Messi",
+      photo: "https://i.kym-cdn.com/entries/icons/medium/000/020/776/messi.jpg",
+      genre: "male",
+      adress: "Barcelona - CA, Espanha",
+      level: 1,
+    }
+    this.menuMobileOpen = false;
+  }
 
   ngOnInit() {
     this.getMenuItems();
   }
 
   getMenuItems() {
-    this.mainHeaderService.getMenuItems().subscribe(
+    this.menuService.getMenuItems().subscribe(
       (data:any) => {
-        this.menuItems = data.items;
+        this.menuMainItems = data.mainItems;
+        this.menuOtherItems = data.otherItems;
       }
     )
+  }
+
+  openMenuMobile() {
+    this.menuMobileOpen = true;
+  }
+
+  closeMenuMobile() {
+    this.menuMobileOpen = false;
   }
 
 }

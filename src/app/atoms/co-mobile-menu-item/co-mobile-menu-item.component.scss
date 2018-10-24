@@ -2,14 +2,30 @@
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-mobile-menu-item {
-    @include flexbox(flex, space-between, center);
-    list-style: none;
-    padding: 15px;
-    color: $menu-item-color;
+  height: 60px;
+  list-style: none;
+  padding-left: 40px;
+  padding-right: 15px;
+  color: $menu-item-color;
+  outline: none;
+  @include flexbox(flex, space-between, center);
 
-    &__text {
-        font: $font-size-small $mobile-menu-item-font-family;
-        flex-grow: 1;
-        margin-left: 15px;
-    }
+  .anticon {
+    font-size: $icon-size;
+  }
+
+  &__title {
+    font-family: $menu-item-font-family;
+    font-size: $mobile-menu-item-font-size;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+
+  @media screen and (max-height: 690px) {
+    height: 50px;
+  }
+
+  @media screen and (max-height: 620px) {
+    height: 45px;
+  }
 }

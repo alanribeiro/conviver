@@ -7,11 +7,11 @@
     'co-button--full-width': fullWidth,
     'co-button--margin': margin
   }">
-  <span class="co-button__icon-container">
+  <span *ngIf="icon" class="co-button__icon-container">
     <i *ngIf="icon && type == 'secondary'" [ngClass]="'anticon anticon-' + icon"></i>
   </span>
   <span class="co-button__title">{{title}}</span>
-  <span class="co-button__icon-container">
+  <span *ngIf="icon" class="co-button__icon-container">
     <i *ngIf="icon && type != 'secondary'" [ngClass]="'anticon anticon-' + icon"></i>
   </span>
 </button>

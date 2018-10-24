@@ -1,4 +1,3 @@
-import { CoMobileMenuService } from './../../services/co-mobile-menu/co-mobile-menu.service';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
@@ -8,11 +7,6 @@ import { Component, HostListener } from '@angular/core';
 })
 export class CoMobileMenuButtonComponent {
 
-  constructor(private coMobileMenuService: CoMobileMenuService) { }
-
-  @HostListener('click')
-  click() {
-    this.coMobileMenuService.toggleMenu(true);
-  }
+  constructor() { }
 
 }

@@ -1,4 +1,3 @@
-<div (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
 <co-main-header></co-main-header>
 <article class="container">
 
@@ -19,8 +18,8 @@
   <!-- co-social-button -->
   <section>
     <co-section-title [title]="'co-social-button'"></co-section-title>
-    <co-social-button [socialNetwork]="'Google'"></co-social-button>
-    <co-social-button [socialNetwork]="'Facebook'"></co-social-button>
+    <co-social-button [socialNetwork]="'Google'" [margin]="true"></co-social-button>
+    <co-social-button [socialNetwork]="'Facebook'" [margin]="true"></co-social-button>
   </section>
 
   <!-- co-rounded-button -->
@@ -53,12 +52,60 @@
   <!-- co-selectable-item -->
   <section>
     <co-section-title [title]="'co-selectable-item'"></co-section-title>
-    <co-selectable-item 
-      [size]="'big'" 
-      [icon]="'flower'" 
-      [title]="'Vegetariano'" 
-      [hoverMessage]="'Que tal comer uma salada deliciosa no RU da UFC?'">
-    </co-selectable-item>
+    <div class="selectable-items">
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+    </div>
+    <div class="selectable-items">
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+    </div>
   </section>
 
   <!-- co-avatar -->
@@ -78,9 +125,9 @@
       <div class="forms__row__column">
         <co-section-title [title]="'co-input'"></co-section-title>
         <div>
-          <co-input [placeholder]="'Placeholder'"></co-input>
-          <co-input [placeholder]="'Type password'" [type]="'password'"></co-input>
-          <co-input [placeholder]="'Error'" [error]="true"></co-input>
+          <co-input [placeholder]="'Placeholder'" [margin]="true"></co-input>
+          <co-input [placeholder]="'Type password'" [type]="'password'" [margin]="true"></co-input>
+          <co-input [placeholder]="'Error'" [error]="true" [margin]="true"></co-input>
         </div>
       </div>
       <div class="forms__row__column">
@@ -171,11 +218,11 @@
     <co-price [colored]="true" [size]="'big'" [price]="550.00"></co-price>
   </section>
 
-  <!-- co-advertisement -->
-  <section>
-    <co-section-title [title]="'co-advertisement'"></co-section-title>
-    <co-advertisement
-      [advertisement]="{
+  <!-- co-advertisement-list -->
+  <co-section-title [title]="'co-advertisement-list'"></co-section-title>
+  <co-advertisement-list
+    [itemsList]="[
+      {
         thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
         city: 'Quixadá',
         state: 'CE',
@@ -184,76 +231,7 @@
         numberOfPlaces: 1,
         rate: 3,
         price: 550
-    }">
-    </co-advertisement>
-  </section>
-
-    <co-section-title [title]="'co-checkbox'"></co-section-title>
-    <co-checkbox [title]="'Energia'"></co-checkbox>
-
-    <co-section-title [title]="'co-error-feedback'"></co-section-title>
-    <co-error-feedback [message]="'O negoço é fazer jogo homi'" [display]="true"></co-error-feedback>
-
-    <co-social-button [socialNetwork]="'Google'"></co-social-button>
-    <co-social-button [socialNetwork]="'Facebook'"></co-social-button>
-    
-    <co-upload></co-upload>
-
-    <co-section-title [title]="'co-mobile-menu-item'"></co-section-title>
-
-    <co-mobile-menu-item [title]="'Teste'" [icon]="'message'" [notifications]=3 [url]="'teste'"></co-mobile-menu-item>
-    <co-mobile-menu-item [title]="'Teste'" [icon]="'message'" [notifications]=0></co-mobile-menu-item>
-
-    <co-section-title [title]="'co-mobile-menu-item-list'"></co-section-title>
-
-    <co-mobile-menu-item-list [items]="[
-    {
-        title: 'Item 1', icon: 'message', notifications: 2, url: 'item1'
-    }, {
-        title: 'Item 2', icon: 'message', notifications: 7, url: 'item2'
-    }]">
-    </co-mobile-menu-item-list>
-
-    <co-section-title [title]="'co-insignia'"></co-section-title>
-    <co-insignia [level]="1"></co-insignia>
-
-    <co-section-title [title]="'co-mobile-menu-user'"></co-section-title>
-    <co-mobile-menu-user [photo]="'photo'" [name]="'Sebastiana Alencar'" [level]="1" [adress]="'Quixadá - Ceará, Brasil'"></co-mobile-menu-user>
-    <co-section-title [title]="'co-mobile-menu'"></co-section-title>
-
-    <co-mobile-menu></co-mobile-menu>
-   
-    <co-section-title [title]="'co-selectable-item'"></co-section-title>
-    <co-selectable-item 
-        [size]="'big'" 
-        [icon]="'flower'" 
-        [title]="'Vegetariano'" 
-        [hoverMessage]="'Que tal comer uma salada deliciosa no RU da UFC?'">
-    </co-selectable-item>
-
-    <co-selectable-item 
-        [size]="'big'" 
-        [icon]="'flower'" 
-        [title]="'Vegetariano'" 
-        [hoverMessage]="'Que tal comer uma salada deliciosa no RU da UFC?'">
-    </co-selectable-item>
-
-    <co-selectable-item 
-        [size]="'small'" 
-        [icon]="'flower'" 
-        [title]="'Vegetariano'">
-    </co-selectable-item>
-
-    <co-selectable-item 
-        [size]="'small'" 
-        [icon]="'flower'" 
-        [title]="'Vegetariano'">
-    </co-selectable-item>
-
-    <co-section-title [title]="'co-advertisement-list'"></co-section-title>
-
-    <co-advertisement-list [itemsList]="[
-    {
+      }, {
         thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
         city: 'Quixadá',
         state: 'CE',
@@ -262,57 +240,36 @@
         numberOfPlaces: 1,
         rate: 3,
         price: 550
-    }, {
-        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
-        city: 'Quixadá',
-        state: 'CE',
-        country: 'Brasil',
-        propertyType: 'Apartamento',
-        numberOfPlaces: 1,
-        rate: 3,
-        price: 550
-    }]"></co-advertisement-list>
+      }
+    ]">
+  </co-advertisement-list>
 
-    <co-section-title [title]="'co-section'"></co-section-title>
+  <!-- co-card-annouce -->
+  <co-section-title [title]="'co-card-announce'"></co-section-title>
+  <co-card-announce
+    [icon]="'flower'"
+    [description]="'Anuncie seu imóvel e rapidamente nós econtraremos pessoas interessadas para você.'"
+    [buttonTitle]="'Anunciar um imóvel'"
+    [buttonURL]="'rumbora'">
+  </co-card-announce>
 
-    <co-section [title]="'Seção Teste'"></co-section>
-
-    <co-section-title [title]="'co-card'"></co-section-title>
-
-    <co-card></co-card>
-
-    <co-section-title [title]="'co-card-announce'"></co-section-title>
-
-    <co-card-announce
-        [icon]="'flower'"
-        [description]="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae, quo reprehenderit neque iste consequuntur eveniet quidem, voluptatem quis soluta obcaecati sunt vel consectetur aut, laboriosam accusamus voluptates ipsum magni!'"
-        [buttonTitle]="'alo'"
-        [buttonURL]="'rumbora'"></co-card-announce>
-
-    <co-section-title [title]="'co-establishment-item'"></co-section-title>
-
-    <co-establishment-item [icon]="'flower'" [establishmentName]="'Flor'" [establishmentType]="'Planta'" [establishmentDistance]="'45m'" [url]="'teste'"></co-establishment-item>
-
-    <co-section-title [title]="'co-establishment-item-list'"></co-section-title>
-
-    <co-establishment-item-list [itemsList]="[
-    {
+  <!-- co-establishment-item-list -->
+  <co-section-title [title]="'co-establishment-item-list'"></co-section-title>
+  <co-establishment-item-list
+    [itemsList]="[
+      {
         icon: 'flower',
-        establishmentType: 'Jardim',
-        establishmentName: 'Calendula',
-        establishmentDistance: '40m',
+        establishmentType: 'Supermercado',
+        establishmentName: 'São Geraldo',
+        establishmentDistance: '600m',
         url: 'string'
-    }, {
+      }, {
         icon: 'flower',
         establishmentType: 'Academia',
         establishmentName: 'Fit It',
-        establishmentDistance: '450m',
+        establishmentDistance: '1.5km',
         url: 'string'
-    }]"></co-establishment-item-list>
-
-    <co-section-title [title]="'co-login-card'"></co-section-title>
-
-    <co-login-card></co-login-card>
-
+      }
+    ]">
+  </co-establishment-item-list>
 </article>
-</div>

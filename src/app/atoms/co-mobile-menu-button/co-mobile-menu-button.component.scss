@@ -4,5 +4,6 @@
   height: 70px;
   border: none;
   background: transparent;
+  outline: none;
   @include flexbox(flex, center, center);
 }

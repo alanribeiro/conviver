@@ -9,15 +9,33 @@ section {
   &__row-1 {
     @include flexbox(flex, space-between, center);
     margin-bottom: 5px;
+
+    @include mqMaxWidth('lg') {
+      display: block;
+    }
   }
 
   &__row-2 {
     @include flexbox(flex, space-around, center);
+
+    @include mqMaxWidth('lg') {
+      display: block;
+    }
   }
+}
+
+.selectable-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .avatars {
   @include flexbox(flex, space-between, flex-start);
+
+  @include mqMaxWidth('sm') {
+    display: block;
+  }
 }
 
 .forms {
@@ -30,6 +48,18 @@ section {
       div:last-child {
         padding-right: 30px;
       }
+
+      @include mqMaxWidth('md') {
+        width: 100%;
+
+        div:last-child {
+          padding-right: 0px;
+        }
+      }
+    }
+
+    @include mqMaxWidth('md') {
+      display: block;
     }
   }
 }

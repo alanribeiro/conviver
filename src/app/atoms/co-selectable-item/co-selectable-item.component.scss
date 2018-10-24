@@ -1,64 +1,54 @@
 @import '../../../assets/sass-utils/variables.scss';
 @import '../../../assets/sass-utils/mixins.scss';
 
-.co-selectable-item{
-    margin: 5px;
-    @include flexbox(inline-flex, center, center, column);
-    cursor: pointer;
+.co-selectable-item {
+  margin: 5px;
+  @include flexbox(inline-flex, center, center, column);
+  cursor: pointer;
 
-    &:hover,
-    &:focus {
-        color: white;
-        background-color: $primary-color-light;
-        @include transition(background);
-    }
+  &__icon {
+    width: 36px;
+    margin-bottom: 15px;
+  }
 
-    &--small{
-        width: 100px;
-        height: 78.5px;
+  &__title {
+    font-family: $title-illustration-font-family;
+    font-size: $title-illustration-item-font-size;
+  }
 
-        &--active{
-            background-color: $primary-color-light;
-        }
-    }
+  &__hoverMessage {
+    max-height: 0px;
+    overflow: hidden;
+    font-family: $selectable-item-description-font-family;
+    font-size: $selectable-item-description-font-size;
+    text-align: center;
+    color: $selectable-item-hoverMessage-color;
+    line-height: 15px;
+    @include transition();
+  }
 
-    &--big{
-        width: 212.5px;
-        height: 158px;
-        
-        &__hoverMessage {
-            display: run-in;
-            font-family: $selectable-item-description-font-family;
-            font-size: $selectable-item-description-font-size;
-            text-align: center;
-            margin: 15px;
-            color: $selectable-item-hoverMessage-color;
-            
-            
-            &:hover{
-                display: inline-flex;
-                text-align: center;
-                @include transition(display);
-            }
-    
-            &--active{ 
-                display: inline-flex;
-            }
-        
-        }
+  &:hover,
+  &:focus,
+  &--active {
+    color: $selectable-item-title-hover-color;
+    background: $selectable-item-bg-hover-color;
+    @include transition();
+  }
 
-        &--active{
-            background-color: $primary-color-light;
-        }
-    }
+  &:hover &__hoverMessage {
+    max-height: 100px;
+    margin-top: 15px;
+  }
 
-    &__title{
-        font-family: $title-illustration-font-family;
-        font-size: $title-illustration-item;
+  &--small {
+    width: 100px;
+    height: 78.5px;
+  }
 
-        &--active{
-            color: $selectable-item-title-color;
-        }
-    }
+  &--big {
+    width: 200px;
+    height: 160px;
+    padding: 15px;
+  }
 }
 

@@ -1,6 +1,7 @@
 @import '../../../assets/sass-utils/mixins.scss';
 
 .co-card-announce {
+    width: 260px;
     @include flexbox(flex, center, center);
     flex-direction: column;
     text-align: center;

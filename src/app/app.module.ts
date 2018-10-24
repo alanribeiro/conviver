@@ -47,7 +47,6 @@ import { CoMobileMenuItemComponent } from './atoms/co-mobile-menu-item/co-mobile
 import { CoMobileMenuItemListComponent } from './molecules/co-mobile-menu-item-list/co-mobile-menu-item-list.component';
 import { CoInsigniaComponent } from './atoms/co-insignia/co-insignia.component';
 import { CoMobileMenuUserComponent } from './molecules/co-mobile-menu-user/co-mobile-menu-user.component';
-import { CoMobileMenuComponent } from './organisms/co-mobile-menu/co-mobile-menu.component';
 import { CoSelectableItemComponent } from './atoms/co-selectable-item/co-selectable-item.component';
 import { CoPagingButtonsComponent } from './molecules/co-paging-buttons/co-paging-buttons.component';
 import { CoAdvertisementListComponent } from './organisms/co-advertisement-list/co-advertisement-list.component';
@@ -102,7 +101,6 @@ registerLocaleData(en);
     CoMobileMenuItemListComponent,
     CoInsigniaComponent,
     CoMobileMenuUserComponent,
-    CoMobileMenuComponent,
     CoSelectableItemComponent,
     CoPagingButtonsComponent,
     CoAdvertisementListComponent,

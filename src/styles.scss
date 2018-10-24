@@ -64,14 +64,14 @@
     border: 1px solid $input-border-color;
     height: 40px;
     padding: 0 20px;
-  }
 
-  &-input:hover, &-input:focus {
-    border: 1px solid $tertiary-color;
-  }
+    &:hover, &:focus {
+      border: 1px solid $tertiary-color;
+    }
 
-  &-input::placeholder {
-    font-family: $font-regular;
+    &::placeholder {
+      font-family: $font-regular;
+    }
   }
 
   &-radio {
@@ -108,13 +108,24 @@
     }
   }
 
-  &-checkbox-input:focus+.ant-checkbox-inner{
-    border-color: $primary-color-light;
+  &-checkbox {  
+    &-input:focus+.ant-checkbox-inner{
+      border-color: $primary-color-light;
+    }
+
+    &-checked .ant-checkbox-inner {
+      background-color: $primary-color-light;
+      border-color: $primary-color-light;
+    }
   }
-  
-  &-checkbox-checked .ant-checkbox-inner {
-    background-color: $primary-color-light;
-    border-color: $primary-color-light;
+
+  &-drawer {
+    &-content {
+      @include menu-gradient;
+    }
+
+    &-body {
+      padding: 0px;
+    }
   }
-  
 }
