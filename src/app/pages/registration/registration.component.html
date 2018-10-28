@@ -1,0 +1,20 @@
+<div class="registration">
+  <div class="registration__card">
+    <co-register-card>
+      <co-stepper-dots [quantity]="5" [activeDot]="activeDot"></co-stepper-dots>
+      <co-registration-title [title]="titleList[activeDot].title" class="registration__card__title"></co-registration-title>
+        <nz-carousel class="registration__card__carousel">
+          <co-registration-name nz-carousel-content></co-registration-name> 
+          <co-registration-account nz-carousel-content></co-registration-account>
+          <co-registration-age nz-carousel-content></co-registration-age>
+          <co-registration-prefs nz-carousel-content></co-registration-prefs>
+          <co-registration-photo nz-carousel-content></co-registration-photo>
+        </nz-carousel>
+    </co-register-card>
+  </div>
+
+  <div class="registration__copyright">
+      © 2018 Conviver, todos os direitos reservados.
+  </div>
+</div>
+  

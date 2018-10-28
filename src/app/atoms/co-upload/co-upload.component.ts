@@ -7,12 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CoUploadComponent {
   fileList = [
-    {
-      uid: -1,
-      name: 'xxx.png',
-      status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
-    }
+    {}
   ];
   previewImage = '';
   previewVisible = false;

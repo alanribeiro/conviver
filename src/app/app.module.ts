@@ -60,6 +60,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 import { CoCardAnnounceListComponent } from './organisms/co-card-announce-list/co-card-announce-list.component';
+import { CoRegisterCardComponent } from './organisms/co-register-card/co-register-card.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { CoRegistrationNameComponent } from './molecules/co-registration-name/co-registration-name.component';
+import { CoRegistrationTitleComponent } from './molecules/co-registration-title/co-registration-title.component';
+import { CoRegistrationAccountComponent } from './molecules/co-registration-account/co-registration-account.component';
+import { CoRegistrationAgeComponent } from './molecules/co-registration-age/co-registration-age.component';
+import { CoRegistrationPrefsComponent } from './molecules/co-registration-prefs/co-registration-prefs.component';
+import { CoRegistrationPhotoComponent } from './molecules/co-registration-photo/co-registration-photo.component';
 
 registerLocaleData(en);
 
@@ -116,7 +124,15 @@ registerLocaleData(en);
     LoginComponent,
     MainComponent,
     MyAdsComponent,
-    CoCardAnnounceListComponent
+    CoCardAnnounceListComponent,
+    CoRegisterCardComponent,
+    RegistrationComponent,
+    CoRegistrationNameComponent,
+    CoRegistrationTitleComponent,
+    CoRegistrationAccountComponent,
+    CoRegistrationAgeComponent,
+    CoRegistrationPrefsComponent,
+    CoRegistrationPhotoComponent
   ],
   imports: [
     BrowserModule,

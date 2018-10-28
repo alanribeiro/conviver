@@ -5,6 +5,7 @@ import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'my-ads',
+        path: 'meus-anuncios',
         component: MyAdsComponent
       }
     ]
@@ -22,6 +23,9 @@ const routes: Routes = [
   }, {
     path: 'login',
     component: LoginComponent
+  }, {
+    path: 'cadastro',
+    component: RegistrationComponent
   }
 ];
 

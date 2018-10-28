@@ -3,6 +3,7 @@
 $white: #FFFFFF;
 $gray-FA: #FAFAFA;
 $gray-DD: #DDDDDD;
+$gray-CC: #CCCCCC;
 $gray-AA: #AAAAAA;
 $gray-70: #707070;
 $gray-33: #333333;
@@ -57,6 +58,7 @@ $selectable-item-hoverMessage-color: $white;
 $establishment-item-text-color: $gray-70;
 $background-color: $gray-FA;
 $text-light-color: $gray-FA;
+$registration-divider-color: $gray-CC;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -128,6 +130,7 @@ $width-breakpoints: (
   'lg': 930px,
   'md': 740px,
   'mdx': 600px,
+  // 'sm': 480px,
   'sm': 414px
 );
 

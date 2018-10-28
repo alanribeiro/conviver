@@ -1,0 +1,28 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.co-registration-name {
+  @include flexbox(flex, center, center);
+  flex-wrap: wrap;
+  height: 260px;
+  width: 100%;
+
+  & * {
+
+    &:last-child {
+      align-self: flex-end;
+    }
+  }
+
+  &__inputs {
+    @include flexbox(flex, center, center);
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 100%;
+
+    & * {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+
+}

@@ -1,7 +1,7 @@
 @import '../../../assets/sass-utils/mixins.scss';
 @import '../../../assets/sass-utils/variables.scss';
 
-.login {
+.registration {
   &__card {
   width: 100vw;
   min-height: 100vh;
@@ -9,6 +9,14 @@
       url('https://images.pexels.com/photos/874629/pexels-photo-874629.jpeg');
   background-size: cover;
   @include flexbox(flex, center, center);
+
+    &__carousel {
+      height: 280px;
+    }
+
+    &__title {
+      margin-top: -20px;
+    }
   }
 
   &__copyright {
