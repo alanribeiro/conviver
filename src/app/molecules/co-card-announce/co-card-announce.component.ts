@@ -10,7 +10,7 @@ export class CoCardAnnounceComponent {
   @Input() icon: string;
   @Input() description: string;
   @Input() buttonTitle: string;
-  @Input() buttonURL: string;
+  @Input() buttonUrl: string;
 
   constructor() { }
 

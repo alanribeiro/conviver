@@ -1,1 +1,5 @@
-<nz-rate [(ngModel)]="rate" nzAllowHalf></nz-rate>
+<nz-rate
+  [(ngModel)]="rate"
+  nzAllowHalf
+  [nzDisabled]="readOnly">
+</nz-rate>

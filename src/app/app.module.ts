@@ -57,6 +57,9 @@ import { CoEstablishmentItemComponent } from './atoms/co-establishment-item/co-e
 import { CoEstablishmentItemListComponent } from './molecules/co-establishment-item-list/co-establishment-item-list.component';
 import { CoLoginCardComponent } from './organisms/co-login-card/co-login-card.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MainComponent } from './templates/main/main.component';
+import { MyAdsComponent } from './pages/my-ads/my-ads.component';
+import { CoCardAnnounceListComponent } from './organisms/co-card-announce-list/co-card-announce-list.component';
 
 registerLocaleData(en);
 
@@ -110,7 +113,10 @@ registerLocaleData(en);
     CoEstablishmentItemComponent,
     CoEstablishmentItemListComponent,
     CoLoginCardComponent,
-    LoginComponent
+    LoginComponent,
+    MainComponent,
+    MyAdsComponent,
+    CoCardAnnounceListComponent
   ],
   imports: [
     BrowserModule,

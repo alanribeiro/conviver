@@ -3,11 +3,19 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MainComponent } from './templates/main/main.component';
+import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: StyleguideComponent
+    component: MainComponent,
+    children: [
+      {
+        path: 'my-ads',
+        component: MyAdsComponent
+      }
+    ]
   }, {
     path: 'styleguide',
     component: StyleguideComponent

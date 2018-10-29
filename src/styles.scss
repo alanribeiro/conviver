@@ -9,9 +9,9 @@
 }
 
 .container {
-  width: 910px;
+  width: 930px;
   margin: auto;
-  padding: 0px 30px;
+  padding: 70px 30px 0;
   box-sizing: border-box;
 
   @include mqMaxWidth('lg') {
@@ -19,7 +19,25 @@
   }
 
   @include mqMaxWidth('md') {
-    padding: 0px 21px;
+    padding: 70px 21px 0;
+  }
+}
+
+.co-advertisement:hover .co-advertisement-thumbnail {
+  background-size: 320px;
+}
+
+.co-card-announce-list {
+  co-card-announce:first-child {
+    .co-card-announce {
+      margin-left: 0;
+    }
+  }
+
+  co-card-announce:last-child {
+    .co-card-announce {
+      margin-right: 0;
+    }
   }
 }
 
