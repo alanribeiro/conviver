@@ -1,0 +1,9 @@
+<section class="co-card-announce-list" [ngClass]="{'co-card-announce-list--first-announce': firstAnnounce}">
+  <co-card-announce
+    *ngFor="let card of cards"
+    [icon]="card.icon"
+    [description]="card.description"
+    [buttonTitle]="card.buttonTitle"
+    [buttonUrl]="card.buttonUrl">
+  </co-card-announce>
+</section>

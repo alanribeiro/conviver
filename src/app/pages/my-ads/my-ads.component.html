@@ -1,0 +1,10 @@
+<co-page-header
+  [title]="'Meus anúncios'"
+  [subtitle]="'Anuncie um imóvel para alugar ou uma vaga na sua casa. Seus anúncios aparecerão aqui.'">
+</co-page-header>
+
+<co-title *ngIf="!myAds" [title]="'Crie o seu primeiro anúncio agora'"></co-title>
+
+<co-advertisement-list *ngIf="myAds" [itemsList]="myAds"></co-advertisement-list>
+
+<co-card-announce-list [firstAnnounce]="!myAds"></co-card-announce-list>

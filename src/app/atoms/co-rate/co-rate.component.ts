@@ -8,7 +8,10 @@ import { Component, Input } from '@angular/core';
 export class CoRateComponent {
 
   @Input() rate:number;
+  @Input() readOnly:boolean;
 
-  constructor() {}
+  constructor() {
+    this.readOnly = false;
+  }
 
 }

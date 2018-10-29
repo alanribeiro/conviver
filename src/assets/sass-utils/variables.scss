@@ -125,10 +125,19 @@ $default-margin: 7.5px;
 /* ----------------- BREAKPOINTS ------------------ */
 
 $width-breakpoints: (
-  'lg': 910px,
+  'lg': 930px,
   'md': 740px,
+  'mdx': 600px,
   'sm': 414px
 );
+
+/* ------------------ Z-INDEXES ------------------- */
+
+$z-indexes: (
+  main-header
+);
+
+
 
 /* -------------------- OTHERS -------------------- */
 

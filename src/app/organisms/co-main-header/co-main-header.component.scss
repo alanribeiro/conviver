@@ -3,10 +3,15 @@
 
 .co-main-header {
   height: 70px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
   @include default-gradient(30deg);
+  z-index: z('main-header');
 
   &__container {
     height: 100%;
+    padding: 0 30px;
     @include flexbox(flex, space-between, center);
 
     &__mobile-menu-button,
@@ -36,6 +41,7 @@
 
     @include mqMaxWidth('md') {
       @include flexbox(flex, space-between, center);
+      padding: 0 21px;
     }
   }
 
