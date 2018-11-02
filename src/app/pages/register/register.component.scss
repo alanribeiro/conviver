@@ -44,6 +44,10 @@
         }
       }
     }
+
+    @include mqMaxWidth('mdx') {
+      width: calc(100% - 30px);
+    }
   }
 
   @include mqMaxWidth('mdx') {

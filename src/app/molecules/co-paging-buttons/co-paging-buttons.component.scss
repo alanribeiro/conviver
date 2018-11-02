@@ -13,5 +13,10 @@
 
   &__next-button {
     width: 200px;
+
+    @include mqMaxWidth('sm') {
+      width: auto;
+      flex-grow: 1;
+    }
   }
 }
