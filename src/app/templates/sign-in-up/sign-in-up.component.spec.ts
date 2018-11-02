@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoRegistrationNameComponent } from './co-registration-name.component';
+import { SignInUpComponent } from './sign-in-up.component';
 
-describe('CoRegistrationNameComponent', () => {
-  let component: CoRegistrationNameComponent;
-  let fixture: ComponentFixture<CoRegistrationNameComponent>;
+describe('SignInUpComponent', () => {
+  let component: SignInUpComponent;
+  let fixture: ComponentFixture<SignInUpComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoRegistrationNameComponent ]
+      declarations: [ SignInUpComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoRegistrationNameComponent);
+    fixture = TestBed.createComponent(SignInUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -67,10 +67,10 @@
   &--margin {
     margin: $default-margin;
   }
-}
 
-@include keyframe("animacao") {
-  0% {
-    
+  @include mqMaxWidth('sm') {
+    height: 50px;
+    border-radius: $default-mobile-border-radius;
+    font-size: $button-mobile-font-size;
   }
 }

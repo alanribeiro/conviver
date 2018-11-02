@@ -1,0 +1,25 @@
+<section class="register">
+  <div class="register__logo">
+    <co-logo [type]="'vertical'" [color]="'default'" [width]="'90'"></co-logo>
+  </div>
+
+  <div class="register__stepper-dots">
+    <co-stepper-dots [quantity]="5" [activeDot]="0"></co-stepper-dots>
+  </div>
+
+  <div class="register__carousel">
+    <div class="register__carousel__item-content">
+      <co-register-name [wrongFields]="wrongFields" (validate)="setSectionOne($event)"></co-register-name>
+    </div>
+  </div>
+
+  <co-error-feedback [message]="errorFeedbackMessage" [display]="errorFeedbackDisplay"></co-error-feedback>
+
+  <footer class="register__actions">
+    <co-paging-buttons [back]="false" [next]="currentSectionValidated" [done]="false" (click)="nextSection()"></co-paging-buttons>
+
+    <div class="register__actions__login">
+      Já possui uma conta? <a routerLink="/sign/in">Entre</a>
+    </div>
+  </footer>
+</section>

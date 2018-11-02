@@ -7,7 +7,6 @@
     text-align: center;
     color: $title-color;
     line-height: $title-line-height;
-    margin: 30px 0;
     @include flexbox(flex, initial, center, column);
 
     &__divider {

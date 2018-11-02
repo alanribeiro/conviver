@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-input',
@@ -13,11 +13,19 @@ export class CoInputComponent {
   @Input() fullWidth: boolean;
   @Input() margin: boolean;
 
+  @Output() valueChange:EventEmitter<any> = new EventEmitter();
+
+  value:string;
+
   constructor() {
     this.type = 'text';
     this.error = false;
     this.fullWidth = false;
     this.margin = false;
+  }
+
+  sendValue() {
+    this.valueChange.emit(this.value);
   }
 
 }

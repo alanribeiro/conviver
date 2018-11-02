@@ -1,3 +1,4 @@
+@import '../../../assets/sass-utils/mixins.scss';
 @import '../../../assets/sass-utils/variables.scss';
 
 .co-input {
@@ -8,5 +9,10 @@
 
   &--margin {
     margin: $default-margin;
+  }
+
+  @include mqMaxWidth('sm') {
+    height: 50px;
+    border-radius: $default-mobile-border-radius;
   }
 }

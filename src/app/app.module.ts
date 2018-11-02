@@ -60,14 +60,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 import { CoCardAnnounceListComponent } from './organisms/co-card-announce-list/co-card-announce-list.component';
-import { CoRegisterCardComponent } from './organisms/co-register-card/co-register-card.component';
-import { RegistrationComponent } from './pages/registration/registration.component';
-import { CoRegistrationNameComponent } from './molecules/co-registration-name/co-registration-name.component';
-import { CoRegistrationTitleComponent } from './molecules/co-registration-title/co-registration-title.component';
-import { CoRegistrationAccountComponent } from './molecules/co-registration-account/co-registration-account.component';
-import { CoRegistrationAgeComponent } from './molecules/co-registration-age/co-registration-age.component';
-import { CoRegistrationPrefsComponent } from './molecules/co-registration-prefs/co-registration-prefs.component';
-import { CoRegistrationPhotoComponent } from './molecules/co-registration-photo/co-registration-photo.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { CoRegisterNameComponent } from './organisms/co-register-name/co-register-name.component';
+import { CoRegistrationTitleComponent } from './organisms/co-registration-title/co-registration-title.component';
+import { CoRegistrationAccountComponent } from './organisms/co-registration-account/co-registration-account.component';
+import { CoRegistrationAgeComponent } from './organisms/co-registration-age/co-registration-age.component';
+import { CoRegistrationPrefsComponent } from './organisms/co-registration-prefs/co-registration-prefs.component';
+import { CoRegistrationPhotoComponent } from './organisms/co-registration-photo/co-registration-photo.component';
+import { SignInUpComponent } from './templates/sign-in-up/sign-in-up.component';
 
 registerLocaleData(en);
 
@@ -125,14 +125,14 @@ registerLocaleData(en);
     MainComponent,
     MyAdsComponent,
     CoCardAnnounceListComponent,
-    CoRegisterCardComponent,
-    RegistrationComponent,
-    CoRegistrationNameComponent,
+    RegisterComponent,
+    CoRegisterNameComponent,
     CoRegistrationTitleComponent,
     CoRegistrationAccountComponent,
     CoRegistrationAgeComponent,
     CoRegistrationPrefsComponent,
-    CoRegistrationPhotoComponent
+    CoRegistrationPhotoComponent,
+    SignInUpComponent
   ],
   imports: [
     BrowserModule,

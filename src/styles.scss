@@ -41,6 +41,18 @@
   }
 }
 
+@include keyframe(card-sign-appear) {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /* ------------------ NG-ZORRO CLASS OVERRIDE ------------------ */
 
 .ant {
@@ -145,5 +157,9 @@
     &-body {
       padding: 0px;
     }
+  }
+
+  &-divider-horizontal.ant-divider-with-text {
+    margin: 20px 0;
   }
 }

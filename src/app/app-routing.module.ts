@@ -5,7 +5,8 @@ import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
-import { RegistrationComponent } from './pages/registration/registration.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { SignInUpComponent } from './templates/sign-in-up/sign-in-up.component';
 
 const routes: Routes = [
   {
@@ -18,14 +19,24 @@ const routes: Routes = [
       }
     ]
   }, {
+    path: 'sign',
+    component: SignInUpComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'in',
+        pathMatch: "full"
+      }, {
+        path: 'in',
+        component: LoginComponent
+      }, {
+        path: 'up',
+        component: RegisterComponent
+      }
+    ]
+  }, {
     path: 'styleguide',
     component: StyleguideComponent
-  }, {
-    path: 'login',
-    component: LoginComponent
-  }, {
-    path: 'cadastro',
-    component: RegistrationComponent
   }
 ];
 

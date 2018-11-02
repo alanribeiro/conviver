@@ -3,4 +3,15 @@
 
 .co-paging-buttons {
   @include flexbox(flex, center, center);
+
+  &__back-button {
+    &--margin {
+      margin-left: -7.5px;
+      margin-right: 7.5px;
+    }
+  }
+
+  &__next-button {
+    width: 200px;
+  }
 }

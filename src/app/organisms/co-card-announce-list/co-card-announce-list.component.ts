@@ -22,13 +22,13 @@ export class CoCardAnnounceListComponent {
       {
         icon: 'house',
         description: 'Anuncie seu imóvel e rapidamente nós econtraremos pessoas interessadas para você.',
-        buttonTitle: 'Anúnciar um imóvel',
+        buttonTitle: 'Anunciar um imóvel',
         buttonUrl: ''
       },
       {
         icon: 'man-and-girl',
         description: 'Encontre pessoas para morar com você e dividir as despesas. Anuncie agora uma vaga na sua casa.',
-        buttonTitle: 'Anúnciar uma vaga',
+        buttonTitle: 'Anunciar uma vaga',
         buttonUrl: ''
       }
     ]

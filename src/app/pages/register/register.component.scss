@@ -1,0 +1,56 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.register {
+  height: 615px;
+  width: 550px;
+  padding: 30px;
+  background-color: $sign-card-bg-color;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  @include animation(card-sign-appear, 1s, 0, initial, ease);
+
+  &__logo {
+    @include flexbox(flex, center, initial);
+    margin-bottom: 30px;
+  }
+
+  &__stepper-dots {
+    margin-bottom: 30px;
+  }
+
+  &__actions {
+    width: calc(100% - 60px);
+    position: absolute;
+    bottom: 30px;
+
+    &__login {
+      font-family: $common-text-font-family;
+      font-size: $sign-card-link;
+      color: $text-default-color;
+      text-align: center;
+      margin-top: 22.5px;
+  
+      & a {
+        text-decoration: none;
+        color: $link-color;
+        text-transform: uppercase;
+        font-weight: bold;
+  
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+
+  @include mqMaxWidth('mdx') {
+    padding: 30px 15px;
+    box-shadow: none;
+    border-radius: 0px;
+    width: 100vw;
+    min-height: 100vh;
+  }
+}

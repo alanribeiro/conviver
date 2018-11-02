@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoRegisterCardComponent } from './co-register-card.component';
+import { CoRegisterNameComponent } from './co-register-name.component';
 
-describe('CoRegisterCardComponent', () => {
-  let component: CoRegisterCardComponent;
-  let fixture: ComponentFixture<CoRegisterCardComponent>;
+describe('CoRegisterNameComponent', () => {
+  let component: CoRegisterNameComponent;
+  let fixture: ComponentFixture<CoRegisterNameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoRegisterCardComponent ]
+      declarations: [ CoRegisterNameComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoRegisterCardComponent);
+    fixture = TestBed.createComponent(CoRegisterNameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
