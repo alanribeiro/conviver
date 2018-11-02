@@ -1,0 +1,54 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-selectable-item {
+  margin: 5px;
+  @include flexbox(inline-flex, center, center, column);
+  cursor: pointer;
+
+  &__icon {
+    width: 36px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: $title-illustration-font-family;
+    font-size: $title-illustration-item-font-size;
+  }
+
+  &__hoverMessage {
+    max-height: 0px;
+    overflow: hidden;
+    font-family: $selectable-item-description-font-family;
+    font-size: $selectable-item-description-font-size;
+    text-align: center;
+    color: $selectable-item-hoverMessage-color;
+    line-height: 15px;
+    @include transition();
+  }
+
+  &:hover,
+  &:focus,
+  &--active {
+    color: $selectable-item-title-hover-color;
+    background: $selectable-item-bg-hover-color;
+    @include transition();
+  }
+
+  &:hover &__hoverMessage {
+    max-height: 100px;
+    margin-top: 15px;
+  }
+
+  &--small {
+    width: 100px;
+    height: 78.5px;
+  }
+
+  &--big {
+    width: 200px;
+    height: 160px;
+    padding: 15px;
+  }
+}
+

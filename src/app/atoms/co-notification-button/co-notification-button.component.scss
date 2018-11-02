@@ -1,8 +1,0 @@
-@import '../../../assets/sass-utils/mixins.scss';
-
-.co-notification-button {
-  height: 70px;
-  border: none;
-  background: transparent;
-  @include flexbox(flex, center, center);
-}

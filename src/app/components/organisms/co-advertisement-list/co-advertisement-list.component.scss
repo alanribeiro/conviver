@@ -1,0 +1,20 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement-list {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    grid-gap: 30px;
+    
+    @include mqMaxWidth('lg') {
+        grid-template-columns: repeat(2, 260px);
+    }
+
+    @include mqMaxWidth('mdx') {
+        grid-template-columns: repeat(1, 260px);
+    }
+
+    @include mqMaxWidth('sm') {
+        grid-template-columns: repeat(1, 100%);
+    }
+}

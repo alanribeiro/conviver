@@ -1,0 +1,14 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-card-announce-list {
+  @include flexbox(flex, flex-start, initial);
+  flex-wrap: wrap;
+
+  &--first-announce {
+    @include flexbox(flex, center, initial);
+  }
+
+  @include mqMaxWidth('mdx') {
+    display: block;
+  }
+}

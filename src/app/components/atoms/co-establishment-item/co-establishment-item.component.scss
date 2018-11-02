@@ -1,0 +1,20 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-establishment-item {
+  width: 110px;
+  margin: 0 5px;
+  color: $establishment-item-text-color;
+  font-size: $establishment-item-font-size;
+  font-family: $establishment-item-font-family;
+  @include flexbox(flex, center, center, column);
+
+  &__type {
+    font-size: $establishment-item-type-font-size;
+    font-family: $establishment-item-type-font-family;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+}

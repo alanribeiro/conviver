@@ -1,0 +1,20 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-card-announce {
+    width: 260px;
+    @include flexbox(flex, center, center, column);
+    text-align: center;
+    margin: 30px 15px;
+
+    &__description {
+        margin-bottom: 20px;
+    }
+
+    @include mqMaxWidth('mdx') {
+        margin: 30px 0;
+    }
+
+    @include mqMaxWidth('sm') {
+        width: 100%;
+    }
+}

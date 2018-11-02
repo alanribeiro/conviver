@@ -1,0 +1,9 @@
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-menu-item {
+  list-style: none;
+  font-family: $menu-item-font-family;
+  font-size: $menu-item-font-size;
+  color: $menu-item-color;
+  padding: 0 20px;
+}

@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MainComponent } from './templates/main/main.component';
+import { MainComponent } from './components/templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { SignInUpComponent } from './templates/sign-in-up/sign-in-up.component';
+import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
 
 const routes: Routes = [
   {

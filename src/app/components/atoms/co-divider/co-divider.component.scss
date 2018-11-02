@@ -1,0 +1,13 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-divider-context-login {
+    width: 30px;
+    height: 30px;
+    border: solid 1px $divider-color;
+    border-radius: 50%;
+    font-size: $divider-context-login-font-size;
+    font-family: $divider-context-login-font-family;
+    color: $divider-context-login-text-color;
+    @include flexbox(flex, center, center);    
+}

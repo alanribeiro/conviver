@@ -1,0 +1,5 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-establishment-item-list {
+    @include flexbox(flex, initial, center);
+}
