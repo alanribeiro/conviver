@@ -49,7 +49,9 @@ export class RegisterComponent implements OnInit {
   }
 
   setSectionFive(value) {
-    this.registerService.user.setPhoto(value.photo.thumbUrl);
+    if(value.photo !== undefined) {
+      this.registerService.user.setPhoto(value.photo.thumbUrl);
+    }
     this.registerService.user.setDescription(value.description);
     this.setCurrentSectionValidated(value.validate);
   }
