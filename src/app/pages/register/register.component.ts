@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
+import { Component } from '@angular/core';
+import { RegisterService } from 'src/app/services/register/register.service';
 
 @Component({
   selector: 'register',
@@ -8,25 +8,25 @@ import { User } from 'src/app/models/user';
 })
 export class RegisterComponent {
 
-  user: User;
-
+  currentSection:number;
   currentSectionValidated:boolean;
-  errorFeedbackMessage:string;
-  errorFeedbackDisplay:boolean;
-  wrongFields:Array<string>;
+  backAvaliable:boolean;
 
-  constructor() {
+  constructor(private registerService:RegisterService) {
+    this.currentSection = 1;
     this.currentSectionValidated = false;
-    this.errorFeedbackMessage = "Todos os campos devem ser preenchidos";
-    this.errorFeedbackDisplay = false;
-    this.wrongFields = [];
-
-    this.user = new User('gerar-um-id-automatico-aqui', '', '');
+    this.backAvaliable = false;
   }
 
   setSectionOne(value) {
-    this.user.setFirstName(value.firstName);
-    this.user.setLastName(value.lastName);
+    this.registerService.user.setFirstName(value.firstName);
+    this.registerService.user.setLastName(value.lastName);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionTwo(value) {
+    this.registerService.user.setEmail(value.email);
+    this.registerService.user.setPassword(value.password);
     this.setCurrentSectionValidated(value.validate);
   }
 
@@ -35,30 +35,19 @@ export class RegisterComponent {
   }
 
   nextSection() {
-    if(!this.currentSectionValidated) {
-      this.errorFeedbackDisplay = true;
-
-      if(this.user.getFirstName() == undefined || this.user.getFirstName() == "") {
-        this.wrongFields.push('firstName');        
-      }
-      else if(this.wrongFields.includes('firstName')) {
-        let index = this.wrongFields.indexOf('firstName');
-        this.wrongFields.splice(index, 1);
-      }
-    
-      if(this.user.getLastName() == undefined || this.user.getLastName() == "") {
-        this.wrongFields.push('lastName');
-      }
-      else if(this.wrongFields.includes('lastName')) {
-        let index = this.wrongFields.indexOf('lastName');
-        this.wrongFields.splice(index, 1);
-      }
+    if(this.currentSectionValidated) {
+      this.currentSection ++;
+      this.backAvaliable = true;
+      this.currentSectionValidated = false;
     }
-    else {
-      this.wrongFields = [];
-      this.errorFeedbackDisplay = false;
-    }
+  }
 
+  previousSection() {
+    this.currentSection --;
+    this.currentSectionValidated = true;
+    if(this.currentSection == 1) {
+      this.backAvaliable = false;
+    }
   }
 
 }

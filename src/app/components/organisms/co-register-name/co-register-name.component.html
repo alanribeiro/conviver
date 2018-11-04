@@ -6,11 +6,13 @@
 
   <div class="co-register-name__inputs">
     <div class="co-register-name__inputs__input-container">
-      <co-input [placeholder]="'Nome'" [type]="'text'" [error]="wrongFields.includes('firstName')" (valueChange)="setFirstName($event)"></co-input>
+      <co-input [placeholder]="'Nome'" [type]="'text'" [error]="firstName == ''" (valueChange)="setFirstName($event)"></co-input>
     </div>
     <div class="co-register-name__inputs__input-container">
-      <co-input [placeholder]="'Sobrenome'" [type]="'text'" [error]="wrongFields.includes('lastName')" (valueChange)="setLastName($event)"></co-input>
+      <co-input [placeholder]="'Sobrenome'" [type]="'text'" [error]="lastName == ''" (valueChange)="setLastName($event)"></co-input>
     </div>
   </div>
+
+  <co-error-feedback [message]="'Todos os campos devem ser preenchidos'" [display]="firstName == '' || lastName == ''"></co-error-feedback>
 
 </div>

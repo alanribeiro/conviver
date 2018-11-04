@@ -1,20 +1,32 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'co-register-name',
   templateUrl: './co-register-name.component.html',
   styleUrls: ['./co-register-name.component.scss']
 })
-export class CoRegisterNameComponent {
+export class CoRegisterNameComponent implements OnChanges {
 
-  @Input() wrongFields:Array<string>;
+  @Input() error:boolean;
   @Output() validate:EventEmitter<any> = new EventEmitter();
 
   firstName:string;
   lastName:string;
 
   constructor() {
-    // this.wrongFields = [];
+    this.error = false;
+  }
+
+  ngOnChanges() {
+    if(this.error) {
+      if(this.firstName == undefined) {
+        this.firstName = "";
+      }
+
+      if(this.lastName == undefined) {
+        this.lastName = "";
+      }
+    }
   }
 
   setFirstName(value:string) {
@@ -33,10 +45,12 @@ export class CoRegisterNameComponent {
       firstName: this.firstName,
       lastName: this.lastName
     }
-    if(this.firstName == undefined || this.firstName == "" || this.lastName == undefined || this.lastName == "") {
+
+    if(this.firstName == "" || this.firstName == undefined || this.lastName == "" || this.lastName == undefined) {
       this.validate.emit(data);
       return;
     }
+
     data.validate = true;
     this.validate.emit(data);
   }

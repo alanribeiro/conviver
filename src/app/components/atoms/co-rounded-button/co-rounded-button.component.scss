@@ -9,7 +9,6 @@
   color: $rounded-button-color;
   font-weight: bold;
   border-radius: 50%;
-  margin: $default-margin;
   outline: none;
   cursor: pointer;
   @include flexbox(inline-flex, center, center);

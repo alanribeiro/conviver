@@ -1,13 +1,14 @@
 <div class="co-paging-buttons">
-  <div class="co-paging-buttons__back-button" [ngClass]="{'co-paging-buttons__back-button--margin': back}">
-    <co-rounded-button *ngIf="back" [icon]="'arrow-left'"></co-rounded-button>
+  <div *ngIf="back" class="co-paging-buttons__back-button" [ngClass]="{'co-paging-buttons__back-button--margin': back}">
+    <co-rounded-button [icon]="'arrow-left'" (click)="previousSection()"></co-rounded-button>
   </div>
-  <div class="co-paging-buttons__next-button">
+  <div class="co-paging-buttons__next-button" [ngClass]="{'co-paging-buttons__next-button--animation': back}">
     <co-button
       [title]="done ? 'Concluir' : 'Avançar'"
       [icon]="done ? null : 'arrow-right'"
       [type]="next ? 'primary' : 'disabled'"
-      [fullWidth]="true">
+      [fullWidth]="true"
+      (click)="nextSection()">
     </co-button>
   </div>
 </div>
