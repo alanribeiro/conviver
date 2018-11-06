@@ -64,7 +64,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { CoRegisterNameComponent } from './components/organisms/co-register-name/co-register-name.component';
 import { CoRegistrationTitleComponent } from './components/organisms/co-registration-title/co-registration-title.component';
 import { CoRegisterAccountComponent } from './components/organisms/co-register-account/co-register-account.component';
-import { CoRegistrationAgeComponent } from './components/organisms/co-registration-age/co-registration-age.component';
+import { CoRegisterAgeComponent } from './components/organisms/co-register-age/co-register-age.component';
 import { CoRegistrationPrefsComponent } from './components/organisms/co-registration-prefs/co-registration-prefs.component';
 import { CoRegistrationPhotoComponent } from './components/organisms/co-registration-photo/co-registration-photo.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
@@ -129,7 +129,7 @@ registerLocaleData(en);
     CoRegisterNameComponent,
     CoRegistrationTitleComponent,
     CoRegisterAccountComponent,
-    CoRegistrationAgeComponent,
+    CoRegisterAgeComponent,
     CoRegistrationPrefsComponent,
     CoRegistrationPhotoComponent,
     SignInUpComponent

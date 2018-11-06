@@ -10,13 +10,17 @@
   <div class="register__carousel">
     <div class="register__carousel__slider"
       [ngClass]="{
-        'register__carousel__slider--section-2': currentSection == 2
+        'register__carousel__slider--section-2': currentSection == 2,
+        'register__carousel__slider--section-3': currentSection == 3
       }">
       <div class="register__carousel__slider__item-content">
         <co-register-name (validate)="setSectionOne($event)"></co-register-name>
       </div>
       <div class="register__carousel__slider__item-content">
         <co-register-account (validate)="setSectionTwo($event)"></co-register-account>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-age (validate)="setSectionThree($event)"></co-register-age>
       </div>
     </div>
   </div>

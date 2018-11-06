@@ -30,6 +30,12 @@ export class RegisterComponent {
     this.setCurrentSectionValidated(value.validate);
   }
 
+  setSectionThree(value) {
+    this.registerService.user.setAge(value.age);
+    this.registerService.user.setGenre(value.genre);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
   setCurrentSectionValidated(value:boolean) {
     this.currentSectionValidated = value;
   }

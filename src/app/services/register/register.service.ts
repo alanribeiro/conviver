@@ -9,6 +9,6 @@ export class RegisterService {
   user:User;
 
   constructor() {
-    this.user = new User('gerar-um-id-automatico-aqui', '', '', '', '');
+    this.user = new User('gerar-um-id-automatico-aqui', '', '', '', '', 0, '');
   }
 }

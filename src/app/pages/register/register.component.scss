@@ -38,12 +38,12 @@
     overflow-x: hidden;
 
     &__slider {
-      width: 200%;
+      width: 300%;
       @include flexbox(flex, initial, initial);
       @include transition(transform, $default-animation-duration, ease);
 
       &__item-content {
-        width: 50%;
+        width: calc(100% / 3);
         padding-right: 30px;
 
         @include mqMaxWidth('mdx') {
@@ -52,7 +52,11 @@
       }
 
       &--section-2 {
-        transform: translateX(-50%);
+        transform: translateX(calc(-100% / 3));
+      }
+
+      &--section-3 {
+        transform: translateX(calc(-200% / 3));
       }
     }
   }

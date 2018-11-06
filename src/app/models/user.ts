@@ -4,7 +4,9 @@ export class User {
     private firstName:string,
     private lastName:string,
     private email:string,
-    private password:string
+    private password:string,
+    private age:number,
+    private genre:string
   ) {}
   
   getId():string {
@@ -41,5 +43,21 @@ export class User {
 
   setPassword(password:string):void {
     this.password = password;
+  }
+
+  getAge():number {
+    return this.age;
+  }
+
+  setAge(age:number):void {
+    this.age = age;
+  }
+
+  getGenre():string {
+    return this.genre;
+  }
+
+  setGenre(genre:string):void {
+    this.genre = genre;
   }
 }

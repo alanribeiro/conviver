@@ -10,6 +10,10 @@
     &--margin {
       margin-left: -15px;
       margin-right: 15px;
+
+      @include mqMaxWidth('sm') {
+        margin-left: 0;
+      }
     }
   }
 

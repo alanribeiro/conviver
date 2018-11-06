@@ -96,7 +96,8 @@
     padding: 0 20px;
 
     &:hover, &:focus {
-      border: 1px solid $tertiary-color;
+      border: 1px solid $primary-color-light;
+      box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
     }
 
     &::placeholder {
@@ -106,34 +107,52 @@
 
   &-radio {
     &-button-wrapper {
+      flex-grow: 1;
       height: 40px;
       line-height: 38px;
       border: 1px solid $input-border-color;
+      @include flexbox(flex, center, center);
 
       &:first-child {
         padding-left: 20px;
         border-radius: $default-border-radius 0 0 $default-border-radius;
+
+        @include mqMaxWidth('sm') {
+          border-radius: $default-mobile-border-radius 0 0 $default-mobile-border-radius;
+        }
       }
 
       &:last-child {
         padding-right: 20px;
         border-radius: 0 $default-border-radius $default-border-radius 0;
+
+        @include mqMaxWidth('sm') {
+          border-radius: 0 $default-mobile-border-radius $default-mobile-border-radius 0;
+        }
       }
 
       &:hover {
         color: $radio-style-checked-color;
       }
+
+      @include mqMaxWidth('sm') {
+        height: 50px;
+      }
     }
 
-    &-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-      color: $radio-style-checked-text-color;
-      border-color: $radio-style-checked-color;
-      background-color: $radio-style-checked-color;
+    &-group {
+      display: flex;
 
-      &:hover {
+      &-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
         color: $radio-style-checked-text-color;
         border-color: $radio-style-checked-color;
         background-color: $radio-style-checked-color;
+
+        &:hover {
+          color: $radio-style-checked-text-color;
+          border-color: $radio-style-checked-color;
+          background-color: $radio-style-checked-color;
+        }
       }
     }
   }
