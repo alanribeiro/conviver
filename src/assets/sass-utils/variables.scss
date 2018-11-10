@@ -3,6 +3,7 @@
 $white: #FFFFFF;
 $gray-FA: #FAFAFA;
 $gray-DD: #DDDDDD;
+$gray-CC: #CCCCCC;
 $gray-AA: #AAAAAA;
 $gray-70: #707070;
 $gray-33: #333333;
@@ -55,8 +56,10 @@ $selectable-item-bg-hover-color: $primary-color-light;
 $selectable-item-title-hover-color: $white;
 $selectable-item-hoverMessage-color: $white;
 $establishment-item-text-color: $gray-70;
-$background-color: $gray-FA;
-$text-light-color: $gray-FA;
+$sign-in-up-footer-text-color: $white;
+$registration-divider-color: $gray-CC;
+$sign-card-bg-color: $gray-FA;
+$recover-password-color: $primary-color;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -85,6 +88,7 @@ $mobile-menu-user-location-font-size: $font-regular;
 $divider-context-login-font-family: $font-regular;
 $establishment-item-font-family: $font-regular;
 $establishment-item-type-font-family: $font-bold;
+$sign-in-up-footer-font-family: $font-regular;
 
 /* ------------------ FONT SIZES ------------------ */
 
@@ -98,6 +102,7 @@ $font-size-extra-small: 12px;
 $page-title-font-size: $font-size-big;
 $title-font-size: $font-size-medium;
 $button-title-font-size: $default-font-size;
+$button-mobile-font-size: $font-size-mx;
 $common-text-font-size: $default-font-size;
 $avatar-font-size: $font-size-small;
 $error-feedback-font-size: $font-size-small;
@@ -111,12 +116,14 @@ $establishment-item-font-size: $font-size-extra-small;
 $establishment-item-type-font-size: $font-size-small;
 $advertisement-address-font-size: $font-size-small;
 $advertisement-additional-info-font-size: $font-size-extra-small;
-$error-feedback-font-size: $default-font-size;
 $divider-context-login-font-size: $default-font-size;
 $selectable-item-description-font-size: $font-size-extra-small;
 $mobile-menu-user-name: $font-size-mx;
 $mobile-menu-user-location: $font-size-extra-small;
 $icon-size: $font-size-mx;
+$sign-card-link: $font-size-small;
+$sign-in-up-footer-font-size: $font-size-small;
+$recover-password-font-size: $font-size-extra-small;
 
 /* ------------------- MARGINS -------------------- */
 
@@ -128,20 +135,22 @@ $width-breakpoints: (
   'lg': 930px,
   'md': 740px,
   'mdx': 600px,
-  'sm': 414px
+  'mdxx': 470px,
+  'sm': 414px,
+  'smx': 370px
 );
 
 /* ------------------ Z-INDEXES ------------------- */
 
 $z-indexes: (
-  main-header
+  main-header,
+  sign-card
 );
-
-
 
 /* -------------------- OTHERS -------------------- */
 
 $gradient-direction: -30deg;
 $default-border-radius: 20px;
+$default-mobile-border-radius: 25px;
 $default-animation-duration: 0.2s;
 $title-line-height: 1.15;

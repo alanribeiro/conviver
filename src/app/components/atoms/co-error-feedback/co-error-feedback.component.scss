@@ -1,0 +1,20 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-error-feedback{
+  font-family: $error-feedback-font-family;
+  font-size: $error-feedback-font-size;
+  color: $error-feedback-text-color;
+  text-align: center;
+  @include animation(error-feedback-appear, $default-animation-duration, 0, initial, linear);
+}
+
+@include keyframe(error-feedback-appear) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

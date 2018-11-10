@@ -1,0 +1,25 @@
+<div class="co-register-age">
+
+  <div class="co-register-age__title">
+    <co-title [title]="'Essas informações são muito importantes para encontrar a pessoa ideal para morar com você'"></co-title>
+  </div>
+
+  <div class="co-register-age__inputs">
+    <div class="co-register-age__inputs__input-container">
+      <co-input [placeholder]="'Sua idade'" [type]="'number'" [error]="age == ''" (valueChange)="setAge($event)"></co-input>
+    </div>
+    <div class="co-register-age__inputs__input-container">
+      <co-radio-style
+        [options]="[
+          {label: 'Masculino', value: 'M'},
+          {label: 'Feminino', value: 'F'},
+          {label: 'Outro', value: 'O'}
+        ]"
+        (valueChange)="setGenre($event)">
+      </co-radio-style>
+    </div>
+  </div>
+
+  <co-error-feedback [message]="'Todos os campos devem ser preenchidos'" [display]="age == ''"></co-error-feedback>
+
+</div>

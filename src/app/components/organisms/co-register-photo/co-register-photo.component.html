@@ -1,0 +1,22 @@
+<div class="co-register-photo">
+
+    <div class="co-register-photo__title">
+      <co-title [title]="'Último passo, adicione uma foto sua e uma pequena descrição sobre você'"></co-title>
+    </div>
+
+    <div class="co-register-photo__form">
+      <co-upload (fileChange)="setPhoto($event)"></co-upload>
+      <div class="co-register-photo__form__textarea">
+        <co-textarea
+          [placeholder]="'Fale um pouco sobre você!'"
+          [rows]="4"
+          [fullWidth]="'true'"
+          [error]="description == ''"
+          (valueChange)="setDescription($event)">
+        </co-textarea>
+      </div>
+    </div>
+
+    <co-error-feedback [message]="'Todos os campos devem ser preenchidos'" [display]="description == ''"></co-error-feedback>
+
+</div>

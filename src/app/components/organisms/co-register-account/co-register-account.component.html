@@ -1,0 +1,23 @@
+<div class="co-register-account">
+  
+  <div class="co-register-account__title">
+    <co-title [title]="'Essas serão suas crendencias de acesso, lembre-se de criar uma senha forte. '"></co-title>
+  </div>
+
+  <div class="co-register-account__inputs">
+    <div class="co-register-account__inputs__input-container">
+      <co-input [placeholder]="'E-mail'" [type]="'text'" [error]="email == ''" (valueChange)="setEmail($event)"></co-input>
+    </div>
+    <div class="co-register-account__inputs__input-container">
+      <co-input [placeholder]="'Senha'" [type]="'password'" [error]="password == ''" (valueChange)="setPassword($event)"></co-input>
+    </div>
+    <div class="co-register-account__inputs__input-container">
+      <co-input [placeholder]="'Confirmar senha'" [type]="'password'" [error]=" confirmPassword !== undefined && confirmPassword !== password" (valueChange)="setConfirmPassword($event)"></co-input>
+    </div>
+  </div>
+
+  <co-error-feedback
+    [message]="errorFeedbackMessage"
+    [display]="email == '' || password == '' || (confirmPassword !== undefined && confirmPassword !== password)">
+  </co-error-feedback>
+</div>

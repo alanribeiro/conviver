@@ -1,0 +1,146 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.register {
+  height: 615px;
+  width: 550px;
+  padding: 30px 0 30px 30px;
+  background-color: $sign-card-bg-color;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  @include flexbox(flex, initial, initial, column);
+  @include animation(card-sign-appear, 1s, 0, initial, ease);
+  @include transition(width, $default-animation-duration, ease);
+  z-index: z('sign-card');
+
+  &__logo {
+    @include flexbox(flex, center, initial);
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    @include mqMaxWidth('mdx') {
+      padding-right: 15px;
+    }
+  }
+
+  &__stepper-dots {
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    @include mqMaxWidth('mdx') {
+      padding-right: 15px;
+    }
+  }
+
+  &__carousel {
+    height: calc(100% - 280px);
+    width: 100%;
+    overflow: hidden;
+
+    &__slider {
+      width: 500%;
+      @include flexbox(flex, initial, initial);
+      @include transition(transform, $default-animation-duration, ease);
+
+      &__item-content {
+        width: calc(100% / 5);
+        padding-right: 30px;
+        overflow: hidden;
+
+        @include mqMaxWidth('mdx') {
+          padding-right: 15px;
+        }
+      }
+
+      &--section-2 {
+        transform: translateX(calc(-100% / 5));
+      }
+
+      &--section-3 {
+        transform: translateX(calc(-200% / 5));
+      }
+
+      &--section-4 {
+        transform: translateX(calc(-300% / 5));
+
+        @include mqMaxWidth('md') {
+          .register__carousel__slider__item-content {
+            height: auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &--section-5 {
+        transform: translateX(calc(-400% / 5));
+      }
+    }
+  }
+
+  &__actions {
+    width: calc(100% - 60px);
+    position: absolute;
+    bottom: 30px;
+
+    &__login {
+      font-family: $common-text-font-family;
+      font-size: $sign-card-link;
+      color: $text-default-color;
+      text-align: center;
+      margin-top: 22.5px;
+  
+      & a {
+        text-decoration: none;
+        color: $link-color;
+        text-transform: uppercase;
+        font-weight: bold;
+  
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+
+    @include mqMaxWidth('mdx') {
+      width: calc(100% - 15px);
+      position: static;
+    }
+  }
+
+  &--bigger {
+    width: 710px;
+
+    .register__carousel {
+      height: auto;
+      overflow-y: visible;
+    }
+
+    .register__actions {
+      @media only screen and (max-height: 794px) {
+        width: calc(100% - 15px);
+        position: static;
+        margin-top: 20px;
+      }
+    }
+    
+    @include mqMaxWidth('md') {
+      min-height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+    }
+
+    @include mqMaxWidth('mdx') {
+      height: auto;
+    }
+  }
+
+  @include mqMaxWidth('mdx') {
+    padding: 30px 0 30px 15px;
+    box-shadow: none;
+    border-radius: 0px;
+    width: 100vw;
+    min-height: 100vh;
+  }
+}

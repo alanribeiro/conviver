@@ -1,0 +1,35 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-register-prefs {
+  &__title {
+    padding: 0 110px;
+    margin-bottom: 30px;
+
+    @include mqMaxWidth('md') {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-gap: 10px;
+
+    @media only screen and (max-width: 700px) {
+      grid-template-columns: repeat(5, 100px);
+      justify-content: center;
+    }
+
+    @include mqMaxWidth('mdx') {
+      grid-template-columns: repeat(4, 100px);
+    }
+
+    @include mqMaxWidth('mdxx') {
+      grid-template-columns: repeat(3, 100px);
+    }
+
+    @include mqMaxWidth('smx') {
+      grid-template-columns: repeat(2, 100px);
+    }
+  }
+}

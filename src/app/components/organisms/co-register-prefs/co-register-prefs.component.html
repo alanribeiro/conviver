@@ -1,0 +1,11 @@
+<div class="co-register-prefs">
+
+  <div class="co-register-prefs__title">
+    <co-title [title]="'Agora, selecione algumas caracteristicas suas para encotrarmos pessoas compatíveis'"></co-title>
+  </div>
+
+  <div class="co-register-prefs__list">
+    <co-selectable-item *ngFor="let item of list" [size]="'small'" [icon]="item.icon" [title]="item.title" (changeActive)="setPreferences(item.title)"></co-selectable-item>
+  </div>
+    
+</div>

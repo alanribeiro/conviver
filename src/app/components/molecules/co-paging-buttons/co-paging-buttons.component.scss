@@ -1,0 +1,54 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-paging-buttons {
+  @include flexbox(flex, center, center);
+
+  &__back-button {
+    @include animation(back-button-appear, $default-animation-duration, 0, initial, ease);
+
+    &--margin {
+      margin-left: -15px;
+      margin-right: 15px;
+
+      @include mqMaxWidth('sm') {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__next-button {
+    width: 200px;
+
+    &--animation {
+      @include animation(next-button-move, $default-animation-duration, 0, initial, ease);
+    }
+
+    @include mqMaxWidth('sm') {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+}
+
+@include keyframe(back-button-appear) {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@include keyframe(next-button-move) {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

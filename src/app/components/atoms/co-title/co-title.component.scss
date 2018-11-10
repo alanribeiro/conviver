@@ -1,0 +1,17 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-title {
+    font-size: $title-font-size;
+    font-family: $title-font-family;
+    text-align: center;
+    color: $title-color;
+    line-height: $title-line-height;
+    @include flexbox(flex, initial, center, column);
+
+    &__divider {
+        margin-top: 15px;
+        width: 80px;
+        border-top: solid 3px $divider-color;
+    }
+}
