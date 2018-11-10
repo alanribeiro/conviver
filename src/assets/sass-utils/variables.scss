@@ -135,13 +135,16 @@ $width-breakpoints: (
   'lg': 930px,
   'md': 740px,
   'mdx': 600px,
-  'sm': 414px
+  'mdxx': 470px,
+  'sm': 414px,
+  'smx': 370px
 );
 
 /* ------------------ Z-INDEXES ------------------- */
 
 $z-indexes: (
-  main-header
+  main-header,
+  sign-card
 );
 
 /* -------------------- OTHERS -------------------- */

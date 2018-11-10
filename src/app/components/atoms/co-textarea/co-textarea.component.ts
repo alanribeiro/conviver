@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-textarea',
@@ -12,10 +12,18 @@ export class CoTextareaComponent{
   @Input() error:boolean;
   @Input() rows:number;
 
+  @Output() valueChange:EventEmitter<any> = new EventEmitter();
+
+  value:string;
+
   constructor() {
     this.fullWidth = true;
     this.error = false;
     this.rows = 3;
-   }
+  }
+
+  sendValue() {
+    this.valueChange.emit(this.value);
+  }
 
 }

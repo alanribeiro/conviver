@@ -43,6 +43,11 @@
   &--small {
     width: 100px;
     height: 78.5px;
+    margin: 0;
+
+    .co-selectable-item__icon {
+      margin-bottom: 10px;
+    }
   }
 
   &--big {

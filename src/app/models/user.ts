@@ -6,7 +6,10 @@ export class User {
     private email:string,
     private password:string,
     private age:number,
-    private genre:string
+    private genre:string,
+    private personality:Array<string>,
+    private photo:string,
+    private description:string
   ) {}
   
   getId():string {
@@ -59,5 +62,29 @@ export class User {
 
   setGenre(genre:string):void {
     this.genre = genre;
+  }
+
+  getPersonality():Array<string> {
+    return this.personality;
+  }
+
+  setPersonality(personality:Array<string>):void {
+    this.personality = personality;
+  }
+
+  getPhoto():string {
+    return this.photo;
+  }
+
+  setPhoto(photo:string):void {
+    this.photo = photo;
+  }
+
+  getDescription():string {
+    return this.description;
+  }
+
+  setDescription(description:string):void {
+    this.description = description;
   }
 }

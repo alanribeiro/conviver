@@ -1,4 +1,4 @@
-<section class="register">
+<section class="register" [ngClass]="{'register--bigger':currentSection == 4}">
   <div class="register__logo">
     <co-logo [type]="'vertical'" [color]="'default'" [width]="'90'"></co-logo>
   </div>
@@ -11,7 +11,9 @@
     <div class="register__carousel__slider"
       [ngClass]="{
         'register__carousel__slider--section-2': currentSection == 2,
-        'register__carousel__slider--section-3': currentSection == 3
+        'register__carousel__slider--section-3': currentSection == 3,
+        'register__carousel__slider--section-4': currentSection == 4,
+        'register__carousel__slider--section-5': currentSection == 5
       }">
       <div class="register__carousel__slider__item-content">
         <co-register-name (validate)="setSectionOne($event)"></co-register-name>
@@ -22,6 +24,12 @@
       <div class="register__carousel__slider__item-content">
         <co-register-age (validate)="setSectionThree($event)"></co-register-age>
       </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-prefs [list]="userPersonalityItems" (validate)="setSectionFour($event)"></co-register-prefs>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-photo (validate)="setSectionFive($event)"></co-register-photo>
+      </div>
     </div>
   </div>
 
@@ -29,7 +37,7 @@
     <co-paging-buttons
       [back]="backAvaliable"
       [next]="currentSectionValidated"
-      [done]="false"
+      [done]="doneAvaliable"
       (clickedBack)="previousSection()"
       (clickedNext)="nextSection()"
       (clickedDone)="register()">

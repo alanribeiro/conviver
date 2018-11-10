@@ -22,4 +22,8 @@
       display: none;
     }
   }
+
+  @include mqMaxWidth('mdx') {
+    align-items: flex-start;
+  }
 }

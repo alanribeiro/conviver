@@ -1,0 +1,31 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-register-photo {
+  &__title {
+    padding: 0 30px;
+    margin-bottom: 30px;
+
+    @include mqMaxWidth('sm') {
+      padding: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+
+    &__textarea {
+      flex-grow: 1;
+
+      @include mqMaxWidth('mdx') {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    @include mqMaxWidth('mdx') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-selectable-item',
@@ -10,7 +10,9 @@ export class CoSelectableItemComponent {
   @Input() title:string;
   @Input() icon:string;
   @Input() hoverMessage:string;
-  @Input() active:boolean;
+  @Output() changeActive:EventEmitter<any> = new EventEmitter();
+
+  active:boolean;
 
   constructor() {
     this.active = false;
@@ -18,5 +20,6 @@ export class CoSelectableItemComponent {
 
    selectableToggle(){
      this.active = !this.active;
+     this.changeActive.emit(this.active);
    }
 }

@@ -1,6 +1,9 @@
 <textarea class="co-textarea" 
   placeholder="{{placeholder}}"
   [ngClass]="{'co-textarea--fullWidth': fullWidth, 'co-textarea--error': error}"
-  rows="{{rows}}">
+  rows="{{rows}}"
+  [(ngModel)]="value"
+  (keyup)="sendValue()"
+  (blur)="sendValue()">
 </textarea>
 

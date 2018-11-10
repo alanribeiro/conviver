@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RegisterService } from 'src/app/services/register/register.service';
 
 @Component({
@@ -6,16 +6,23 @@ import { RegisterService } from 'src/app/services/register/register.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
   currentSection:number;
   currentSectionValidated:boolean;
   backAvaliable:boolean;
+  doneAvaliable:boolean;
+  userPersonalityItems:any;
 
   constructor(private registerService:RegisterService) {
     this.currentSection = 1;
     this.currentSectionValidated = false;
     this.backAvaliable = false;
+    this.doneAvaliable = false;
+  }
+
+  ngOnInit() {
+    this.getUserPersonalityItems();
   }
 
   setSectionOne(value) {
@@ -36,6 +43,17 @@ export class RegisterComponent {
     this.setCurrentSectionValidated(value.validate);
   }
 
+  setSectionFour(value) {
+    this.registerService.user.setPersonality(value.personality);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionFive(value) {
+    this.registerService.user.setPhoto(value.photo.thumbUrl);
+    this.registerService.user.setDescription(value.description);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
   setCurrentSectionValidated(value:boolean) {
     this.currentSectionValidated = value;
   }
@@ -46,6 +64,10 @@ export class RegisterComponent {
       this.backAvaliable = true;
       this.currentSectionValidated = false;
     }
+
+    if(this.currentSection == 5) {
+      this.doneAvaliable = true;
+    }
   }
 
   previousSection() {
@@ -54,6 +76,18 @@ export class RegisterComponent {
     if(this.currentSection == 1) {
       this.backAvaliable = false;
     }
+  }
+
+  getUserPersonalityItems() {
+    this.registerService.getUserPersonalityItems().subscribe(
+      (data:any) => {
+        this.userPersonalityItems = data.personality;
+      }
+    )
+  }
+
+  register() {
+    
   }
 
 }

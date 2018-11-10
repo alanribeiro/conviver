@@ -12,6 +12,8 @@
   overflow: hidden;
   @include flexbox(flex, initial, initial, column);
   @include animation(card-sign-appear, 1s, 0, initial, ease);
+  @include transition(width, $default-animation-duration, ease);
+  z-index: z('sign-card');
 
   &__logo {
     @include flexbox(flex, center, initial);
@@ -33,18 +35,19 @@
   }
 
   &__carousel {
+    height: calc(100% - 280px);
     width: 100%;
-    flex-grow: 1;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__slider {
-      width: 300%;
+      width: 500%;
       @include flexbox(flex, initial, initial);
       @include transition(transform, $default-animation-duration, ease);
 
       &__item-content {
-        width: calc(100% / 3);
+        width: calc(100% / 5);
         padding-right: 30px;
+        overflow: hidden;
 
         @include mqMaxWidth('mdx') {
           padding-right: 15px;
@@ -52,11 +55,26 @@
       }
 
       &--section-2 {
-        transform: translateX(calc(-100% / 3));
+        transform: translateX(calc(-100% / 5));
       }
 
       &--section-3 {
-        transform: translateX(calc(-200% / 3));
+        transform: translateX(calc(-200% / 5));
+      }
+
+      &--section-4 {
+        transform: translateX(calc(-300% / 5));
+
+        @include mqMaxWidth('md') {
+          .register__carousel__slider__item-content {
+            height: auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &--section-5 {
+        transform: translateX(calc(-400% / 5));
       }
     }
   }
@@ -86,7 +104,35 @@
     }
 
     @include mqMaxWidth('mdx') {
-      width: calc(100% - 30px);
+      width: calc(100% - 15px);
+      position: static;
+    }
+  }
+
+  &--bigger {
+    width: 710px;
+
+    .register__carousel {
+      height: auto;
+      overflow-y: visible;
+    }
+
+    .register__actions {
+      @media only screen and (max-height: 794px) {
+        width: calc(100% - 15px);
+        position: static;
+        margin-top: 20px;
+      }
+    }
+    
+    @include mqMaxWidth('md') {
+      min-height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+    }
+
+    @include mqMaxWidth('mdx') {
+      height: auto;
     }
   }
 
