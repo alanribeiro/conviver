@@ -11,7 +11,7 @@ export class RegisterService {
   userPersonalityItemsUrl:string = 'assets/js-utils/user-personality.json';
 
   constructor(private http:HttpClient) {
-    this.user = new User('gerar-um-id-automatico-aqui', '', '', '', '', 0, '', [], '', '');
+    this.user = new User('gerar-um-id-automatico-aqui', '', '', '', '', 0, '', [], '', '', '', '', '', 1, []);
   }
 
   getUserPersonalityItems() {

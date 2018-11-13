@@ -9,7 +9,12 @@ export class User {
     private genre:string,
     private personality:Array<string>,
     private photo:string,
-    private description:string
+    private description:string,
+    private city:string,
+    private country:string,
+    private since:string,
+    private level:number,
+    private advertisements:Array<string>
   ) {}
   
   getId():string {
@@ -86,5 +91,45 @@ export class User {
 
   setDescription(description:string):void {
     this.description = description;
+  }
+
+  getCity():string {
+    return this.city;
+  }
+
+  setCity(city:string):void {
+    this.city = city;
+  }
+
+  getCountry():string {
+    return this.country;
+  }
+
+  setCountry(country:string):void {
+    this.country = country;
+  }
+
+  getSince():string {
+    return this.since;
+  }
+
+  setSince(since:string):void {
+    this.since = since;
+  }
+
+  getLevel():number {
+    return this.level;
+  }
+
+  setLevel(level:number):void {
+    this.level = level;
+  }
+
+  getAdvertisements():Array<string> {
+    return this.advertisements;
+  }
+
+  setAdvertisements(advertisements:Array<string>):void {
+    this.advertisements = advertisements;
   }
 }

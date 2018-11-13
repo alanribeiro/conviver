@@ -68,6 +68,14 @@ import { CoRegisterAgeComponent } from './components/organisms/co-register-age/c
 import { CoRegisterPrefsComponent } from './components/organisms/co-register-prefs/co-register-prefs.component';
 import { CoRegisterPhotoComponent } from './components/organisms/co-register-photo/co-register-photo.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { CoUserProfileHeaderComponent } from './components/organisms/co-user-profile-header/co-user-profile-header.component';
+import { CoUserProfileHeaderActionsComponent } from './components/molecules/co-user-profile-header-actions/co-user-profile-header-actions.component';
+import { CoUserProfileHeaderInfoComponent } from './components/molecules/co-user-profile-header-info/co-user-profile-header-info.component';
+import { CoUserProfileHeaderAvatarComponent } from './components/molecules/co-user-profile-header-avatar/co-user-profile-header-avatar.component';
+import { CoProfileUserNameComponent } from './components/atoms/co-profile-user-name/co-profile-user-name.component';
+import { CoProfileUserCityAndAgeComponent } from './components/atoms/co-profile-user-city-and-age/co-profile-user-city-and-age.component';
+import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-since/co-profile-user-since.component';
 
 registerLocaleData(en);
 
@@ -132,7 +140,15 @@ registerLocaleData(en);
     CoRegisterAgeComponent,
     CoRegisterPrefsComponent,
     CoRegisterPhotoComponent,
-    SignInUpComponent
+    SignInUpComponent,
+    ProfileComponent,
+    CoUserProfileHeaderComponent,
+    CoUserProfileHeaderActionsComponent,
+    CoUserProfileHeaderInfoComponent,
+    CoUserProfileHeaderAvatarComponent,
+    CoProfileUserNameComponent,
+    CoProfileUserCityAndAgeComponent,
+    CoProfileUserSinceComponent
   ],
   imports: [
     BrowserModule,

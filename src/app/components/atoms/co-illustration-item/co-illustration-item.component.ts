@@ -6,11 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./co-illustration-item.component.scss']
 })
 export class CoIllustrationItemComponent {
-  @Input() icon:string;
-  @Input() title:string;
+  @Input() item:string;
+  @Input() showTitle:boolean;
+  @Input() size:string;
 
   constructor() {
-  
+    this.showTitle = true;
   }
 
 }
