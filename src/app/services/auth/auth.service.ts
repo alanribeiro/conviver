@@ -14,24 +14,23 @@ export class AuthService {
       alert("Login efetuado com sucesso!");
       console.log(data);
     }).catch(error => {
-      switch(error.code) {
-        case "auth/network-request-failed":
-          alert("Erro ne rede, verifique se você está conectado à internet!");
-
-        case "auth/email-already-exists":
-          alert("O e-mail informado já está cadastrado!");
-        
-        case "auth/invalid-email":
-          alert("O e-mail informado é inválido, tente novamente!");
-
-        case "auth/invalid-password":
-          alert("A senha está incorreta, tente novamente!");
-
-        case "auth/user-not-found":
-          alert("Usuário não existe!");
-
-        case "auth/internal-error":
-          alert("Erro interno!");
+      if(error.code == "auth/network-request-failed") {
+        alert("Erro na rede, verifique se você está conectado à internet!");
+      }
+      else if(error.code == "auth/email-already-exists") {
+        alert("O e-mail informado já está cadastrado!");
+      }
+      else if(error.code == "auth/invalid-email") {
+        alert("O e-mail informado é inválido, tente novamente!");
+      }
+      else if(error.code == "auth/invalid-password") {
+        alert("A senha está incorreta, tente novamente!");
+      }
+      else if(error.code == "auth/user-not-found") {
+        alert("Usuário não existe!");
+      }
+      else if(error.code == "auth/internal-error") {
+        alert("Erro interno!");
       }
     });
   }
