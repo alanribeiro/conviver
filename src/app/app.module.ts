@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 import en from '@angular/common/locales/en';
 import { CoButtonComponent } from './components/atoms/co-button/co-button.component';
 import { CoSectionTitleComponent } from './components/atoms/co-section-title/co-section-title.component';
@@ -76,6 +80,8 @@ import { CoUserProfileHeaderAvatarComponent } from './components/molecules/co-us
 import { CoProfileUserNameComponent } from './components/atoms/co-profile-user-name/co-profile-user-name.component';
 import { CoProfileUserCityAndAgeComponent } from './components/atoms/co-profile-user-city-and-age/co-profile-user-city-and-age.component';
 import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-since/co-profile-user-since.component';
+
+import { AuthService } from './services/auth/auth.service';
 
 registerLocaleData(en);
 
@@ -156,9 +162,12 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
