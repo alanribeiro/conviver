@@ -1,0 +1,17 @@
+<div class="co-comment">
+  <div class="co-comment__avatar">
+    <co-avatar [photo]="comment.user.photo" [genre]="comment.user.genre" [title]="comment.user.name" [size]="'medium'"></co-avatar>
+  </div>
+  <div class="co-comment__avatar--mobile">
+    <co-avatar [photo]="comment.user.photo" [genre]="comment.user.genre" [size]="'small'"></co-avatar>
+    <span class="co-comment__avatar--mobile__name">{{comment.user.name}}</span>
+  </div>
+  <div class="co-comment__content">
+    <div class="co-comment__content__message">
+      {{comment.message}}
+    </div>
+    <div class="co-comment__content__date">
+      {{comment.date}}
+    </div>
+  </div>
+</div>

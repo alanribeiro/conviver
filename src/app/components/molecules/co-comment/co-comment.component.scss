@@ -1,0 +1,50 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-comment {
+  margin-bottom: 30px;
+  display: flex;
+
+  &__avatar {
+    margin-right: 20px;
+
+    &--mobile {
+      margin-bottom: 10px;
+      display: none;
+
+      &__name {
+        font-family: $avatar-font-family;
+        font-size: $avatar-font-size;
+        margin-left: 10px;
+      }
+
+      @include mqMaxWidth('md') {
+        @include flexbox(flex, initial, center);
+      }
+    }
+
+    @include mqMaxWidth('md') {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    &__message {
+      font-family: $common-text-font-family;
+      font-size: $common-text-font-size;
+      color: $common-text-color;
+      margin-bottom: 10px;
+    }
+
+    &__date {
+      font-family: $comment-date-font-family;
+      color: $text-default-color;
+    }
+  }
+
+  @include mqMaxWidth('md') {
+    display: block;
+  }
+}

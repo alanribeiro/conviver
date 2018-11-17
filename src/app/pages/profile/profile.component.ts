@@ -30,7 +30,29 @@ export class ProfileComponent {
       "Brasil",
       "setembro de 2018",
       1,
-      []
+      [],
+      [
+        {
+          user: {
+            name: 'Sebozim',
+            photo: 'http://www.museudememes.com.br/wp-content/uploads/2017/01/15894684_1134472926682034_7757859649070414556_n.jpg',
+            genre: 'male',
+            username: 'sebozim'
+          },
+          message: 'Nam magna leo, fermentum id dolor a, suscipit vulputate metus. Curabitur id aliquam nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+          date: '17 de Novembro de 2018'
+        },
+        {
+          user: {
+            name: 'Sebozim',
+            photo: 'http://www.museudememes.com.br/wp-content/uploads/2017/01/15894684_1134472926682034_7757859649070414556_n.jpg',
+            genre: 'male',
+            username: 'sebozim'
+          },
+          message: 'Nam magna leo, fermentum id dolor a, suscipit vulputate metus. Curabitur id aliquam nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+          date: '17 de Novembro de 2018'
+        }
+      ]
     );
   }
 
