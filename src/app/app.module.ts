@@ -82,6 +82,8 @@ import { CoProfileUserCityAndAgeComponent } from './components/atoms/co-profile-
 import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-since/co-profile-user-since.component';
 
 import { AuthService } from './services/auth/auth.service';
+import { CoCommentComponent } from './components/molecules/co-comment/co-comment.component';
+import { CoCommentListComponent } from './components/organisms/co-comment-list/co-comment-list.component';
 
 registerLocaleData(en);
 
@@ -154,7 +156,9 @@ registerLocaleData(en);
     CoUserProfileHeaderAvatarComponent,
     CoProfileUserNameComponent,
     CoProfileUserCityAndAgeComponent,
-    CoProfileUserSinceComponent
+    CoProfileUserSinceComponent,
+    CoCommentComponent,
+    CoCommentListComponent
   ],
   imports: [
     BrowserModule,

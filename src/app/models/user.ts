@@ -14,7 +14,17 @@ export class User {
     private country:string,
     private since:string,
     private level:number,
-    private advertisements:Array<string>
+    private advertisements:Array<string>,
+    private comments:Array<{
+      user: {
+        name:string,
+        photo:string,
+        genre:string,
+        username:string
+      },
+      message:string,
+      date:string
+    }>
   ) {}
   
   getId():string {
@@ -132,4 +142,12 @@ export class User {
   setAdvertisements(advertisements:Array<string>):void {
     this.advertisements = advertisements;
   }
+
+  getComments():Array<any> {
+    return this.comments;  
+  }
+
+  setComments(comments:Array<any>):void {
+    this.comments = comments;
+  } 
 }
