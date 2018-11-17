@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -32,6 +33,7 @@ import { CoDividerComponent } from './components/atoms/co-divider/co-divider.com
 import { CoStepperDotsDotComponent } from './components/atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
 import { CoIllustrationItemComponent } from './components/atoms/co-illustration-item/co-illustration-item.component';
 import { CoAdvertisementAddressComponent } from './components/atoms/co-advertisement-address/co-advertisement-address.component';
+// tslint:disable-next-line:max-line-length
 import { CoAdvertisementAdditionalInfoComponent } from './components/atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
 import { CoTextareaComponent } from './components/atoms/co-textarea/co-textarea.component';
 import { CoLogoComponent } from './components/atoms/co-logo/co-logo.component';
@@ -84,6 +86,7 @@ import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-
 import { AuthService } from './services/auth/auth.service';
 import { CoCommentComponent } from './components/molecules/co-comment/co-comment.component';
 import { CoCommentListComponent } from './components/organisms/co-comment-list/co-comment-list.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 registerLocaleData(en);
 
@@ -158,7 +161,8 @@ registerLocaleData(en);
     CoProfileUserCityAndAgeComponent,
     CoProfileUserSinceComponent,
     CoCommentComponent,
-    CoCommentListComponent
+    CoCommentListComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -169,7 +173,8 @@ registerLocaleData(en);
     NgZorroAntdModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFullpageModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService],
   bootstrap: [AppComponent]
