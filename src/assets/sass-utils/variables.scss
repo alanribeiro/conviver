@@ -18,6 +18,7 @@ $error-color: #FF7200;
 $facebook-color: #4267b2;
 $google-color:#ea4335;
 
+$landing-page-title2-color: $primary-color;
 $link-color: $primary-color;
 $link-hover-color: $secondary-color;
 $text-default-color: $gray-70;
@@ -60,6 +61,7 @@ $sign-in-up-footer-text-color: $white;
 $registration-divider-color: $gray-CC;
 $sign-card-bg-color: $gray-FA;
 $recover-password-color: $primary-color;
+$landing-page-title-color: $gray-FA;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -92,6 +94,8 @@ $sign-in-up-footer-font-family: $font-regular;
 
 /* ------------------ FONT SIZES ------------------ */
 
+$font-size-huge: 48px;
+$font-size-bigbig: 32px;
 $font-size-big: 24px;
 $font-size-medium: 20px;
 $font-size-mx: 18px;
@@ -99,6 +103,8 @@ $default-font-size: 16px;
 $font-size-small: 14px;
 $font-size-extra-small: 12px;
 
+$landing-page-item-font-size: $font-size-bigbig;
+$landing-page-font-size: $font-size-huge;
 $page-title-font-size: $font-size-big;
 $title-font-size: $font-size-medium;
 $button-title-font-size: $default-font-size;
@@ -125,9 +131,11 @@ $sign-card-link: $font-size-small;
 $sign-in-up-footer-font-size: $font-size-small;
 $recover-password-font-size: $font-size-extra-small;
 
-/* ------------------- MARGINS -------------------- */
+/* ------------------- MARGINS / PADDINGS -------------------- */
 
 $default-margin: 7.5px;
+
+$landing-page-padding: 8vw;
 
 /* ----------------- BREAKPOINTS ------------------ */
 

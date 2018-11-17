@@ -1,3 +1,4 @@
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,13 +12,7 @@ import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
-    children: [
-      {
-        path: 'meus-anuncios',
-        component: MyAdsComponent
-      }
-    ]
+    component: LandingPageComponent,
   }, {
     path: 'sign',
     component: SignInUpComponent,
@@ -25,7 +20,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'in',
-        pathMatch: "full"
+        pathMatch: 'full'
       }, {
         path: 'in',
         component: LoginComponent

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -28,6 +29,7 @@ import { CoDividerComponent } from './components/atoms/co-divider/co-divider.com
 import { CoStepperDotsDotComponent } from './components/atoms/co-stepper-dots-dot/co-stepper-dots-dot.component';
 import { CoIllustrationItemComponent } from './components/atoms/co-illustration-item/co-illustration-item.component';
 import { CoAdvertisementAddressComponent } from './components/atoms/co-advertisement-address/co-advertisement-address.component';
+// tslint:disable-next-line:max-line-length
 import { CoAdvertisementAdditionalInfoComponent } from './components/atoms/co-advertisement-additional-info/co-advertisement-additional-info.component';
 import { CoTextareaComponent } from './components/atoms/co-textarea/co-textarea.component';
 import { CoLogoComponent } from './components/atoms/co-logo/co-logo.component';
@@ -68,6 +70,7 @@ import { CoRegisterAgeComponent } from './components/organisms/co-register-age/c
 import { CoRegisterPrefsComponent } from './components/organisms/co-register-prefs/co-register-prefs.component';
 import { CoRegisterPhotoComponent } from './components/organisms/co-register-photo/co-register-photo.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 registerLocaleData(en);
 
@@ -132,7 +135,8 @@ registerLocaleData(en);
     CoRegisterAgeComponent,
     CoRegisterPrefsComponent,
     CoRegisterPhotoComponent,
-    SignInUpComponent
+    SignInUpComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -140,7 +144,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    AngularFullpageModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
