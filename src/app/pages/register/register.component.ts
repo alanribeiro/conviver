@@ -89,7 +89,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    
+    this.registerService.registerUser();
   }
 
 }

@@ -1,4 +1,7 @@
 <div class="co-illustration-item">
-  <img class="co-illustration-item__icon" [src]="'../../../../assets/icons/' + icon + '.svg'">
-  <div class="co-illustration-item__title">{{title}}</div>
+  <img
+    class="co-illustration-item__icon"
+    [ngClass]="{'co-illustration-item__icon--small': size == 'small'}"
+    [src]="'../../../../assets/icons/' + item + '.svg'">
+  <div *ngIf="showTitle" class="co-illustration-item__title">{{item}}</div>
 </div>

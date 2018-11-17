@@ -89,9 +89,13 @@ $divider-context-login-font-family: $font-regular;
 $establishment-item-font-family: $font-regular;
 $establishment-item-type-font-family: $font-bold;
 $sign-in-up-footer-font-family: $font-regular;
+$profile-user-name-font-family: $font-bold;
+$profile-user-city-and-age-font-family: $font-medium;
+$profile-user-since-font-family: $font-regular;
 
 /* ------------------ FONT SIZES ------------------ */
 
+$font-size-enormous: 30px;
 $font-size-big: 24px;
 $font-size-medium: 20px;
 $font-size-mx: 18px;
@@ -124,6 +128,8 @@ $icon-size: $font-size-mx;
 $sign-card-link: $font-size-small;
 $sign-in-up-footer-font-size: $font-size-small;
 $recover-password-font-size: $font-size-extra-small;
+$profile-user-name-font-size: $font-size-enormous;
+$profile-user-since-font-size: $font-size-extra-small;
 
 /* ------------------- MARGINS -------------------- */
 

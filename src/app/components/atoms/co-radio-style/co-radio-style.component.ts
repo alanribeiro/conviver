@@ -16,6 +16,7 @@ export class CoRadioStyleComponent implements OnInit {
 
   ngOnInit() {
     this.value = this.options[0].value;
+    this.sendValue();
   }
 
   sendValue() {

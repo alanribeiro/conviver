@@ -1,0 +1,9 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-user-profile-header-info {
+  &__since {
+    @include mqMaxWidth('md') {
+      margin-bottom: 30px;
+    }
+  }
+}

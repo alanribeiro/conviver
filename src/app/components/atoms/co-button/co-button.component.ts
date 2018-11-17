@@ -10,7 +10,7 @@ export class CoButtonComponent {
   @Input() type:string;
   @Input() title:string;
   @Input() icon:string;
-  @Input() fullWidth:boolean;
+  @Input() fullWidth: boolean;
   @Input() margin:boolean;
 
   constructor() {

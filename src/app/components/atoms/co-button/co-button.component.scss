@@ -3,6 +3,7 @@
 
 .co-button {
   height: 40px;
+  width: 100%;
   border: none;
   min-width: 200px;
   padding: 0 20px;
@@ -59,11 +60,7 @@
     font-family: inherit;
     flex-grow: 1;
   }
-
-  &--full-width {
-    width: 100%;
-  }
-
+  
   &--margin {
     margin: $default-margin;
   }

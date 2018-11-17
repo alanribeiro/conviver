@@ -7,6 +7,7 @@ import { MainComponent } from './components/templates/main/main.component';
 import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'meus-anuncios',
         component: MyAdsComponent
+      },
+      {
+        path: 'perfil/:username',
+        component: ProfileComponent
       }
     ]
   }, {
