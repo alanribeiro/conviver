@@ -1,3 +1,4 @@
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -12,17 +13,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
-    children: [
-      {
-        path: 'meus-anuncios',
-        component: MyAdsComponent
-      },
-      {
-        path: 'perfil/:username',
-        component: ProfileComponent
-      }
-    ]
+    component: LandingPageComponent,
   }, {
     path: 'sign',
     component: SignInUpComponent,
@@ -30,7 +21,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'in',
-        pathMatch: "full"
+        pathMatch: 'full'
       }, {
         path: 'in',
         component: LoginComponent
