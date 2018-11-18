@@ -13,8 +13,23 @@ import { ProfileComponent } from './pages/profile/profile.component';
 const routes: Routes = [
   {
     path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: 'my-ads',
+        component: MyAdsComponent
+      },
+      {
+        path: 'profile/:id',
+        component: ProfileComponent
+      }
+    ]
+  },
+  {
+    path: 'home',
     component: LandingPageComponent,
-  }, {
+  },
+  {
     path: 'sign',
     component: SignInUpComponent,
     children: [
@@ -30,10 +45,11 @@ const routes: Routes = [
         component: RegisterComponent
       }
     ]
-  }, {
+  },
+  {
     path: 'styleguide',
     component: StyleguideComponent
-  }
+  },
 ];
 
 @NgModule({
