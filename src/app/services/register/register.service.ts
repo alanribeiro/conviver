@@ -13,7 +13,7 @@ export class RegisterService {
   userPersonalityItemsUrl:string = 'assets/js-utils/user-personality.json';
 
   constructor(private http:HttpClient, private angularFireDatabaseModule:AngularFireDatabase, private angularFireAuth:AngularFireAuth) {
-    this.user = new User('id', '', '', '', '', 0, '', [], '', '', '', '', '', 1, []);
+    this.user = new User('id', '', '', '', '', 0, '', [], '', '', '', '', '', 1, [], []);
   }
 
   registerUser = () => {
