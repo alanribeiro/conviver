@@ -82,13 +82,16 @@ import { CoUserProfileHeaderAvatarComponent } from './components/molecules/co-us
 import { CoProfileUserNameComponent } from './components/atoms/co-profile-user-name/co-profile-user-name.component';
 import { CoProfileUserCityAndAgeComponent } from './components/atoms/co-profile-user-city-and-age/co-profile-user-city-and-age.component';
 import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-since/co-profile-user-since.component';
-
-import { AuthService } from './services/auth/auth.service';
 import { CoCommentComponent } from './components/molecules/co-comment/co-comment.component';
 import { CoCommentListComponent } from './components/organisms/co-comment-list/co-comment-list.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 registerLocaleData(en);
+
+import { AuthService } from './services/auth/auth.service';
+import { RegisterService } from './services/register/register.service';
+import { MenuService } from './services/menu/menu.service';
+import { UserService } from './services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -176,7 +179,7 @@ registerLocaleData(en);
     AngularFireDatabaseModule,
     AngularFullpageModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

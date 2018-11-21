@@ -35,7 +35,7 @@ export class CoRegisterPhotoComponent {
       this.validate.emit(data);
       return;
     }
-
+  
     data.validate = true;
     this.validate.emit(data); 
   }
