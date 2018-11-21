@@ -23,7 +23,7 @@ export class RegisterService {
     register.then(value => {
       this.registerUserData(value.user.uid);
     })
-    .catch(error => console.log("Erro ao cadastrar usuário! deu erro no registeruser", error));
+    .catch(error => alert("Erro ao cadastrar usuário!"));
   }
 
   registerUserData = (id) => {
@@ -50,7 +50,7 @@ export class RegisterService {
     const registerData = this.angularFireDatabaseModule.database.ref("users").child(id).set(user);
     registerData.then(() => {
       alert("Usuário cadastrado com sucesso!");
-    }).catch(error => console.log("Erro ao cadastrar usuário! deu erro no registeruserdata", error));
+    }).catch(error => alert("Erro ao cadastrar usuário!"));
   }
 
   getUserPersonalityItems() {
