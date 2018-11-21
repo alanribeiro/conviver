@@ -20,7 +20,7 @@ export class ProfileComponent {
       data => {
         snapshot = data;
         this.user = new User(
-          snapshot.id, 
+          snapshot.id,
           snapshot.firstName, 
           snapshot.lastName, 
           snapshot.email,

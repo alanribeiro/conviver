@@ -1,23 +1,28 @@
-<co-user-profile-header
-  [photo]="user.photo"
-  [level]="user.level"
-  [name]="user.firstName + ' ' + user.lastName"
-  [city]="user.city"
-  [country]="user.country"
-  [age]="user.age"
-  [since]="user.since">
-</co-user-profile-header>
-<article class="profile-container">
-  <co-section [title]="'Sobre mim'">
-    <div class="profile-container__description">{{user.description}}</div>
-  </co-section>
-  <co-section [title]="'Caracteristicas'">
-    <co-illustration-item-list [itemsList]="user.personality"></co-illustration-item-list>
-  </co-section>
-  <co-section [title]="'Anúncios'">
-    <co-advertisement-list [itemsList]="user.advertisements"></co-advertisement-list>
-  </co-section>
-  <co-section [title]="'Comentários'">
-    <co-comment-list [comments]="user.comments"></co-comment-list>
-  </co-section>
-</article>
+<div class="profile__loading" *ngIf="user == undefined">
+  <co-loading></co-loading>
+</div>
+<div *ngIf="user != undefined">
+  <co-user-profile-header
+    [photo]="user.photo"
+    [level]="user.level"
+    [name]="user.firstName + ' ' + user.lastName"
+    [city]="user.city"
+    [country]="user.country"
+    [age]="user.age"
+    [since]="user.since">
+  </co-user-profile-header>
+  <article class="profile__container">
+    <co-section [title]="'Sobre mim'">
+      <div class="profile__container__description">{{user.description}}</div>
+    </co-section>
+    <co-section [title]="'Caracteristicas'">
+      <co-illustration-item-list [itemsList]="user.personality"></co-illustration-item-list>
+    </co-section>
+    <co-section *ngIf="user.advertisements.lenght > 0" [title]="'Anúncios'">
+      <co-advertisement-list [itemsList]="user.advertisements"></co-advertisement-list>
+    </co-section>
+    <co-section *ngIf="user.comments.lenght > 0" [title]="'Comentários'">
+      <co-comment-list [comments]="user.comments"></co-comment-list>
+    </co-section>
+  </article>
+</div>

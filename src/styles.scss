@@ -182,4 +182,8 @@
   &-divider-horizontal.ant-divider-with-text {
     margin: 20px 0;
   }
+
+  &-spin-dot i {
+    background-color: $primary-color;
+  }
 }

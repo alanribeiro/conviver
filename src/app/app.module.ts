@@ -92,6 +92,7 @@ import { AuthService } from './services/auth/auth.service';
 import { RegisterService } from './services/register/register.service';
 import { MenuService } from './services/menu/menu.service';
 import { UserService } from './services/user/user.service';
+import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.component';
 
 @NgModule({
   declarations: [
@@ -165,7 +166,8 @@ import { UserService } from './services/user/user.service';
     CoProfileUserSinceComponent,
     CoCommentComponent,
     CoCommentListComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CoLoadingComponent
   ],
   imports: [
     BrowserModule,

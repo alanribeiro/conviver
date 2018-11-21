@@ -1,16 +1,24 @@
 @import '../../../assets/sass-utils/mixins.scss';
 @import '../../../assets/sass-utils/variables.scss';
 
-.profile-container {
-  padding-left: 190px;
-
-  &__description {
-    font-family: $common-text-font-family;
-    font-size: $common-text-font-size;
-    color: $common-text-color;
+.profile {
+  &__loading {
+    height: calc(100vh - 70px);
+    width: 100%;
+    @include flexbox(flex, center, center);
   }
 
-  @include mqMaxWidth('md') {
-    padding-left: 0;
+  &__container {
+    padding-left: 190px;
+  
+    &__description {
+      font-family: $common-text-font-family;
+      font-size: $common-text-font-size;
+      color: $common-text-color;
+    }
+  
+    @include mqMaxWidth('md') {
+      padding-left: 0;
+    }
   }
 }
