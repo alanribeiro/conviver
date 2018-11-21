@@ -1,0 +1,18 @@
+<div class="co-register-name">
+
+  <div class="co-register-name__title">
+    <co-title [title]="'Em instantes, você poderá encontrar a pessoa perfeita para morar com você.'"></co-title>
+  </div>
+
+  <div class="co-register-name__inputs">
+    <div class="co-register-name__inputs__input-container">
+      <co-input [placeholder]="'Nome'" [type]="'text'" [error]="firstName == ''" (valueChange)="setFirstName($event)"></co-input>
+    </div>
+    <div class="co-register-name__inputs__input-container">
+      <co-input [placeholder]="'Sobrenome'" [type]="'text'" [error]="lastName == ''" (valueChange)="setLastName($event)"></co-input>
+    </div>
+  </div>
+
+  <co-error-feedback [message]="'Todos os campos devem ser preenchidos'" [display]="firstName == '' || lastName == ''"></co-error-feedback>
+
+</div>

@@ -1,0 +1,36 @@
+<section class="co-login-card">
+
+  <div class="co-login-card__logo">
+    <co-logo [type]="'vertical'" [color]="'default'" [width]="'90'"></co-logo>
+  </div>
+
+  <div class="co-login-card__social-buttons">
+    <div class="co-login-card__social-buttons__google">
+      <co-social-button [socialNetwork]="'Google'" [fullWidth]="true"></co-social-button>
+    </div>
+    <div class="co-login-card__social-buttons__facebook">
+      <co-social-button [socialNetwork]="'Facebook'" [fullWidth]="true"></co-social-button>
+    </div>
+  </div>
+
+  <co-divider [context]="'login'"></co-divider>
+  
+  <div class="co-login-card__form">
+    <div class="co-login-card__form__email">
+      <co-input [placeholder]="'Digite seu e-mail'" [type]="'text'" (valueChange)="setEmail($event)"></co-input>
+    </div>
+    <div class="co-login-card__form__password">
+      <co-input [placeholder]="'Digite sua senha'" [type]="'password'" (valueChange)="setPassword($event)"></co-input>
+    </div>
+  </div>
+
+  <div class="co-login-card__recover-password">
+    <a routerLink="recovery">Esqueceu a Senha?</a>
+  </div>
+  
+  <co-button [title]="'Entrar'" [fullWidth]="true" (click)="login()"></co-button>
+
+  <div class="co-login-card__register">
+    Não possui conta? <a routerLink="/sign/up">Registre-se</a>
+  </div>
+</section>

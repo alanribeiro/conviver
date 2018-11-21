@@ -1,0 +1,30 @@
+<header class="co-main-header">
+  <div class="co-main-header__container container">
+    <div class="co-main-header__container__mobile-menu-button">
+      <co-mobile-menu-button (click)="openMenuMobile()"></co-mobile-menu-button>
+    </div>
+    <co-logo [type]="'horizontal'" [color]="'white'" [width]="'125'"> </co-logo>
+    <div class="co-main-header__container__menu">
+      <co-menu-items [items]="menuMainItems"></co-menu-items>
+      <co-avatar
+        class="co-main-header__container__menu__avatar"
+        [size]="'small'"
+        [photo]="user.photo"
+        [genre]="user.genre">
+      </co-avatar>
+    </div>
+    <div class="co-main-header__container__notification-button">
+      <co-notification-button [withNotification]="false"></co-notification-button>
+    </div>
+  </div>
+
+  <nz-drawer class="co-main-header__menu-mobile" [nzClosable]="false" [nzVisible]="menuMobileOpen" [nzPlacement]="'left'" (nzOnClose)="closeMenuMobile()">
+    <co-mobile-menu-user [user]="user"></co-mobile-menu-user>
+    <co-mobile-menu-item-list [items]="menuMainItems"></co-mobile-menu-item-list>
+    <div class="co-main-header__menu-mobile__divider-container">
+      <co-divider></co-divider>
+    </div>
+    <co-mobile-menu-item-list [items]="menuOtherItems"></co-mobile-menu-item-list>
+  </nz-drawer>
+
+</header>

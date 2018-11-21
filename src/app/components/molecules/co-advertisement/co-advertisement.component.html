@@ -1,0 +1,9 @@
+<div class="co-advertisement">
+  <co-advertisement-thumbnail [thumbnail]="advertisement.thumbnail"></co-advertisement-thumbnail>
+  <co-advertisement-address [city]="advertisement.city" [state]="advertisement.state" [country]="advertisement.country"></co-advertisement-address>
+  <co-advertisement-additional-info [propertyType]="advertisement.propertyType" [numberOfPlaces]="advertisement.numberOfPlaces"></co-advertisement-additional-info>
+  <div class="co-advertisement__bottom-info">
+    <co-rate [rate]="advertisement.rate" [readOnly]="true"></co-rate>
+    <co-price [price]="advertisement.price" [colored]="true"  [size]="'big'"></co-price>
+  </div>
+</div>

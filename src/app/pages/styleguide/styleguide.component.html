@@ -1,6 +1,275 @@
+<co-main-header></co-main-header>
 <article class="container">
+
   <co-page-header
     [title]="'Styleguide'"
-    [subtitle]="'Essa página vai servir para colocamos os componentes que forem sendo feitos.'">
+    [subtitle]="'Essa página vai servir para colocarmos os componentes que forem sendo feitos.'">
   </co-page-header>
+
+  <!-- co-button -->
+  <section>
+    <co-section-title [title]="'co-button'"></co-section-title>
+    <co-button [title]="'Entrar'" [margin]="true"></co-button>
+    <co-button [title]="'Avançar'" [icon]="'arrow-right'" [margin]="true"></co-button>
+    <co-button [title]="'Avançar'" [icon]="'arrow-right'" [type]="'disabled'" [margin]="true"></co-button>
+    <co-button [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'" [margin]="true"></co-button>
+  </section>
+
+  <!-- co-social-button -->
+  <section>
+    <co-section-title [title]="'co-social-button'"></co-section-title>
+    <co-social-button [socialNetwork]="'Google'" [margin]="true"></co-social-button>
+    <co-social-button [socialNetwork]="'Facebook'" [margin]="true"></co-social-button>
+  </section>
+
+  <!-- co-rounded-button -->
+  <section>
+    <co-section-title [title]="'co-rounded-button'"></co-section-title>
+    <co-rounded-button [icon]="'arrow-left'"></co-rounded-button>
+    <co-rounded-button [icon]="'message'"></co-rounded-button>
+  </section>
+
+  <!-- co-paging-buttons -->
+  <section>
+    <co-section-title [title]="'co-paging-buttons'"></co-section-title>
+    <div class="paging-buttons__row-1">
+      <co-paging-buttons [back]="false" [next]="false" [done]="false"></co-paging-buttons>
+      <co-paging-buttons [back]="true" [next]="false" [done]="false"></co-paging-buttons>
+      <co-paging-buttons [back]="true" [next]="true" [done]="false"></co-paging-buttons>
+    </div>
+    <div class="paging-buttons__row-2">
+      <co-paging-buttons [back]="true" [next]="false" [done]="true"></co-paging-buttons>
+      <co-paging-buttons [back]="true" [next]="true" [done]="true"></co-paging-buttons>
+    </div>
+  </section>
+
+  <!-- co-illustration-item-lists -->
+  <section>
+    <co-section-title [title]="'co-illustration-item-list'"></co-section-title>
+    <co-illustration-item-list [itemsList]="[{icon: 'flower', name: 'Vegetariano'}, {icon: 'flower', name: 'Outra Flor'}]"></co-illustration-item-list>
+  </section>
+
+  <!-- co-selectable-item -->
+  <section>
+    <co-section-title [title]="'co-selectable-item'"></co-section-title>
+    <div class="selectable-items">
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+
+      <co-selectable-item 
+        [size]="'big'" 
+        [icon]="'house'" 
+        [title]="'Casa'" 
+        [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades.'">
+      </co-selectable-item>
+    </div>
+    <div class="selectable-items">
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+  
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+
+      <co-selectable-item 
+        [size]="'small'" 
+        [icon]="'house'" 
+        [title]="'Casa'">
+      </co-selectable-item>
+    </div>
+  </section>
+
+  <!-- co-avatar -->
+  <section>
+    <co-section-title [title]="'co-avatar'"></co-section-title>
+    <div class="avatars">
+      <co-avatar [size]="'small'" [genre]="'male'"></co-avatar>
+      <co-avatar [title]="'Caíque'" [genre]="'male'"></co-avatar>
+      <co-avatar [size]="'big'" [genre]="'female'"></co-avatar>
+      <co-avatar [size]="'enormous'" [genre]="'female'"></co-avatar>
+    </div>
+  </section>
+
+  <!-- forms -->
+  <section class="forms">
+    <div class="forms__row">
+      <div class="forms__row__column">
+        <co-section-title [title]="'co-input'"></co-section-title>
+        <div>
+          <co-input [placeholder]="'Placeholder'" [margin]="true"></co-input>
+          <co-input [placeholder]="'Type password'" [type]="'password'" [margin]="true"></co-input>
+          <co-input [placeholder]="'Error'" [error]="true" [margin]="true"></co-input>
+        </div>
+      </div>
+      <div class="forms__row__column">
+        <co-section-title [title]="'co-select'"></co-section-title>
+        <co-select 
+          [placeholder]="'Estado'"
+          [options]="[
+            {value: 'CE', label: 'CE'}, 
+            {value: 'SP', label: 'SP'}, 
+            {value: 'RJ', label: 'RJ'}]"
+          [fullWidth]="true"
+          [margin]="true">
+        </co-select>
+        <co-section-title [title]="'co-radio-style'"></co-section-title>
+        <co-radio-style
+          [options]="[
+            {label: 'Masculino', value: 'masculino'},
+            {label: 'Feminino', value: 'feminino'},
+            {label: 'Outro', value: 'outro'}
+          ]">
+        </co-radio-style>
+      </div>
+    </div>
+    <div class="forms__row">
+      <div class="forms__row__column">
+        <co-section-title [title]="'co-textarea'"></co-section-title>
+        <div>
+          <co-textarea
+            [placeholder]="'Nos conte mais sobre você...'"
+            [fullWidth]="'true'">
+          </co-textarea>
+        </div>
+      </div>
+      <div class="forms__row__column">
+        <co-section-title [title]="'co-checkbox'"></co-section-title>
+        <co-checkbox [title]="'Água e luz incluso'"></co-checkbox>
+      </div>
+    </div>
+  </section>
+
+  <!-- co-upload -->
+  <section>
+    <co-section-title [title]="'co-upload'"></co-section-title>
+    <co-upload></co-upload>
+  </section>
+
+  <!-- co-error-feedback -->
+  <section>
+    <co-section-title [title]="'co-error-feedback'"></co-section-title>
+    <co-error-feedback
+      [message]="'O valor do aluguel é obrigatório'"
+      [display]="true">
+    </co-error-feedback>
+  </section>
+
+  <!-- co-rate -->
+  <section>
+    <co-section-title [title]="'co-rate'"></co-section-title>
+    <co-rate [rate]="2.5"></co-rate>
+  </section>
+
+  <!-- co-divider -->
+  <section>
+    <co-section-title [title]="'co-divider'"></co-section-title>
+    <co-divider></co-divider>
+    <co-divider [context]="'login'"></co-divider>
+  </section>
+
+  <!-- co-stepper-dots -->
+  <section>
+    <co-section-title [title]="'co-stepper-dots'"></co-section-title>
+    <co-stepper-dots [quantity]="5" [activeDot]="2"></co-stepper-dots>
+  </section>
+
+  <!-- co-title -->
+  <section>
+    <co-section-title [title]="'co-title'"></co-section-title>
+    <co-title
+      [title]="'Em instantes, você poderá encontrar a pessoa perfeita para morar com você.'">
+    </co-title>
+  </section>
+  
+  <!-- co-price -->
+  <section>
+    <co-section-title [title]="'co-price'"></co-section-title>
+    <co-price [colored]="false" [size]="'small'" [price]="550.00"></co-price>
+    <co-price [colored]="false" [size]="'big'" [price]="550.00"></co-price>
+    <co-price [colored]="true" [size]="'big'" [price]="550.00"></co-price>
+  </section>
+
+  <!-- co-advertisement-list -->
+  <co-section-title [title]="'co-advertisement-list'"></co-section-title>
+  <co-advertisement-list
+    [itemsList]="[
+      {
+        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
+        city: 'Quixadá',
+        state: 'CE',
+        country: 'Brasil',
+        propertyType: 'Apartamento',
+        numberOfPlaces: 1,
+        rate: 3,
+        price: 550
+      }, {
+        thumbnail: 'http://s2.glbimg.com/feWuUX0z-7pLnz4wnUSaw_fpglA=/smart/e.glbimg.com/og/ed/f/original/2016/02/01/apartamento-samy-e-ricky-lapa360-01.jpg',
+        city: 'Quixadá',
+        state: 'CE',
+        country: 'Brasil',
+        propertyType: 'Apartamento',
+        numberOfPlaces: 1,
+        rate: 3,
+        price: 550
+      }
+    ]">
+  </co-advertisement-list>
+
+  <!-- co-card-annouce -->
+  <co-section-title [title]="'co-card-announce'"></co-section-title>
+  <co-card-announce
+    [icon]="'house'"
+    [description]="'Anuncie seu imóvel e rapidamente nós econtraremos pessoas interessadas para você.'"
+    [buttonTitle]="'Anunciar um imóvel'"
+    [buttonUrl]="'rumbora'">
+  </co-card-announce>
+
+  <!-- co-establishment-item-list -->
+  <co-section-title [title]="'co-establishment-item-list'"></co-section-title>
+  <co-establishment-item-list
+    [itemsList]="[
+      {
+        icon: 'flower',
+        establishmentType: 'Supermercado',
+        establishmentName: 'São Geraldo',
+        establishmentDistance: '600m',
+        url: 'string'
+      }, {
+        icon: 'flower',
+        establishmentType: 'Academia',
+        establishmentName: 'Fit It',
+        establishmentDistance: '1.5km',
+        url: 'string'
+      }
+    ]">
+  </co-establishment-item-list>
 </article>

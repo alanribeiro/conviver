@@ -1,0 +1,35 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-user-profile-header {
+  height: 150px;
+  @include flexbox(flex, initial, center);
+  margin-top: 40px;
+
+  &__avatar {
+    margin-right: 40px;
+
+    @include mqMaxWidth('md') {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info {
+    height: 100%;
+    flex-grow: 1;
+    @include flexbox(flex, space-between, center);
+    border-bottom: 1px solid $border-color;
+
+    @include mqMaxWidth('md') {
+      display: block;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  @include mqMaxWidth('md') {
+    height: auto;
+    display: block;
+  }
+}

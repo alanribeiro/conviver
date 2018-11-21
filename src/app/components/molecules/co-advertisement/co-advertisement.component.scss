@@ -1,0 +1,14 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement {
+    width: 260px;
+    cursor: pointer;
+
+    &__bottom-info {
+        @include flexbox(flex, space-between, center);
+    }
+
+    @include mqMaxWidth('sm') {
+        width: 100%;
+    }
+}

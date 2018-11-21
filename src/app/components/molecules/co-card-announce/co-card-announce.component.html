@@ -1,0 +1,11 @@
+<co-card class="co-card-announce">
+    <co-illustration-item [item]="icon" [showTitle]="false"></co-illustration-item>
+    <div class="co-card-announce__description">
+      {{description}}
+    </div>
+    <co-button
+      [title]="buttonTitle"
+      [routerLink]="buttonUrl"
+      routerLinkActive="router-link-active">
+    </co-button>
+</co-card>

@@ -1,0 +1,71 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-login-card {
+  width: 350px;
+  background-color: $sign-card-bg-color;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  padding: 30px;
+  @include animation(card-sign-appear, 1s, 0, initial, ease);
+
+  &__logo {
+    @include flexbox(flex, center, initial);
+    margin-bottom: 30px;
+  }
+
+  &__social-buttons {
+    &__google {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form {
+    &__email {
+      margin-bottom: 15px;
+    }
+
+    &__password {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__recover-password {
+    font-family: $common-text-font-family;
+    font-size: $recover-password-font-size;
+    text-align: right;
+    margin-bottom: 15px;
+
+    & a {
+      text-decoration: none;
+      color: $recover-password-color;
+    }
+  }
+
+  &__register {
+    font-family: $common-text-font-family;
+    font-size: $sign-card-link;
+    color: $text-default-color;
+    margin-top: 20px;
+    text-align: center;
+
+    & a {
+      text-decoration: none;
+      color: $link-color;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  @include mqMaxWidth('sm') {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px 15px;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+}

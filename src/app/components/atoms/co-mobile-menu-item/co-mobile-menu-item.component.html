@@ -1,0 +1,13 @@
+<li class="co-mobile-menu-item" [routerLink]="url">
+  <i [ngClass]="'anticon anticon-' + icon"></i>
+
+  <div class="co-mobile-menu-item__title">
+    {{title}}
+  </div>
+
+  <nz-badge
+    *ngIf="notifications > 0"
+    [nzOverflowCount] = 10
+    [nzCount]=notifications>
+  </nz-badge>
+</li>

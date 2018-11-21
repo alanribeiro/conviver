@@ -1,0 +1,10 @@
+<div class="co-establishment-item-list">
+  <co-establishment-item
+    *ngFor="let item of itemsList"
+    [icon]= "item.icon"
+    [establishmentType]= "item.establishmentType"
+    [establishmentName]= "item.establishmentName"
+    [establishmentDistance]= "item.establishmentDistance"
+    [url]="item.url">
+  </co-establishment-item>
+</div>

@@ -1,0 +1,50 @@
+<section class="register" [ngClass]="{'register--bigger':currentSection == 4}">
+  <div class="register__logo">
+    <co-logo [type]="'vertical'" [color]="'default'" [width]="'90'"></co-logo>
+  </div>
+
+  <div class="register__stepper-dots">
+    <co-stepper-dots [quantity]="5" [activeDot]="currentSection - 1"></co-stepper-dots>
+  </div>
+
+  <div class="register__carousel">
+    <div class="register__carousel__slider"
+      [ngClass]="{
+        'register__carousel__slider--section-2': currentSection == 2,
+        'register__carousel__slider--section-3': currentSection == 3,
+        'register__carousel__slider--section-4': currentSection == 4,
+        'register__carousel__slider--section-5': currentSection == 5
+      }">
+      <div class="register__carousel__slider__item-content">
+        <co-register-name (validate)="setSectionOne($event)"></co-register-name>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-account (validate)="setSectionTwo($event)"></co-register-account>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-age (validate)="setSectionThree($event)"></co-register-age>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-prefs [list]="userPersonalityItems" (validate)="setSectionFour($event)"></co-register-prefs>
+      </div>
+      <div class="register__carousel__slider__item-content">
+        <co-register-photo (validate)="setSectionFive($event)"></co-register-photo>
+      </div>
+    </div>
+  </div>
+
+  <footer class="register__actions">
+    <co-paging-buttons
+      [back]="backAvaliable"
+      [next]="currentSectionValidated"
+      [done]="doneAvaliable"
+      (clickedBack)="previousSection()"
+      (clickedNext)="nextSection()"
+      (clickedDone)="register()">
+    </co-paging-buttons>
+
+    <div class="register__actions__login">
+      Já possui uma conta? <a routerLink="/sign/in">Entre</a>
+    </div>
+  </footer>
+</section>

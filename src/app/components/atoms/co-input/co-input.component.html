@@ -1,0 +1,12 @@
+<input nz-input
+  class="co-input"
+  type="{{type}}"
+  placeholder="{{placeholder}}"
+  [(ngModel)]="value"
+  [ngClass]="{
+    'co-input--fullWidth': fullWidth,
+    'co-input--margin': margin,
+    'co-input--error': error
+  }"
+  (keyup)="sendValue()"
+  (blur)="sendValue()">

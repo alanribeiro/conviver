@@ -2,10 +2,184 @@
 @import './assets/sass-utils/fonts.scss';
 @import './assets/sass-utils/variables.scss';
 @import './assets/sass-utils/mixins.scss';
+@import '~fullpage.js/dist/fullpage.min.css';
 
 * {
   padding: 0;
   margin: 0;
-  font-family: $font-regular;
-  font-size: $common-text-font-size;
+}
+
+.container {
+  width: 930px;
+  margin: auto;
+  padding: 70px 30px 0;
+  box-sizing: border-box;
+
+  @include mqMaxWidth('lg') {
+    width: 100vw;
+  }
+
+  @include mqMaxWidth('md') {
+    padding: 70px 21px 0;
+  }
+}
+
+.co-advertisement:hover .co-advertisement-thumbnail {
+  background-size: 320px;
+}
+
+.co-card-announce-list {
+  co-card-announce:first-child {
+    .co-card-announce {
+      margin-left: 0;
+    }
+  }
+
+  co-card-announce:last-child {
+    .co-card-announce {
+      margin-right: 0;
+    }
+  }
+}
+
+@include keyframe(card-sign-appear) {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ------------------ NG-ZORRO CLASS OVERRIDE ------------------ */
+
+.ant {
+  &-select {
+    &-selection {
+      border-radius: $default-border-radius;
+      border: 1px solid $input-border-color;
+  
+      &--single {
+        height: 40px;
+      }
+  
+      &__rendered {
+        line-height: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  
+    &-arrow {
+      right: 20px;
+      top: 55%;
+    }
+  }
+
+  &-rate {
+    color: $primary-color;
+  }
+
+  &-badge {
+    &-count {
+      box-shadow: none;
+      background-color: $badge-color;
+    }
+  }
+
+  &-input {
+    border-radius: $default-border-radius;
+    border: 1px solid $input-border-color;
+    height: 40px;
+    padding: 0 20px;
+
+    &:hover, &:focus {
+      border: 1px solid $primary-color-light;
+      box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
+    }
+
+    &::placeholder {
+      font-family: $font-regular;
+    }
+  }
+
+  &-radio {
+    &-button-wrapper {
+      flex-grow: 1;
+      height: 40px;
+      line-height: 38px;
+      border: 1px solid $input-border-color;
+      @include flexbox(flex, center, center);
+
+      &:first-child {
+        padding-left: 20px;
+        border-radius: $default-border-radius 0 0 $default-border-radius;
+
+        @include mqMaxWidth('sm') {
+          border-radius: $default-mobile-border-radius 0 0 $default-mobile-border-radius;
+        }
+      }
+
+      &:last-child {
+        padding-right: 20px;
+        border-radius: 0 $default-border-radius $default-border-radius 0;
+
+        @include mqMaxWidth('sm') {
+          border-radius: 0 $default-mobile-border-radius $default-mobile-border-radius 0;
+        }
+      }
+
+      &:hover {
+        color: $radio-style-checked-color;
+      }
+
+      @include mqMaxWidth('sm') {
+        height: 50px;
+      }
+    }
+
+    &-group {
+      display: flex;
+
+      &-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        color: $radio-style-checked-text-color;
+        border-color: $radio-style-checked-color;
+        background-color: $radio-style-checked-color;
+
+        &:hover {
+          color: $radio-style-checked-text-color;
+          border-color: $radio-style-checked-color;
+          background-color: $radio-style-checked-color;
+        }
+      }
+    }
+  }
+
+  &-checkbox {  
+    &-input:focus+.ant-checkbox-inner{
+      border-color: $primary-color-light;
+    }
+
+    &-checked .ant-checkbox-inner {
+      background-color: $primary-color-light;
+      border-color: $primary-color-light;
+    }
+  }
+
+  &-drawer {
+    &-content {
+      @include menu-gradient;
+    }
+
+    &-body {
+      padding: 0px;
+    }
+  }
+
+  &-divider-horizontal.ant-divider-with-text {
+    margin: 20px 0;
+  }
 }

@@ -1,0 +1,52 @@
+{
+ "personality": [
+   {
+     "title": "Fumante",
+     "icon": "smoker"
+   },
+   {
+    "title": "Vegetariano",
+    "icon": "vegetarian"
+  },
+  {
+    "title": "Fitness",
+    "icon": "fitness"
+  },
+  {
+    "title": "Músico",
+    "icon": "musician"
+  },
+  {
+    "title": "Geek",
+    "icon": "geek"
+  },
+  {
+    "title": "Festeiro",
+    "icon": "party-planner"
+  },
+  {
+    "title": "Organizado",
+    "icon": "organized"
+  },
+  {
+    "title": "Caseiro",
+    "icon": "house-made"
+  },
+  {
+    "title": "Religioso",
+    "icon": "religious"
+  },
+  {
+    "title": "LGBT+",
+    "icon": "lgbt+"
+  },
+  {
+    "title": "Estudante",
+    "icon": "student"
+  },
+  {
+    "title": "Profissional",
+    "icon": "professional"
+  }
+ ]
+}

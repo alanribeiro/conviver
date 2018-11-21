@@ -1,0 +1,12 @@
+<div class="co-price"
+    [ngClass]="{
+        'co-price--small': size == 'small',
+        'co-price--big': size == 'big',
+        'co-price--colored': colored == true
+      }">
+    <span [ngClass]="{
+        'co-price__notation--small': size == 'small',
+        'co-price__notation--big': size == 'big'
+      }">R$</span>
+    {{priceRendered}}
+</div>

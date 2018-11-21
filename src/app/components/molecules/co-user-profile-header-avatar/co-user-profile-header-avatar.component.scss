@@ -1,0 +1,11 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-user-profile-header-avatar {
+  @include flexbox(flex, center, initial);
+
+  &__container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+}

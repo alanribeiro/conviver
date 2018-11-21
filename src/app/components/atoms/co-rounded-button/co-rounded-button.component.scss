@@ -1,0 +1,27 @@
+@import '../../../../assets/sass-utils/variables.scss';
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-rounded-button {
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: 1px solid $rounded-button-color;
+  color: $rounded-button-color;
+  font-weight: bold;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  @include flexbox(inline-flex, center, center);
+  @include transition(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $rounded-button-hover-color;
+    color: $rounded-button-hover-color;
+  }
+
+  @include mqMaxWidth('sm') {
+    width: 50px;
+    height: 50px;
+  }
+}

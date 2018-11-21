@@ -1,0 +1,8 @@
+<div>
+    <nz-divider [nzText]="text" *ngIf="context === 'login'">
+        <ng-template #text>
+            <div class="co-divider-context-login"> ou </div>
+        </ng-template>
+    </nz-divider>
+    <nz-divider *ngIf="context === 'default'"></nz-divider>
+</div>

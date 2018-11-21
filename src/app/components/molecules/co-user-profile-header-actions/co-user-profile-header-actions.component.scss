@@ -1,0 +1,13 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-user-profile-header-actions {
+  @include flexbox(flex, initial, center, column);
+
+  &__send-msg-button {
+    margin-bottom: 15px;
+
+    @include mqMaxWidth('sm') {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,319 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.landing-page {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+  & > * {
+    margin: 0 auto;
+  }
+
+  /* SECTION ONE */
+
+  &__one {
+    width: 1050px;
+
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 25px;
+    }
+
+    &__flex {
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-around;
+
+      &__game {
+        width: 100%;
+        border: 2px dashed #000;
+        height: 400px;
+      }
+
+      &__arrow {
+      
+      }
+    }
+  }
+
+  /* SECTION TWO */
+
+  &__two {
+    width: 100%;
+    @include default-gradient;
+
+    &__container {
+      width: 1050px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+
+      &__content {
+        flex-basis: 55%;
+      
+        &__title {
+          font-family: $page-title-font-family;
+          font-size: $landing-page-font-size;
+          color: $landing-page-title-color;
+          line-height: 1;
+        }
+
+        &__subtitle {
+          font-family: $page-title-font-family;
+          font-size: $page-title-font-size;
+          color: #FFF;
+          opacity: 0.5;
+        }
+
+        &__desc {
+          font-family: $common-text-font-family;
+          font-size: $common-text-font-size;
+          color: $landing-page-title-color;
+          margin-top: 20px;
+        }
+      }
+
+      &__img {
+        flex-basis: 30%;
+      }
+    }
+  }
+
+  &__three {
+    width: 100%;
+    background-color: $white;
+
+    &__container {
+      width: 1050px;
+      margin: 0 auto;
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        width: 100%;
+        padding: 50px 0;
+
+        &__text {
+        flex-basis: 50%;
+        
+          &__title {
+            font-family: $page-title-font-family;
+            font-size: $landing-page-font-size;
+            color: $landing-page-title2-color;
+            line-height: 1;
+          }
+
+          &__subtitle {
+            font-family: $page-title-font-family;
+            font-size: $page-title-font-size;
+            color: $landing-page-title2-color;
+            opacity: 0.35;
+          }
+
+          &__desc {
+            font-family: $common-text-font-family;
+            font-size: $common-text-font-size;
+            color: $title-color;
+            margin-top: 20px;
+          }
+        }
+
+        &__img {
+          flex-basis: 30%;
+        }
+      }
+    }
+
+    &__divider {
+      background-image: url('../../../assets/images/divisory.png');
+      background-size: cover;
+      height: 250px;
+    }
+
+    &__container2 {
+      width: 1050px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      padding: 50px 0 0px 0;
+
+      &:last-child {
+        padding-bottom: 50px;
+      }
+
+      &__item {
+        flex-basis: 40%;
+
+        &__icon img {
+          height: 100px;
+        }
+
+        &__title {
+          @include default-gradient;
+          font-family: $page-title-font-family;
+          font-size: $landing-page-item-font-size;
+          color: $landing-page-title2-color;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-top: -5px;
+          letter-spacing: -1px;
+        }
+        
+        &__desc {
+          font-family: $common-text-font-family;
+          font-size: $common-text-font-size;
+          color: $title-color;
+          margin-top: 10px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__four {
+    width: 100%;
+    @include menu-gradient;
+
+    &__container {
+      width: 1050px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+
+      &__text {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+
+        &__title {
+          font-family: $page-title-font-family;
+          font-size: $landing-page-font-size;
+          color: $landing-page-title-color;
+          line-height: 1;
+        }
+
+        &__subtitle {
+          font-family: $page-title-font-family;
+          font-size: $page-title-font-size;
+          color: #FFF;
+          opacity: 0.5;
+        }
+      }
+
+      &__input {
+        margin-top: 25px;
+
+        &__button {
+          margin-top: 10px;
+          min-height: 40px;
+          border: none;
+          min-width: 200px;
+          padding: 0 20px;
+          background: transparent;
+          border: 2px solid #FFF;
+          font-family: $primary-button-font-family;
+          font-size: $button-title-font-size;
+          color: $white;
+          border-radius: $default-border-radius;
+          cursor: pointer;
+          text-align: center;
+          transition: 0.75s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right
+}
+
+/* SETINHA */
+
+.round {
+  width: 40px;
+  height: 40px;
+  transform: rotate(90deg);
+}
+
+.round:hover {
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.segunda { 
+  margin-left: 10px;
+}
+
+.next {
+background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojNjUwRUNFfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+  26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.round .arrow {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.round .arrow.primera{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+

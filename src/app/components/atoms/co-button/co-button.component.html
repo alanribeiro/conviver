@@ -1,0 +1,16 @@
+<button
+  class="co-button"
+  [ngClass]="{
+    'co-button--primary': type == 'primary',
+    'co-button--secondary': type == 'secondary',
+    'co-button--disabled': type == 'disabled',
+    'co-button--margin': margin
+  }">
+  <span *ngIf="icon" class="co-button__icon-container">
+    <i *ngIf="icon && type == 'secondary'" [ngClass]="'anticon anticon-' + icon"></i>
+  </span>
+  <span class="co-button__title">{{title}}</span>
+  <span *ngIf="icon && type !== 'secondary'" class="co-button__icon-container">
+    <i *ngIf="icon && type != 'secondary'" [ngClass]="'anticon anticon-' + icon"></i>
+  </span>
+</button>

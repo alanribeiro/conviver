@@ -1,0 +1,26 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-register-age {
+  &__title {
+    padding: 0 30px;
+    margin-bottom: 30px;
+
+    @include mqMaxWidth('sm') {
+      padding: 0;
+    }
+  }
+
+  &__inputs {
+    @include flexbox(flex, initial, center, column);
+
+    &__input-container {
+      width: 290px;
+      margin-bottom: 15px;
+
+      @include mqMaxWidth('sm') {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.sign-in-up {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-30deg, rgba(101,14,206, 0.8), rgba(206,14,168,0.8)), url('https://www.casaconceitoabc.com.br/wp-content/uploads/2017/05/banner-home-site-casa-conceito-sala-amb-2.jpg');
+  background-size: cover;
+  background-position: center;
+  @include flexbox(flex, center, center);
+
+  &__footer {
+    width: 100vw;
+    text-align: center;
+    color: $sign-in-up-footer-text-color;
+    font-size: $sign-in-up-footer-font-size;
+    font-family: $sign-in-up-footer-font-family;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+
+    @include mqMaxWidth('sm') {
+      display: none;
+    }
+  }
+
+  @include mqMaxWidth('mdx') {
+    align-items: flex-start;
+  }
+}

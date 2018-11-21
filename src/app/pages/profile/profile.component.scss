@@ -1,0 +1,16 @@
+@import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+.profile-container {
+  padding-left: 190px;
+
+  &__description {
+    font-family: $common-text-font-family;
+    font-size: $common-text-font-size;
+    color: $common-text-color;
+  }
+
+  @include mqMaxWidth('md') {
+    padding-left: 0;
+  }
+}

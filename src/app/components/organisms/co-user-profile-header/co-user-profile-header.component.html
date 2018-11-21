@@ -1,0 +1,15 @@
+<header class="co-user-profile-header">
+  <div class="co-user-profile-header__avatar">
+    <co-user-profile-header-avatar [photo]="photo" [genre]="genre" [level]="level"></co-user-profile-header-avatar>
+  </div>
+  <div class="co-user-profile-header__info">
+      <co-user-profile-header-info
+        [userName]="name"
+        [city]="city"
+        [country]="country"
+        [age]="age"
+        [userSince]="since">
+      </co-user-profile-header-info>
+      <co-user-profile-header-actions></co-user-profile-header-actions>
+  </div>
+</header>

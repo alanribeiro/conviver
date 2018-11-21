@@ -1,0 +1,29 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-mobile-menu-user {
+  padding: 40px 0;
+  @include flexbox(flex, initial, center, column);
+
+  &__photo-container {
+    width: 64px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-family: $avatar-font-family;
+    font-size: $mobile-menu-user-name;
+    color: $mobile-menu-text-color;
+  }
+
+  &__adress {
+    font-family: $mobile-menu-user-location-font-size;
+    font-size: $mobile-menu-user-location;
+    color: rgba($color: #FFFFFF, $alpha: 0.5);
+  }
+
+  @media screen and (max-height: 620px) {
+    padding: 20px 0;
+  }
+}
