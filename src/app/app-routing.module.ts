@@ -9,6 +9,7 @@ import { MyAdsComponent } from './pages/my-ads/my-ads.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'profile/:id',
         component: ProfileComponent
+      },
+      {
+        path: 'advertise/vacancy',
+        component: AdvertiseVacancyComponent
       }
     ]
   },

@@ -1,0 +1,30 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-number-picker {
+    @include flexbox(flex, space-around, center);
+
+    &__number {
+        font-size: 70px;
+        font-family: $number-picker-font-family;
+        color: $number-picker-color;
+    }
+
+    & > i {
+        font-size: 24px;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.disabled {
+    color: $disabled-color;
+    cursor: default !important;
+
+    &:hover {
+        color: $disabled-color !important;
+    }
+}

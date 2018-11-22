@@ -1,0 +1,22 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+%block {
+    width: 248px;
+    box-sizing: content-box;
+}
+
+.co-advertise-vacancy-residents {
+    @include flexbox(flex, center, initial);
+
+    &__residents {
+        @extend %block;
+        padding-right: 50px;
+        border-right: 1px solid $border-color;
+    }
+
+    &__vacancies {
+        @extend %block;
+        padding-left: 50px;
+    }
+}

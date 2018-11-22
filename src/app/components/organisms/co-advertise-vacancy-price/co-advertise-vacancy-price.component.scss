@@ -1,0 +1,39 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertise-vacancy-price {
+    &__form {
+        margin-top: 40px;
+        padding-left: 264px;
+
+        &__row {
+            display: flex;
+            margin-bottom: 15px;
+
+            &__rent-label {
+                @include flexbox(flex, initial, center);
+                padding-left: 20px;
+            }
+
+            &__rent-label,
+            &__expense-name {
+                width: 224px;
+            }
+
+            &__rent,
+            &__expense-value {
+                width: 120px;
+                margin-left: 10px;
+            }
+
+            &__water-and-light {
+                margin-left: 20px;
+                @include flexbox(flex, initial, center);
+            }
+        }
+    }
+
+    &__add-button {
+        margin: auto;
+        width: 166px;
+    }
+}

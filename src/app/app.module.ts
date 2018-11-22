@@ -93,6 +93,12 @@ import { RegisterService } from './services/register/register.service';
 import { MenuService } from './services/menu/menu.service';
 import { UserService } from './services/user/user.service';
 import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.component';
+import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
+import { CoAdvertiseVacancyPropertyTypeComponent } from './components/organisms/co-advertise-vacancy-property-type/co-advertise-vacancy-property-type.component';
+import { CoAdvertiseVacancyLocationComponent } from './components/organisms/co-advertise-vacancy-location/co-advertise-vacancy-location.component';
+import { CoAdvertiseVacancyResidentsComponent } from './components/organisms/co-advertise-vacancy-residents/co-advertise-vacancy-residents.component';
+import { CoNumberPickerComponent } from './components/atoms/co-number-picker/co-number-picker.component';
+import { CoAdvertiseVacancyPriceComponent } from './components/organisms/co-advertise-vacancy-price/co-advertise-vacancy-price.component';
 
 @NgModule({
   declarations: [
@@ -167,7 +173,13 @@ import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.com
     CoCommentComponent,
     CoCommentListComponent,
     LandingPageComponent,
-    CoLoadingComponent
+    CoLoadingComponent,
+    AdvertiseVacancyComponent,
+    CoAdvertiseVacancyPropertyTypeComponent,
+    CoAdvertiseVacancyLocationComponent,
+    CoAdvertiseVacancyResidentsComponent,
+    CoNumberPickerComponent,
+    CoAdvertiseVacancyPriceComponent
   ],
   imports: [
     BrowserModule,
