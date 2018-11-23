@@ -1,6 +1,7 @@
-<textarea class="co-textarea" 
+<textarea
+  class="co-textarea"
+  nz-input
   placeholder="{{placeholder}}"
-  [ngClass]="{'co-textarea--fullWidth': fullWidth, 'co-textarea--error': error}"
   rows="{{rows}}"
   [(ngModel)]="value"
   (keyup)="sendValue()"

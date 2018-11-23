@@ -99,6 +99,8 @@ import { CoAdvertiseVacancyLocationComponent } from './components/organisms/co-a
 import { CoAdvertiseVacancyResidentsComponent } from './components/organisms/co-advertise-vacancy-residents/co-advertise-vacancy-residents.component';
 import { CoNumberPickerComponent } from './components/atoms/co-number-picker/co-number-picker.component';
 import { CoAdvertiseVacancyPriceComponent } from './components/organisms/co-advertise-vacancy-price/co-advertise-vacancy-price.component';
+import { CoAdvertiseVacancyRulesComponent } from './components/organisms/co-advertise-vacancy-rules/co-advertise-vacancy-rules.component';
+import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-advertise-vacancy-photos/co-advertise-vacancy-photos.component';
 
 @NgModule({
   declarations: [
@@ -179,7 +181,9 @@ import { CoAdvertiseVacancyPriceComponent } from './components/organisms/co-adve
     CoAdvertiseVacancyLocationComponent,
     CoAdvertiseVacancyResidentsComponent,
     CoNumberPickerComponent,
-    CoAdvertiseVacancyPriceComponent
+    CoAdvertiseVacancyPriceComponent,
+    CoAdvertiseVacancyRulesComponent,
+    CoAdvertiseVacancyPhotosComponent
   ],
   imports: [
     BrowserModule,

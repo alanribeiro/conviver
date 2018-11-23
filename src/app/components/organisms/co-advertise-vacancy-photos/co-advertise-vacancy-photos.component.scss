@@ -1,0 +1,8 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertise-vacancy-photos {
+    &__upload {
+        margin-top: 40px;
+        @include flexbox(flex, initial, initial, column);
+    }
+}
