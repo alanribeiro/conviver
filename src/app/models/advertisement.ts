@@ -1,6 +1,10 @@
 export class Advertisement {
   constructor(
     private id:string,
+    private description:string,
+    private accommodations:Array<string>,
+    private homeAppliances:Array<string>,
+    private amenities:Array<string>,
     private thumbnail:string,
     private city:string,
     private state:string,
@@ -8,11 +12,60 @@ export class Advertisement {
     private propertyType:string,
     private numberOfPlaces:number,
     private rate:number,
-    private price:number
+    private photos:Array<string>,
+    private ownerId:string,
+    private creationDate:string,
+    private rent: {
+      value:number,
+      waterAndElectricityIncluded:boolean
+    },
+    private expenses:Array<{
+      name:string,
+      value:number
+    }>,
+    private residents:Array<string>,
+    private experienceReports:Array<{
+      userId:string,
+      message:string,
+      date:string,
+      rate:string
+    }>
   ) {}
 
   getId():string {
     return this.id;
+  }
+
+  getDescription():string {
+    return this.description;
+  }
+
+  setDescription(description:string):void {
+    this.description = description;
+  }
+
+  getAccommodations():Array<string> {
+    return this.accommodations;
+  }
+
+  setAccommodations(accommodations:Array<string>):void {
+    this.accommodations = accommodations;
+  }
+
+  getHomeAppliances():Array<string> {
+    return this.homeAppliances;
+  }
+
+  setHomeAppliances(homeAppliances:Array<string>):void {
+    this.homeAppliances = homeAppliances;
+  }
+
+  getAmenities():Array<string> {
+    return this.amenities;
+  }
+
+  setAmenities(amenities:Array<string>):void {
+    this.amenities = amenities;
   }
 
   getThumbnail():string {
@@ -71,11 +124,55 @@ export class Advertisement {
     this.rate = rate;
   }
 
-  getPrice():number {
-    return this.price;
+  getPhotos():Array<string> {
+    return this.photos;
   }
 
-  setPrice(price:number):void {
-    this.price = price;
+  setPhotos(photos:Array<string>):void {
+    this.photos = photos;
+  }
+
+  getOwnerId():string {
+    return this.ownerId;
+  }
+
+  getCreationDate():string {
+    return this.creationDate;
+  }
+
+  setCreationDate(creationDate:string):void {
+    this.creationDate = creationDate;
+  }
+
+  getRent():Object {
+    return this.rent;
+  }
+
+  setRent(rent:any):void {
+    this.rent = rent;
+  }
+
+  getExpenses():Array<any> {
+    return this.expenses;
+  }
+
+  setExpenses(expenses:Array<any>):void {
+    this.expenses = expenses;
+  }
+
+  getResidents():Array<string> {
+    return this.residents;
+  }
+
+  setResidents(residents:Array<string>):void {
+    this.residents = residents;
+  }
+
+  getExperienceReports():Array<any> {
+    return this.experienceReports;
+  }
+
+  setExperienceReports(experienceReports:Array<any>):void {
+    this.experienceReports = experienceReports;
   }
 }

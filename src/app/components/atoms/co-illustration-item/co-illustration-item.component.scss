@@ -2,7 +2,7 @@
 @import '../../../../assets/sass-utils/mixins.scss';
 
 .co-illustration-item {
-    width: 100px;
+    min-width: 100px;
     height: 78.5px;
     margin: 5px;
     @include flexbox(inline-flex, center, center, column);
@@ -17,6 +17,7 @@
     }
 
     &__title {
+        text-align: center;
         font-family: $title-illustration-font-family;
         font-size: $title-illustration-item-font-size;
     }

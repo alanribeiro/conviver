@@ -1,0 +1,13 @@
+<div class="co-experience-reports-carousel">
+  <div class="co-experience-reports-carousel__slider" [ngStyle]="{'transform': 'translateX(-' + translate + '%)'}">
+    <div *ngFor="let report of reports" class="co-experience-reports-carousel__slider__item">
+      <co-experience-report [report]="report"></co-experience-report>
+    </div>
+  </div>
+  <div class="co-experience-reports-carousel__left-arrow">
+    <i class="anticon anticon-left" (click)="previous()" [ngClass]="{'disabled': currentReport == 1}"></i>
+  </div>
+  <div class="co-experience-reports-carousel__right-arrow">
+    <i class="anticon anticon-right" (click)="next()" [ngClass]="{'disabled': currentReport == reports.length}"></i>
+  </div>
+</div>

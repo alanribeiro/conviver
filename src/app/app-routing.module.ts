@@ -10,6 +10,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
+import { AdvertisementComponent } from './pages/advertisement/advertisement.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'advertise/vacancy',
         component: AdvertiseVacancyComponent
+      },
+      {
+        path: 'advertisement/:id',
+        component: AdvertisementComponent
       }
     ]
   },

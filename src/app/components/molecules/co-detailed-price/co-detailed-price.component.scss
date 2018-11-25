@@ -1,0 +1,25 @@
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-detailed-price-table {
+  &__expense-name {
+    color: $common-text-color;
+    font-family: $expense-name-font-family;
+    font-size: $common-text-font-size;
+  }
+
+  &__value,
+  &__total__value {
+    text-align: right;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  &__total {
+    height: 45px;
+  }
+
+  &__water-and-electricity-included {
+    color: $text-default-color;
+    font-size: $font-size-extra-small;
+  }
+}

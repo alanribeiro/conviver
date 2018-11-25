@@ -1,0 +1,66 @@
+{
+  "advertisements": [
+    {
+      "id": "1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt vel elit vitae placerat. Curabitur nisi nisi, hendrerit sit amet efficitur non, convallis id est. Vivamus in est pretium, tristique augue et, mollis lectus. Nam sed massa non ipsum consequat consectetur. Etiam aliquam augue fermentum purus tristique, id varius nunc varius. Quisque ultrices congue ornare. Nullam justo magna, cursus id sollicitudin sit amet, posuere in neque. Mauris porttitor convallis arcu ac iaculis. Quisque et vehicula dolor, vitae aliquet libero. Sed vestibulum sem at nisi pretium convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus venenatis feugiat pharetra. Vivamus faucibus sit amet ante quis bibendum. Praesent tristique augue at imperdiet rutrum. Proin a pulvinar eros. Suspendisse viverra magna vitae massa dapibus iaculis.",
+      "accommodations": [
+        "Sala de estar",
+        "Varanda",
+        "Despensa",
+        "Área de serviço"
+      ],
+      "homeAppliances": [
+        "Geladeira",
+        "Fogão",
+        "Máquina de lavar"
+      ],
+      "amenities": [
+        "Internet",
+        "Lavanderia",
+        "Ar-condicionado"
+      ],
+      "thumbnail": "http://s2.glbimg.com/Mb7quxuxpjXjKEai64pDwJjPxFc=/e.glbimg.com/og/ed/f/original/2017/12/13/apartamento-pequeno-sala-estar-jantar-living-marcenaria-pendentes-prateleiras-armarios-cinza-laranja-cortina-pufes-cadeiras-mesa-espelho.jpg",
+      "city": "Quixadá",
+      "state": "CE",
+      "country": "Brasil",
+      "propertyType": "Casa",
+      "numberOfPlaces": 2,
+      "rate": 4.5,
+      "photos": [
+        "http://s2.glbimg.com/Mb7quxuxpjXjKEai64pDwJjPxFc=/e.glbimg.com/og/ed/f/original/2017/12/13/apartamento-pequeno-sala-estar-jantar-living-marcenaria-pendentes-prateleiras-armarios-cinza-laranja-cortina-pufes-cadeiras-mesa-espelho.jpg",
+        "https://www.tuacasa.com.br/wp-content/uploads/2017/05/quarto-pequeno-730x548.jpg",
+        "https://www.tuacasa.com.br/wp-content/uploads/2016/09/decoracao-casas-apartamentos-pequenos-5-730x487.jpg"
+      ],
+      "ownerId": "22357914",
+      "creationDate": "20/11/2018",
+      "rent": {
+        "value": 470,
+        "waterAndElectricityIncluded": true
+      },
+      "expenses": [
+        {
+          "name": "Internet",
+          "value": 90
+        }
+      ],
+      "residents": [
+        "Ml9jqLRHi4TL4vDwLttiwgGe4LD3",
+        "Tp4AOz4bUMZwzUuth2tieugWLlI2"
+      ],
+      "experienceReports": [
+        {
+          "userId": "Ml9jqLRHi4TL4vDwLttiwgGe4LD3",
+          "message": "Mauris ut convallis arcu. Nulla et quam convallis, convallis magna non, blandit ante. Fusce ultricies ligula orci, a vulputate dolor suscipit ac. Nullam pretium at ligula in maximus. Etiam lacus metus, sollicitudin ut tincidunt et, interdum ut metus. Nulla sit amet eros ut neque gravida congue non et ipsum. Pellentesque commodo felis neque, in tincidunt erat maximus in.",
+          "date": "24/11/2018",
+          "rate": 3.5
+        },
+        {
+          "userId": "Tp4AOz4bUMZwzUuth2tieugWLlI2",
+          "message": "In hac habitasse platea dictumst. Morbi ultrices, dui vitae hendrerit aliquam, ex est interdum tortor, eu malesuada orci nisl ut dolor. Quisque eget condimentum sem. Vestibulum vel sollicitudin tellus, nec pretium tortor. Proin gravida quam a maximus laoreet. Duis vulputate ut arcu sed volutpat.",
+          "date": "06/08/2018",
+          "rate": 4
+        }
+      ]
+    }
+  ]
+}

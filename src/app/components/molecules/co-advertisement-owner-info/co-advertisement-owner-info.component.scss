@@ -1,0 +1,31 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement-owner-info {
+  margin-top: 20px;
+  @include flexbox(flex, initial, center);
+
+  &__avatar {
+    margin-right: 10px;
+  }
+
+  &__name-and-city {
+    flex-grow: 1;
+
+    &__name {
+      font-family: $avatar-font-family;
+      font-size: $common-text-font-size;
+    }
+
+    &__city {
+      font-family: $common-text-font-family;
+      font-size: $advertisement-additional-info-font-size;
+    }
+  }
+
+  &__created-in {
+    text-align: right;
+    margin-bottom: 21px;
+    font-family: $common-text-font-family;
+    font-size: $advertisement-additional-info-font-size;
+  }
+}

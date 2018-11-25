@@ -85,6 +85,14 @@ import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-
 import { CoCommentComponent } from './components/molecules/co-comment/co-comment.component';
 import { CoCommentListComponent } from './components/organisms/co-comment-list/co-comment-list.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { AdvertisementComponent } from './pages/advertisement/advertisement.component';
+import { CoCarouselComponent } from './components/atoms/co-carousel/co-carousel.component';
+import { CoAdvertisementOwnerInfoComponent } from './components/molecules/co-advertisement-owner-info/co-advertisement-owner-info.component';
+import { CoAdvertisementMainSectionComponent } from './components/organisms/co-advertisement-main-section/co-advertisement-main-section.component';
+import { CoDetailedPriceComponent } from './components/molecules/co-detailed-price/co-detailed-price.component';
+import { CoResidentsListComponent } from './components/molecules/co-residents-list/co-residents-list.component';
+import { CoExperienceReportComponent } from './components/molecules/co-experience-report/co-experience-report.component';
+import { CoExperienceReportsCarouselComponent } from './components/organisms/co-experience-reports-carousel/co-experience-reports-carousel.component';
 
 registerLocaleData(en);
 
@@ -194,7 +202,15 @@ import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/
     CoAdvertiseVacancyRoomsComponent,
     CoAdvertiseVacancyAppliancesComponent,
     CoAdvertiseVacancyAmenitiesComponent,
-    CoAdvertiseVacancyRestrictionsComponent
+    CoAdvertiseVacancyRestrictionsComponent,
+    AdvertisementComponent,
+    CoCarouselComponent,
+    CoAdvertisementOwnerInfoComponent,
+    CoAdvertisementMainSectionComponent,
+    CoDetailedPriceComponent,
+    CoResidentsListComponent,
+    CoExperienceReportComponent,
+    CoExperienceReportsCarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+@import '../../../assets/sass-utils/variables.scss';
+
+.advertisement-page-container {
+  padding-top: 40px;
+  padding-right: 372px;
+
+  &__description {
+    font-family: $common-text-font-family;
+    font-size: $common-text-font-size;
+    color: $common-text-color;
+  }
+
+  &__resident-list {
+    display: flex;
+
+    &__owner {
+      // width: fit-content;
+      margin-right: 40px;
+    }
+  }
+}

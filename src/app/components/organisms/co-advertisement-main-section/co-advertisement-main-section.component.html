@@ -1,0 +1,10 @@
+<section class="co-advertisement-main-section">
+  <co-carousel [photos]="photos"></co-carousel>
+  <co-advertisement-owner-info
+    [photo]="user.getPhoto()"
+    [genre]="user.getGenre()"
+    [name]="user.getFirstName() + ' ' + user.getLastName()"
+    [city]="user.getCity() + ' - ' + user.getCountry()"
+    [creationDate]="creationDate">
+  </co-advertisement-owner-info>
+</section>
