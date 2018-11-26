@@ -5,7 +5,8 @@
     [(nzFileList)]="fileList"
     [nzShowButton]="fileList.length < numberOfFiles"
     [nzPreview]="handlePreview"
-    (nzChange)="sendFile()">
+    (nzChange)="sendFile()"
+    style="display: flex;">
       <i class="anticon anticon-plus"></i>
       <div class="ant-upload-text">Upload</div>
   </nz-upload>
