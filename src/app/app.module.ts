@@ -101,6 +101,12 @@ import { CoNumberPickerComponent } from './components/atoms/co-number-picker/co-
 import { CoAdvertiseVacancyPriceComponent } from './components/organisms/co-advertise-vacancy-price/co-advertise-vacancy-price.component';
 import { CoAdvertiseVacancyRulesComponent } from './components/organisms/co-advertise-vacancy-rules/co-advertise-vacancy-rules.component';
 import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-advertise-vacancy-photos/co-advertise-vacancy-photos.component';
+import { CoAdvertiseVacancyDescriptionComponent } from './components/organisms/co-advertise-vacancy-description/co-advertise-vacancy-description.component';
+import { CoAdvertiseVacancyRoomsComponent } from './components/organisms/co-advertise-vacancy-rooms/co-advertise-vacancy-rooms.component';
+import { AdvertiseService } from './services/advertise/advertise.service';
+import { CoAdvertiseVacancyAppliancesComponent } from './components/organisms/co-advertise-vacancy-appliances/co-advertise-vacancy-appliances.component';
+import { CoAdvertiseVacancyAmenitiesComponent } from './components/organisms/co-advertise-vacancy-amenities/co-advertise-vacancy-amenities.component';
+import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/co-advertise-vacancy-restrictions/co-advertise-vacancy-restrictions.component';
 
 @NgModule({
   declarations: [
@@ -183,7 +189,12 @@ import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-adv
     CoNumberPickerComponent,
     CoAdvertiseVacancyPriceComponent,
     CoAdvertiseVacancyRulesComponent,
-    CoAdvertiseVacancyPhotosComponent
+    CoAdvertiseVacancyPhotosComponent,
+    CoAdvertiseVacancyDescriptionComponent,
+    CoAdvertiseVacancyRoomsComponent,
+    CoAdvertiseVacancyAppliancesComponent,
+    CoAdvertiseVacancyAmenitiesComponent,
+    CoAdvertiseVacancyRestrictionsComponent
   ],
   imports: [
     BrowserModule,
@@ -197,7 +208,7 @@ import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-adv
     AngularFireDatabaseModule,
     AngularFullpageModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertiseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

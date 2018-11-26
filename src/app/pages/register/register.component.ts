@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   currentSectionValidated:boolean;
   backAvaliable:boolean;
   doneAvaliable:boolean;
-  userPersonalityItems:any;
+  userPersonalityItems:Array<string>;
 
   constructor(private registerService:RegisterService) {
     this.currentSection = 1;

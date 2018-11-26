@@ -1,0 +1,118 @@
+{
+  "rooms": [
+    {
+      "title": "Quarto",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Cozinha",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Cozinha Americana",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Benheiro",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Sala de estar",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Varanda",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Despensa",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Área de serviço",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Garagem",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Suite",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    }
+  ],
+  "appliances": [
+    {
+      "title": "Geladeira",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Fogão",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Máquina de lavar",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Micro-ondas",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "TV",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    }
+  ],
+  "amenities": [
+    {
+      "title": "Internet",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Lavanderia",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Piscina",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Ar-condicionado",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Elevador",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Água quente",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    }
+  ],
+  "restrictions": [
+    {
+      "title": "Sem fumantes",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Só meninos",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Só meninos",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Só meninas",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Proibido animais",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    },
+    {
+      "title": "Proibido eventos/festas",
+      "hoverMessage": "Tem que fazer essa frase aqui"
+    }
+  ]
+}

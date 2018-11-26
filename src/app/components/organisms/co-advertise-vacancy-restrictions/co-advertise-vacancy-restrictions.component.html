@@ -1,0 +1,24 @@
+<section class="co-advertise-vacancy-restrictions">
+  <co-title [title]="'Quais dessas comodidades o imóvel possui?'"></co-title>
+  <div class="co-advertise-vacancy-restrictions__list">
+    <co-selectable-item
+      *ngFor="let item of restrictions"
+      [size]="'big'"
+      [icon]="item.title"
+      [title]="item.title"
+      [hoverMessage]="item.hoverMessage">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'block'"
+      [title]="'Nenhuma restição'"
+      [hoverMessage]="'Temq que fazer essa frase aqui'">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'add'"
+      [title]="'Outras'"
+      [hoverMessage]="'Adicionar outras restrições'">
+    </co-selectable-item>
+  </div>
+</section>
