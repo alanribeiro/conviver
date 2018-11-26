@@ -13,7 +13,7 @@
       "hoverMessage": "Tem que fazer essa frase aqui"
     },
     {
-      "title": "Benheiro",
+      "title": "Banheiro",
       "hoverMessage": "Tem que fazer essa frase aqui"
     },
     {
@@ -99,10 +99,6 @@
       "hoverMessage": "Tem que fazer essa frase aqui"
     },
     {
-      "title": "Só meninos",
-      "hoverMessage": "Tem que fazer essa frase aqui"
-    },
-    {
       "title": "Só meninas",
       "hoverMessage": "Tem que fazer essa frase aqui"
     },
@@ -111,7 +107,7 @@
       "hoverMessage": "Tem que fazer essa frase aqui"
     },
     {
-      "title": "Proibido eventos/festas",
+      "title": "Proibido eventos ou festas",
       "hoverMessage": "Tem que fazer essa frase aqui"
     }
   ]
