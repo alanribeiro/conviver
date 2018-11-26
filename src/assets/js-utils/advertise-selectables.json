@@ -6,7 +6,7 @@
     },
     {
       "title": "Cozinha",
-      "hoverMessage": "Tem que fazer essa frase aqui"
+      "hoverMessage": "Os mais gostosos improvisos acontecem aqui"
     },
     {
       "title": "Cozinha Americana",
@@ -44,7 +44,7 @@
   "appliances": [
     {
       "title": "Geladeira",
-      "hoverMessage": "Tem que fazer essa frase aqui"
+      "hoverMessage": "Água gelada para refrescar nos dias quentes"
     },
     {
       "title": "Fogão",
@@ -66,7 +66,7 @@
   "amenities": [
     {
       "title": "Internet",
-      "hoverMessage": "Tem que fazer essa frase aqui"
+      "hoverMessage": "Para muitos é o bastante"
     },
     {
       "title": "Lavanderia",
@@ -92,7 +92,7 @@
   "restrictions": [
     {
       "title": "Sem fumantes",
-      "hoverMessage": "Tem que fazer essa frase aqui"
+      "hoverMessage": "Quem não fuma geralmente não gosta do cheiro de cigarro"
     },
     {
       "title": "Só meninos",
