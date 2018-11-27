@@ -16,6 +16,14 @@ export class AdvertiseVacancyComponent implements OnInit{
     this.getRoomsItems();
   }
 
+  setSectionOne(value) {
+    // console.log(value);
+  }
+
+  setSectionTwo(value) {
+    // console.log(value);
+  }
+
   getRoomsItems() {
     this.advertiseService.getRoomItems().subscribe(
       (data:any) => {

@@ -5,6 +5,7 @@
         margin-top: 40px;
 
         &__row{
+            margin-bottom: 40px;
             @include flexbox(flex, center, initial);
 
             &__street {

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-select',
@@ -11,11 +11,20 @@ export class CoSelectComponent {
   @Input() options:Array<{value:string, label:string}>;
   @Input() fullWidth:boolean;
   @Input() margin:boolean;
+  @Input() error:boolean;
+  
+  @Output() valueChange:EventEmitter<any> = new EventEmitter();
+
   selectedValue:string;
 
   constructor() {
     this.fullWidth = false;
     this.margin = false;
+    this.error = false;
+  }
+
+  sendValue() {
+    this.valueChange.emit(this.selectedValue);
   }
 
 }

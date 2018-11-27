@@ -6,12 +6,12 @@
   <co-stepper-dots [quantity]="11" [activeDot]="0"></co-stepper-dots>
   <section class="advertise-vacancy-page__carousel">
     <div class="advertise-vacancy-page__carousel__slider">
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-property-type></co-advertise-vacancy-property-type>
-      </div> -->
       <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-location></co-advertise-vacancy-location>
+        <co-advertise-vacancy-property-type (changeType)="setSectionOne($event)"></co-advertise-vacancy-property-type>
       </div>
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-location (validate)="setSectionTwo($event)"></co-advertise-vacancy-location>
+      </div> -->
       <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
         <co-advertise-vacancy-residents></co-advertise-vacancy-residents>
       </div> -->

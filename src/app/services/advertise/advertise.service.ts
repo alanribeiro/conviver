@@ -6,11 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdvertiseService {
 
-  advertiseRoomsItemsUrl:string = 'assets/js-utils/advertise-selectables.json'; 
+  advertiseSelectablesUrl:string = 'assets/js-utils/advertise-selectables.json';
+  statesUrl:string = 'assets/js-utils/states.json';
 
   constructor(private http:HttpClient) { }
 
   getRoomItems() {
-    return this.http.get(this.advertiseRoomsItemsUrl);
+    return this.http.get(this.advertiseSelectablesUrl);
+  }
+
+  getStates() {
+    return this.http.get(this.statesUrl);
   }
 }
