@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-advertise-vacancy-property-type',
@@ -7,6 +7,21 @@ import { Component } from '@angular/core';
 })
 export class CoAdvertiseVacancyPropertyTypeComponent {
 
+  @Output() changeType:EventEmitter<any> = new EventEmitter();
+
+  propertyType:string;
+
   constructor() { }
+
+  changePropertyType(activating, value) {
+    if(activating) {
+      this.propertyType = value;
+      this.changeType.emit(this.propertyType);
+      return;
+    }
+
+    this.propertyType = '';
+    this.changeType.emit(this.propertyType);
+  }
 
 }

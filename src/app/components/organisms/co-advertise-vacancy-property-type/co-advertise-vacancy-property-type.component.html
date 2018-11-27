@@ -5,13 +5,17 @@
       [size]="'big'"
       [title]="'Casa'"
       [icon]="'house'"
-      [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades'">
+      [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades'"
+      [active]="propertyType == 'Casa'"
+      (changeActive)="changePropertyType($event, 'Casa')">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"
       [title]="'Apartamento'"
       [icon]="'apartment'"
-      [hoverMessage]="'Precisa criar essa frase aqui'">
+      [hoverMessage]="'Precisa criar essa frase aqui'"
+      [active]="propertyType == 'Apartamento'"
+      (changeActive)="changePropertyType($event, 'Apartamento')">
     </co-selectable-item>
   </div>
 </section>
