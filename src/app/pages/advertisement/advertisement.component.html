@@ -1,4 +1,7 @@
-<article *ngIf="advertisement != undefined" class="advertisement-page-container">
+<div class="advertisement-page-container__loading" *ngIf="advertisement == undefined || owner == undefined">
+  <co-loading></co-loading>
+</div>
+<article *ngIf="advertisement != undefined && owner != undefined" class="advertisement-page-container">
   <co-advertisement-main-section [photos]="advertisement.photos" [user]="owner" [creationDate]="advertisement.creationDate"></co-advertisement-main-section>
   <co-section [title]="'Descrição do imóvel'">
     <div class="advertisement-page-container__description">{{advertisement.description}}</div>  

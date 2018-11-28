@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdvertisementService {
 
-  advertisementsURL:string = 'assets/js-utils/ad-teste.json';
+  constructor(private angularFireDatabase:AngularFireDatabase) { }
 
-  constructor(private http:HttpClient) { }
-
-  getAdvertisements() {
-    return this.http.get(this.advertisementsURL);
+  getAdvertisement = (advertisementId) => {
+    return this.angularFireDatabase.object(`advertisements/${advertisementId}`).valueChanges();
   }
 }

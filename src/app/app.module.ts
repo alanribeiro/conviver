@@ -100,6 +100,7 @@ import { AuthService } from './services/auth/auth.service';
 import { RegisterService } from './services/register/register.service';
 import { MenuService } from './services/menu/menu.service';
 import { UserService } from './services/user/user.service';
+import { AdvertisementService } from './services/advertisement/advertisement.service';
 import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.component';
 import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
 import { CoAdvertiseVacancyPropertyTypeComponent } from './components/organisms/co-advertise-vacancy-property-type/co-advertise-vacancy-property-type.component';
@@ -224,7 +225,7 @@ import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/
     AngularFireDatabaseModule,
     AngularFullpageModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertiseService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, AdvertiseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

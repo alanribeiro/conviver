@@ -1,8 +1,15 @@
 @import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
 
 .advertisement-page-container {
   padding-top: 40px;
   padding-right: 372px;
+
+  &__loading {
+    height: calc(100vh - 70px);
+    width: 100%;
+    @include flexbox(flex, center, center);
+  }
 
   &__description {
     font-family: $common-text-font-family;
