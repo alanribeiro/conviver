@@ -32,4 +32,11 @@
   <co-section [title]="'Relatos de experiência'">
     <co-experience-reports-carousel [reports]="advertisement.experienceReports"></co-experience-reports-carousel>
   </co-section>
+
+  <co-advertisement-float-card
+    [price]="totalPrice"
+    [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"    
+    [features]=""
+    [rate]="advertisement.rate">
+  </co-advertisement-float-card>
 </article>

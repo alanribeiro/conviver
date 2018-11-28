@@ -1,0 +1,17 @@
+import { Component, Input  } from '@angular/core';
+
+@Component({
+  selector: 'co-advertisement-float-card',
+  templateUrl: './co-advertisement-float-card.component.html',
+  styleUrls: ['./co-advertisement-float-card.component.scss']
+})
+export class CoAdvertisementFloatCardComponent {
+
+  @Input() price:number;
+  @Input() address:string;
+  @Input() features:Array<any>;
+  @Input() rate:number;
+
+  constructor() { }
+
+}

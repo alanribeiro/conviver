@@ -15,10 +15,12 @@ export class AdvertisementComponent implements OnInit {
   advertisement:Advertisement;
   owner:User;
   residents:Array<any>
+  totalPrice:number;
 
   constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute) {
     this.residents = [];
     this.owner = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", 1, [], []);
+    this.totalPrice = 0;
   }
 
   ngOnInit() {
@@ -55,6 +57,7 @@ export class AdvertisementComponent implements OnInit {
         )
         this.getOwner(snapshot.ownerId);
         this.populateResidents(snapshot.residents);
+        this.calculatePrice(snapshot.rent, snapshot.expenses);
       },
       error => console.log(error)
     )
@@ -74,7 +77,7 @@ export class AdvertisementComponent implements OnInit {
         snapshot = data;
         const obj = {
           id: snapshot.id,
-          name: `${snapshot.firstName} ${snapshot.lastName}`,
+          name: snapshot.firstName,
           photo: snapshot.photo,
           genre: snapshot.genre
         }
@@ -111,6 +114,13 @@ export class AdvertisementComponent implements OnInit {
       },
       error => console.log(error)
     )
+  }
+
+  calculatePrice(rent, expenses) {
+    this.totalPrice = rent.value;
+    for(let i in expenses) {
+      this.totalPrice += expenses[i].value;
+    }
   }
 
   // showAdvertisementInfo = () => {

@@ -3,7 +3,7 @@
 
 .advertisement-page-container {
   padding-top: 40px;
-  padding-right: 372px;
+  padding-right: 362px;
 
   &__loading {
     height: calc(100vh - 70px);
@@ -21,7 +21,6 @@
     display: flex;
 
     &__owner {
-      // width: fit-content;
       margin-right: 40px;
     }
   }
