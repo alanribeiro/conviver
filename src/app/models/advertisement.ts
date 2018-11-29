@@ -29,7 +29,8 @@ export class Advertisement {
       message:string,
       date:string,
       rate:string
-    }>
+    }>,
+    private restrictions:Array<string>
   ) {}
 
   getId():string {
@@ -174,5 +175,13 @@ export class Advertisement {
 
   setExperienceReports(experienceReports:Array<any>):void {
     this.experienceReports = experienceReports;
+  }
+
+  getRestrictions():Array<string> {
+    return this.restrictions;
+  }
+
+  setRestrictions(restrictions:Array<string>):void {
+    this.restrictions = restrictions;
   }
 }

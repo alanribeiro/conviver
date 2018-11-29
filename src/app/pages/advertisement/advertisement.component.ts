@@ -53,7 +53,8 @@ export class AdvertisementComponent implements OnInit {
           snapshot.rent,
           snapshot.expenses,
           snapshot.residents,
-          snapshot.experienceReports
+          snapshot.experienceReports,
+          snapshot.restrictions
         )
         this.getOwner(snapshot.ownerId);
         this.populateResidents(snapshot.residents);
@@ -122,10 +123,4 @@ export class AdvertisementComponent implements OnInit {
       this.totalPrice += expenses[i].value;
     }
   }
-
-  // showAdvertisementInfo = () => {
-  //   if(this.advertisement == undefined || this.owner == undefined) {
-  //     return false;
-  //   }
-  // }
 }

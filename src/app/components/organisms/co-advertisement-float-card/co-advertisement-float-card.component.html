@@ -5,7 +5,11 @@
     </div>
     <div class="co-advertisement-float-card__address">{{address}}</div>
     <div class="co-advertisement-float-card__features">
-      <co-illustration-item-list [itemsList]="features"></co-illustration-item-list>
+      <div class="co-advertisement-float-card__features__title">Caracteristicas:</div>
+      <co-illustration-item [item]="propertyType" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item [icon]="'man-and-girl'" [item]="numberOfResidents + ' moradores'" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item [icon]="'man-and-girl'" [item]="numberOfResidents + ' vagas'" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item-list [itemsList]="restrictions" [size]="'extra-small'"></co-illustration-item-list>
     </div>
     <div class="co-advertisement-float-card__rate">
       <div class="co-advertisement-float-card__rate__title">Avaliação:</div>

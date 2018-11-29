@@ -35,8 +35,11 @@
 
   <co-advertisement-float-card
     [price]="totalPrice"
-    [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"    
-    [features]=""
+    [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"
+    [propertyType]="advertisement.propertyType"
+    [numberOfResidents]="residents.length"
+    [numberOfPlaces]="advertisement.numberOfPlaces"
+    [restrictions]="advertisement.restrictions"
     [rate]="advertisement.rate">
   </co-advertisement-float-card>
 </article>

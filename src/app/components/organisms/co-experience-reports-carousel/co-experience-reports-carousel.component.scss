@@ -25,6 +25,10 @@
 
     &__item {
       width: 498px;
+
+      // @include mqMaxWidth('mdx') {
+      //   width: 100%;
+      // }
     }
   }
 
@@ -36,5 +40,14 @@
   &__right-arrow {
     @extend %arrow;
     right: 0;
+  }
+
+  @include mqMaxWidth('lg') {
+    width: 498px;
+    margin: auto;
+  }
+
+  @include mqMaxWidth('mdx') {
+    width: 100%;
   }
 }

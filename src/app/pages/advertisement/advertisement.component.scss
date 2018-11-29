@@ -24,4 +24,13 @@
       margin-right: 40px;
     }
   }
+
+  @include mqMaxWidth('lg') {
+    padding-top: 30px;
+    padding-right: 0;
+  }
+
+  @include mqMaxWidth('md') {
+    padding-top: 21px;
+  }
 }

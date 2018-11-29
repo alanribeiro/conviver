@@ -9,7 +9,10 @@ export class CoAdvertisementFloatCardComponent {
 
   @Input() price:number;
   @Input() address:string;
-  @Input() features:Array<any>;
+  @Input() propertyType:string;
+  @Input() numberOfResidents:number;
+  @Input() numberOfPlaces:number;
+  @Input() restrictions:Array<any>;
   @Input() rate:number;
 
   constructor() { }

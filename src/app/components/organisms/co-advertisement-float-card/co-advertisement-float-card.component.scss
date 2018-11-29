@@ -24,10 +24,19 @@
         margin-bottom: 10px;
     }
 
+    &__features {
+        &__title {
+            font-size: $section-title-font-size;
+            font-family: $font-medium;
+            margin-bottom: 5px;
+        }
+    }
+
     &__rate {
         &__title {
             font-size: $section-title-font-size;
             font-family: $font-medium;
+            margin-top: 10px;
         }
 
         &__description {
@@ -39,5 +48,9 @@
     &__message-button {
         margin-top: 10px;
         padding: 0 64px;
+    }
+
+    @include mqMaxWidth('lg') {
+        display: none;
     }
 }
