@@ -3,12 +3,22 @@
   <!--Section One-->
   <div class="section landing-page__one">
     <header class="landing-page__one__header">
-        <co-logo [type]="'horizontal'" [color]="'default'" [width]="'175'" class="landing-page__one_header__logo"> </co-logo>
+        <img src ="./../../../assets/icons/conviver_logo-icon.png" class="landing-page__one__header__logo">
         <co-button [title]="'PARTICIPAR'" class="landing-page__one_header__input" (click)="fullpage_api.moveTo('lastPage')"></co-button>
     </header>
 
     <div class="landing-page__one__flex">
-      <div class="landing-page__one__flex__game"></div>
+      <div class="landing-page__one__flex__logo">
+          <co-logo [type]="'vertical'" [color]="'default'" [width]="'250'" class="landing-page__one__flex__logo__desktop"> </co-logo>
+
+          <co-logo [type]="'vertical'" [color]="'default'" [width]="'100'" class="landing-page__one__flex__logo__mobile"> </co-logo>
+
+          <div class="landing-page__one__flex__logo__title">
+            Descubra a nova forma de encontrar alguém para morar com você.
+          </div>
+      </div>
+
+      <!-- <div class="landing-page__one__flex__game"></div> -->
 
       <div class="landing-page__one__flex__arrow">
           <div class="round" (click)="fullpage_api.moveTo('secondPage')">
@@ -21,11 +31,16 @@
   </div>
 
   <div class="section fp-noscroll landing-page__two">
+
+    <div class="landing-page__two__divider">
+    </div>
+
     <div class="landing-page__two__container" [ngStyle]="{
     'transform': translateYMain1,
     'transition': '0.75s',
     'opacity': opacity1
   }">
+
       <div class="landing-page__two__container__content">
         <div class="landing-page__two__container__content__title" [ngStyle]="{
           'transform': translateYTitle1,
@@ -48,6 +63,10 @@
         }">
       </div>
     </div>
+
+    <div class="landing-page__two__divider2">
+    </div>
+
   </div>
 
   <!-- SECTION THREE -->
@@ -156,6 +175,11 @@
 
 
   <div class="section landing-page__four">
+
+    <div class="landing-page__four__divider">
+    
+    </div>
+
     <div class="landing-page__four__container" [ngStyle]="{
       'transform': translateYMain3,
       'transition': '0.75s',

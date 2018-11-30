@@ -14,13 +14,22 @@
   /* SECTION ONE */
 
   &__one {
-    width: 1050px;
+    width: 1000px;
+
+    @include mqMaxWidth('lg') {
+      width: 100vw;
+      padding: 20px;
+    }
 
     &__header {
       width: 100%;
       display: flex;
       justify-content: space-between;
       padding-top: 25px;
+
+      &__logo {
+        height: 50px;
+      }
     }
 
     &__flex {
@@ -28,7 +37,34 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-content: space-around;
+      align-items: center;
+
+      &__logo {
+        flex-basis: 100%;
+        margin-top: 50px;
+
+        &__desktop {
+          @include mqMaxWidth('lg') {
+            display: none;
+          } 
+        }
+
+        &__mobile {
+          display: none;
+
+          @include mqMaxWidth('lg') {
+            display: block;
+          } 
+        }
+
+        &__title {
+          font-family: $page-title-font-family;
+          font-size: $landing-page-item-font-size;
+          color: $landing-page-title2-color;
+          text-align: center;
+          margin-top: 30px;
+        }
+      }
 
       &__game {
         width: 100%;
@@ -40,6 +76,7 @@
       
       }
     }
+
   }
 
   /* SECTION TWO */
@@ -48,8 +85,38 @@
     width: 100%;
     @include default-gradient;
 
+    &__divider {
+      height: 150px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-image: url('./../../../assets/images/org-div-1.png');
+
+      @include mqMaxWidth('lg') {
+        height: 75px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    
+    &__divider2 {
+      height: 150px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-image: url('./../../../assets/images/org-div-1.png');
+      transform: scaleX(-1) rotate(180deg);
+
+      @include mqMaxWidth('lg') {
+        height: 75px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
     &__container {
-      width: 1050px;
+      width: 1000px;
       height: 100%;
       margin: 0 auto;
       display: flex;
@@ -57,8 +124,17 @@
       align-items: center;
       text-align: left;
 
+      @include mqMaxWidth('lg') {
+        width: 100%;
+        padding: 20px;
+      }
+
       &__content {
         flex-basis: 55%;
+        
+        @include mqMaxWidth('lg') {
+          flex-basis: 100%;
+        }
       
         &__title {
           font-family: $page-title-font-family;
@@ -84,6 +160,10 @@
 
       &__img {
         flex-basis: 30%;
+        
+        @include mqMaxWidth('lg') {
+          display: none;
+        }
       }
     }
   }
@@ -93,8 +173,13 @@
     background-color: $white;
 
     &__container {
-      width: 1050px;
+      width: 1000px;
       margin: 0 auto;
+
+      @include mqMaxWidth('lg') {
+        padding: 20px;
+        width: 100vw;
+      }
 
       &__content {
         display: flex;
@@ -106,6 +191,10 @@
 
         &__text {
         flex-basis: 50%;
+
+        @include mqMaxWidth('lg') {
+          flex-basis: 100%;
+        }
         
           &__title {
             font-family: $page-title-font-family;
@@ -131,6 +220,10 @@
 
         &__img {
           flex-basis: 30%;
+
+          @include mqMaxWidth('lg') {
+            display: none;
+          }
         }
       }
     }
@@ -142,7 +235,7 @@
     }
 
     &__container2 {
-      width: 1050px;
+      width: 1000px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -150,12 +243,29 @@
       margin-bottom: 25px;
       padding: 50px 0 0px 0;
 
+      @include mqMaxWidth('lg') {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 20px 20px 0 20px;
+        margin-bottom: 0px;
+      }
+
       &:last-child {
         padding-bottom: 50px;
+
+        @include mqMaxWidth('lg') {
+          padding-bottom: 0px;
+          padding-top: 0px;
+        }
       }
 
       &__item {
         flex-basis: 40%;
+
+        @include mqMaxWidth('lg') {
+          flex-basis: 100%;
+          margin: 0 0 15px 0;
+        }
 
         &__icon img {
           height: 100px;
@@ -187,9 +297,17 @@
     width: 100%;
     @include menu-gradient;
 
+    &__divider {
+      height: 150px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-image: url('./../../../assets/images/org-div-1.png');
+    }
+
     &__container {
-      width: 1050px;
-      height: 100%;
+      width: 1000px;
+      height: 100vh;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -197,9 +315,13 @@
       align-content: center;
       text-align: center;
 
+      @include mqMaxWidth('lg') {
+        width: 100%;
+      }
+
       &__text {
         flex-basis: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 50px; 
 
         &__title {
           font-family: $page-title-font-family;
@@ -217,8 +339,6 @@
       }
 
       &__input {
-        margin-top: 25px;
-
         &__button {
           margin-top: 10px;
           min-height: 40px;
@@ -249,7 +369,7 @@
 }
 
 .right {
-  text-align: right
+  text-align: right;
 }
 
 /* SETINHA */
@@ -276,7 +396,7 @@
 }
 
 .next {
-background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojNjUwRUNFfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwlgAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojNjUwRUNFfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
 }
 
 @keyframes bounceAlpha {
