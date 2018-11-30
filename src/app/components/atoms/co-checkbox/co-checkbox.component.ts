@@ -13,6 +13,4 @@ export class CoCheckboxComponent {
     this.checked = false;
   }
 
-
-
 }

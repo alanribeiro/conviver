@@ -6,6 +6,9 @@ export class Advertisement {
     private homeAppliances:Array<string>,
     private amenities:Array<string>,
     private thumbnail:string,
+    private street:string,
+    private number:number,
+    private neighborhood:string,
     private city:string,
     private state:string,
     private country:string,
@@ -75,6 +78,30 @@ export class Advertisement {
 
   setThumbnail(thumbnail:string):void {
     this.thumbnail = thumbnail;
+  }
+
+  getStreet():string {
+    return this.street;
+  }
+
+  setStreet(street:string):void {
+    this.street = street;
+  }
+
+  getNumber():number {
+    return this.number;
+  }
+
+  setNumber(number:number):void {
+    this.number = number;
+  }
+
+  getNeighborhood():string {
+    return this.neighborhood;
+  }
+
+  setNeighborhood(neighborhood:string):void {
+    this.neighborhood = neighborhood;
   }
 
   getCity():string {

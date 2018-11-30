@@ -1,8 +1,41 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
 .advertise-vacancy-page {
     &__carousel {
+        overflow: hidden;
+
         &__slider {
+            width: 700%;
+            @include flexbox(flex, initial, initial);
+            @include transition(transform, $default-animation-duration, ease);
+
             &__item-content {
+                width: calc(100% / 7);
                 padding: 40px 0;
+            }
+
+            &--section-2 {
+                transform: translateX(calc(-100% / 7));
+            }
+
+            &--section-3 {
+                transform: translateX(calc(-200% / 7))
+            }
+
+            &--section-4 {
+                transform: translateX(calc(-300% / 7));
+            }
+
+            &--section-5 {
+                transform: translateX(calc(-400% / 7));
+            }
+
+            &--section-6 {
+                transform: translateX(calc(-500% / 7))
+            }
+
+            &--section-7 {
+                transform: translateX(calc(-600% / 7));
             }
         }
     }

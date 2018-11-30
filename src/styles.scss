@@ -111,6 +111,10 @@
       box-shadow: none;
       background-color: $badge-color;
     }
+
+    &-dot {
+      box-shadow: none;
+    }
   }
 
   &-input {
@@ -192,6 +196,10 @@
 
     &-checked .ant-checkbox-inner {
       background-color: $primary-color-light;
+      border-color: $primary-color-light;
+    }
+
+    &:hover .ant-checkbox-inner {
       border-color: $primary-color-light;
     }
   }

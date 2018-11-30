@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-advertise-vacancy-rooms',
@@ -8,7 +8,39 @@ import { Component, Input } from '@angular/core';
 export class CoAdvertiseVacancyRoomsComponent {
 
   @Input() rooms:Array<any>;
+  @Output() validate:EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  selectedRooms:Array<string>;
+
+  constructor() {
+    this.selectedRooms = [];
+  }
+
+  setRooms(activing, room) {
+    if(activing) {
+      this.selectedRooms.push(room);
+    }
+    else {
+      let index = this.selectedRooms.indexOf(room);
+      this.selectedRooms.splice(index, 1);
+    }
+
+    this.validateSection();
+  }
+
+  validateSection() {
+    let data = {
+      validate: false,
+      rooms: this.selectedRooms
+    };
+
+    if(this.selectedRooms.length == 0) {
+      this.validate.emit(data);
+      return;
+    }
+
+    data.validate = true;
+    this.validate.emit(data);
+  }
 
 }

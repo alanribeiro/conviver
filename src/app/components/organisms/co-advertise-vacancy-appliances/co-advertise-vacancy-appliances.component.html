@@ -6,13 +6,17 @@
       [size]="'big'"
       [icon]="item.title"
       [title]="item.title"
-      [hoverMessage]="item.hoverMessage">
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedAppliances.includes(item.title)"
+      (changeActive)="setAppliances($event, item.title)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"
       [icon]="'block'"
       [title]="'Não possuo nenhum'"
-      [hoverMessage]="'Tem que fazer essa frase aqui'">
+      [hoverMessage]="'Tem que fazer essa frase aqui'"
+      [active]="noAppliancesChecked"
+      (changeActive)="noAppliances($event)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"

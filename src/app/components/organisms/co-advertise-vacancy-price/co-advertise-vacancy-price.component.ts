@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class CoAdvertiseVacancyPriceComponent {
 
-  constructor() { }
+  expenses:Array<{name:string, value:number}>;
+
+  constructor() {
+    this.expenses = [];
+  }
+
+  addExpense() {
+    this.expenses.push({name: '', value: undefined});
+  }
+
+  setExpenseName(index, name) {
+    this.expenses[index].name = name;
+  }
+
+  setExpenseValue(index, value) {
+    this.expenses[index].value = value;
+  }
 
 }
