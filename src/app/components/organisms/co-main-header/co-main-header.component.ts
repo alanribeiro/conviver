@@ -8,18 +8,18 @@ import { MenuService } from '../../../services/menu/menu.service';
 })
 export class CoMainHeaderComponent implements OnInit {
 
-  user:any;
+  user: any;
 
-  menuMainItems:any;
-  menuOtherItems:any;
-  menuMobileOpen:boolean;
+  menuMainItems: any;
+  menuOtherItems: any;
+  menuMobileOpen: boolean;
 
-  constructor(private menuService:MenuService) {
+  constructor(private menuService: MenuService) {
     this.user = {
-      name: "Lionel Messi",
-      photo: "https://i.kym-cdn.com/entries/icons/medium/000/020/776/messi.jpg",
-      genre: "male",
-      adress: "Barcelona - CA, Espanha",
+      name: 'Lionel Messi',
+      photo: 'https://i.kym-cdn.com/entries/icons/medium/000/020/776/messi.jpg',
+      genre: 'male',
+      adress: 'Barcelona - CA, Espanha',
       level: 1,
     }
     this.menuMobileOpen = false;

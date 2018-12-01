@@ -6,13 +6,21 @@
     <co-logo [type]="'horizontal'" [color]="'white'" [width]="'125'"> </co-logo>
     <div class="co-main-header__container__menu">
       <co-menu-items [items]="menuMainItems"></co-menu-items>
-      <co-avatar
-        class="co-main-header__container__menu__avatar"
-        [size]="'small'"
-        [photo]="user.photo"
-        [genre]="user.genre">
-      </co-avatar>
+      <div class="co-main-header__container__menu__avatar" (mouseover)="hover=true" (mouseleave)="hover=false">
+        <co-avatar
+          [size]="'small'"
+          [photo]="user.photo"
+          [genre]="user.genre">
+        </co-avatar>
+
+        <div class="co-main-header__container__menu__dropdown" [ngStyle]="{ visibility: hover == true  ? 'visible' : 'hidden',
+                                                                          opacity: hover == true ? '1' : '0' }">
+                                                                          
+          <co-mobile-menu-item-list [items]="menuOtherItems" [isDropdown]=true></co-mobile-menu-item-list>
+        </div>
+      </div>
     </div>
+
     <div class="co-main-header__container__notification-button">
       <co-notification-button [withNotification]="false"></co-notification-button>
     </div>

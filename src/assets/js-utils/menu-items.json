@@ -43,6 +43,12 @@
       "icon": "question",
       "notifications": 0,
       "url": "item7"
+    },
+    {
+      "title": "Desconectar",
+      "icon": "logout",
+      "notifications": 0,
+      "url": "item8"
     }
   ]
 }

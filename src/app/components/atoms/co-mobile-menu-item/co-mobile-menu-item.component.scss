@@ -4,8 +4,6 @@
 .co-mobile-menu-item {
   height: 60px;
   list-style: none;
-  padding-left: 40px;
-  padding-right: 15px;
   color: $menu-item-color;
   outline: none;
   @include flexbox(flex, space-between, center);

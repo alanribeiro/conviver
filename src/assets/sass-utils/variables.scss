@@ -62,6 +62,8 @@ $registration-divider-color: $gray-CC;
 $sign-card-bg-color: $gray-FA;
 $recover-password-color: $primary-color;
 $landing-page-title-color: $gray-FA;
+$menu-item-hover: $black;
+$menu-back-color: $primary-color-light;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -95,6 +97,7 @@ $profile-user-name-font-family: $font-bold;
 $profile-user-city-and-age-font-family: $font-medium;
 $profile-user-since-font-family: $font-regular;
 $comment-date-font-family: $font-medium;
+$dp-menu-font-family: $font-regular;
 
 /* ------------------ FONT SIZES ------------------ */
 
@@ -141,13 +144,12 @@ $profile-user-since-font-size: $font-size-extra-small;
 /* ------------------- MARGINS / PADDINGS -------------------- */
 
 $default-margin: 7.5px;
-
 $landing-page-padding: 8vw;
 
 /* ----------------- BREAKPOINTS ------------------ */
 
 $width-breakpoints: (
-  'lg': 930px,
+  'lg': 1000px,
   'md': 740px,
   'mdx': 600px,
   'mdxx': 470px,
