@@ -4,7 +4,7 @@
   <div class="section landing-page__one">
     <header class="landing-page__one__header">
         <img src ="./../../../assets/icons/conviver_logo-icon.png" class="landing-page__one__header__logo">
-        <co-button [title]="'PARTICIPAR'" class="landing-page__one_header__input" (click)="fullpage_api.moveTo('lastPage')"></co-button>
+        <co-button [title]="'CADASTRAR'" class="landing-page__one_header__input" (click)="fullpage_api.moveTo('lastPage')"></co-button>
     </header>
 
     <div class="landing-page__one__flex">
@@ -14,7 +14,7 @@
           <co-logo [type]="'vertical'" [color]="'default'" [width]="'100'" class="landing-page__one__flex__logo__mobile"> </co-logo>
 
           <div class="landing-page__one__flex__logo__title">
-            Descubra a nova forma de encontrar alguém para morar com você.
+            A primeira plataforma automatizada de compartilhamento de moradias
           </div>
       </div>
 
@@ -45,15 +45,20 @@
         <div class="landing-page__two__container__content__title" [ngStyle]="{
           'transform': translateYTitle1,
           'transition': '1s'
-        }">Encontre um novo amigo e more com ele. Nós mediamos tudo.</div>
+        }">Encontre a pessoa ideal para morar com você</div>
 
         <div class="landing-page__two__container__content__subtitle" [ngStyle]="{
           'transform': translateYSubtitle1,
           'transition': '1.25s'
         }">
-        Encontre um novo amigo e more com ele. Nós mediamos tudo.</div>
+        Tudo isso de forma rápida e fácil</div>
 
-        <div class="landing-page__two__container__content__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente aspernatur libero dolorum voluptatem vel quibusdam maxime aliquid distinctio placeat asperiores, minima hic molestias quia? Nam nisi expedita sint et obcaecati!.</div>
+        <div class="landing-page__two__container__content__desc">
+          Já pensou morar com alguém que compartilhe dos mesmos gostos que você e tenha uma
+          personalidade semelhante a sua? Agora isso é possível! Basta realizar seu
+          cadastro que nós te indicamos pessoas que estão buscando dividir moradia e que
+          tenham mais chances de se dar bem com você.  
+        </div>
       </div>
       
       <div class="landing-page__two__container__img">
@@ -84,16 +89,18 @@
             'transform': translateYTitle2,
             'transition': '1s'
           }">
-            Para Locadores.
+            Proprietário de imóvel
           </div>
           <div class="landing-page__three__container__content__text__subtitle" [ngStyle]="{
             'transform': translateYSubtitle2,
             'transition': '1s'
           }">
-            Lorem Ipsum.
+            Anuncie de forma fácil e eficiente
           </div>
           <div class="landing-page__three__container__content__text__desc">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero alias corporis! Itaque atque porro molestias enim harum accusamus ad dolorem, facilis unde! Officiis soluta veritatis vero cupiditate vitae eum!
+            Conectamos o seu anúncio com pessoas interessadas em alugar. Além disso, nós cuidados do
+            aluguel do início ao fim, agendando visitas, fechando o contrato e repassando valor mensalmente.
+            E o melhor de tudo, o anúncio é feito de forma rápida e totalmente gratuita. 
           </div>
         </div>
         <div class="landing-page__three__container__content__img" id="scene" [ngStyle]="{
@@ -117,16 +124,19 @@
             'transform': translateYTitle2,
             'transition': '1s'
           }">
-            Para Locatários.
+            Deseja alugar?
           </div>
           <div class="landing-page__three__container__content__text__subtitle" [ngStyle]="{
             'transform': translateYSubtitle2,
             'transition': '1s'
           }">
-            Lorem Ipsum.
+            Encontre o imóvel ideal para você
           </div>
           <div class="landing-page__three__container__content__text__desc">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero alias corporis! Itaque atque porro molestias enim harum accusamus ad dolorem, facilis unde! Officiis soluta veritatis vero cupiditate vitae eum!
+            Aqui você encontra anúncios de imóveis nas mais diversas regiões do Brasil. Você pode
+            alugar diretamente na nossa plataforma, de forma rápida e sem burocracias. E tudo isso é feito de
+            modo transparente e totalmente seguro. Além disso, se você busca dividir gastos, temos 
+            anúncios de imóveis já ocupados e com vagas disponíveis.
           </div>
         </div>
       </div>
@@ -141,14 +151,20 @@
     }">
       <div class="landing-page__three__container2__item">
         <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
-        <div class="landing-page__three__container2__item__title">Lorem Ipsum</div>
-        <div class="landing-page__three__container2__item__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, cum sed beatae labore soluta aspernatur praesentium enim sint dolore debitis natus rem? Fuga tempore perferendis facilis cumque nihil illum voluptatum?</div>
+        <div class="landing-page__three__container2__item__title">Automatizado</div>
+        <div class="landing-page__three__container2__item__desc">
+          Usamos um algorito de automação que analisa os dados dos usuários, inseridos no momento de 
+          cadastro e forma o "match" ideal entre aqueles que possuem um perfil mais semelhante.
+        </div>
       </div>
 
       <div class="landing-page__three__container2__item">
         <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
-        <div class="landing-page__three__container2__item__title">Lorem Ipsum</div>
-        <div class="landing-page__three__container2__item__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, cum sed beatae labore soluta aspernatur praesentium enim sint dolore debitis natus rem? Fuga tempore perferendis facilis cumque nihil illum voluptatum?</div>
+        <div class="landing-page__three__container2__item__title">Seguro</div>
+        <div class="landing-page__three__container2__item__desc">
+          Contamos com um time jurídico e contábel que é responsável por garantir a transparência e 
+          segurança durante todo o processo de locação dos imóveis. E você acompanha tudo que está acontecendo.
+        </div>
       </div>
     </div>
 
@@ -159,14 +175,20 @@
     }">
       <div class="landing-page__three__container2__item">
         <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
-        <div class="landing-page__three__container2__item__title">Lorem Ipsum</div>
-        <div class="landing-page__three__container2__item__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, cum sed beatae labore soluta aspernatur praesentium enim sint dolore debitis natus rem? Fuga tempore perferendis facilis cumque nihil illum voluptatum?</div>
+        <div class="landing-page__three__container2__item__title">Prático</div>
+        <div class="landing-page__three__container2__item__desc">
+          Você pode buscar imóveis, anunciar vagas disponíveis no seu imóvel e anunciar imóveis disponíveis
+          para locação. Tudo isso através do seu celular ou computador, de forma fácil, rápida e sem burocracias.
+        </div>
       </div>
 
       <div class="landing-page__three__container2__item">
           <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
-          <div class="landing-page__three__container2__item__title">Lorem Ipsum</div>
-          <div class="landing-page__three__container2__item__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, cum sed beatae labore soluta aspernatur praesentium enim sint dolore debitis natus rem? Fuga tempore perferendis facilis cumque nihil illum voluptatum?</div>
+          <div class="landing-page__three__container2__item__title">Moderno</div>
+          <div class="landing-page__three__container2__item__desc">
+            Usamos uma linguagem que tem tudo a ver com você. De forma clara e animada, queremos tornar a sua
+            experiência de moradia mais divertida, sustentável e prazerosa.
+          </div>
         </div>
     </div>
 
@@ -190,7 +212,7 @@
           Entre na lista de espera.
         </div>
         <div class="landing-page__four__container__text__subtitle">
-          O conviver é a primeira plataforma automatizada de compartilhamento de moradias.
+          Cadastre seu e-mail e seja um dos primeiros a anunciar vagas e imóveis no Conviver
         </div>
       </div>
       <div class="landing-page__four__container__input">
