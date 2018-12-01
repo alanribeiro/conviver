@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'co-advertisement-float-card',
@@ -12,7 +12,7 @@ export class CoAdvertisementFloatCardComponent {
   @Input() propertyType:string;
   @Input() numberOfResidents:number;
   @Input() numberOfPlaces:number;
-  @Input() restrictions:Array<any>;
+  @Input() restrictions:Array<string>;
   @Input() rate:number;
 
   constructor() { }

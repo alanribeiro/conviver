@@ -26,11 +26,16 @@
   }
 
   @include mqMaxWidth('lg') {
-    padding-top: 30px;
-    padding-right: 0;
+    padding: 30px 0 90px 0;
   }
 
   @include mqMaxWidth('md') {
     padding-top: 21px;
+  }
+
+  &__experience-reports {
+    @include mqMaxWidth('md') {
+      display: none;
+    }
   }
 }

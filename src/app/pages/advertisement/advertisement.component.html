@@ -2,7 +2,13 @@
   <co-loading></co-loading>
 </div>
 <article *ngIf="advertisement != undefined && owner != undefined" class="advertisement-page-container">
-  <co-advertisement-main-section [photos]="advertisement.photos" [user]="owner" [creationDate]="advertisement.creationDate"></co-advertisement-main-section>
+  <co-advertisement-main-section
+    [photos]="advertisement.photos"
+    [user]="owner"
+    [creationDate]="advertisement.creationDate"
+    [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"
+    [rate]="advertisement.rate">
+  </co-advertisement-main-section>
   <co-section [title]="'Descrição do imóvel'">
     <div class="advertisement-page-container__description">{{advertisement.description}}</div>  
   </co-section>
@@ -29,10 +35,11 @@
       <co-residents-list [residents]="residents"></co-residents-list>
     </div>  
   </co-section>
-  <co-section [title]="'Relatos de experiência'">
-    <co-experience-reports-carousel [reports]="advertisement.experienceReports"></co-experience-reports-carousel>
-  </co-section>
-
+  <div class="advertisement-page-container__experience-reports">
+    <co-section [title]="'Relatos de experiência'">
+      <co-experience-reports-carousel [reports]="advertisement.experienceReports"></co-experience-reports-carousel>
+    </co-section>
+  </div>
   <co-advertisement-float-card
     [price]="totalPrice"
     [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"
