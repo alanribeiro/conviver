@@ -1,0 +1,19 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+[nz-carousel-content] {
+  height: 290px;
+  background-size: cover;
+  background-position: center;
+
+  @include mqMaxWidth('lg') {
+    height: 440px;
+  }
+
+  @include mqMaxWidth('mdx') {
+    height: 330px;
+  }
+
+  @include mqMaxWidth('sm') {
+    height: 220px;
+  }
+}

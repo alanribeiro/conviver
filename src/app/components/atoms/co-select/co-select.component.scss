@@ -10,4 +10,8 @@
     &--margin {
         margin: $default-margin;
     }
+
+    &--error {
+        border-color: $input-error-border-color;
+    }
 }

@@ -2,7 +2,7 @@
 @import '../../../../assets/sass-utils/mixins.scss';
 
 .co-illustration-item {
-    width: 100px;
+    min-width: 100px;
     height: 78.5px;
     margin: 5px;
     @include flexbox(inline-flex, center, center, column);
@@ -14,11 +14,28 @@
             max-height: 36px;
             margin-bottom: 10px;
         }
+
+        &--extra-small {
+            max-height: 24px;
+            margin-bottom: 5px;
+        }
     }
 
     &__title {
+        text-align: center;
         font-family: $title-illustration-font-family;
         font-size: $title-illustration-item-font-size;
+
+        &--extra-small {
+            font-size: $font-size-super-small;
+        }
+    }
+
+    &--extra-small {
+        min-width: 65.5px;
+        height: 41px;
+        margin: 5px;
+        margin-left: 0;
     }
 }
 

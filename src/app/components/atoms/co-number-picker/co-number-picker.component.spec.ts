@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { CoNumberPickerComponent } from './co-number-picker.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('CoNumberPickerComponent', () => {
+  let component: CoNumberPickerComponent;
+  let fixture: ComponentFixture<CoNumberPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ CoNumberPickerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(CoNumberPickerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

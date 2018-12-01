@@ -29,7 +29,7 @@ export class CoCardAnnounceListComponent {
         icon: 'man-and-girl',
         description: 'Encontre pessoas para morar com você e dividir as despesas. Anuncie agora uma vaga na sua casa.',
         buttonTitle: 'Anunciar uma vaga',
-        buttonUrl: ''
+        buttonUrl: '/advertise/vacancy'
       }
     ]
   }

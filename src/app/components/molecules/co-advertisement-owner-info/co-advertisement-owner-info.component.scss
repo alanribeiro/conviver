@@ -1,0 +1,91 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement-owner-info {
+  margin-top: 20px;
+  @include flexbox(flex, initial, center);
+
+  &__user-info {
+    flex-grow: 1;
+    @include flexbox(flex, initial, center);
+
+    &__avatar {
+      margin-right: 10px;
+    }
+
+    &__info {
+      &__name {
+        font-family: $avatar-font-family;
+        font-size: $common-text-font-size;
+      }
+  
+      &__city {
+        font-family: $common-text-font-family;
+        font-size: $advertisement-additional-info-font-size;
+      }
+  
+      &__created-in {
+        font-family: $common-text-font-family;
+        font-size: $advertisement-additional-info-font-size;
+        display: none;
+  
+        @include mqMaxWidth('lg') {
+          display: block;
+        }
+      }
+    }
+
+    @include mqMaxWidth('mdx') {
+      padding-top: 20px;
+    }
+  }
+
+  &__created-in {
+    text-align: right;
+    margin-bottom: 21px;
+    font-family: $common-text-font-family;
+    font-size: $advertisement-additional-info-font-size;
+
+    @include mqMaxWidth('lg') {
+      display: none;
+    }
+  }
+
+  &__advertisement-info {
+    width: 285px;
+    text-align: right;
+    display: none;
+
+    &__address {
+      font-size: $common-text-font-size;
+      font-family: $font-medium;
+      margin-bottom: 5px;
+    }
+
+    &__rate-description {
+      margin-top: 5px;
+      font-size: $font-size-super-small;
+
+      @include mqMaxWidth('mdx') {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    @include mqMaxWidth('lg') {
+      display: block;
+    }
+
+    @include mqMaxWidth('mdx') {
+      text-align: left;
+      width: auto;
+    }
+  }
+
+  @include mqMaxWidth('lg') {
+    @include flexbox(flex, initial, initial);
+  }
+
+  @include mqMaxWidth('mdx') {
+    @include flexbox(flex, initial, initial, column-reverse);
+  }
+}

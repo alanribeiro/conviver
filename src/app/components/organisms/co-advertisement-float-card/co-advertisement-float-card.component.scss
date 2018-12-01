@@ -1,0 +1,124 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertisement-float-card {
+    width: 332px;
+    position: fixed;
+    top: 110px;
+    margin-left: 548px;
+
+    &__price {
+        margin-bottom: 5px;
+        @include flexbox(flex, initial, baseline);
+
+        span {
+            margin-left: 5px;
+            font-size: $font-size-extra-small;
+            font-family: $price-font-family;
+            color: $black;
+        }
+    }
+
+    &__address {
+        font-size: $common-text-font-size;
+        font-family: $font-medium;
+        margin-bottom: 10px;
+    }
+
+    &__features {
+        &__title {
+            font-size: $section-title-font-size;
+            font-family: $font-medium;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__rate {
+        &__title {
+            font-size: $section-title-font-size;
+            font-family: $font-medium;
+            margin-top: 10px;
+        }
+
+        &__description {
+            margin-top: 5px;
+            font-size: $font-size-super-small;
+        }
+    }
+
+    &__message-button {
+        margin-top: 10px;
+        padding: 0 64px;
+    }
+
+    @include mqMaxWidth('lg') {
+        display: none;
+    }
+
+    &--mobile {
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0 30px;
+        background-color: white;
+        border-top: 1px solid $border-color;
+        display: none;
+
+        &__price {
+            flex-grow: 1;
+            @include flexbox(flex, initial, baseline);
+
+            span {
+                margin-left: 5px;
+                font-size: $font-size-extra-small;
+                font-family: $price-font-family;
+                color: $black;
+
+                @include mqMaxWidth('mdx') {
+                    margin-left: 0;
+                }
+            }
+
+            @include mqMaxWidth('mdx') {
+                display: block;
+                line-height: 1;
+            }
+        }
+
+        &__rounded-message-button {
+            display: none;
+            margin-right: 15px;
+
+            @include mqMaxWidth('md') {
+                display: block;
+            }
+
+            @include mqMaxWidth('sm') {
+                display: none;
+            }
+        }
+
+        &__interested-button {
+            margin-right: 30px;
+
+            @include mqMaxWidth('md') {
+                margin-right: 0;
+            }
+        }
+
+        &__message-button {
+            @include mqMaxWidth('md') {
+                display: none;
+            }
+        }
+
+        @include mqMaxWidth('lg') {
+            @include flexbox(flex, initial, center);
+        }
+
+        @include mqMaxWidth('md') {
+            padding: 0 21px;
+        }
+    }
+}

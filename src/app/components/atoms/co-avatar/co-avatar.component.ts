@@ -17,7 +17,7 @@ export class CoAvatarComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.photo == undefined) {
+    if(this.photo == undefined || this.photo == '') {
       return this.photo = `../../../../assets/images/${this.genre}-user-icon.png`;
     }
   }

@@ -1,0 +1,44 @@
+<div class="co-advertisement-float-card">
+  <co-card>
+    <div class="co-advertisement-float-card__price">
+      <co-price [price]="price" [size]="'big'"></co-price><span>por mês</span>
+    </div>
+    <div class="co-advertisement-float-card__address">{{address}}</div>
+    <div class="co-advertisement-float-card__features">
+      <div class="co-advertisement-float-card__features__title">Caracteristicas:</div>
+      <co-illustration-item [item]="propertyType" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item [icon]="'man-and-girl'" [item]="numberOfResidents + ' moradores'" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item [icon]="'man-and-girl'" [item]="numberOfResidents + ' vagas'" [size]="'extra-small'"></co-illustration-item>
+      <co-illustration-item-list [itemsList]="restrictions" [size]="'extra-small'"></co-illustration-item-list>
+    </div>
+    <div class="co-advertisement-float-card__rate">
+      <div class="co-advertisement-float-card__rate__title">Avaliação:</div>
+      <co-rate [rate]="rate" [readOnly]="true"></co-rate>
+      <div class="co-advertisement-float-card__rate__description">
+        As avaliações e comentários de um imóvel são restritos apenas à antigos e atuais moradores do mesmo.
+      </div>
+    </div>
+    <co-divider></co-divider>
+    <div class="co-advertisement-float-card__interested-button">
+      <co-button [title]="'Tenho interesse'"></co-button>
+    </div>
+    <div class="co-advertisement-float-card__message-button">
+      <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
+    </div>
+  </co-card>
+</div>
+
+<div class="co-advertisement-float-card--mobile">
+  <div class="co-advertisement-float-card--mobile__price">
+    <co-price [price]="price" [size]="'big'"></co-price><span>por mês</span>
+  </div>
+  <div class="co-advertisement-float-card--mobile__rounded-message-button">
+    <co-rounded-button [icon]="'message'"></co-rounded-button>
+  </div>
+  <div class="co-advertisement-float-card--mobile__interested-button">
+    <co-button [title]="'Tenho interesse'"></co-button>
+  </div>
+  <div class="co-advertisement-float-card--mobile__message-button">
+    <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
+  </div>
+</div>

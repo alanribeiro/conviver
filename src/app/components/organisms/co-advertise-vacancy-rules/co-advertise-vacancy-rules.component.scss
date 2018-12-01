@@ -1,0 +1,29 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-advertise-vacancy-rules {
+    &__form {
+        margin-top: 40px;
+
+        &__rule {
+            margin-bottom: 40px;
+            @include flexbox(flex, center, initial);
+
+            &__number {
+                color: $rule-number-color;
+                font-family: $title-font-family;
+                font-size: $rule-number-font-size;
+                margin-right: 15px;
+            }
+
+            &__textarea {
+                width: 526px;
+            }
+        }
+    }
+
+    &__add-button {
+        width: 145px;
+        margin: auto;
+    }
+}

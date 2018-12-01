@@ -1,1 +1,1 @@
-<co-illustration-item *ngFor="let item of itemsList" [item]="item" [size]="'small'"></co-illustration-item>
+<co-illustration-item *ngFor="let item of itemsList" [item]="item" [size]="size != undefined ? size : 'small'"></co-illustration-item>

@@ -1,0 +1,36 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-advertise-vacancy-location {
+    &__form {
+        margin-top: 40px;
+
+        &__row{
+            margin-bottom: 40px;
+            @include flexbox(flex, center, initial);
+
+            &__street {
+                width: 481px;
+                margin-right: 10px;
+            }
+
+            &__number,
+            &__state {
+                width: 135px;
+            }
+
+            &__neighborhood {
+                width: 251px;
+                margin-right: 10px;
+            }
+
+            &__city {
+                width: 219px;
+                margin-right: 10px;
+            }
+
+            &:first-child {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

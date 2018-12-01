@@ -85,6 +85,14 @@ import { CoProfileUserSinceComponent } from './components/atoms/co-profile-user-
 import { CoCommentComponent } from './components/molecules/co-comment/co-comment.component';
 import { CoCommentListComponent } from './components/organisms/co-comment-list/co-comment-list.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { AdvertisementComponent } from './pages/advertisement/advertisement.component';
+import { CoCarouselComponent } from './components/atoms/co-carousel/co-carousel.component';
+import { CoAdvertisementOwnerInfoComponent } from './components/molecules/co-advertisement-owner-info/co-advertisement-owner-info.component';
+import { CoAdvertisementMainSectionComponent } from './components/organisms/co-advertisement-main-section/co-advertisement-main-section.component';
+import { CoDetailedPriceComponent } from './components/molecules/co-detailed-price/co-detailed-price.component';
+import { CoResidentsListComponent } from './components/molecules/co-residents-list/co-residents-list.component';
+import { CoExperienceReportComponent } from './components/molecules/co-experience-report/co-experience-report.component';
+import { CoExperienceReportsCarouselComponent } from './components/organisms/co-experience-reports-carousel/co-experience-reports-carousel.component';
 
 registerLocaleData(en);
 
@@ -92,7 +100,23 @@ import { AuthService } from './services/auth/auth.service';
 import { RegisterService } from './services/register/register.service';
 import { MenuService } from './services/menu/menu.service';
 import { UserService } from './services/user/user.service';
+import { AdvertisementService } from './services/advertisement/advertisement.service';
 import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.component';
+import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
+import { CoAdvertiseVacancyPropertyTypeComponent } from './components/organisms/co-advertise-vacancy-property-type/co-advertise-vacancy-property-type.component';
+import { CoAdvertiseVacancyLocationComponent } from './components/organisms/co-advertise-vacancy-location/co-advertise-vacancy-location.component';
+import { CoAdvertiseVacancyResidentsComponent } from './components/organisms/co-advertise-vacancy-residents/co-advertise-vacancy-residents.component';
+import { CoNumberPickerComponent } from './components/atoms/co-number-picker/co-number-picker.component';
+import { CoAdvertiseVacancyPriceComponent } from './components/organisms/co-advertise-vacancy-price/co-advertise-vacancy-price.component';
+import { CoAdvertiseVacancyRulesComponent } from './components/organisms/co-advertise-vacancy-rules/co-advertise-vacancy-rules.component';
+import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-advertise-vacancy-photos/co-advertise-vacancy-photos.component';
+import { CoAdvertiseVacancyDescriptionComponent } from './components/organisms/co-advertise-vacancy-description/co-advertise-vacancy-description.component';
+import { CoAdvertiseVacancyRoomsComponent } from './components/organisms/co-advertise-vacancy-rooms/co-advertise-vacancy-rooms.component';
+import { AdvertiseService } from './services/advertise/advertise.service';
+import { CoAdvertiseVacancyAppliancesComponent } from './components/organisms/co-advertise-vacancy-appliances/co-advertise-vacancy-appliances.component';
+import { CoAdvertiseVacancyAmenitiesComponent } from './components/organisms/co-advertise-vacancy-amenities/co-advertise-vacancy-amenities.component';
+import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/co-advertise-vacancy-restrictions/co-advertise-vacancy-restrictions.component';
+import { CoAdvertisementFloatCardComponent } from './components/organisms/co-advertisement-float-card/co-advertisement-float-card.component';
 
 @NgModule({
   declarations: [
@@ -167,7 +191,29 @@ import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.com
     CoCommentComponent,
     CoCommentListComponent,
     LandingPageComponent,
-    CoLoadingComponent
+    CoLoadingComponent,
+    AdvertiseVacancyComponent,
+    CoAdvertiseVacancyPropertyTypeComponent,
+    CoAdvertiseVacancyLocationComponent,
+    CoAdvertiseVacancyResidentsComponent,
+    CoNumberPickerComponent,
+    CoAdvertiseVacancyPriceComponent,
+    CoAdvertiseVacancyRulesComponent,
+    CoAdvertiseVacancyPhotosComponent,
+    CoAdvertiseVacancyDescriptionComponent,
+    CoAdvertiseVacancyRoomsComponent,
+    CoAdvertiseVacancyAppliancesComponent,
+    CoAdvertiseVacancyAmenitiesComponent,
+    CoAdvertiseVacancyRestrictionsComponent,
+    AdvertisementComponent,
+    CoCarouselComponent,
+    CoAdvertisementOwnerInfoComponent,
+    CoAdvertisementMainSectionComponent,
+    CoDetailedPriceComponent,
+    CoResidentsListComponent,
+    CoExperienceReportComponent,
+    CoExperienceReportsCarouselComponent,
+    CoAdvertisementFloatCardComponent
   ],
   imports: [
     BrowserModule,
@@ -181,7 +227,7 @@ import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.com
     AngularFireDatabaseModule,
     AngularFullpageModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, AdvertiseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

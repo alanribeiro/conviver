@@ -9,6 +9,11 @@
   &__icon {
     width: 36px;
     margin-bottom: 15px;
+
+    &--hover {
+      @extend .co-selectable-item__icon;
+      display: none;
+    }
   }
 
   &__title {
@@ -33,6 +38,14 @@
     color: $selectable-item-title-hover-color;
     background: $selectable-item-bg-hover-color;
     @include transition();
+
+    .co-selectable-item__icon {
+      display: none;
+
+      &--hover {
+        display: block;
+      }
+    }
   }
 
   &:hover &__hoverMessage {

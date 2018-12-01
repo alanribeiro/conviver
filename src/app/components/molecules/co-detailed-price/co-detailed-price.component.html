@@ -1,0 +1,23 @@
+<table class="co-detailed-price-table">
+  <tr>
+    <td class="co-detailed-price-table__expense-name">Aluguel:</td>
+    <td class="co-detailed-price-table__value">
+      <co-price [price]="rent.value"></co-price>
+    </td>
+    <td *ngIf="rent.waterAndElectricityIncluded" class="co-detailed-price-table__water-and-electricity-included">
+      Água e luz incluso
+    </td>
+  </tr>
+  <tr *ngFor="let expense of expenses">
+    <td class="co-detailed-price-table__expense-name">{{expense.name}}:</td>
+    <td class="co-detailed-price-table__value">
+      <co-price [price]="expense.value"></co-price>
+    </td>
+  </tr>
+  <tr class="co-detailed-price-table__total">
+    <td class="co-detailed-price-table__expense-name">TOTAL:</td>
+    <td class="co-detailed-price-table__total__value">
+      <co-price [price]="total" [colored]="true"></co-price>
+    </td>
+  </tr>
+</table>

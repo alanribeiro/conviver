@@ -1,0 +1,8 @@
+<nz-carousel nzAutoPlay [nzAutoPlaySpeed]="5000">
+  <div
+    nz-carousel-content
+    *ngFor="let photo of photos"
+    class="advertisement-page-container__carousel-image"
+    [ngStyle]="{'background-image': 'url(' + photo + ')'}">
+  </div>
+</nz-carousel>

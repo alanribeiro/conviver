@@ -1,0 +1,54 @@
+<article class="advertise-vacancy-page">
+  <co-page-header
+    [title]="'Anunciar vaga'"
+    [subtitle]="'Conte-nos mais sobre onde você mora e encontre alguém para dividir as despesas.'">
+  </co-page-header>
+  <co-stepper-dots [quantity]="11" [activeDot]="0"></co-stepper-dots>
+  <section class="advertise-vacancy-page__carousel">
+    <div class="advertise-vacancy-page__carousel__slider">
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-property-type (changeType)="setSectionOne($event)"></co-advertise-vacancy-property-type>
+      </div>
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-location (validate)="setSectionTwo($event)"></co-advertise-vacancy-location>
+      </div> -->
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-residents></co-advertise-vacancy-residents>
+      </div> -->
+      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-rooms [rooms]="selectablesItems.rooms"></co-advertise-vacancy-rooms>
+      </div> -->
+      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-appliances [appliances]="selectablesItems.appliances"></co-advertise-vacancy-appliances>
+      </div> -->
+      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-amenities [amenities]="selectablesItems.amenities"></co-advertise-vacancy-amenities>
+      </div> -->
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-price></co-advertise-vacancy-price>
+      </div> -->
+      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-restrictions [restrictions]="selectablesItems.restrictions"></co-advertise-vacancy-restrictions>
+      </div> -->
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-rules></co-advertise-vacancy-rules>
+      </div> -->
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-photos></co-advertise-vacancy-photos>
+      </div> -->
+      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-description></co-advertise-vacancy-description>
+      </div> -->
+    </div>
+  </section>
+  <footer class="advertise-vacancy-page__actions">
+    <co-paging-buttons
+      [back]="backAvaliable"
+      [next]="currentSectionValidated"
+      [done]="doneAvaliable"
+      (clickedBack)="previousSection()"
+      (clickedNext)="nextSection()"
+      (clickedDone)="register()">
+    </co-paging-buttons>
+  </footer>
+</article>

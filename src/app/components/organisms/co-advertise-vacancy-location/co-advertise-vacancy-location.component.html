@@ -1,0 +1,28 @@
+<section class="co-advertise-vacancy-location">
+  <co-title [title]="'Qual a localização do imóvel?'"></co-title>
+  <div class="co-advertise-vacancy-location__form">
+    <div class="co-advertise-vacancy-location__form__row">
+      <div class="co-advertise-vacancy-location__form__row__street">
+        <co-input [placeholder]="'Rua'" [error]="street == ''" (valueChange)="setStreet($event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-location__form__row__number">
+        <co-input [type]="'number'" [placeholder]="'Nº'" [error]="number == ''" (valueChange)="setNumber($event)"></co-input>
+      </div>
+    </div>
+    <div class="co-advertise-vacancy-location__form__row">
+      <div class="co-advertise-vacancy-location__form__row__neighborhood">
+        <co-input [placeholder]="'Bairro'" [error]="neighborhood == ''" (valueChange)="setNeighborhood($event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-location__form__row__city">
+        <co-input [placeholder]="'Cidade'" [error]="city == ''" (valueChange)="setCity($event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-location__form__row__state">
+        <co-select [placeholder]="'Estado'" [options]="states" (valueChange)="setState($event)"></co-select>
+      </div>
+    </div>
+  </div>
+  <co-error-feedback
+    [message]="'Todos os campos devem ser preenchidos'"
+    [display]="street == '' || number == '' || neighborhood == '' || city == ''">
+  </co-error-feedback>
+</section>

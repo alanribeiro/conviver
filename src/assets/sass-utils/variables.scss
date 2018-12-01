@@ -64,6 +64,8 @@ $recover-password-color: $primary-color;
 $landing-page-title-color: $gray-FA;
 $menu-item-hover: $black;
 $menu-back-color: $primary-color-light;
+$number-picker-color: $gray-70;
+$rule-number-color: $primary-color;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
@@ -98,6 +100,8 @@ $profile-user-city-and-age-font-family: $font-medium;
 $profile-user-since-font-family: $font-regular;
 $comment-date-font-family: $font-medium;
 $dp-menu-font-family: $font-regular;
+$number-picker-font-family: $font-bold;
+$expense-name-font-family: $font-medium;
 
 /* ------------------ FONT SIZES ------------------ */
 
@@ -110,6 +114,7 @@ $font-size-mx: 18px;
 $default-font-size: 16px;
 $font-size-small: 14px;
 $font-size-extra-small: 12px;
+$font-size-super-small: 10px;
 
 $landing-page-item-font-size: $font-size-bigbig;
 $landing-page-font-size: $font-size-huge;
@@ -140,6 +145,7 @@ $sign-in-up-footer-font-size: $font-size-small;
 $recover-password-font-size: $font-size-extra-small;
 $profile-user-name-font-size: $font-size-enormous;
 $profile-user-since-font-size: $font-size-extra-small;
+$rule-number-font-size: $font-size-mx;
 
 /* ------------------- MARGINS / PADDINGS -------------------- */
 

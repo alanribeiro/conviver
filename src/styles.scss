@@ -42,6 +42,11 @@
   }
 }
 
+.clearfix {
+  display: flex;
+  justify-content: center;
+}
+
 @include keyframe(card-sign-appear) {
   0% {
     opacity: 0;
@@ -71,16 +76,34 @@
         margin-left: 20px;
         margin-right: 20px;
       }
+
+      &:hover {
+        border-color: $primary-color;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
+      } 
     }
   
     &-arrow {
       right: 20px;
       top: 55%;
     }
+
+    &-open .ant-select-selection {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
+    }
   }
 
   &-rate {
     color: $primary-color;
+
+    &-star:last-child {
+      margin-right: 0;
+    }
   }
 
   &-badge {
@@ -96,7 +119,11 @@
     height: 40px;
     padding: 0 20px;
 
-    &:hover, &:focus {
+    &:hover {
+      border: 1px solid $primary-color-light;
+    }
+    
+    &:focus {
       border: 1px solid $primary-color-light;
       box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
     }

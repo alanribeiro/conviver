@@ -1,7 +1,20 @@
-<div class="co-illustration-item">
+<div class="co-illustration-item" [ngClass]="{'co-illustration-item--extra-small': size == 'extra-small'}">
   <img
     class="co-illustration-item__icon"
-    [ngClass]="{'co-illustration-item__icon--small': size == 'small'}"
-    [src]="'../../../../assets/icons/' + item + '.svg'">
-  <div *ngIf="showTitle" class="co-illustration-item__title">{{item}}</div>
+    [ngClass]="
+      {
+        'co-illustration-item__icon--small': size == 'small',
+        'co-illustration-item__icon--extra-small': size == 'extra-small'
+      }"
+    [src]="icon != undefined ? '../../../../assets/icons/' + icon + '.svg' : '../../../../assets/icons/' + item + '.svg'">
+  <div
+    *ngIf="showTitle"
+    class="co-illustration-item__title"
+    [ngClass]="
+      {
+        'co-illustration-item__title--extra-small': size == 'extra-small'
+      }
+    ">
+    {{item}}
+  </div>
 </div>
