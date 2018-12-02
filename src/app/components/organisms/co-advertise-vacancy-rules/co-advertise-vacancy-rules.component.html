@@ -9,6 +9,6 @@
     </div>
   </div>
   <div class="co-advertise-vacancy-rules__add-button">
-    <co-button [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'" (click)="addRule()"></co-button>
+    <co-button *ngIf="rules.length < 2" [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'" (click)="addRule()"></co-button>
   </div>
 </section>

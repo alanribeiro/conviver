@@ -20,6 +20,6 @@
     </div>
   </div>
   <div class="co-advertise-vacancy-price__add-button">
-    <co-button [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'" (click)="addExpense()"></co-button>
+    <co-button *ngIf="expenses.length < 2" [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'" (click)="addExpense()"></co-button>
   </div>
 </section>

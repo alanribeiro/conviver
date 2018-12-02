@@ -11,6 +11,8 @@
 
             &__item-content {
                 width: calc(100% / 11);
+                max-height: 331px;
+                overflow-y: hidden;
                 padding: 40px 0;
             }
 
@@ -24,14 +26,27 @@
 
             &--section-4 {
                 transform: translateX(calc(-300% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: none;
+                    overflow-y: visible;
+                }
             }
 
             &--section-5 {
                 transform: translateX(calc(-400% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
             }
 
             &--section-6 {
                 transform: translateX(calc(-500% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
             }
 
             &--section-7 {
@@ -40,6 +55,10 @@
 
             &--section-8 {
                 transform: translateX(calc(-700% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
             }
 
             &--section-9 {
