@@ -59,6 +59,32 @@ export class AdvertiseVacancyComponent implements OnInit{
     this.setCurrentSectionValidated(value.validate);
   }
 
+  setSectionSeven(value) {
+    this.advertiseService.advertisement.setRent(value.rent);
+    this.advertiseService.advertisement.setExpenses(value.expenses);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionEight(value) {
+    this.advertiseService.advertisement.setRestrictions(value.restrictions);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionNine(value) {
+    this.advertiseService.advertisement.setRules(value.rules);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionTen(value) {
+    this.advertiseService.advertisement.setPhotos(value.photos);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
+  setSectionEleven(value) {
+    this.advertiseService.advertisement.setDescription(value.description);
+    this.setCurrentSectionValidated(value.validate);
+  }
+
   setCurrentSectionValidated(value:boolean) {
     this.currentSectionValidated = value;
   }
@@ -78,6 +104,7 @@ export class AdvertiseVacancyComponent implements OnInit{
   previousSection() {
     this.currentSection --;
     this.currentSectionValidated = true;
+    this.doneAvaliable = false;
     if(this.currentSection == 1) {
       this.backAvaliable = false;
     }

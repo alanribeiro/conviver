@@ -33,7 +33,8 @@ export class Advertisement {
       date:string,
       rate:string
     }>,
-    private restrictions:Array<string>
+    private restrictions:Array<string>,
+    private rules:Array<any>
   ) {}
 
   getId():string {
@@ -210,5 +211,13 @@ export class Advertisement {
 
   setRestrictions(restrictions:Array<string>):void {
     this.restrictions = restrictions;
+  }
+
+  getRules():Array<any> {
+    return this.rules;
+  }
+
+  setRules(rules:Array<any>):void {
+    this.rules = rules;
   }
 }

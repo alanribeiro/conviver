@@ -1,14 +1,14 @@
 <section class="co-advertise-vacancy-rules">
   <co-title [title]="'A casa possui regras? Se sim, descreva elas para os possíveis novos moradores'"></co-title>
   <div class="co-advertise-vacancy-rules__form">
-    <div class="co-advertise-vacancy-rules__form__rule">
-      <div class="co-advertise-vacancy-rules__form__rule__number">#1</div>
+    <div *ngFor="let rule of rules; let i = index" class="co-advertise-vacancy-rules__form__rule">
+      <div class="co-advertise-vacancy-rules__form__rule__number">#{{i + 1}}</div>
       <div class="co-advertise-vacancy-rules__form__rule__textarea">
-        <co-textarea [placeholder]="'Descreva a regra aqui...'" [rows]="2"></co-textarea>
+        <co-textarea [placeholder]="'Descreva a regra aqui...'" [rows]="2" (valueChange)="setRule(i, $event)"></co-textarea>
       </div>
     </div>
   </div>
   <div class="co-advertise-vacancy-rules__add-button">
-    <co-button [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'"></co-button>
+    <co-button [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'" (click)="addRule()"></co-button>
   </div>
 </section>

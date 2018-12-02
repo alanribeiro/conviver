@@ -57,7 +57,8 @@ export class AdvertisementComponent implements OnInit {
           snapshot.expenses,
           snapshot.residents,
           snapshot.experienceReports,
-          snapshot.restrictions
+          snapshot.restrictions,
+          snapshot.rules
         )
         this.getOwner(snapshot.ownerId);
         this.populateResidents(snapshot.residents);

@@ -7,7 +7,7 @@
         <co-input [type]="'number'" [placeholder]="'R$ 000,00'" (valueChange)="setRent($event)"></co-input>
       </div>
       <div class="co-advertise-vacancy-price__form__row__water-and-light">
-        <co-checkbox [title]="'Água e luz incluso'"></co-checkbox>
+        <co-checkbox [title]="'Água e luz incluso'" (check)="setWaterAndElectricityIncluded($event)"></co-checkbox>
       </div>
     </div>
     <div *ngFor="let expense of expenses; let i = index" class="co-advertise-vacancy-price__form__row">

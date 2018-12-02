@@ -6,13 +6,17 @@
       [size]="'big'"
       [icon]="item.title"
       [title]="item.title"
-      [hoverMessage]="item.hoverMessage">
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedRestrictions.includes(item.title)"
+      (changeActive)="setRestrictions($event, item.title)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"
       [icon]="'block'"
       [title]="'Nenhuma restição'"
-      [hoverMessage]="'É tudo liberado!!!'">
+      [hoverMessage]="'É tudo liberado!!!'"
+      [active]="noRestrictionsChecked"
+      (changeActive)="noRestrictions($event)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"
