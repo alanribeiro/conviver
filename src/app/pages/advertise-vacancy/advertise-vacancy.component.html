@@ -3,42 +3,54 @@
     [title]="'Anunciar vaga'"
     [subtitle]="'Conte-nos mais sobre onde você mora e encontre alguém para dividir as despesas.'">
   </co-page-header>
-  <co-stepper-dots [quantity]="11" [activeDot]="0"></co-stepper-dots>
+  <co-stepper-dots [quantity]="11" [activeDot]="currentSection - 1"></co-stepper-dots>
   <section class="advertise-vacancy-page__carousel">
-    <div class="advertise-vacancy-page__carousel__slider">
+    <div class="advertise-vacancy-page__carousel__slider"
+      [ngClass]="{
+        'advertise-vacancy-page__carousel__slider--section-2': currentSection == 2,
+        'advertise-vacancy-page__carousel__slider--section-3': currentSection == 3,
+        'advertise-vacancy-page__carousel__slider--section-4': currentSection == 4,
+        'advertise-vacancy-page__carousel__slider--section-5': currentSection == 5,
+        'advertise-vacancy-page__carousel__slider--section-6': currentSection == 6,
+        'advertise-vacancy-page__carousel__slider--section-7': currentSection == 7,
+        'advertise-vacancy-page__carousel__slider--section-8': currentSection == 8,
+        'advertise-vacancy-page__carousel__slider--section-9': currentSection == 9,
+        'advertise-vacancy-page__carousel__slider--section-10': currentSection == 10,
+        'advertise-vacancy-page__carousel__slider--section-11': currentSection == 11
+      }">
       <div class="advertise-vacancy-page__carousel__slider__item-content">
         <co-advertise-vacancy-property-type (changeType)="setSectionOne($event)"></co-advertise-vacancy-property-type>
       </div>
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
         <co-advertise-vacancy-location (validate)="setSectionTwo($event)"></co-advertise-vacancy-location>
-      </div> -->
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-residents></co-advertise-vacancy-residents>
-      </div> -->
-      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-rooms [rooms]="selectablesItems.rooms"></co-advertise-vacancy-rooms>
-      </div> -->
-      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-appliances [appliances]="selectablesItems.appliances"></co-advertise-vacancy-appliances>
-      </div> -->
-      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-amenities [amenities]="selectablesItems.amenities"></co-advertise-vacancy-amenities>
-      </div> -->
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-price></co-advertise-vacancy-price>
-      </div> -->
-      <!-- <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-restrictions [restrictions]="selectablesItems.restrictions"></co-advertise-vacancy-restrictions>
-      </div> -->
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-rules></co-advertise-vacancy-rules>
-      </div> -->
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-photos></co-advertise-vacancy-photos>
-      </div> -->
-      <!-- <div class="advertise-vacancy-page__carousel__slider__item-content">
-        <co-advertise-vacancy-description></co-advertise-vacancy-description>
-      </div> -->
+      </div>
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-residents (validate)="setSectionThree($event)"></co-advertise-vacancy-residents>
+      </div>
+      <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-rooms [rooms]="selectablesItems.rooms" (validate)="setSectionFour($event)"></co-advertise-vacancy-rooms>
+      </div>
+      <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-appliances [appliances]="selectablesItems.appliances" (validate)="setSectionFive($event)"></co-advertise-vacancy-appliances>
+      </div>
+      <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-amenities [amenities]="selectablesItems.amenities" (validate)="setSectionSix($event)"></co-advertise-vacancy-amenities>
+      </div>
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-price (validate)="setSectionSeven($event)"></co-advertise-vacancy-price>
+      </div>
+      <div *ngIf="selectablesItems != undefined" class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-restrictions [restrictions]="selectablesItems.restrictions" (validate)="setSectionEight($event)"></co-advertise-vacancy-restrictions>
+      </div>
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-rules (validate)="setSectionNine($event)"></co-advertise-vacancy-rules>
+      </div>
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-photos (validate)="setSectionTen($event)"></co-advertise-vacancy-photos>
+      </div>
+      <div class="advertise-vacancy-page__carousel__slider__item-content">
+        <co-advertise-vacancy-description (validate)="setSectionEleven($event)"></co-advertise-vacancy-description>
+      </div>
     </div>
   </section>
   <footer class="advertise-vacancy-page__actions">

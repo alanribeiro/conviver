@@ -75,6 +75,7 @@ export class RegisterComponent implements OnInit {
   previousSection() {
     this.currentSection --;
     this.currentSectionValidated = true;
+    this.doneAvaliable = false;
     if(this.currentSection == 1) {
       this.backAvaliable = false;
     }

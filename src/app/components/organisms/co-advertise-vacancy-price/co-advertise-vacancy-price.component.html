@@ -4,22 +4,22 @@
     <div class="co-advertise-vacancy-price__form__row">
       <div class="co-advertise-vacancy-price__form__row__rent-label">Aluguel:</div>
       <div class="co-advertise-vacancy-price__form__row__rent">
-        <co-input [type]="'number'" [placeholder]="'R$ 000,00'"></co-input>
+        <co-input [type]="'number'" [placeholder]="'R$ 000,00'" (valueChange)="setRent($event)"></co-input>
       </div>
       <div class="co-advertise-vacancy-price__form__row__water-and-light">
-        <co-checkbox [title]="'Água e luz incluso'"></co-checkbox>
+        <co-checkbox [title]="'Água e luz incluso'" (check)="setWaterAndElectricityIncluded($event)"></co-checkbox>
       </div>
     </div>
-    <div class="co-advertise-vacancy-price__form__row">
+    <div *ngFor="let expense of expenses; let i = index" class="co-advertise-vacancy-price__form__row">
       <div class="co-advertise-vacancy-price__form__row__expense-name">
-        <co-input [placeholder]="'Despesa'"></co-input>
+        <co-input [placeholder]="'Despesa'" (valueChange)="setExpenseName(i, $event)"></co-input>
       </div>
       <div class="co-advertise-vacancy-price__form__row__expense-value">
-        <co-input [type]="'number'" [placeholder]="'R$ 000,00'"></co-input>
+        <co-input [type]="'number'" [placeholder]="'R$ 000,00'" (valueChange)="setExpenseValue(i, $event)"></co-input>
       </div>
     </div>
   </div>
   <div class="co-advertise-vacancy-price__add-button">
-    <co-button [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'"></co-button>
+    <co-button *ngIf="expenses.length < 2" [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'" (click)="addExpense()"></co-button>
   </div>
 </section>

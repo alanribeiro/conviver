@@ -6,13 +6,17 @@
       [size]="'big'"
       [icon]="item.title"
       [title]="item.title"
-      [hoverMessage]="item.hoverMessage">
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedAmenities.includes(item.title)"
+      (changeActive)="setAmenities($event, item.title)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"
       [icon]="'block'"
       [title]="'Não possuo nenhum'"
-      [hoverMessage]="'Temq que fazer essa frase aqui'">
+      [hoverMessage]="'Era uma casa muito engraçada, não tinha teto, não tinha nada'"
+      [active]="noAmenitiesChecked"
+      (changeActive)="noAmenities($event)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"

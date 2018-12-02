@@ -59,7 +59,7 @@ export class CoAdvertiseVacancyLocationComponent implements OnInit {
       state: this.state
     }
 
-    if(this.state == '' || this.state == undefined || this.number == undefined || this.neighborhood == '' || this.neighborhood == undefined || this.city == '' || this.city == undefined || this.state == undefined) {
+    if(this.street == '' || this.street == undefined || this.state == '' || this.state == undefined || this.number == undefined || this.neighborhood == '' || this.neighborhood == undefined || this.city == '' || this.city == undefined || this.state == undefined) {
       this.validate.emit(data);
       return;
     }

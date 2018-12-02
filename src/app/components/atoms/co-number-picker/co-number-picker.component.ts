@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-number-picker',
@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CoNumberPickerComponent implements OnInit {
 
   @Input() startsAt:number;
+  @Output() valueChange:EventEmitter<any> = new EventEmitter();
+
   value:number;
 
   constructor() {
@@ -17,16 +19,21 @@ export class CoNumberPickerComponent implements OnInit {
   ngOnInit() {
     this.value = this.startsAt;
   }
-
   
   increase() {
     this.value ++;
+    this.sendValue();
   }
 
   decrease() {
     if(this.value > this.startsAt) {
       this.value --;
+      this.sendValue();
     }
+  }
+
+  sendValue() {
+    this.valueChange.emit(this.value);
   }
 
 }

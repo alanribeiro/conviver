@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-advertise-vacancy-photos',
@@ -7,6 +7,29 @@ import { Component } from '@angular/core';
 })
 export class CoAdvertiseVacancyPhotosComponent {
 
+  @Output() validate:EventEmitter<any> = new EventEmitter();
+
+  photos:Array<any>;
+
   constructor() { }
+
+  setPhotos(photos) {
+    this.photos = photos;
+    this.validateSection();
+  }
+
+  validateSection() {
+    let data = {
+      validate: false,
+      photos: this.photos
+    };
+
+    if(this.photos.length == 0) {
+      this.validate.emit(data);
+      return;
+    }
+    data.validate = true;
+    this.validate.emit(data);
+  }
 
 }

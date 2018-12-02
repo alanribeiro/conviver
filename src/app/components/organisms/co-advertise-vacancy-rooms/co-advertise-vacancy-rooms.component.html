@@ -6,7 +6,8 @@
       [size]="'big'"
       [icon]="item.title"
       [title]="item.title"
-      [hoverMessage]="item.hoverMessage">
+      [hoverMessage]="item.hoverMessage"
+      (changeActive)="setRooms($event, item.title)">
     </co-selectable-item>
     <co-selectable-item
       [size]="'big'"

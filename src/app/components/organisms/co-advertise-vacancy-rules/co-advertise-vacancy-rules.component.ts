@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-advertise-vacancy-rules',
@@ -7,6 +7,34 @@ import { Component } from '@angular/core';
 })
 export class CoAdvertiseVacancyRulesComponent {
 
-  constructor() { }
+  @Output() validate:EventEmitter<any> = new EventEmitter();
+
+  rules:Array<{
+    number:number,
+    rule:string
+  }>;
+
+  constructor() {
+    this.rules = [{number: undefined, rule: ''}];
+  }
+
+  setRule(index, value) {
+    this.rules[index].number = index;
+    this.rules[index].rule = value;
+    this.validateSection();
+  }
+
+  addRule() {
+    this.rules.push({number: undefined, rule: ''});
+  }
+
+  validateSection() {
+    let data = {
+      validate: true,
+      rules: this.rules
+    };
+
+    this.validate.emit(data);
+  }
 
 }

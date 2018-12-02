@@ -16,12 +16,13 @@ export class CoAdvertiseVacancyPropertyTypeComponent {
   changePropertyType(activating, value) {
     if(activating) {
       this.propertyType = value;
-      this.changeType.emit(this.propertyType);
-      return;
+    }
+    else {
+      this.propertyType = '';
     }
 
-    this.propertyType = '';
-    this.changeType.emit(this.propertyType);
+    let data = {validate: activating, propertyType: this.propertyType};
+    this.changeType.emit(data);
   }
 
 }
