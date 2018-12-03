@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from 'src/app/services/register/register.service';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'register',
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
   doneAvaliable:boolean;
   userPersonalityItems:Array<string>;
 
-  constructor(private registerService:RegisterService) {
+  constructor(private registerService:RegisterService, private userService:UserService) {
     this.currentSection = 1;
     this.currentSectionValidated = false;
     this.backAvaliable = false;

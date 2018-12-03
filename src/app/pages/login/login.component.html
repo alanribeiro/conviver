@@ -1,1 +1,6 @@
-<co-login-card></co-login-card>
+<div class="login__loading" *ngIf="!verified">
+    <co-loading></co-loading>
+</div>
+<div *ngIf="verified && !userLogged">
+    <co-login-card></co-login-card>
+</div>

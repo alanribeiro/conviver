@@ -19,5 +19,4 @@ export class MyAdsComponent {
   }>
 
   constructor() {}
-
 }
