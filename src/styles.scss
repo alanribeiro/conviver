@@ -135,6 +135,16 @@
     &::placeholder {
       font-family: $font-regular;
     }
+
+    &-affix-wrapper {
+      &:hover .ant-input:not(.ant-input-disabled) {
+        border-color: $primary-color-light;
+      }
+
+      & .ant-input-suffix {
+        right: 20px;
+      }
+    }
   }
 
   &-radio {

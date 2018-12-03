@@ -117,6 +117,9 @@ import { CoAdvertiseVacancyAppliancesComponent } from './components/organisms/co
 import { CoAdvertiseVacancyAmenitiesComponent } from './components/organisms/co-advertise-vacancy-amenities/co-advertise-vacancy-amenities.component';
 import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/co-advertise-vacancy-restrictions/co-advertise-vacancy-restrictions.component';
 import { CoAdvertisementFloatCardComponent } from './components/organisms/co-advertisement-float-card/co-advertisement-float-card.component';
+import { SearchComponent } from './pages/search/search.component';
+import { CoDropdownItemListComponent } from './components/molecules/co-dropdown-item-list/co-dropdown-item-list.component';
+import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-dropdown-item.component';
 
 @NgModule({
   declarations: [
@@ -213,7 +216,10 @@ import { CoAdvertisementFloatCardComponent } from './components/organisms/co-adv
     CoResidentsListComponent,
     CoExperienceReportComponent,
     CoExperienceReportsCarouselComponent,
-    CoAdvertisementFloatCardComponent
+    CoAdvertisementFloatCardComponent,
+    SearchComponent,
+    CoDropdownItemListComponent,
+    CoDropdownItemComponent
   ],
   imports: [
     BrowserModule,

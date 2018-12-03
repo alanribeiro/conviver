@@ -11,6 +11,7 @@ import { SignInUpComponent } from './components/templates/sign-in-up/sign-in-up.
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
 import { AdvertisementComponent } from './pages/advertisement/advertisement.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'advertisement/:id',
         component: AdvertisementComponent
+      },
+      {
+        path: 'search',
+        component: SearchComponent
       }
     ]
   },

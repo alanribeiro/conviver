@@ -1,0 +1,11 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+
+.co-dropdown-item {
+    @include flexbox(flex, initial, center);
+    color: white;
+    padding: 10px 20px;
+    
+    i {
+        margin-right: 10px;
+    }
+}

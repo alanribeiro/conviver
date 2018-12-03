@@ -1,8 +1,9 @@
-<ul class="co-menu-items" [class.is-dropdown]="isDropdown == true">
+<ul class="co-menu-items">
   <co-mobile-menu-item
     *ngFor="let item of items"
     [title]="item.title"
     [icon]="item.icon"
     [notifications]="item.notifications"
-    [url]="item.url"></co-mobile-menu-item>
+    [url]="item.url">
+  </co-mobile-menu-item>
 </ul> 

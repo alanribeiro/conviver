@@ -29,26 +29,22 @@
 
     &__menu {
       @include flexbox(flex, initial, center);
-
-      &__dropdown {
-        width: 190px;
-        margin-top: 15px;
-        background-color: #aaa;
-        position: absolute;
-        background-color: $menu-back-color;
-        left: 50%;
-        transform: translate(-50%, 0);
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        padding-left: 15px;
-
-        }
+      position: relative;
 
       &__avatar {
         cursor: pointer;
         margin-left: 20px;
         position: relative;
+      }
+
+      .user-dropdown {
+        width: 190px;
+        @include default-gradient(30deg);
+        position: absolute;
+        margin-top: 10px;
+        right: -75px;
+        top: 55px;
+        border-radius: 10px;
       }
 
       @include mqMaxWidth('md') {
