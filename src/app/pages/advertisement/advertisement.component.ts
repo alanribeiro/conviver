@@ -19,7 +19,7 @@ export class AdvertisementComponent implements OnInit {
 
   constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute) {
     this.residents = [];
-    this.owner = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", 1, [], []);
+    this.owner = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", "", 1, [], []);
     this.totalPrice = 0;
   }
 
@@ -27,11 +27,11 @@ export class AdvertisementComponent implements OnInit {
     this.getAdvertisement();
   }
 
-  async getAdvertisement() {
+  getAdvertisement = () => {
     const advertisementId = this.activatedRoute.snapshot.params.id;
     const advertisement = this.advertisementService.getAdvertisement(advertisementId);
     let snapshot = null;
-    await advertisement.subscribe(
+    advertisement.subscribe(
       data => {
         snapshot = data;
         this.advertisement = new Advertisement(
@@ -110,6 +110,7 @@ export class AdvertisementComponent implements OnInit {
           snapshot.photo,
           snapshot.description,
           snapshot.city,
+          snapshot.state,
           snapshot.country,
           snapshot.since,
           1,

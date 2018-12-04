@@ -35,18 +35,18 @@
       <co-residents-list [residents]="residents"></co-residents-list>
     </div>  
   </co-section>
-  <div class="advertisement-page-container__experience-reports">
+  <div *ngIf="advertisement.experienceReports != undefined" class="advertisement-page-container__experience-reports">
     <co-section [title]="'Relatos de experiência'">
       <co-experience-reports-carousel [reports]="advertisement.experienceReports"></co-experience-reports-carousel>
     </co-section>
   </div>
   <co-advertisement-float-card
     [price]="totalPrice"
-    [address]="advertisement.city + ' - ' + advertisement.state + ', ' + advertisement.country"
-    [propertyType]="advertisement.propertyType"
+    [address]="advertisement.getCity() + ' - ' + advertisement.getState() + ', ' + advertisement.getCountry()"
+    [propertyType]="advertisement.getPropertyType()"
     [numberOfResidents]="residents.length"
-    [numberOfPlaces]="advertisement.numberOfPlaces"
-    [restrictions]="advertisement.restrictions"
-    [rate]="advertisement.rate">
+    [numberOfPlaces]="advertisement.getNumberOfPlaces()"
+    [restrictions]="advertisement.getRestrictions()"
+    [rate]="advertisement.getRate()">
   </co-advertisement-float-card>
 </article>

@@ -41,6 +41,10 @@ export class Advertisement {
     return this.id;
   }
 
+  setId(id):void {
+    this.id = id;
+  }
+
   getDescription():string {
     return this.description;
   }
@@ -159,6 +163,10 @@ export class Advertisement {
 
   setPhotos(photos:Array<string>):void {
     this.photos = photos;
+  }
+
+  setOwnerId(id:string):void {
+    this.ownerId = id;
   }
 
   getOwnerId():string {

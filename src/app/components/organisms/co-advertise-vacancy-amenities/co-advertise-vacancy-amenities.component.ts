@@ -45,7 +45,7 @@ export class CoAdvertiseVacancyAmenitiesComponent {
   validateSection() {
     let data = {
       validate: false,
-      Amenities: this.selectedAmenities
+      amenities: this.selectedAmenities
     };
 
     if(this.selectedAmenities.length == 0 && this.noAmenitiesChecked == false) {
