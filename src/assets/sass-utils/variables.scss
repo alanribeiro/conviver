@@ -13,6 +13,7 @@ $primary-color: #650ECE;
 $primary-color-light: #880ECE;
 $secondary-color: #CE0EA8;
 $tertiary-color: #00C4DF;
+$tertiary-color-dark: #4f35d2;
 $quaternary-color: #EA154E;
 $error-color: #FF7200;
 $facebook-color: #4267b2;
@@ -66,12 +67,14 @@ $menu-item-hover: $black;
 $menu-back-color: $primary-color-light;
 $number-picker-color: $gray-70;
 $rule-number-color: $primary-color;
+$game-font-color: $white;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
 $font-regular: 'HKGrotesk-Regular';
 $font-medium: 'HKGrotesk-Medium';
 $font-bold: 'HKGrotesk-Bold';
+$font-game: 'PS2P';
 
 $page-title-font-family: $font-bold;
 $title-font-family: $font-bold;
