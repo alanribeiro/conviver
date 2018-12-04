@@ -16,6 +16,12 @@
   background: linear-gradient($direction, $secondary-color, $primary-color);
 }
 
+@mixin blue-gradient($direction: $gradient-direction) {
+  background: $tertiary-color;
+  background: -webkit-linear-gradient(legacy-direction($direction), $tertiary-color, $tertiary-color-dark);
+  background: linear-gradient($direction, $tertiary-color, $tertiary-color-dark);
+}
+
 @mixin menu-gradient($direction: $gradient-direction) {
   background: $primary-color;
   background: -webkit-linear-gradient(legacy-direction($direction), $primary-color-light, $primary-color);

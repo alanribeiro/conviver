@@ -1,39 +1,58 @@
-<div fullpage id="fullscreen" [options]="config" (ref)="getRef($event)" class="landing-page">
+<div fullpage id="fullscreen" [options]="config" (ref)="getRef($event)" class="landing-page" (keydown)="onKeydown($event)">
 
   <!--Section One-->
+
+  <div class="organic" [ngStyle]="{
+    'transform': translateYMain4,
+    'transition': '0.75s',
+    'opacity': opacity4
+  }">
+    <img src="../../../assets/images/organic3.png" class="organic__1" id="organic1">
+    <img src="../../../assets/images/organic4.png" class="organic__2" id="organic2">
+  </div>
+
+  <div class="divisor">
+  </div>
+
+  <div class="divisor-mask">
+  </div>
+
   <div class="section landing-page__one">
     <header class="landing-page__one__header">
         <img src ="./../../../assets/icons/conviver_logo-icon.png" class="landing-page__one__header__logo">
-        <co-button [title]="'CADASTRAR'" class="landing-page__one_header__input" (click)="fullpage_api.moveTo('lastPage')"></co-button>
+        <co-button [title]="'CADASTRAR'" class="landing-page__one_header__input" routerLink="/sign/up"></co-button>
     </header>
 
     <div class="landing-page__one__flex">
-      <div class="landing-page__one__flex__logo">
-          <co-logo [type]="'vertical'" [color]="'default'" [width]="'250'" class="landing-page__one__flex__logo__desktop"> </co-logo>
+      <div class="landing-page__one__flex__game" id="city">
+        <div class="landing-page__one__flex__game__c1" id="c1"></div>
+        <div class="landing-page__one__flex__game__c2" id="c2"></div>
 
-          <co-logo [type]="'vertical'" [color]="'default'" [width]="'100'" class="landing-page__one__flex__logo__mobile"> </co-logo>
+        <div class="landing-page__one__flex__game__text-container">
+          <div class="landing-page__one__flex__game__text-container__text">
+              Olá! Enzo está buscando alguém para dividir apartamento com ele e decidiu testar o conviver. Você pode ajuda-lô? <br><p>Use as setas esquerda e direita para andar, e a de cima para pular.</p>
+          </div>
+          <a id="playBtn" class="landing-page__one__flex__game__play-btn blink">Jogar!</a>
+        </div>
+        <div class="landing-page__one__flex__game__overlay"></div>
+      </div>
+
+      <div class="landing-page__one__flex__logo">
+          <co-logo [type]="'vertical'" [color]="'default'" [width]="'150'"> </co-logo>
 
           <div class="landing-page__one__flex__logo__title">
             A primeira plataforma automatizada de compartilhamento de moradias
           </div>
       </div>
 
-      <!-- <div class="landing-page__one__flex__game"></div> -->
-
-      <div class="landing-page__one__flex__arrow">
-          <div class="round" (click)="fullpage_api.moveTo('secondPage')">
-            <span class="arrow primera next"></span>
-            <span class="arrow segunda next"></span>
-          </div>
+      <div class="landing-page__one__flex__arrow" (click)="fullpage_api.moveTo('secondPage')">
+        <div class="landing-page__one__flex__arrow__arrow-element"></div>
+        <div class="landing-page__one__flex__arrow__arrow-element"></div>
       </div>
     </div>
-
   </div>
 
   <div class="section fp-noscroll landing-page__two">
-
-    <div class="landing-page__two__divider">
-    </div>
 
     <div class="landing-page__two__container" [ngStyle]="{
     'transform': translateYMain1,
@@ -61,15 +80,12 @@
         </div>
       </div>
       
-      <div class="landing-page__two__container__img">
-        <img src="https://www.colourbox.com/preview/4681081-isometric-city.jpg" width="400" [ngStyle]="{
-          'transform': translateYSubtitle,
-          'transition': '1s'
-        }">
+      <div class="landing-page__two__container__img" id="scene3" [ngStyle]="{
+        'transform': translateYSubtitle,
+        'transition': '1s'
+      }">
+        <img data-depth="0.5" src="../../../assets/images/citycell.png">
       </div>
-    </div>
-
-    <div class="landing-page__two__divider2">
     </div>
 
   </div>
@@ -98,8 +114,8 @@
             Anuncie de forma fácil e eficiente
           </div>
           <div class="landing-page__three__container__content__text__desc">
-            Conectamos o seu anúncio com pessoas interessadas em alugar. Além disso, nós cuidados do
-            aluguel do início ao fim, agendando visitas, fechando o contrato e repassando valor mensalmente.
+            Conectamos o seu anúncio com pessoas interessadas em alugar. Além disso, nós <span class="text-effect">cuidamos do
+            aluguel do início ao fim</span>, agendando visitas, fechando o contrato e repassando valor mensalmente.
             E o melhor de tudo, o anúncio é feito de forma rápida e totalmente gratuita. 
           </div>
         </div>
@@ -107,7 +123,7 @@
           'transform': translateYSubtitle2,
           'transition': '1s'
         }">
-          <img src="../../../assets/images/organic1.png" data-depth="0.7">
+          <img src="../../../assets/images/organic1.png" data-depth="0.5">
         </div>
       </div>
 
@@ -133,8 +149,8 @@
             Encontre o imóvel ideal para você
           </div>
           <div class="landing-page__three__container__content__text__desc">
-            Aqui você encontra anúncios de imóveis nas mais diversas regiões do Brasil. Você pode
-            alugar diretamente na nossa plataforma, de forma rápida e sem burocracias. E tudo isso é feito de
+            Aqui você encontra anúncios de imóveis nas mais diversas regiões do Brasil. <span class="text-effect">Você pode
+            alugar diretamente na nossa plataforma</span>, de forma rápida e sem burocracias. E tudo isso é feito de
             modo transparente e totalmente seguro. Além disso, se você busca dividir gastos, temos 
             anúncios de imóveis já ocupados e com vagas disponíveis.
           </div>
@@ -150,20 +166,20 @@
       'opacity': opacity2
     }">
       <div class="landing-page__three__container2__item">
-        <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
+        <div class="landing-page__three__container2__item__icon"><img src="../../../assets/images/icons/l1.png"></div>
         <div class="landing-page__three__container2__item__title">Automatizado</div>
         <div class="landing-page__three__container2__item__desc">
-          Usamos um algorito de automação que analisa os dados dos usuários, inseridos no momento de 
+          Usamos um <span class="text-effect">algorito de automação</span> que analisa os dados dos usuários, inseridos no momento de 
           cadastro e forma o "match" ideal entre aqueles que possuem um perfil mais semelhante.
         </div>
       </div>
 
       <div class="landing-page__three__container2__item">
-        <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
+        <div class="landing-page__three__container2__item__icon"><img src="../../../assets/images/icons/l2.png"></div>
         <div class="landing-page__three__container2__item__title">Seguro</div>
         <div class="landing-page__three__container2__item__desc">
           Contamos com um time jurídico e contábel que é responsável por garantir a transparência e 
-          segurança durante todo o processo de locação dos imóveis. E você acompanha tudo que está acontecendo.
+          segurança durante todo o processo de locação dos imóveis. <br> E <span class="text-effect">você acompanha tudo que está acontecendo</span>.
         </div>
       </div>
     </div>
@@ -174,20 +190,20 @@
       'opacity': opacity2
     }">
       <div class="landing-page__three__container2__item">
-        <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
+        <div class="landing-page__three__container2__item__icon"><img src="../../../assets/images/icons/l3.png"></div>
         <div class="landing-page__three__container2__item__title">Prático</div>
         <div class="landing-page__three__container2__item__desc">
           Você pode buscar imóveis, anunciar vagas disponíveis no seu imóvel e anunciar imóveis disponíveis
-          para locação. Tudo isso através do seu celular ou computador, de forma fácil, rápida e sem burocracias.
+          para locação. Tudo isso através do seu celular ou computador, <span class="text-effect">de forma fácil, rápida e sem burocracias</span>.
         </div>
       </div>
 
       <div class="landing-page__three__container2__item">
-          <div class="landing-page__three__container2__item__icon"><img src="https://static.thenounproject.com/png/291205-200.png"></div>
+          <div class="landing-page__three__container2__item__icon"><img src="../../../assets/images/icons/l4.png"></div>
           <div class="landing-page__three__container2__item__title">Moderno</div>
           <div class="landing-page__three__container2__item__desc">
-            Usamos uma linguagem que tem tudo a ver com você. De forma clara e animada, queremos tornar a sua
-            experiência de moradia mais divertida, sustentável e prazerosa.
+            Usamos uma linguagem que tem tudo a ver com você. Tudo de forma clara e animada. <br> Queremos tornar a sua
+            experiência de moradia mais <span class="text-effect">divertida, sustentável e prazerosa</span>.
           </div>
         </div>
     </div>
@@ -219,6 +235,17 @@
         <co-input [placeholder]="'Seu email'"></co-input>
         <button class="landing-page__four__container__input__button">Enviar</button>
       </div>
+      <footer class="landing-page__four__container__footer">
+        <div class="landing-page__four__container__footer__text">Conviver, 2018. Todos os direitos reservados. Ícones pelo The Noun Project. </div>
+        <div class="landing-page__four__container__footer__links">
+          <ul>
+            <li><a href="">Sobre Nós</a></li>
+            <li><a href="">Termos de Uso</a></li>
+            <li><a href="">Guia do Locador</a></li>
+            <li><a href="">Guia do Locatário</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </div> 
 </div>
