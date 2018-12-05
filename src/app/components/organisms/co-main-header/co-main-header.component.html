@@ -35,7 +35,14 @@
         [ngClass]="{'dropdown-visible': notificationsDropdown}"
         (clickOutside)="notificationsDropdown ? toggleDropdown('Notificações') : return"
         [exclude]="'.co-menu-items'">
-        
+        <div class="notifications-dropdown__container">
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+        </div>
       </div>
 
       <div

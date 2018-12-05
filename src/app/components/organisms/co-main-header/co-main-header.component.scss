@@ -23,6 +23,28 @@
   border-color: transparent transparent $white transparent;
 }
 
+%dropdown-container {
+  height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray-FA; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-CC; 
+    border-radius: 0 10px 10px 0;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-AA; 
+  }
+}
+
 .co-main-header {
   height: 70px;
   width: 100vw;
@@ -71,25 +93,7 @@
         }
 
         &__container {
-          height: 100%;
-          overflow-y: auto;
-
-          &::-webkit-scrollbar {
-            width: 5px;
-          }
-
-          &::-webkit-scrollbar-track {
-            background: $gray-FA; 
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: $gray-CC; 
-            border-radius: 0 10px 10px 0;
-          }
-
-          &::-webkit-scrollbar-thumb:hover {
-            background: $gray-AA; 
-          }
+          @extend %dropdown-container;
         }
       }
 
@@ -106,6 +110,10 @@
           @include mqMaxWidth('lg') {
             left: 155px;
           }
+        }
+
+        &__container {
+          @extend %dropdown-container;
         }
 
         @include mqMaxWidth('lg') {

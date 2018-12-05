@@ -122,6 +122,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { CoDropdownItemListComponent } from './components/molecules/co-dropdown-item-list/co-dropdown-item-list.component';
 import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-dropdown-item.component';
 import { CoMessageItemComponent } from './components/molecules/co-message-item/co-message-item.component';
+import { CoNotificationItemComponent } from './components/molecules/co-notification-item/co-notification-item.component';
 
 @NgModule({
   declarations: [
@@ -222,7 +223,8 @@ import { CoMessageItemComponent } from './components/molecules/co-message-item/c
     SearchComponent,
     CoDropdownItemListComponent,
     CoDropdownItemComponent,
-    CoMessageItemComponent
+    CoMessageItemComponent,
+    CoNotificationItemComponent
   ],
   imports: [
     BrowserModule,
