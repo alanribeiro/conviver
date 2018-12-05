@@ -13,8 +13,12 @@
           [genre]="user.genre">
         </co-avatar>
 
-        <div class="co-main-header__container__menu__dropdown" [ngStyle]="{ visibility: hover == true  ? 'visible' : 'hidden',
-                                                                          opacity: hover == true ? '1' : '0' }">
+        <div 
+          class="co-main-header__container__menu__dropdown" 
+          [ngStyle]="{ 
+            visibility: hover == true  ? 'visible' : 'hidden', 
+            opacity: hover == true ? '1' : '0' 
+          }">
                                                                           
           <co-mobile-menu-item-list [items]="menuOtherItems" [isDropdown]=true></co-mobile-menu-item-list>
         </div>

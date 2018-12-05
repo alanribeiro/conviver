@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdvertiseService } from 'src/app/services/advertise/advertise.service';
+import { AdvertisementService } from 'src/app/services/advertisement/advertisement.service';
 
 @Component({
   selector: 'advertise-vacancy',
@@ -14,7 +14,7 @@ export class AdvertiseVacancyComponent implements OnInit{
   backAvaliable:boolean;
   doneAvaliable:boolean;
 
-  constructor(private advertiseService:AdvertiseService) {
+  constructor(private advertisementService:AdvertisementService) {
     this.currentSection = 1;
     this.currentSectionValidated = false;
     this.backAvaliable = false;
@@ -26,62 +26,66 @@ export class AdvertiseVacancyComponent implements OnInit{
   }
 
   setSectionOne(value) {
-    this.advertiseService.advertisement.setPropertyType(value.propertyType);
+    this.advertisementService.advertisement.setPropertyType(value.propertyType);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionTwo(value) {
-    this.advertiseService.advertisement.setStreet(value.street);
-    this.advertiseService.advertisement.setNumber(value.number);
-    this.advertiseService.advertisement.setNeighborhood(value.neighborhood);
-    this.advertiseService.advertisement.setCity(value.city);
-    this.advertiseService.advertisement.setState(value.state);
+    this.advertisementService.advertisement.setStreet(value.street);
+    this.advertisementService.advertisement.setNumber(value.number);
+    this.advertisementService.advertisement.setNeighborhood(value.neighborhood);
+    this.advertisementService.advertisement.setCity(value.city);
+    this.advertisementService.advertisement.setState(value.state);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionThree(value) {
-    this.advertiseService.advertisement.setNumberOfPlaces(value.numberOfPlaces);
+    this.advertisementService.advertisement.setNumberOfPlaces(value.numberOfPlaces);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionFour(value) {
-    this.advertiseService.advertisement.setAccommodations(value.rooms);
+    this.advertisementService.advertisement.setAccommodations(value.rooms);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionFive(value) {
-    this.advertiseService.advertisement.setHomeAppliances(value.appliances);
+    this.advertisementService.advertisement.setHomeAppliances(value.appliances);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionSix(value) {
-    this.advertiseService.advertisement.setAmenities(value.amenities);
+    this.advertisementService.advertisement.setAmenities(value.amenities);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionSeven(value) {
-    this.advertiseService.advertisement.setRent(value.rent);
-    this.advertiseService.advertisement.setExpenses(value.expenses);
+    this.advertisementService.advertisement.setRent(value.rent);
+    this.advertisementService.advertisement.setExpenses(value.expenses);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionEight(value) {
-    this.advertiseService.advertisement.setRestrictions(value.restrictions);
+    this.advertisementService.advertisement.setRestrictions(value.restrictions);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionNine(value) {
-    this.advertiseService.advertisement.setRules(value.rules);
+    this.advertisementService.advertisement.setRules(value.rules);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionTen(value) {
-    this.advertiseService.advertisement.setPhotos(value.photos);
+    let photosUrl = [];
+    for(let i in value.photos) {
+      photosUrl.push(value.photos[i].thumbUrl);
+    }
+    this.advertisementService.advertisement.setPhotos(photosUrl);
     this.setCurrentSectionValidated(value.validate);
   }
 
   setSectionEleven(value) {
-    this.advertiseService.advertisement.setDescription(value.description);
+    this.advertisementService.advertisement.setDescription(value.description);
     this.setCurrentSectionValidated(value.validate);
   }
 
@@ -111,11 +115,17 @@ export class AdvertiseVacancyComponent implements OnInit{
   }
 
   getRoomsItems() {
-    this.advertiseService.getRoomItems().subscribe(
+    this.advertisementService.getRoomItems().subscribe(
       (data:any) => {
         this.selectablesItems = data;
       }
     )
+  }
+
+  registerAdvertisement = () => {
+    const register = this.advertisementService.registerAdvertisement();
+    register.then(() => alert("Anúncio cadastrado com sucesso!"))
+    .catch(error => alert("Erro ao cadastrar anúncio"));
   }
 
 }

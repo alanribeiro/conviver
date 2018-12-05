@@ -31,6 +31,7 @@ export class ProfileComponent {
           snapshot.photo,
           snapshot.description,
           snapshot.city,
+          snapshot.state,
           snapshot.country,
           snapshot.since,
           1,

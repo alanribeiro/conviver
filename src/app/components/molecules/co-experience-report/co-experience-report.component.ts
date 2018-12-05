@@ -19,7 +19,7 @@ export class CoExperienceReportComponent implements OnInit {
   user:User; // Recuperar usuário do firebase com o userId
 
   constructor(private userService:UserService) { 
-    this.user = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", 1, [], []);
+    this.user = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", "", 1, [], []);
   }
 
   ngOnInit() {
@@ -40,6 +40,7 @@ export class CoExperienceReportComponent implements OnInit {
           snapshot.photo,
           snapshot.description,
           snapshot.city,
+          snapshot.state,
           snapshot.country,
           snapshot.since,
           1,

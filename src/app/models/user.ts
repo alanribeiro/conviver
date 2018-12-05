@@ -11,6 +11,7 @@ export class User {
     private photo:string,
     private description:string,
     private city:string,
+    private state:string,
     private country:string,
     private since:string,
     private level:number,
@@ -109,6 +110,14 @@ export class User {
 
   setCity(city:string):void {
     this.city = city;
+  }
+
+  getState():string {
+    return this.state;
+  }
+
+  setState(state:string):void {
+    this.state = state;
   }
 
   getCountry():string {

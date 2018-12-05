@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
-import { AdvertiseService } from 'src/app/services/advertise/advertise.service';
+import { AdvertisementService } from 'src/app/services/advertisement/advertisement.service';
 
 @Component({
   selector: 'co-advertise-vacancy-location',
@@ -18,7 +18,7 @@ export class CoAdvertiseVacancyLocationComponent implements OnInit {
   city:string;
   state:string;
 
-  constructor(private advertiseService:AdvertiseService) { }
+  constructor(private advertisementService:AdvertisementService) { }
 
   ngOnInit() {
     this.getStates();
@@ -69,7 +69,7 @@ export class CoAdvertiseVacancyLocationComponent implements OnInit {
   }
 
   getStates() {
-    this.advertiseService.getStates().subscribe(
+    this.advertisementService.getStates().subscribe(
       (data:any) => {
         this.states = data.states;
       }
