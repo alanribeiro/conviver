@@ -232,8 +232,8 @@
         </div>
       </div>
       <div class="landing-page__four__container__input">
-        <co-input [placeholder]="'Seu email'"></co-input>
-        <button class="landing-page__four__container__input__button">Enviar</button>
+        <co-input [placeholder]="'Seu email'" [type]="'text'" (valueChange)="setEmail($event)"></co-input>
+        <button class="landing-page__four__container__input__button" (click)="registerEmail()">Enviar</button>
       </div>
       <footer class="landing-page__four__container__footer">
         <div class="landing-page__four__container__footer__text">Conviver, 2018. Todos os direitos reservados. Ícones pelo The Noun Project. </div>

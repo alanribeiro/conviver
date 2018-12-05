@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterContentInit, HostListener } from '@angular/core';
+import { RegisterService } from '../../services/register/register.service';
+import { Router } from '@angular/router';
 import * as Parallax from 'parallax-js';
 
 declare var $: any;
@@ -12,6 +14,7 @@ declare var Parallax: any;
 })
 export class LandingPageComponent implements AfterContentInit {
 
+  email:string;
   config: any;
   fullpage_api: any;
   translateYMain1 = 'translateY(500px)';
@@ -27,8 +30,7 @@ export class LandingPageComponent implements AfterContentInit {
   opacity3 = '0';
   opacity4 = '1';
 
-  constructor() {
-
+  constructor(private registerService:RegisterService, private router:Router) {
     this.config = {
 
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -114,6 +116,20 @@ export class LandingPageComponent implements AfterContentInit {
         }, 500);
       }
     };
+  }
+
+  setEmail = (value:string) => {
+    this.email = value;
+  }
+
+  registerEmail = () => {
+    const register = this.registerService.registerEmail(this.email);
+    register.then(() => {
+      alert("E-mail cadastrado com sucesso!");
+      this.router.navigateByUrl("home");
+      location.reload();      
+    })
+    .catch(error => alert("Erro ao cadastrar e-mail!"));
   }
 
   ngAfterContentInit() {
