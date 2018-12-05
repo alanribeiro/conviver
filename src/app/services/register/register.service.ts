@@ -14,7 +14,7 @@ export class RegisterService {
   user:User;
   userPersonalityItemsUrl:string = 'assets/js-utils/user-personality.json';
 
-  constructor(private http:HttpClient, private angularFireDatabaseModule:AngularFireDatabase, private angularFireAuth:AngularFireAuth, private authService:AuthService, private router:Router) {
+  constructor(private http:HttpClient, private angularFireDatabase:AngularFireDatabase, private angularFireAuth:AngularFireAuth, private authService:AuthService, private router:Router) {
     this.user = new User('id', '', '', '', '', 0, '', [], '', '', '', '', '', '', 1, [], []);
   }
 
@@ -50,7 +50,7 @@ export class RegisterService {
       level: this.user.getLevel(),
       advertisements: this.user.getAdvertisements()
     }
-    const registerData = this.angularFireDatabaseModule.database.ref("users").child(id).set(user);
+    const registerData = this.angularFireDatabase.database.ref("users").child(id).set(user);
     registerData.then(() => {
       alert("Usuário cadastrado com sucesso!");
       this.authService.getCurrentUser(id, `profile/${id}`);
@@ -59,6 +59,11 @@ export class RegisterService {
       alert("Erro ao cadastrar usuário!");
       this.removeUserFromAuthentication(user.email, password);
     });
+  }
+
+  registerEmail = (email) => {
+    const id = this.angularFireDatabase.database.ref().push().key;
+    return this.angularFireDatabase.database.ref("emails").child(id).set(email);
   }
 
   removeUserFromAuthentication = (email, password) => {
