@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -120,6 +121,7 @@ import { CoAdvertisementFloatCardComponent } from './components/organisms/co-adv
 import { SearchComponent } from './pages/search/search.component';
 import { CoDropdownItemListComponent } from './components/molecules/co-dropdown-item-list/co-dropdown-item-list.component';
 import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-dropdown-item.component';
+import { CoMessageItemComponent } from './components/molecules/co-message-item/co-message-item.component';
 
 @NgModule({
   declarations: [
@@ -219,7 +221,8 @@ import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-
     CoAdvertisementFloatCardComponent,
     SearchComponent,
     CoDropdownItemListComponent,
-    CoDropdownItemComponent
+    CoDropdownItemComponent,
+    CoMessageItemComponent
   ],
   imports: [
     BrowserModule,
@@ -231,7 +234,8 @@ import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFullpageModule
+    AngularFullpageModule,
+    ClickOutsideModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, AdvertiseService],
   bootstrap: [AppComponent]

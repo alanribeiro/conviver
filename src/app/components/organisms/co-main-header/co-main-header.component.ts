@@ -14,6 +14,9 @@ export class CoMainHeaderComponent implements OnInit {
   menuMainItems: any;
   menuOtherItems: any;
   menuMobileOpen: boolean;
+  userDropdown: boolean;
+  messagesDropdown: boolean;
+  notificationsDropdown: boolean;
 
   constructor(private menuService: MenuService, private userService:UserService) {
     if(this.userService.currentUser != undefined) {
@@ -35,6 +38,9 @@ export class CoMainHeaderComponent implements OnInit {
       }
     }
     this.menuMobileOpen = false;
+    this.userDropdown = false;
+    this.messagesDropdown = false;
+    this.notificationsDropdown = false;
   }
 
   ngOnInit() {
@@ -56,6 +62,21 @@ export class CoMainHeaderComponent implements OnInit {
 
   closeMenuMobile() {
     this.menuMobileOpen = false;
+  }
+
+  toggleDropdown(dropdown) {
+    if(dropdown == 'Mensagens') {
+      this.notificationsDropdown = false;
+      this.messagesDropdown = !this.messagesDropdown;
+    }
+    else if(dropdown == 'Notificações') {
+      this.messagesDropdown = false;
+      this.notificationsDropdown = !this.notificationsDropdown;
+    }
+  }
+
+  toggleUserDropdown() {
+    this.userDropdown = !this.userDropdown;
   }
 
 }

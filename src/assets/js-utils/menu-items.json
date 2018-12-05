@@ -4,25 +4,27 @@
       "title": "Procurar",
       "icon": "search",
       "notifications": 0,
-      "url": "item1"
+      "url": "/search"
     },
     {
       "title": "Meus Anúncios",
       "icon": "appstore",
-      "notifications": 12,
-      "url": "item2"
+      "notifications": 0,
+      "url": "/my-ads"
     },
     {
       "title": "Mensagens",
       "icon": "message",
-      "notifications": 0,
-      "url": "item3"
+      "notifications": 1,
+      "url": "item3",
+      "callback": "function(){ that.openDropdown.emit(); }"
     },
     {
       "title": "Notificações",
       "icon": "bell",
       "notifications": 6,
-      "url": "item4"
+      "url": "item4",
+      "callback": "function(){ that.openDropdown.emit(); }"
     } 
   ],
   "otherItems": [
@@ -48,7 +50,7 @@
       "title": "Desconectar",
       "icon": "logout",
       "notifications": 0,
-      "url": "item8"
+      "callback": "function(){ alert('Teste'); }"
     }
   ]
 }

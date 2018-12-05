@@ -10,7 +10,12 @@ export class CoDropdownItemComponent {
   @Input() icon: string;
   @Input() title: string;
   @Input() url: string;
+  @Input() callback: string;
 
   constructor() { }
+
+  callbackFunction() {
+    eval("(" + this.callback + ")()");
+  }
 
 }

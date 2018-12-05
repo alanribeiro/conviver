@@ -1,4 +1,4 @@
-<li class="co-mobile-menu-item" [routerLink]="url">
+<li class="co-mobile-menu-item" [routerLink]="url" (click)="callback != undefined ? callbackFunction() : return">
   <i [ngClass]="'anticon anticon-' + icon"></i>
 
   <div class="co-mobile-menu-item__title">

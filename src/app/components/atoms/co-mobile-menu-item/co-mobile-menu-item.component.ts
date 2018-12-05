@@ -11,7 +11,12 @@ export class CoMobileMenuItemComponent {
   @Input() notifications: number;
   @Input() title: string;
   @Input() url: string;
+  @Input() callback: string;
 
   constructor() {}
+
+  callbackFunction() {
+    eval("(" + this.callback + ")()");
+  }
 
 }

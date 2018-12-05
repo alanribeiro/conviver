@@ -1,0 +1,50 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-message-item {
+  @include flexbox(flex, initial, center);
+  padding: 15px;
+  border-bottom: 1px solid $border-color;
+  @include transition(background-color);
+  cursor: pointer;
+
+  &__avatar {
+    width: 40px;
+  }
+
+  &__content {
+    width: calc(100% - 40px);
+    padding-left: 15px;
+
+    &__user-and-date {
+      line-height: 1.3;
+      @include flexbox(flex, space-between, flex-end);
+
+      &__user-name {
+        font-family: $avatar-font-family;
+      }
+
+      &__date {
+        font-family: $common-text-font-family;
+        font-size: $font-size-extra-small;
+        color: $text-default-color;
+      }
+    }
+
+    &__message-preview {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: $common-text-font-family;
+      line-height: 1.3;
+    }
+  }
+
+  &:hover {
+    background-color: $gray-FA;
+
+    & .co-message-item__content__user-and-date__user-name {
+      color: $primary-color;
+    }
+  }
+}
