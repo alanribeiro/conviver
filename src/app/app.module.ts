@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -117,6 +118,13 @@ import { CoAdvertiseVacancyAppliancesComponent } from './components/organisms/co
 import { CoAdvertiseVacancyAmenitiesComponent } from './components/organisms/co-advertise-vacancy-amenities/co-advertise-vacancy-amenities.component';
 import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/co-advertise-vacancy-restrictions/co-advertise-vacancy-restrictions.component';
 import { CoAdvertisementFloatCardComponent } from './components/organisms/co-advertisement-float-card/co-advertisement-float-card.component';
+import { SearchComponent } from './pages/search/search.component';
+import { CoDropdownItemListComponent } from './components/molecules/co-dropdown-item-list/co-dropdown-item-list.component';
+import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-dropdown-item.component';
+import { CoMessageItemComponent } from './components/molecules/co-message-item/co-message-item.component';
+import { CoNotificationItemComponent } from './components/molecules/co-notification-item/co-notification-item.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { HelpComponent } from './pages/help/help.component';
 
 @NgModule({
   declarations: [
@@ -213,7 +221,14 @@ import { CoAdvertisementFloatCardComponent } from './components/organisms/co-adv
     CoResidentsListComponent,
     CoExperienceReportComponent,
     CoExperienceReportsCarouselComponent,
-    CoAdvertisementFloatCardComponent
+    CoAdvertisementFloatCardComponent,
+    SearchComponent,
+    CoDropdownItemListComponent,
+    CoDropdownItemComponent,
+    CoMessageItemComponent,
+    CoNotificationItemComponent,
+    SettingsComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
@@ -225,7 +240,8 @@ import { CoAdvertisementFloatCardComponent } from './components/organisms/co-adv
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFullpageModule
+    AngularFullpageModule,
+    ClickOutsideModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, AdvertiseService],
   bootstrap: [AppComponent]

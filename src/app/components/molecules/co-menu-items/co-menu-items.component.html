@@ -1,3 +1,10 @@
 <ul class="co-menu-items">
-  <co-menu-item *ngFor="let item of items" [title]="item.title" [withNotification]="item.notifications > 0"></co-menu-item>
+  <co-menu-item
+    *ngFor="let item of items"
+    [title]="item.title"
+    [withNotification]="item.notifications > 0"
+    [url]="item.url"
+    [callback]="item.callback"
+    (openDropdown)="toggleDropdown(item.title)">
+  </co-menu-item>
 </ul>

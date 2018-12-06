@@ -1,0 +1,15 @@
+<article class="search-page">
+  <header class="search-page__header">
+    <div class="search-page__header__search-bar">
+      <nz-input-group [nzSuffix]="suffixIconSearch">
+        <co-input [placeholder]="'Onde você quer morar?'"></co-input>
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i class="anticon anticon-search"></i>
+      </ng-template>
+    </div>
+  </header>
+  <section class="search-page__results-list">
+    <co-advertisement-list [itemsList]="advertisementsResult"></co-advertisement-list>
+  </section>
+</article>

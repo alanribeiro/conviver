@@ -1,0 +1,17 @@
+.search-page {
+    padding-top: 40px;
+
+    &__header {
+        display: flex;
+
+        &__search-bar {
+            flex-grow: 4;
+            margin-right: 20px;
+        }
+
+        &__radio {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+    }
+}

@@ -3,30 +3,59 @@
     <div class="co-main-header__container__mobile-menu-button">
       <co-mobile-menu-button (click)="openMenuMobile()"></co-mobile-menu-button>
     </div>
-    <co-logo [type]="'horizontal'" [color]="'white'" [width]="'125'"> </co-logo>
+    <co-logo [type]="'horizontal'" [color]="'white'" [width]="'125'"></co-logo>
     <div class="co-main-header__container__menu">
-      <co-menu-items [items]="menuMainItems"></co-menu-items>
-      <div class="co-main-header__container__menu__avatar" (mouseover)="hover=true" (mouseleave)="hover=false">
+      <co-menu-items [items]="menuMainItems" (openDropdown)="toggleDropdown($event)"></co-menu-items>
+      <div class="co-main-header__container__menu__avatar" (click)="toggleUserDropdown()">
         <co-avatar
           [size]="'small'"
           [photo]="user.photo"
           [genre]="user.genre">
         </co-avatar>
+      </div>
 
-        <div 
-          class="co-main-header__container__menu__dropdown" 
-          [ngStyle]="{ 
-            visibility: hover == true  ? 'visible' : 'hidden', 
-            opacity: hover == true ? '1' : '0' 
-          }">
-                                                                          
-          <co-mobile-menu-item-list [items]="menuOtherItems" [isDropdown]=true></co-mobile-menu-item-list>
+      <div
+        class="messages-dropdown"
+        [ngClass]="{'dropdown-visible': messagesDropdown}"
+        (clickOutside)="messagesDropdown ? toggleDropdown('Mensagens') : return"
+        [exclude]="'.co-menu-items'">
+        <div class="messages-dropdown__container">
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
+          <co-message-item></co-message-item>
         </div>
+      </div>
+
+      <div
+        class="notifications-dropdown"
+        [ngClass]="{'dropdown-visible': notificationsDropdown}"
+        (clickOutside)="notificationsDropdown ? toggleDropdown('Notificações') : return"
+        [exclude]="'.co-menu-items'">
+        <div class="notifications-dropdown__container">
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+          <co-notification-item></co-notification-item>
+        </div>
+      </div>
+
+      <div
+        class="user-dropdown"
+        [ngClass]="{'dropdown-visible': userDropdown}"
+        (clickOutside)="userDropdown ? toggleUserDropdown() : return"
+        [exclude]="'.co-main-header__container__menu__avatar'">
+        <co-dropdown-item-list [items]="menuOtherItems"></co-dropdown-item-list>
       </div>
     </div>
 
     <div class="co-main-header__container__notification-button">
-      <co-notification-button [withNotification]="false"></co-notification-button>
+      <co-notification-button [withNotification]="false" (click)="toggleDropdown('Notificações')"></co-notification-button>
     </div>
   </div>
 

@@ -24,7 +24,11 @@ export class CoAdvertiseVacancyPhotosComponent {
       photos: this.photos
     };
 
-    if(this.photos.length == 0) {
+    const result = this.photos.filter((element) => {
+      return element.status != "removed";
+    });
+
+    if(result.length == 0) {
       this.validate.emit(data);
       return;
     }

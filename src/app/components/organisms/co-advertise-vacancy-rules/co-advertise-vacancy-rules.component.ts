@@ -28,6 +28,10 @@ export class CoAdvertiseVacancyRulesComponent {
     this.rules.push({number: undefined, rule: ''});
   }
 
+  removeRule (index) {
+    this.rules.splice(index, 1);
+  }
+
   validateSection() {
     let data = {
       validate: true,

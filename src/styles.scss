@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #F9F9F9;
+}
+
 .container {
   width: 930px;
   margin: auto;
@@ -39,6 +43,17 @@
     .co-card-announce {
       margin-right: 0;
     }
+  }
+}
+
+co-message-item{
+  &:first-child .co-message-item {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child .co-message-item {
+    border: none;
+    border-radius: 0 0 10px 10px;
   }
 }
 
@@ -135,6 +150,16 @@
     &::placeholder {
       font-family: $font-regular;
     }
+
+    &-affix-wrapper {
+      &:hover .ant-input:not(.ant-input-disabled) {
+        border-color: $primary-color-light;
+      }
+
+      & .ant-input-suffix {
+        right: 20px;
+      }
+    }
   }
 
   &-radio {
@@ -144,6 +169,10 @@
       line-height: 38px;
       border: 1px solid $input-border-color;
       @include flexbox(flex, center, center);
+
+      &-checked {
+        z-index: auto;
+      }
 
       &:first-child {
         padding-left: 20px;

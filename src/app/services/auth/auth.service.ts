@@ -74,5 +74,6 @@ export class AuthService {
   logoff = () => {
     this.angularFireAuth.auth.signOut();
     localStorage.removeItem("conviverUser");
+    this.router.navigateByUrl('sign/in');
   }
 }

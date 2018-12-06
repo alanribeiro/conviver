@@ -14,7 +14,7 @@ export class CoAdvertiseVacancyResidentsComponent {
 
   constructor() {
     this.numberOfResidents = 0;
-    this.numberOfPlaces = 1;
+    this.numberOfPlaces = 0;
   }
 
   setNumberOfResidents(value) {
@@ -23,16 +23,23 @@ export class CoAdvertiseVacancyResidentsComponent {
   }
 
   setNumberOfPlaces(value) {
-    this.setNumberOfPlaces = value;
+    this.numberOfPlaces = value;
     this.validateSection();
   }
 
   validateSection() {
     let data = {
-      validate: true,
+      validate: false,
       numberOfResidents: this.numberOfResidents,
       numberOfPlaces: this.numberOfPlaces
     };
+
+    if(this.numberOfPlaces == 0) {
+      this.validate.emit(data);
+      return;
+    }
+
+    data.validate = true;
     this.validate.emit(data);
   }
 

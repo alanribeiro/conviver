@@ -1,0 +1,17 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-dropdown-item {
+  @include flexbox(flex, initial, center);
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: none;
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  &:hover {
+    color: $primary-color;
+  }
+}

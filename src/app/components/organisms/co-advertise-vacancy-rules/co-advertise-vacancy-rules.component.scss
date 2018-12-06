@@ -6,8 +6,8 @@
         margin-top: 40px;
 
         &__rule {
-            margin-bottom: 40px;
-            @include flexbox(flex, center, initial);
+            margin-bottom: 15px;
+            @include flexbox(flex, center, center);
 
             &__number {
                 color: $rule-number-color;
@@ -16,9 +16,11 @@
                 margin-right: 15px;
             }
 
-            &__textarea {
-                width: 526px;
+            &__input {
+                width: 476px;
+                margin-right: 10px;
             }
+
         }
     }
 
