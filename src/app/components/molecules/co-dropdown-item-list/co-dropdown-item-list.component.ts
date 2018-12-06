@@ -7,11 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CoDropdownItemListComponent {
 
-  @Input() items: Array<{
-    title: string,
-    icon: string,
-    notifications: number,
-    url: string}>;
+  @Input() items: Array<any>;
 
   constructor() { }
 

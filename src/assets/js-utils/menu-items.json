@@ -1,7 +1,7 @@
 {
   "mainItems": [
     {
-      "title": "Procurar",
+      "title": "Anúncios",
       "icon": "search",
       "notifications": 0,
       "url": "/search"
@@ -38,19 +38,19 @@
       "title": "Configurações",
       "icon": "setting",
       "notifications": 0,
-      "url": "item6"
+      "url": "/settings"
     },
     {
       "title": "Ajuda",
       "icon": "question",
       "notifications": 0,
-      "url": "item7"
+      "url": "/help"
     },
     {
       "title": "Desconectar",
       "icon": "logout",
       "notifications": 0,
-      "callback": "function(){ alert('Teste'); }"
+      "callback": "function(){ that.authService.logoff(); }"
     }
   ]
 }

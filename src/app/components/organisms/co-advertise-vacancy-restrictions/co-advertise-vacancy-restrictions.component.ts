@@ -11,18 +11,41 @@ export class CoAdvertiseVacancyRestrictionsComponent {
   @Output() validate:EventEmitter<any> = new EventEmitter();
 
   selectedRestrictions:Array<string>;
+  justBoys:boolean;
+  justGirls:boolean;
   noRestrictionsChecked:boolean;
 
   constructor() {
     this.selectedRestrictions = [];
+    this.justBoys = false;
+    this.justGirls = false;
     this.noRestrictionsChecked = false;
   }
 
   setRestrictions(activing, restriction) {
     if(activing) {
       this.selectedRestrictions.push(restriction);
+
       if(this.noRestrictionsChecked) {
         this.noRestrictionsChecked = false;
+      }
+
+      if(restriction == 'Só meninos') {
+        this.justBoys = true;
+        if(this.justGirls) {
+          let index = this.selectedRestrictions.indexOf('Só meninas');
+          this.selectedRestrictions.splice(index, 1);
+          this.justGirls = false;
+        }
+      }
+      
+      if(restriction == 'Só meninas') {
+        this.justGirls = true;
+        if(this.justBoys) {
+          let index = this.selectedRestrictions.indexOf('Só meninos');
+          this.selectedRestrictions.splice(index, 1);
+          this.justBoys = false;
+        }
       }
     }
     else {

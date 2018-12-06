@@ -12,6 +12,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
 import { AdvertisementComponent } from './pages/advertisement/advertisement.component';
 import { SearchComponent } from './pages/search/search.component';
+import { HelpComponent } from './pages/help/help.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,14 @@ const routes: Routes = [
       {
         path: 'search',
         component: SearchComponent
+      },
+      {
+        path: 'help',
+        component: HelpComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
       }
     ]
   },

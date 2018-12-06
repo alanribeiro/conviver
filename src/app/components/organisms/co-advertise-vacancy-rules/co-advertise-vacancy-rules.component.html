@@ -3,12 +3,15 @@
   <div class="co-advertise-vacancy-rules__form">
     <div *ngFor="let rule of rules; let i = index" class="co-advertise-vacancy-rules__form__rule">
       <div class="co-advertise-vacancy-rules__form__rule__number">#{{i + 1}}</div>
-      <div class="co-advertise-vacancy-rules__form__rule__textarea">
-        <co-textarea [placeholder]="'Descreva a regra aqui...'" [rows]="2" (valueChange)="setRule(i, $event)"></co-textarea>
+      <div class="co-advertise-vacancy-rules__form__rule__input">
+        <co-input [placeholder]="'Descreva a regra aqui...'" (valueChange)="setRule(i, $event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-rules__form__rule__remove-rule">
+        <co-rounded-button [icon]="'delete'" (click)="removeRule(i)"></co-rounded-button>
       </div>
     </div>
   </div>
   <div class="co-advertise-vacancy-rules__add-button">
-    <co-button *ngIf="rules.length < 2" [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'" (click)="addRule()"></co-button>
+    <co-button *ngIf="rules.length < 3" [title]="'Adicionar regra'" [icon]="'plus'" [type]="'secondary'" (click)="addRule()"></co-button>
   </div>
 </section>

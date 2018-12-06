@@ -142,7 +142,7 @@
 
       .dropdown-visible {
         display: block;
-      }
+      } 
 
       @include mqMaxWidth('md') {
         display: none;

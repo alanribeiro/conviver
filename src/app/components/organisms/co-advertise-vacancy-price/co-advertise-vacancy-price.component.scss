@@ -22,7 +22,7 @@
             &__rent,
             &__expense-value {
                 width: 120px;
-                margin-left: 10px;
+                margin: 0 10px;
             }
 
             &__water-and-light {
@@ -35,5 +35,6 @@
     &__add-button {
         margin: auto;
         width: 166px;
+        margin-bottom: 20px;
     }
 }

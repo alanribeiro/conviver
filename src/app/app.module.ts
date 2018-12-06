@@ -123,6 +123,8 @@ import { CoDropdownItemListComponent } from './components/molecules/co-dropdown-
 import { CoDropdownItemComponent } from './components/atoms/co-dropdown-item/co-dropdown-item.component';
 import { CoMessageItemComponent } from './components/molecules/co-message-item/co-message-item.component';
 import { CoNotificationItemComponent } from './components/molecules/co-notification-item/co-notification-item.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { HelpComponent } from './pages/help/help.component';
 
 @NgModule({
   declarations: [
@@ -224,7 +226,9 @@ import { CoNotificationItemComponent } from './components/molecules/co-notificat
     CoDropdownItemListComponent,
     CoDropdownItemComponent,
     CoMessageItemComponent,
-    CoNotificationItemComponent
+    CoNotificationItemComponent,
+    SettingsComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
