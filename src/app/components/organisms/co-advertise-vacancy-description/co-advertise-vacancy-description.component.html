@@ -3,6 +3,9 @@
     <co-title [title]="'Adicione uma descrição ao imóvel. Sinta-se à vontade para adicionar mais informações que não foram citadas anteriromente.'"></co-title>
   </div>
   <div class="co-advertise-vacancy-description__textarea">
-    <co-textarea [placeholder]="'Nos conte mais sobre o ímovel...'" [rows]="4" (valueChange)="setDescription($event)"></co-textarea>
+    <co-textarea [placeholder]="'Nos conte mais sobre o ímovel...'" [rows]="4" [error]="description == ''" (valueChange)="setDescription($event)"></co-textarea>
   </div>
+
+  <co-error-feedback [message]="'A descrição do imóvel é obrigatória'" [display]="description == ''"></co-error-feedback>
+  
 </section>

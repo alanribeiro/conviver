@@ -2,24 +2,12 @@
   <header class="search-page__header">
     <div class="search-page__header__search-bar">
       <nz-input-group [nzSuffix]="suffixIconSearch">
-        <co-input [placeholder]="'Procure por locais e usuários'"></co-input>
+        <co-input [placeholder]="'Onde você quer morar?'"></co-input>
       </nz-input-group>
       <ng-template #suffixIconSearch>
         <i class="anticon anticon-search"></i>
       </ng-template>
     </div>
-    <!-- <div class="search-page__header__radio">
-      <co-radio-style
-        [options]="[
-          {label:'Todos', value: 'all'},
-          {label: 'Anúncios', value: 'advertisements'},
-          {label: 'usuários', value: 'users'}
-        ]">
-      </co-radio-style>
-    </div>
-    <div class="search-page__header__filters-button">
-      <co-rounded-button [icon]="'filter'"></co-rounded-button>
-    </div> -->
   </header>
   <section class="search-page__results-list">
     <co-advertisement-list [itemsList]="advertisementsResult"></co-advertisement-list>

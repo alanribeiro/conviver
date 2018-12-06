@@ -15,14 +15,14 @@
     {
       "title": "Mensagens",
       "icon": "message",
-      "notifications": 1,
+      "notifications": 0,
       "url": "item3",
       "callback": "function(){ that.openDropdown.emit(); }"
     },
     {
       "title": "Notificações",
       "icon": "bell",
-      "notifications": 6,
+      "notifications": 0,
       "url": "item4",
       "callback": "function(){ that.openDropdown.emit(); }"
     } 

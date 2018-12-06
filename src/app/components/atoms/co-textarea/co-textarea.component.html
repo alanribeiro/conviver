@@ -5,6 +5,7 @@
   rows="{{rows}}"
   [(ngModel)]="value"
   (keyup)="sendValue()"
-  (blur)="sendValue()">
+  (blur)="sendValue()"
+  [ngClass]="{'co-textarea--error': error}">
 </textarea>
 
