@@ -3,38 +3,43 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { UserService } from '../user/user.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
+import { NzMessageService } from 'ng-zorro-antd';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private angularFireAuth:AngularFireAuth, private userService:UserService, private router:Router) {}
+  alertMessage:string;
+
+  constructor(private angularFireAuth:AngularFireAuth, private userService:UserService, private router:Router, private message:NzMessageService) {}
 
   login = (credentials) => {
     this.angularFireAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password)
     .then(value => {
-      alert("Login efetuado com sucesso!");
+      this.message.loading('Entrando...');
       this.getCurrentUser(value.user.uid, `profile/${value.user.uid}`);
     }).catch(error => {
       if(error.code == "auth/network-request-failed") {
-        alert("Erro na rede, verifique se você está conectado à internet!");
+        this.alertMessage = "Erro na rede, verifique se você está conectado à internet!";
       }
       else if(error.code == "auth/email-already-exists") {
-        alert("O e-mail informado já está cadastrado!");
+        this.alertMessage = "O e-mail informado já está cadastrado!";
       }
       else if(error.code == "auth/invalid-email") {
-        alert("O e-mail informado é inválido, tente novamente!");
+        this.alertMessage = "O e-mail informado é inválido, tente novamente!";
       }
       else if(error.code == "auth/invalid-password") {
-        alert("A senha está incorreta, tente novamente!");
+        this.alertMessage = "A senha está incorreta, tente novamente!";
       }
       else if(error.code == "auth/user-not-found") {
-        alert("Usuário não existe!");
+        this.alertMessage = "Usuário não existe!";
       }
       else if(error.code == "auth/internal-error") {
-        alert("Erro interno!");
+        this.alertMessage = "Erro interno!";
       }
+
+      this.message.error(this.alertMessage);
     });
   }
 
