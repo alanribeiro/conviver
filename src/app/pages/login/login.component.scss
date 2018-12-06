@@ -1,0 +1,9 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.login {
+    &__loading {
+        height: calc(100vh - 70px);
+        width: 100%;
+        @include flexbox(flex, center, center);
+      }
+}

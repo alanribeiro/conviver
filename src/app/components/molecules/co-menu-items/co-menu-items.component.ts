@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-menu-items',
@@ -8,7 +8,12 @@ import { Component, Input } from '@angular/core';
 export class CoMenuItemsComponent {
 
   @Input() items:Array<any>;
+  @Output() openDropdown:EventEmitter<any> = new EventEmitter();
 
   constructor() { }
+
+  toggleDropdown(dropdown) {
+    this.openDropdown.emit(dropdown);
+  }
 
 }

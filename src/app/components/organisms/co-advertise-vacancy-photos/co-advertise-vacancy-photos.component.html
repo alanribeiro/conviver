@@ -1,0 +1,6 @@
+<section class="co-advertise-vacancy-photos">
+  <co-title [title]="'Faça o upload de algumas fotos do imóvel'"></co-title>
+  <div class="co-advertise-vacancy-photos__upload">
+    <co-upload [numberOfFiles]="5" (fileChange)="setPhotos($event)"></co-upload>
+  </div>
+</section>

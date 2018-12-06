@@ -1,0 +1,19 @@
+<section class="co-advertise-vacancy-rooms">
+  <co-title [title]="'O imóvel possui quais destes cômodos?'"></co-title>
+  <div class="co-advertise-vacancy-rooms__list">
+    <co-selectable-item
+      *ngFor="let item of rooms"
+      [size]="'big'"
+      [icon]="item.title"
+      [title]="item.title"
+      [hoverMessage]="item.hoverMessage"
+      (changeActive)="setRooms($event, item.title)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'add'"
+      [title]="'Outros'"
+      [hoverMessage]="'Adicionar outros cômodos'">
+    </co-selectable-item>
+  </div>
+</section>

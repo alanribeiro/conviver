@@ -1,0 +1,10 @@
+<div class="co-experience-report">
+  <div class="co-experience-report__avatar">
+    <co-avatar [photo]="user.photo" [genre]="user.genre" [title]="user.firstName + ' ' + user.lastName"></co-avatar>
+  </div>
+  <div class="co-experience-report__message">"{{report.message}}"</div>
+  <div class="co-experience-report__date">{{report.date}}</div>
+  <div class="co-experience-report__rate">
+    <co-rate [rate]="report.rate" [readOnly]="true"></co-rate>
+  </div>
+</div>

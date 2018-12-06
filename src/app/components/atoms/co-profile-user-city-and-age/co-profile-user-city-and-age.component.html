@@ -1,1 +1,3 @@
-<div class="co-profile-user-city-and-age">{{city}} - {{country}} - {{age}} anos</div>
+<div class="co-profile-user-city-and-age">
+    {{city}} <span *ngIf="city != ''">-</span> {{country}} <span *ngIf="country != ''">-</span> {{age}} anos
+</div>

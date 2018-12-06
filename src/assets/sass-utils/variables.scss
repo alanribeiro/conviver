@@ -13,6 +13,7 @@ $primary-color: #650ECE;
 $primary-color-light: #880ECE;
 $secondary-color: #CE0EA8;
 $tertiary-color: #00C4DF;
+$tertiary-color-dark: #4f35d2;
 $quaternary-color: #EA154E;
 $error-color: #FF7200;
 $facebook-color: #4267b2;
@@ -62,12 +63,18 @@ $registration-divider-color: $gray-CC;
 $sign-card-bg-color: $gray-FA;
 $recover-password-color: $primary-color;
 $landing-page-title-color: $gray-FA;
+$menu-item-hover: $black;
+$menu-back-color: $primary-color-light;
+$number-picker-color: $gray-70;
+$rule-number-color: $primary-color;
+$game-font-color: $white;
 
 /* ------------------ FONT FAMILIES ------------------ */
 
 $font-regular: 'HKGrotesk-Regular';
 $font-medium: 'HKGrotesk-Medium';
 $font-bold: 'HKGrotesk-Bold';
+$font-game: 'PS2P';
 
 $page-title-font-family: $font-bold;
 $title-font-family: $font-bold;
@@ -95,6 +102,9 @@ $profile-user-name-font-family: $font-bold;
 $profile-user-city-and-age-font-family: $font-medium;
 $profile-user-since-font-family: $font-regular;
 $comment-date-font-family: $font-medium;
+$dp-menu-font-family: $font-regular;
+$number-picker-font-family: $font-bold;
+$expense-name-font-family: $font-medium;
 
 /* ------------------ FONT SIZES ------------------ */
 
@@ -107,6 +117,7 @@ $font-size-mx: 18px;
 $default-font-size: 16px;
 $font-size-small: 14px;
 $font-size-extra-small: 12px;
+$font-size-super-small: 10px;
 
 $landing-page-item-font-size: $font-size-bigbig;
 $landing-page-font-size: $font-size-huge;
@@ -137,17 +148,17 @@ $sign-in-up-footer-font-size: $font-size-small;
 $recover-password-font-size: $font-size-extra-small;
 $profile-user-name-font-size: $font-size-enormous;
 $profile-user-since-font-size: $font-size-extra-small;
+$rule-number-font-size: $font-size-mx;
 
 /* ------------------- MARGINS / PADDINGS -------------------- */
 
 $default-margin: 7.5px;
-
 $landing-page-padding: 8vw;
 
 /* ----------------- BREAKPOINTS ------------------ */
 
 $width-breakpoints: (
-  'lg': 930px,
+  'lg': 1000px,
   'md': 740px,
   'mdx': 600px,
   'mdxx': 470px,

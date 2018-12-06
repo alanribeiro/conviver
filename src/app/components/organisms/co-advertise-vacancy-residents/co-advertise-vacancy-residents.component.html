@@ -1,0 +1,10 @@
+<section class="co-advertise-vacancy-residents">
+  <div class="co-advertise-vacancy-residents__residents">
+    <co-title [title]="'Quantas pessoas moram com você?'"></co-title>
+    <co-number-picker (valueChange)="setNumberOfResidents($event)"></co-number-picker>
+  </div>
+  <div class="co-advertise-vacancy-residents__vacancies">
+    <co-title [title]="'Quantas vagas para novos moradores?'"></co-title>
+    <co-number-picker (valueChange)="setNumberOfPlaces($event)"></co-number-picker>
+  </div>
+</section>

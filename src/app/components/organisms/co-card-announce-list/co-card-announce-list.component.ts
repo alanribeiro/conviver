@@ -20,7 +20,7 @@ export class CoCardAnnounceListComponent {
     this.firstAnnounce = true;
     this.cards = [
       {
-        icon: 'house',
+        icon: 'Casa',
         description: 'Anuncie seu imóvel e rapidamente nós econtraremos pessoas interessadas para você.',
         buttonTitle: 'Anunciar um imóvel',
         buttonUrl: ''
@@ -29,7 +29,7 @@ export class CoCardAnnounceListComponent {
         icon: 'man-and-girl',
         description: 'Encontre pessoas para morar com você e dividir as despesas. Anuncie agora uma vaga na sua casa.',
         buttonTitle: 'Anunciar uma vaga',
-        buttonUrl: ''
+        buttonUrl: '/advertise/vacancy'
       }
     ]
   }

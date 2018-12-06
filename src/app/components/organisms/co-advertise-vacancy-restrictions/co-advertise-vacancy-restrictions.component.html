@@ -1,0 +1,28 @@
+<section class="co-advertise-vacancy-restrictions">
+  <co-title [title]="'Você gostaria de adicionar alguma dessas restrições?'"></co-title>
+  <div class="co-advertise-vacancy-restrictions__list">
+    <co-selectable-item
+      *ngFor="let item of restrictions"
+      [size]="'big'"
+      [icon]="item.title"
+      [title]="item.title"
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedRestrictions.includes(item.title)"
+      (changeActive)="setRestrictions($event, item.title)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'block'"
+      [title]="'Nenhuma restição'"
+      [hoverMessage]="'É tudo liberado!!!'"
+      [active]="noRestrictionsChecked"
+      (changeActive)="noRestrictions($event)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'add'"
+      [title]="'Outras'"
+      [hoverMessage]="'Adicionar outras restrições'">
+    </co-selectable-item>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
+.advertise-vacancy-page {
+    &__carousel {
+        overflow: hidden;
+
+        &__slider {
+            width: 1100%;
+            @include flexbox(flex, initial, initial);
+            @include transition(transform, $default-animation-duration, ease);
+
+            &__item-content {
+                width: calc(100% / 11);
+                max-height: 331px;
+                overflow-y: hidden;
+                padding: 40px 0;
+            }
+
+            &--section-2 {
+                transform: translateX(calc(-100% / 11));
+            }
+
+            &--section-3 {
+                transform: translateX(calc(-200% / 11));
+            }
+
+            &--section-4 {
+                transform: translateX(calc(-300% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: none;
+                    overflow-y: visible;
+                }
+            }
+
+            &--section-5 {
+                transform: translateX(calc(-400% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
+            }
+
+            &--section-6 {
+                transform: translateX(calc(-500% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
+            }
+
+            &--section-7 {
+                transform: translateX(calc(-600% / 11));
+            }
+
+            &--section-8 {
+                transform: translateX(calc(-700% / 11));
+
+                .advertise-vacancy-page__carousel__slider__item-content {
+                    max-height: 501px;
+                }
+            }
+
+            &--section-9 {
+                transform: translateX(calc(-800% / 11));
+            }
+
+            &--section-10 {
+                transform: translateX(calc(-900% / 11));
+            }
+
+            &--section-11 {
+                transform: translateX(calc(-1000% / 11));
+            }
+        }
+    }
+}

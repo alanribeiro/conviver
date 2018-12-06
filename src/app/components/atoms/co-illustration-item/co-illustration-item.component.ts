@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CoIllustrationItemComponent {
   @Input() item:string;
+  @Input() icon:string;
   @Input() showTitle:boolean;
   @Input() size:string;
 

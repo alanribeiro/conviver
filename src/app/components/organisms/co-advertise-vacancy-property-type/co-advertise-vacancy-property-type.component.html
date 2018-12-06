@@ -1,0 +1,21 @@
+<section class="co-advertise-vacancy-type">
+  <co-title [title]="'Qual o tipo do imóvel?'"></co-title>
+  <div class="co-advertise-vacancy-type__options">
+    <co-selectable-item
+      [size]="'big'"
+      [title]="'Casa'"
+      [icon]="'Casa'"
+      [hoverMessage]="'Grande ou pequena, sempre há espaço para novas amizades'"
+      [active]="propertyType == 'Casa'"
+      (changeActive)="changePropertyType($event, 'Casa')">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [title]="'Apartamento'"
+      [icon]="'Apartamento'"
+      [hoverMessage]="'Tenha um espaço só seu e esteja sempre cercado de outras pessoas'"
+      [active]="propertyType == 'Apartamento'"
+      (changeActive)="changePropertyType($event, 'Apartamento')">
+    </co-selectable-item>
+  </div>
+</section>

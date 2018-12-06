@@ -1,0 +1,30 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-notification-item {
+  @include flexbox(flex, initial, initial);
+  padding: 15px;
+  border-bottom: 1px solid $border-color;
+  @include transition(background-color);
+  cursor: pointer;
+
+  &__avatar {
+    width: 40px;
+  }
+
+  &__content {
+    width: calc(100% - 40px);
+    padding-left: 15px;
+
+    &__date {
+      font-family: $common-text-font-family;
+      font-size: $font-size-extra-small;
+      color: $text-default-color;
+      margin-top: 5px;
+    }
+  }
+
+  &:hover {
+    background-color: $gray-FA;
+  }
+}

@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #F9F9F9;
+}
+
 .container {
   width: 930px;
   margin: auto;
@@ -42,6 +46,22 @@
   }
 }
 
+co-message-item{
+  &:first-child .co-message-item {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child .co-message-item {
+    border: none;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.clearfix {
+  display: flex;
+  justify-content: center;
+}
+
 @include keyframe(card-sign-appear) {
   0% {
     opacity: 0;
@@ -71,22 +91,44 @@
         margin-left: 20px;
         margin-right: 20px;
       }
+
+      &:hover {
+        border-color: $primary-color;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
+      } 
     }
   
     &-arrow {
       right: 20px;
       top: 55%;
     }
+
+    &-open .ant-select-selection {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
+    }
   }
 
   &-rate {
     color: $primary-color;
+
+    &-star:last-child {
+      margin-right: 0;
+    }
   }
 
   &-badge {
     &-count {
       box-shadow: none;
       background-color: $badge-color;
+    }
+
+    &-dot {
+      box-shadow: none;
     }
   }
 
@@ -96,13 +138,27 @@
     height: 40px;
     padding: 0 20px;
 
-    &:hover, &:focus {
+    &:hover {
+      border: 1px solid $primary-color-light;
+    }
+    
+    &:focus {
       border: 1px solid $primary-color-light;
       box-shadow: 0 0 0 2px rgba($color: $primary-color-light, $alpha: 0.2);
     }
 
     &::placeholder {
       font-family: $font-regular;
+    }
+
+    &-affix-wrapper {
+      &:hover .ant-input:not(.ant-input-disabled) {
+        border-color: $primary-color-light;
+      }
+
+      & .ant-input-suffix {
+        right: 20px;
+      }
     }
   }
 
@@ -113,6 +169,10 @@
       line-height: 38px;
       border: 1px solid $input-border-color;
       @include flexbox(flex, center, center);
+
+      &-checked {
+        z-index: auto;
+      }
 
       &:first-child {
         padding-left: 20px;
@@ -167,6 +227,10 @@
       background-color: $primary-color-light;
       border-color: $primary-color-light;
     }
+
+    &:hover .ant-checkbox-inner {
+      border-color: $primary-color-light;
+    }
   }
 
   &-drawer {
@@ -181,5 +245,9 @@
 
   &-divider-horizontal.ant-divider-with-text {
     margin: 20px 0;
+  }
+
+  &-spin-dot i {
+    background-color: $primary-color;
   }
 }

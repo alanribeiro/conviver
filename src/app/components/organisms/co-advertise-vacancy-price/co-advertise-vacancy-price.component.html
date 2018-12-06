@@ -1,0 +1,31 @@
+<section class="co-advertise-vacancy-price">
+  <co-title [title]="'Quais são as despesas da casa?'"></co-title>
+  <div class="co-advertise-vacancy-price__form">
+    <div class="co-advertise-vacancy-price__form__row">
+      <div class="co-advertise-vacancy-price__form__row__rent-label">Aluguel:</div>
+      <div class="co-advertise-vacancy-price__form__row__rent">
+        <co-input [type]="'number'" [placeholder]="'R$ 000,00'" (valueChange)="setRent($event)" [error]="rent.value == '' || rent.value < 0"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-price__form__row__water-and-light">
+        <co-checkbox [title]="'Água e luz incluso'" (check)="setWaterAndElectricityIncluded($event)"></co-checkbox>
+      </div>
+    </div>
+    <div *ngFor="let expense of expenses; let i = index" class="co-advertise-vacancy-price__form__row">
+      <div class="co-advertise-vacancy-price__form__row__expense-name">
+        <co-input [placeholder]="'Despesa'" (valueChange)="setExpenseName(i, $event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-price__form__row__expense-value">
+        <co-input [type]="'number'" [placeholder]="'R$ 000,00'" (valueChange)="setExpenseValue(i, $event)"></co-input>
+      </div>
+      <div class="co-advertise-vacancy-price__form__row__remove-expense">
+        <co-rounded-button [icon]="'delete'" (click)="removeExpense(i)"></co-rounded-button>
+      </div>
+    </div>
+  </div>
+  <div class="co-advertise-vacancy-price__add-button">
+    <co-button *ngIf="expenses.length < 2" [title]="'Adicionar despesa'" [icon]="'plus'" [type]="'secondary'" (click)="addExpense()"></co-button>
+  </div>
+
+  <co-error-feedback [message]="'O valor do aluguel é obrigatório'" [display]="rent.value == '' || rent.value < 0"></co-error-feedback>
+
+</section>

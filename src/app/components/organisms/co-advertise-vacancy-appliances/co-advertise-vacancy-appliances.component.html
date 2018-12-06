@@ -1,0 +1,28 @@
+<section class="co-advertise-vacancy-appliances">
+  <co-title [title]="'Quais eletrodomésticos você possui?'"></co-title>
+  <div class="co-advertise-vacancy-appliances__list">
+    <co-selectable-item
+      *ngFor="let item of appliances"
+      [size]="'big'"
+      [icon]="item.title"
+      [title]="item.title"
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedAppliances.includes(item.title)"
+      (changeActive)="setAppliances($event, item.title)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'block'"
+      [title]="'Não possuo nenhum'"
+      [hoverMessage]="'Mas possuo um bom coração'"
+      [active]="noAppliancesChecked"
+      (changeActive)="noAppliances($event)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'add'"
+      [title]="'Outros'"
+      [hoverMessage]="'Adicionar outros eletrodomésticos'">
+    </co-selectable-item>
+  </div>
+</section>

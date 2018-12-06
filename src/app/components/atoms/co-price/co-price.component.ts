@@ -18,7 +18,7 @@ export class CoPriceComponent implements OnInit {
    }
 
    ngOnInit() {
-    let price = this.price.toFixed(2).toString();
+    let price = typeof this.price == "string" ? parseInt(this.price).toFixed(2).toString() : this.price.toFixed(2).toString()
     this.priceRendered = price.replace(".", ",");
    }
 

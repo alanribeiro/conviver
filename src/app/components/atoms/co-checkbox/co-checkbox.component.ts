@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'co-checkbox',
@@ -8,11 +8,14 @@ import { Component, Input } from '@angular/core';
 export class CoCheckboxComponent {
   @Input() title:string;
   @Input() checked:boolean;
+  @Output() check:EventEmitter<any> = new EventEmitter();
 
   constructor() { 
     this.checked = false;
   }
 
-
+  sendValue() {
+    this.check.emit(this.checked);
+  }
 
 }

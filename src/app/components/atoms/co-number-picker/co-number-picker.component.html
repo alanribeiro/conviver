@@ -1,0 +1,5 @@
+<div class="co-number-picker">
+  <i class="anticon anticon-minus" (click)="decrease()" [ngClass]="{'disabled': value == startsAt}"></i>
+  <span class="co-number-picker__number">{{value}}</span>
+  <i class="anticon anticon-plus" (click)="increase()"></i>
+</div>

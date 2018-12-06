@@ -1,0 +1,22 @@
+<div class="co-advertisement-owner-info">
+  <div class="co-advertisement-owner-info__user-info">
+    <div class="co-advertisement-owner-info__user-info__avatar">
+      <co-avatar [photo]="photo" [genre]="genre"></co-avatar>
+    </div>
+    <div class="co-advertisement-owner-info__user-info__info">
+      <div class="co-advertisement-owner-info__user-info__info__name">{{name}}</div>
+      <div class="co-advertisement-owner-info__user-info__info__city">{{city}}</div>
+      <div class="co-advertisement-owner-info__user-info__info__created-in">Criou o anúncio em {{creationDate}}</div>
+    </div>
+  </div>
+  <div class="co-advertisement-owner-info__created-in">Criou o anúncio em {{creationDate}}</div>
+  <div class="co-advertisement-owner-info__advertisement-info">
+    <div class="co-advertisement-owner-info__advertisement-info__address">{{adAddress}}</div>
+    <div class="co-advertisement-owner-info__advertisement-info__rate">
+      <co-rate [rate]="adRate"></co-rate>
+    </div>
+    <div class="co-advertisement-owner-info__advertisement-info__rate-description">
+      As avaliações e comentários de um imóvel são restritos apenas à antigos e atuais moradores do mesmo.
+    </div>
+  </div>
+</div>

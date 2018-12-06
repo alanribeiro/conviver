@@ -1,0 +1,28 @@
+<section class="co-advertise-vacancy-amenities">
+  <co-title [title]="'Quais dessas comodidades o imóvel possui?'"></co-title>
+  <div class="co-advertise-vacancy-amenities__list">
+    <co-selectable-item
+      *ngFor="let item of amenities"
+      [size]="'big'"
+      [icon]="item.title"
+      [title]="item.title"
+      [hoverMessage]="item.hoverMessage"
+      [active]="selectedAmenities.includes(item.title)"
+      (changeActive)="setAmenities($event, item.title)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'block'"
+      [title]="'Não possuo nenhum'"
+      [hoverMessage]="'Era uma casa muito engraçada, não tinha teto, não tinha nada'"
+      [active]="noAmenitiesChecked"
+      (changeActive)="noAmenities($event)">
+    </co-selectable-item>
+    <co-selectable-item
+      [size]="'big'"
+      [icon]="'add'"
+      [title]="'Outros'"
+      [hoverMessage]="'Adicionar outras comodidades'">
+    </co-selectable-item>
+  </div>
+</section>

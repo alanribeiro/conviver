@@ -1,0 +1,114 @@
+{
+  "rooms": [
+    {
+      "title": "Quarto",
+      "hoverMessage": "Para descansar e esquecer os problemas do dia-a-dia"
+    },
+    {
+      "title": "Cozinha",
+      "hoverMessage": "Os mais gostosos improvisos acontecem aqui"
+    },
+    {
+      "title": "Cozinha Americana",
+      "hoverMessage": "Se inspire e faça receitas deliciosas"
+    },
+    {
+      "title": "Banheiro",
+      "hoverMessage": "Não dá pra segurar, não é mesmo?"
+    },
+    {
+      "title": "Sala de estar",
+      "hoverMessage": "Junte os amigos e compartilhe bons momentos aqui"
+    },
+    {
+      "title": "Varanda",
+      "hoverMessage": "Daqui você pode observar o mundo"
+    },
+    {
+      "title": "Despensa",
+      "hoverMessage": "Deixe tudo bem guardado aqui"
+    },
+    {
+      "title": "Área de serviço",
+      "hoverMessage": "Para lavar, passar e manter a casa limpa e organizada"
+    },
+    {
+      "title": "Garagem",
+      "hoverMessage": "Aqui você coloca a placa 'Proibido Estacionar'"
+    },
+    {
+      "title": "Suite",
+      "hoverMessage": "Banheiro e quarto em um lugar só! É sério isso!"
+    }
+  ],
+  "appliances": [
+    {
+      "title": "Geladeira",
+      "hoverMessage": "Água gelada para refrescar nos dias quentes"
+    },
+    {
+      "title": "Fogão",
+      "hoverMessage": "Receitas dignas de masterchef saindo do forno"
+    },
+    {
+      "title": "Máquina de lavar",
+      "hoverMessage": "Lavar roupa na mão é uma tarefa muito cansativa"
+    },
+    {
+      "title": "Micro-ondas",
+      "hoverMessage": "Comida pronta em 3min"
+    },
+    {
+      "title": "TV",
+      "hoverMessage": "Assista todos os seus programas favoritos"
+    }
+  ],
+  "amenities": [
+    {
+      "title": "Internet",
+      "hoverMessage": "Para muitos é o bastante"
+    },
+    {
+      "title": "Lavanderia",
+      "hoverMessage": "Roupas limpas, perfumadas e bem cuidadas"
+    },
+    {
+      "title": "Piscina",
+      "hoverMessage": "O melhor lugar para um dia de sol e calor"
+    },
+    {
+      "title": "Ar-condicionado",
+      "hoverMessage": "Você decide se faz frio ou calor"
+    },
+    {
+      "title": "Elevador",
+      "hoverMessage": "Para subir ou descer basta apertar um botão"
+    },
+    {
+      "title": "Água quente",
+      "hoverMessage": "Ideal para os dias frios"
+    }
+  ],
+  "restrictions": [
+    {
+      "title": "Sem fumantes",
+      "hoverMessage": "Quem não fuma geralmente não gosta do cheiro de cigarro"
+    },
+    {
+      "title": "Só meninos",
+      "hoverMessage": "Nada contra as meninas"
+    },
+    {
+      "title": "Só meninas",
+      "hoverMessage": "Nada contra os meninos"
+    },
+    {
+      "title": "Proibido animais",
+      "hoverMessage": "Afinal de contas, nem todo mundo gosta"
+    },
+    {
+      "title": "Proibido eventos ou festas",
+      "hoverMessage": "Respeite o espaço dos outros moradores"
+    }
+  ]
+}

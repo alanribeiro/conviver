@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class CoIllustrationItemListComponent {
 
-  @Input() itemsList: Array<string>
+  @Input() itemsList: Array<string>;
+  @Input() size:string;
 
   constructor() { }
 
