@@ -27,6 +27,5 @@ export class CoAdvertisementComponent implements OnChanges {
       }
       else this.price = rent;
     }
-    console.log("PRICE", this.price);
   }
 }

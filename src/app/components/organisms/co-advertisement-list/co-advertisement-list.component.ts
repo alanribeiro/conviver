@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'co-advertisement-list',
@@ -9,6 +10,10 @@ export class CoAdvertisementListComponent {
 
   @Input() itemsList: Array<any>;
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  redirectToDetails = (advertisementId) => {
+    this.router.navigateByUrl(`advertisement/${advertisementId}`);
+  }
 
 }
