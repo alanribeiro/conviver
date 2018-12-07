@@ -29,6 +29,10 @@ export class AdvertisementService {
     return this.angularFireDatabase.database.ref("advertisements").child(id).set(this.advertisement);
   }
 
+  getAllAdvertisements = () => {
+    return this.angularFireDatabase.list("advertisements").valueChanges();
+  }
+
   getAdvertisement = (advertisementId) => {
     return this.angularFireDatabase.object(`advertisements/${advertisementId}`).valueChanges();
   }
