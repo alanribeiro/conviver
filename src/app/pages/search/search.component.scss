@@ -1,5 +1,13 @@
+@import '../../../assets/sass-utils/mixins.scss';
+
 .search-page {
     padding-top: 40px;
+
+    &__loading {
+        height: calc(100vh - 70px);
+        width: 100%;
+        @include flexbox(flex, center, center);
+      }
 
     &__header {
         display: flex;
@@ -13,5 +21,9 @@
             flex-grow: 1;
             margin-right: 20px;
         }
+    }
+
+    &__results-list {
+        margin: 40px 0;
     }
 }

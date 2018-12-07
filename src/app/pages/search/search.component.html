@@ -1,4 +1,7 @@
-<article class="search-page">
+<div class="search-page__loading" *ngIf="advertisementsResult == undefined">
+  <co-loading></co-loading>
+</div>
+<article class="search-page" *ngIf="advertisementsResult != undefined">
   <header class="search-page__header">
     <div class="search-page__header__search-bar">
       <nz-input-group [nzSuffix]="suffixIconSearch">

@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CoAdvertisementListComponent {
 
-  @Input() itemsList: Array<{advertisement: Object}>;
+  @Input() itemsList: Array<any>;
 
   constructor() { }
 
