@@ -44,7 +44,7 @@ export class CoRegisterAccountComponent {
       this.setErrorFeedbackMessage();
       return;
     }
-
+    
     data.validate = true;
     this.validate.emit(data);
     this.setErrorFeedbackMessage();
