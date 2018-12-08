@@ -113,7 +113,6 @@ import { CoAdvertiseVacancyRulesComponent } from './components/organisms/co-adve
 import { CoAdvertiseVacancyPhotosComponent } from './components/organisms/co-advertise-vacancy-photos/co-advertise-vacancy-photos.component';
 import { CoAdvertiseVacancyDescriptionComponent } from './components/organisms/co-advertise-vacancy-description/co-advertise-vacancy-description.component';
 import { CoAdvertiseVacancyRoomsComponent } from './components/organisms/co-advertise-vacancy-rooms/co-advertise-vacancy-rooms.component';
-import { AdvertiseService } from './services/advertise/advertise.service';
 import { CoAdvertiseVacancyAppliancesComponent } from './components/organisms/co-advertise-vacancy-appliances/co-advertise-vacancy-appliances.component';
 import { CoAdvertiseVacancyAmenitiesComponent } from './components/organisms/co-advertise-vacancy-amenities/co-advertise-vacancy-amenities.component';
 import { CoAdvertiseVacancyRestrictionsComponent } from './components/organisms/co-advertise-vacancy-restrictions/co-advertise-vacancy-restrictions.component';
@@ -245,7 +244,7 @@ import { TermsComponent } from './pages/terms/terms.component';
     AngularFullpageModule,
     ClickOutsideModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, AdvertiseService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

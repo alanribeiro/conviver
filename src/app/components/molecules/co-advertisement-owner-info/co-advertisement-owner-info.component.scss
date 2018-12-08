@@ -14,8 +14,11 @@
 
     &__info {
       &__name {
-        font-family: $avatar-font-family;
-        font-size: $common-text-font-size;
+        & a {
+          font-family: $avatar-font-family;
+          font-size: $common-text-font-size;
+          color: $common-text-color;
+        }
       }
   
       &__city {

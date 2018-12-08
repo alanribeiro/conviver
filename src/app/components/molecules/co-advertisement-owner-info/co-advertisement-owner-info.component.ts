@@ -14,7 +14,7 @@ export class CoAdvertisementOwnerInfoComponent {
   @Input() creationDate:string;
   @Input() adAddress:string;
   @Input() adRate:number;
+  @Input() id:string;
 
   constructor() {}
-
 }

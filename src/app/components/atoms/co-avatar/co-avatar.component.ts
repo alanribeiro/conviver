@@ -11,8 +11,11 @@ export class CoAvatarComponent implements OnInit {
   @Input() title:string;
   @Input() genre:string;
   @Input() size:string;
+  @Input() clickable:boolean;
+  @Input() id:string;
 
   constructor() {
+    this.clickable = true;
     this.size = 'medium';
   }
 

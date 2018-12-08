@@ -1,4 +1,4 @@
-<div class="co-avatar">
+<div class="co-avatar" [routerLink]=" clickable ? '/profile/' + id : null">
   <div
     class="co-avatar__photo"
     [ngStyle]="{'background-image': 'url(' + photo + ')'}"

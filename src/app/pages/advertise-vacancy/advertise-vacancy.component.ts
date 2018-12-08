@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdvertisementService } from 'src/app/services/advertisement/advertisement.service';
+import { Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd';
 
 @Component({
   selector: 'advertise-vacancy',
@@ -14,7 +16,7 @@ export class AdvertiseVacancyComponent implements OnInit{
   backAvaliable:boolean;
   doneAvaliable:boolean;
 
-  constructor(private advertisementService:AdvertisementService) {
+  constructor(private advertisementService:AdvertisementService, private message:NzMessageService, private router:Router) {
     this.currentSection = 1;
     this.currentSectionValidated = false;
     this.backAvaliable = false;
@@ -41,6 +43,7 @@ export class AdvertiseVacancyComponent implements OnInit{
 
   setSectionThree(value) {
     this.advertisementService.advertisement.setNumberOfPlaces(value.numberOfPlaces);
+    this.advertisementService.advertisement.setNumberOfResidents(value.numberOfResidents);
     this.setCurrentSectionValidated(value.validate);
   }
 
@@ -124,8 +127,11 @@ export class AdvertiseVacancyComponent implements OnInit{
 
   registerAdvertisement = () => {
     const register = this.advertisementService.registerAdvertisement();
-    register.then(() => alert("Anúncio cadastrado com sucesso!"))
-    .catch(error => alert("Erro ao cadastrar anúncio"));
+    register.then(() => {
+      this.message.success("Anúncio cadastrado com sucesso!");
+      this.router.navigateByUrl(`advertisement/${this.advertisementService.advertisement.getId()}`);
+    })
+    .catch(error => this.message.error("Erro ao cadastrar anúncio"));
   }
 
 }

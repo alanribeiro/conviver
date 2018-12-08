@@ -1,10 +1,10 @@
 <div class="co-advertisement-owner-info">
   <div class="co-advertisement-owner-info__user-info">
     <div class="co-advertisement-owner-info__user-info__avatar">
-      <co-avatar [photo]="photo" [genre]="genre"></co-avatar>
+      <co-avatar [photo]="photo" [genre]="genre" [id]="id"></co-avatar>
     </div>
     <div class="co-advertisement-owner-info__user-info__info">
-      <div class="co-advertisement-owner-info__user-info__info__name">{{name}}</div>
+      <div class="co-advertisement-owner-info__user-info__info__name"><a [routerLink]="'/profile/' + id">{{name}}</a></div>
       <div class="co-advertisement-owner-info__user-info__info__city">{{city}}</div>
       <div class="co-advertisement-owner-info__user-info__info__created-in">Criou o anúncio em {{creationDate}}</div>
     </div>

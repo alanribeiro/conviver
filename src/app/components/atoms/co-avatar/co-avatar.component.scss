@@ -1,6 +1,9 @@
 @import '../../../../assets/sass-utils/variables.scss';
 
 .co-avatar {
+  outline: none;
+  cursor: pointer;
+
   &__photo {
     margin: auto;
     background-color: gray;

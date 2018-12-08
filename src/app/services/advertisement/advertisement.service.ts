@@ -14,7 +14,7 @@ export class AdvertisementService {
   advertisement:Advertisement;
 
   constructor(private http:HttpClient, private angularFireDatabase:AngularFireDatabase, private userService:UserService) {
-    this.advertisement = new Advertisement('id','', [], [], [], '', '', 0, '', '', '', '', '', 1, 0, [], '', '', {value: 0, waterAndElectricityIncluded: false}, [], [], [], [], []);
+    this.advertisement = new Advertisement('id','', [], [], [], '', '', 0, '', '', '', '', '', 1, 0, [], '', '', {value: 0, waterAndElectricityIncluded: false}, [], [], [], [], [], 0);
   }
 
   registerAdvertisement = () => {

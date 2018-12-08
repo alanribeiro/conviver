@@ -1,7 +1,7 @@
 <div class="advertisement-page-container__loading" *ngIf="advertisement == undefined || owner == undefined">
   <co-loading></co-loading>
 </div>
-<article *ngIf="advertisement != undefined && owner != undefined" class="advertisement-page-container">
+<article *ngIf="advertisement != undefined && owner.getId() != 'id'" class="advertisement-page-container">
   <co-advertisement-main-section
     [photos]="advertisement.photos"
     [user]="owner"
@@ -33,7 +33,7 @@
   <co-section [title]="'Moradores'">
     <div class="advertisement-page-container__resident-list">
       <div class="advertisement-page-container__resident-list__owner">
-        <co-avatar [photo]="owner.photo" [genre]="owner.genre" [title]="owner.firstName"></co-avatar>
+        <co-avatar [photo]="owner.photo" [genre]="owner.genre" [title]="owner.firstName" [id]="owner.id"></co-avatar>
       </div>
       <co-residents-list [residents]="residents"></co-residents-list>
     </div>  
@@ -47,7 +47,7 @@
     [price]="totalPrice"
     [address]="advertisement.getCity() + ' - ' + advertisement.getState() + ', ' + advertisement.getCountry()"
     [propertyType]="advertisement.getPropertyType()"
-    [numberOfResidents]="residents.length"
+    [numberOfResidents]="advertisement.getNumberOfResidents() + 1"
     [numberOfPlaces]="advertisement.getNumberOfPlaces()"
     [restrictions]="advertisement.getRestrictions()"
     [rate]="advertisement.getRate()">

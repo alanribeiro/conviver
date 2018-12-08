@@ -5,6 +5,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../auth/auth.service';
 import { User } from 'src/app/models/user';
+import { NzMessageService } from 'ng-zorro-antd';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class RegisterService {
   user:User;
   userPersonalityItemsUrl:string = 'assets/js-utils/user-personality.json';
 
-  constructor(private http:HttpClient, private angularFireDatabase:AngularFireDatabase, private angularFireAuth:AngularFireAuth, private authService:AuthService, private router:Router) {
+  constructor(private http:HttpClient, private angularFireDatabase:AngularFireDatabase, private angularFireAuth:AngularFireAuth, private authService:AuthService, private router:Router, private message:NzMessageService) {
     this.user = new User('id', '', '', '', '', 0, '', [], '', '', '', '', '', '', 1, [], []);
   }
 
@@ -25,7 +26,7 @@ export class RegisterService {
     register.then(value => {
       this.registerUserData(value.user.uid, password);
     })
-    .catch(error => alert("Erro ao cadastrar usuário!"));
+    .catch(error => this.message.error("Erro ao cadastrar usuário!"));
   }
 
   registerUserData = (id, password) => {
@@ -52,11 +53,11 @@ export class RegisterService {
     }
     const registerData = this.angularFireDatabase.database.ref("users").child(id).set(user);
     registerData.then(() => {
-      alert("Usuário cadastrado com sucesso!");
+      this.message.success("Usuário cadastrado com sucesso!");
       this.authService.getCurrentUser(id, `profile/${id}`);
       localStorage.setItem('conviverUser', JSON.stringify(user));
     }).catch(error => {
-      alert("Erro ao cadastrar usuário!");
+      this.message.error("Erro ao cadastrar usuário!");
       this.removeUserFromAuthentication(user.email, password);
     });
   }

@@ -34,7 +34,8 @@ export class Advertisement {
       rate:string
     }>,
     private restrictions:Array<string>,
-    private rules:Array<any>
+    private rules:Array<any>,
+    private numberOfResidents:number
   ) {}
 
   getId():string {
@@ -227,5 +228,13 @@ export class Advertisement {
 
   setRules(rules:Array<any>):void {
     this.rules = rules;
+  }
+
+  getNumberOfResidents():number {
+    return this.numberOfResidents;
+  }
+
+  setNumberOfResidents(numberOfResidents:number):void {
+    this.numberOfResidents = numberOfResidents;
   }
 }
