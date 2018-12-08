@@ -125,6 +125,7 @@ import { CoMessageItemComponent } from './components/molecules/co-message-item/c
 import { CoNotificationItemComponent } from './components/molecules/co-notification-item/co-notification-item.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HelpComponent } from './pages/help/help.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -228,7 +229,8 @@ import { HelpComponent } from './pages/help/help.component';
     CoMessageItemComponent,
     CoNotificationItemComponent,
     SettingsComponent,
-    HelpComponent
+    HelpComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

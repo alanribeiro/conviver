@@ -1,0 +1,41 @@
+@import '../../../assets/sass-utils/variables.scss';
+@import '../../../assets/sass-utils/mixins.scss';
+
+.terms {
+  padding: 50px;
+  margin: 0 auto;
+
+  font-family: $advertisement-additional-info-font-family;
+  color: #111;
+  text-align: justify;
+
+  & h1 {
+    font-family: $page-title-font-family;
+    font-size: $landing-page-font-size;
+    color: $landing-page-title2-color;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  & h2 {
+    margin-top: 30px;
+    color: $landing-page-title2-color;
+  }
+}
+
+.header {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px 10px 50px;
+
+  .logo {
+    height: 70px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

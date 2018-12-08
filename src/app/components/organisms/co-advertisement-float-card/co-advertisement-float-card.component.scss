@@ -1,4 +1,52 @@
 @import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+  .modal {
+      position: fixed;
+      height: 300px;
+      width: 300px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  
+      &__close {
+        @include default-gradient(30deg);
+        width: 25px;
+        height: 25px;
+        border-radius: 0 10px 0 10px;
+        position: absolute;
+        top: 0px;
+        left: calc(300px - 25px);
+        @include flexbox(flex, center, center);
+        font: 14px $title-font-family;
+        color: #eee;
+  
+        &:hover {
+          @include default-gradient(30deg);
+          cursor: pointer;
+        }
+      }
+  
+      & h1 {
+        font: 20px $title-font-family;
+        padding-bottom: 10px;
+        text-align: center;
+        color: $section-title-color;
+      }
+
+      &__textarea {
+          margin-top: 10px;
+          margin-bottom: 30px;
+
+      }
+    }
 
 .co-advertisement-float-card {
     width: 332px;

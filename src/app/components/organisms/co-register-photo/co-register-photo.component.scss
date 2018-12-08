@@ -10,6 +10,14 @@
     }
   }
 
+  &__terms {
+    color: #333;
+    font-family: $title-font-family;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
   &__form {
     display: flex;
 

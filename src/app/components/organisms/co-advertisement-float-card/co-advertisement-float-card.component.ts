@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'co-advertisement-float-card',
   templateUrl: './co-advertisement-float-card.component.html',
@@ -15,6 +17,14 @@ export class CoAdvertisementFloatCardComponent {
   @Input() restrictions:Array<string>;
   @Input() rate:number;
 
-  constructor() { }
+  isOpen = false;
+
+  constructor() {
+
+  }
+
+  toggleModal() {
+    this.isOpen = !this.isOpen;
+  }
 
 }

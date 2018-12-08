@@ -1,3 +1,4 @@
+import { TermsComponent } from './pages/terms/terms.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'my-ads',
         component: MyAdsComponent
+      },
+      {
+        path: 'terms',
+        component: TermsComponent
       },
       {
         path: 'profile/:id',
