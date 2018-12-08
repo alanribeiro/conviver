@@ -54,7 +54,6 @@ export class CoMainHeaderComponent implements OnInit {
         this.menuMainItems = data.mainItems;
         this.menuOtherItems = data.otherItems;
         const userId = this.userService.currentUser.getId();
-        this.menuOtherItems[0].url = `/profile/${userId}`;
       }
     )
   }
