@@ -18,8 +18,8 @@
     <co-section [title]="'Caracteristicas'">
       <co-illustration-item-list [itemsList]="user.personality"></co-illustration-item-list>
     </co-section>
-    <co-section *ngIf="user.advertisements.lenght > 0" [title]="'Anúncios'">
-      <co-advertisement-list [itemsList]="user.advertisements"></co-advertisement-list>
+    <co-section *ngIf="advertisements != undefined" [title]="'Anúncios'">
+      <co-advertisement-list [itemsList]="advertisements"></co-advertisement-list>
     </co-section>
     <co-section *ngIf="user.comments.lenght > 0" [title]="'Comentários'">
       <co-comment-list [comments]="user.comments"></co-comment-list>

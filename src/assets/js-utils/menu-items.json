@@ -32,7 +32,8 @@
       "title": "Meu Perfil",
       "icon": "user",
       "notifications": 0,
-      "url": "item5"
+      "url": "item5",
+      "callback": "function(){ that.redirectToMyProfile(); }"
     },
     {
       "title": "Configurações",

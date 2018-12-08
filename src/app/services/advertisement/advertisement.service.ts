@@ -37,6 +37,10 @@ export class AdvertisementService {
     return this.angularFireDatabase.object(`advertisements/${advertisementId}`).valueChanges();
   }
 
+  getUserAdvertisements = (userId) => {
+    return this.angularFireDatabase.database.ref("advertisements").orderByChild("ownerId").equalTo(userId).once('value');
+  }
+
   getRoomItems = () => {
     return this.http.get(this.advertiseSelectablesUrl);
   }

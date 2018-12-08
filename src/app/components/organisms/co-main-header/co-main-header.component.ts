@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuService } from '../../../services/menu/menu.service';
 import { UserService } from '../../../services/user/user.service';
 
@@ -18,7 +19,7 @@ export class CoMainHeaderComponent implements OnInit {
   messagesDropdown: boolean;
   notificationsDropdown: boolean;
 
-  constructor(private menuService: MenuService, private userService:UserService) {
+  constructor(private menuService: MenuService, private userService:UserService, private router:Router) {
     if(this.userService.currentUser != undefined) {
       this.user = {
         name: `${this.userService.currentUser.getFirstName()} ${this.userService.currentUser.getLastName()}`,
@@ -52,6 +53,8 @@ export class CoMainHeaderComponent implements OnInit {
       (data:any) => {
         this.menuMainItems = data.mainItems;
         this.menuOtherItems = data.otherItems;
+        const userId = this.userService.currentUser.getId();
+        this.menuOtherItems[0].url = `/profile/${userId}`;
       }
     )
   }

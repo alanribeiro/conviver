@@ -10,4 +10,12 @@
       width: 100%;
     }
   }
+
+  &__edit-profile-button {
+    margin-bottom: 15px;
+
+    @include mqMaxWidth('sm') {
+      width: 100%;
+    }
+  }
 }

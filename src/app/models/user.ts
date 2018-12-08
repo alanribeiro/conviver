@@ -15,7 +15,7 @@ export class User {
     private country:string,
     private since:string,
     private level:number,
-    private advertisements:Array<string>,
+    private advertisements:Array<any>,
     private comments:Array<{
       user: {
         name:string,
@@ -144,11 +144,11 @@ export class User {
     this.level = level;
   }
 
-  getAdvertisements():Array<string> {
+  getAdvertisements():Array<any> {
     return this.advertisements;
   }
 
-  setAdvertisements(advertisements:Array<string>):void {
+  setAdvertisements(advertisements:Array<any>):void {
     this.advertisements = advertisements;
   }
 

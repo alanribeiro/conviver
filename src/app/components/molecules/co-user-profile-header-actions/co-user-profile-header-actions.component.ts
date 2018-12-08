@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from '../../../services/user/user.service';
 
 @Component({
   selector: 'co-user-profile-header-actions',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class CoUserProfileHeaderActionsComponent {
 
-  constructor() { }
+  sameUser:boolean;
+
+  constructor(private userService:UserService, private activatedRoute:ActivatedRoute) { 
+    const idUser = this.activatedRoute.snapshot.params.id;
+    this.sameUser = idUser == this.userService.currentUser.getId() ? true : false;
+  }
 
 }
