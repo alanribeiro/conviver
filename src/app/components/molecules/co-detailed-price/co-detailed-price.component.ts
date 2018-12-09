@@ -17,7 +17,8 @@ export class CoDetailedPriceComponent implements OnInit {
   ngOnInit() {
     this.total = this.rent.value;
     for(let i in this.expenses) {
-      this.total += this.expenses[i].value;
+      this.total += Number(this.expenses[i].value);
+      console.log(typeof this.expenses[i].value)
     }
   }
 
