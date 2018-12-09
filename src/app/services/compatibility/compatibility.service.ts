@@ -30,23 +30,23 @@ export class CompatibilityService {
   verifyPersonalities = (personality1:Array<string>, personality2:Array<string>) => {
     let personalityPercentage = 0;
 
-    if((personality1.includes("Fumante") && personality2.includes("Fumante")) || (personality1.includes("Fumante") && !personality2.includes("Fumante"))) {
+    if((personality1.includes("Fumante") && personality2.includes("Fumante")) || (!personality1.includes("Fumante") && !personality2.includes("Fumante"))) {
       personalityPercentage += this.high;
     }
 
     else personalityPercentage -= 3;
 
-    if((personality1.includes("Organizado") && personality2.includes("Organizado")) || (personality1.includes("Organizado") && !personality2.includes("Organizado"))) {
+    if((personality1.includes("Organizado") && personality2.includes("Organizado")) || (!personality1.includes("Organizado") && !personality2.includes("Organizado"))) {
       personalityPercentage += this.highest;
     }
 
     else personalityPercentage -= 5;
 
-    if((personality1.includes("Festeiro") && personality2.includes("Festeiro")) || (personality1.includes("Festeiro") && !personality2.includes("Festeiro"))) {
+    if((personality1.includes("Festeiro") && personality2.includes("Festeiro")) || (!personality1.includes("Festeiro") && !personality2.includes("Festeiro"))) {
       personalityPercentage += this.high;
     }
     
-    if((personality1.includes("LGBT+") && personality2.includes("LGBT+")) || (personality1.includes("LGBT+") && !personality2.includes("LGBT+"))) {
+    if((personality1.includes("LGBT+") && personality2.includes("LGBT+")) || (!personality1.includes("LGBT+") && !personality2.includes("LGBT+"))) {
       personalityPercentage += this.high;
     }
 
@@ -56,37 +56,37 @@ export class CompatibilityService {
       personalityPercentage += this.lowest;
     }
 
-    else if(personality1.includes("Religioso") && !personality2.includes("Religioso")) {
+    else if(!personality1.includes("Religioso") && !personality2.includes("Religioso")) {
       personalityPercentage += this.average;
     }
 
-    if((personality1.includes("Vegetariano") && personality2.includes("Vegetariano")) || (personality1.includes("Vegetariano") && !personality2.includes("Vegetariano"))) {
+    if((personality1.includes("Vegetariano") && personality2.includes("Vegetariano")) || (!personality1.includes("Vegetariano") && !personality2.includes("Vegetariano"))) {
       personalityPercentage += this.normal;
     }
 
     else personalityPercentage -= 2;
 
-    if((personality1.includes("Fitness") && personality2.includes("Fitness")) || (personality1.includes("Fitness") && !personality2.includes("Fitness"))) {
+    if((personality1.includes("Fitness") && personality2.includes("Fitness")) || (!personality1.includes("Fitness") && !personality2.includes("Fitness"))) {
       personalityPercentage += this.average;
     }
 
-    if((personality1.includes("Comunicativo") && personality2.includes("Comunicativo")) || (personality1.includes("Comunicativo") && !personality2.includes("Comunicativo"))) {
+    if((personality1.includes("Comunicativo") && personality2.includes("Comunicativo")) || (!personality1.includes("Comunicativo") && !personality2.includes("Comunicativo"))) {
       personalityPercentage += this.average;
     }
 
-    if((personality1.includes("Geek") && personality2.includes("Geek")) || (personality1.includes("Geek") && !personality2.includes("Geek"))) {
+    if((personality1.includes("Geek") && personality2.includes("Geek")) || (!personality1.includes("Geek") && !personality2.includes("Geek"))) {
       personalityPercentage += this.low;
     }
 
-    if((personality1.includes("Caseiro") && personality2.includes("Caseiro")) || (personality1.includes("Caseiro") && !personality2.includes("Caseiro"))) {
+    if((personality1.includes("Caseiro") && personality2.includes("Caseiro")) || (!personality1.includes("Caseiro") && !personality2.includes("Caseiro"))) {
       personalityPercentage += this.average;
     }
 
-    if((personality1.includes("Estudante") && personality2.includes("Estudante")) || (personality1.includes("Estudante") && !personality2.includes("Estudante"))) {
+    if((personality1.includes("Estudante") && personality2.includes("Estudante")) || (!personality1.includes("Estudante") && !personality2.includes("Estudante"))) {
       personalityPercentage += this.average;
     }
 
-    if((personality1.includes("Profissional") && personality2.includes("Profissional")) || (personality1.includes("Profissional") && !personality2.includes("Profissional"))) {
+    if((personality1.includes("Profissional") && personality2.includes("Profissional")) || (!personality1.includes("Profissional") && !personality2.includes("Profissional"))) {
       personalityPercentage += this.average;
     }
 

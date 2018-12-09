@@ -5,6 +5,8 @@
 
 <co-title *ngIf="!myAds" [title]="'Crie o seu primeiro anúncio agora'"></co-title>
 
-<co-advertisement-list *ngIf="myAds" [itemsList]="myAds"></co-advertisement-list>
+<article *ngIf="myAds">
+  <co-advertisement-list [itemsList]="myAds"></co-advertisement-list>
 
-<co-card-announce-list [firstAnnounce]="!myAds"></co-card-announce-list>
+  <co-card-announce-list [firstAnnounce]="!myAds"></co-card-announce-list>
+</article>
