@@ -101,6 +101,7 @@ import { AuthService } from './services/auth/auth.service';
 import { RegisterService } from './services/register/register.service';
 import { MenuService } from './services/menu/menu.service';
 import { UserService } from './services/user/user.service';
+import { CompatibilityService } from './services/compatibility/compatibility.service';
 import { AdvertisementService } from './services/advertisement/advertisement.service';
 import { CoLoadingComponent } from './components/atoms/co-loading/co-loading.component';
 import { AdvertiseVacancyComponent } from './pages/advertise-vacancy/advertise-vacancy.component';
@@ -252,7 +253,7 @@ import { CoCompatibilityComponent } from './components/atoms/co-compatibility/co
     AngularFullpageModule,
     ClickOutsideModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthService, RegisterService, MenuService, UserService, AdvertisementService, CompatibilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
