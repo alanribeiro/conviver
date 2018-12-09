@@ -26,7 +26,6 @@ export class CoAdvertiseVacancyPriceComponent {
   setRent(value) {
     this.rent.value = value;
     this.validateSection();
-    console.log(this.rent.value);
   }
 
   setWaterAndElectricityIncluded(value) {

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class CoAdvertisementListComponent implements OnChanges {
 
   @Input() itemsList: Array<any>;
+  @Input() searchTag: Array<any>;
 
   constructor(private router:Router) { }
 

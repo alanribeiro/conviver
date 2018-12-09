@@ -1,6 +1,6 @@
 <div class="co-advertisement-list">
   <co-advertisement
-    *ngFor="let item of itemsList"
+    *ngFor="let item of itemsList | advertisementSearch: searchTag"
     [advertisement]=item (click)="redirectToDetails(item.id)">
   </co-advertisement>
 </div>

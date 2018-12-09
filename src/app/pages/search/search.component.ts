@@ -9,17 +9,20 @@ import { AdvertisementService } from '../../services/advertisement/advertisement
 export class SearchComponent {
 
   advertisementsResult:Array<any>;
+  searchTag:string;
 
   constructor(private advertisementService:AdvertisementService) {
     this.advertisementService.getAllAdvertisements()
     .subscribe(
       data => {
         this.advertisementsResult = data;
-        console.log(this.advertisementsResult);
       },
       error => console.log(error)
     );
-    console.log(this.advertisementsResult);
-   }
+  }
+
+  setSearchTag(value) {
+    this.searchTag = value;
+  }
 
 }

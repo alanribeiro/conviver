@@ -1,18 +1,21 @@
-<div class="search-page__loading" *ngIf="advertisementsResult == undefined">
-  <co-loading></co-loading>
-</div>
-<article class="search-page" *ngIf="advertisementsResult != undefined">
+<article class="search-page">
   <header class="search-page__header">
     <div class="search-page__header__search-bar">
       <nz-input-group [nzSuffix]="suffixIconSearch">
-        <co-input [placeholder]="'Onde você quer morar?'"></co-input>
+        <co-input [placeholder]="'Onde você quer morar?'" (valueChange)="setSearchTag($event)"></co-input>
       </nz-input-group>
       <ng-template #suffixIconSearch>
         <i class="anticon anticon-search"></i>
       </ng-template>
     </div>
+    <div class="search-page__header__filters-button">
+      <co-button [title]="'Filtros'"></co-button>
+    </div>
   </header>
-  <section class="search-page__results-list">
-    <co-advertisement-list [itemsList]="advertisementsResult"></co-advertisement-list>
+  <div class="search-page__loading" *ngIf="advertisementsResult == undefined">
+    <co-loading></co-loading>
+  </div>
+  <section *ngIf="advertisementsResult != undefined" class="search-page__results-list">
+    <co-advertisement-list [itemsList]="advertisementsResult" [searchTag]="searchTag"></co-advertisement-list>
   </section>
 </article>

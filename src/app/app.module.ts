@@ -125,6 +125,9 @@ import { CoNotificationItemComponent } from './components/molecules/co-notificat
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HelpComponent } from './pages/help/help.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { AdvertisementSearchPipe } from 'src/assets/js-utils/pipes/advertisement-search.pipe';
+import { CoRuleComponent } from './components/atoms/co-rule/co-rule.component';
+import { CoRulesListComponent } from './components/molecules/co-rules-list/co-rules-list.component';
 
 @NgModule({
   declarations: [
@@ -229,7 +232,10 @@ import { TermsComponent } from './pages/terms/terms.component';
     CoNotificationItemComponent,
     SettingsComponent,
     HelpComponent,
-    TermsComponent
+    TermsComponent,
+    AdvertisementSearchPipe,
+    CoRuleComponent,
+    CoRulesListComponent
   ],
   imports: [
     BrowserModule,
