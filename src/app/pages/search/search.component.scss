@@ -1,4 +1,13 @@
 @import '../../../assets/sass-utils/mixins.scss';
+@import '../../../assets/sass-utils/variables.scss';
+
+nz-input-number {
+    width: 50px;
+}
+
+.ant-drawer-content-wrapper {
+    width: 350px;
+}
 
 .search-page {
     padding-top: 40px;
@@ -21,5 +30,44 @@
 
     &__results-list {
         margin: 40px 0;
+    }
+
+    &__filter {
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        padding: 20px;
+        font-family: $common-text-font-family;
+        font-size: 12px;
+        color: #888;
+
+        & h1 {
+            font-family: $title-font-family;
+            font-size: $title-font-size;
+            color: $landing-page-title2-color;
+            margin: 0;
+        }
+
+        
+        & h2 {
+            font-family: $title-font-family;
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            padding: 20px 0 5px 0;
+            margin-bottom: 0px;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        
+        & h3 {
+            font-family: $title-font-family;
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            padding: 10px 0 5px 0;
+        }
     }
 }

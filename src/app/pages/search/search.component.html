@@ -9,9 +9,66 @@
       </ng-template>
     </div>
     <div class="search-page__header__filters-button">
-      <co-button [title]="'Filtros'"></co-button>
+      <co-button [title]="'Filtros'" (click)="open()"></co-button>
     </div>
   </header>
+  <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" (nzOnClose)="close()" [nzWidth]="300">
+    <div class="search-page__filter">
+      <h1> Filtros </h1>
+      <co-divider></co-divider>
+
+      <h2> Moradores </h2>
+      <h3> Número de Moradores </h3> 
+      <co-select 
+          [placeholder]="'Número de Moradores'"
+          [options]="[
+            {value: '1', label: '1'}, 
+            {value: '2', label: '2'}, 
+            {value: '3', label: '3'},
+            {value: '4', label: '4'},
+            {value: '5', label: '5+'}]"
+          [fullWidth]="false"
+          [margin]="false">
+        </co-select>
+        <h3> Características dos Moradores
+        </h3>
+      <co-checkbox [title]="'Sem fumantes'"></co-checkbox> <Br>
+      <co-checkbox [title]="'Só meninos'"></co-checkbox> <br>
+      <co-checkbox [title]="'Só meninas'"></co-checkbox> <br>
+      <co-checkbox [title]="'Membros LGBT+'"></co-checkbox> <br>
+      <h2> Características do Imóvel </h2>
+      <h3> Faixa de Preço </h3>
+      R$ <nz-input-number [nzMin]="0" [nzSize]="'small'" [nzMax]="1000" [nzStep]="1"></nz-input-number> até <nz-input-number [nzSize]="'small'" [nzMin]="0" [nzMax]="1000" [nzStep]="1"></nz-input-number>
+      <h3> Quantidade de Vagas </h3> 
+      <co-select 
+          [placeholder]="'Número de Moradores'"
+          [options]="[
+            {value: '1', label: '1'}, 
+            {value: '2', label: '2'}, 
+            {value: '3+', label: '3+'}]"
+          [fullWidth]="false"
+          [margin]="false">
+        </co-select>
+      <h3> Tipo de Imóvel </h3>
+      <co-checkbox [title]="'Casa'"></co-checkbox> <br>
+      <co-checkbox [title]="'Apartamento'"></co-checkbox> <br>
+      <h3> Tipo de Quarto </h3>
+      <co-checkbox [title]="'Individual simples'"></co-checkbox> <br>
+      <co-checkbox [title]="'Suíte'"></co-checkbox> <br>
+      <co-checkbox [title]="'Compartilhado'"></co-checkbox> <br>
+      <h3> Comodidades </h3>
+      <co-checkbox [title]="'Internet'"></co-checkbox> <br>
+      <co-checkbox [title]="'Lavanderia'"></co-checkbox> <br>
+      <co-checkbox [title]="'Piscina'"></co-checkbox> <br>
+      <co-checkbox [title]="'Garagem'"></co-checkbox> <br>
+      <co-checkbox [title]="'Arcondicionado'"></co-checkbox> <br>
+      <co-checkbox [title]="'Elevador'"></co-checkbox> <br>
+      <co-checkbox [title]="'Chuveiro Elétrico'"></co-checkbox> <br>
+      <co-checkbox [title]="'Permite animais'"></co-checkbox> <br>
+      <co-checkbox [title]="'Permite Eventos/festas'"></co-checkbox> <br>
+      <co-checkbox [title]="'Acessível'"></co-checkbox> 
+    </div>
+    </nz-drawer>
   <div class="search-page__loading" *ngIf="advertisementsResult == undefined">
     <co-loading></co-loading>
   </div>
