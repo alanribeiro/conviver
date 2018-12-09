@@ -4,6 +4,7 @@ import { Advertisement } from 'src/app/models/advertisement';
 import { AdvertisementService } from 'src/app/services/advertisement/advertisement.service';
 import { UserService } from 'src/app/services/user/user.service';
 import { User } from 'src/app/models/user';
+import { CompatibilityService } from 'src/app/services/compatibility/compatibility.service';
 
 @Component({
   selector: 'advertisement',
@@ -16,14 +17,14 @@ export class AdvertisementComponent implements OnInit {
   owner:User;
   residents:Array<any>
   totalPrice:number;
-  compatibility:Array<number>;
+  compatibility:number;
   myAd:boolean;
 
-  constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute) {
+  constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute, private compatibilityService:CompatibilityService) {
     this.residents = [];
     this.owner = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", "", 1, [], []);
     this.totalPrice = 0;
-    this.compatibility = [];
+    this.compatibility = 0;
   }
 
   ngOnInit() {
@@ -88,7 +89,9 @@ export class AdvertisementComponent implements OnInit {
           id: snapshot.id,
           name: snapshot.firstName,
           photo: snapshot.photo,
-          genre: snapshot.genre
+          genre: snapshot.genre,
+          personality: snapshot.personality,
+          age: snapshot.age
         }
         this.residents.push(obj);
       },
@@ -122,6 +125,15 @@ export class AdvertisementComponent implements OnInit {
           snapshot.comments == undefined ? [] : snapshot.comments
         )
         this.myAd = this.advertisement.getOwnerId() == this.userService.currentUser.getId() ? true : false;
+        const data1 = {
+          personality: this.userService.currentUser.getPersonality(),
+          age: this.userService.currentUser.getAge()
+        }
+        const data2 = {
+          personality: this.owner.getPersonality(),
+          age: this.owner.getAge()
+        }
+        this.compatibility = Math.round(this.compatibilityService.verifyCompatibility(data1, data2));
       },
       error => console.log(error)
     )

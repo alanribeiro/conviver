@@ -33,9 +33,9 @@
   <co-section [title]="'Moradores'">
     <div class="advertisement-page-container__resident-list">
       <div class="advertisement-page-container__resident-list__owner">
-        <co-avatar [photo]="owner.photo" [genre]="owner.genre" [title]="owner.firstName" [id]="owner.id"></co-avatar>
+        <co-avatar [photo]="owner.photo" [genre]="owner.genre" [title]="owner.firstName" [id]="owner.id" [compatibility]="compatibility"></co-avatar>
       </div>
-      <co-residents-list [residents]="residents" [compatibilityList]="compatibility"></co-residents-list>
+      <co-residents-list [residents]="residents"></co-residents-list>
     </div>  
   </co-section>
   <div *ngIf="advertisement.experienceReports != undefined" class="advertisement-page-container__experience-reports">

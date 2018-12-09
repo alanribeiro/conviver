@@ -106,7 +106,7 @@ export class CompatibilityService {
   }
 
   verifyAge = (age1, age2) => {
-    const ageDifference = age1 > age2 ? (age1 - age2) : (age2 - age1);
-    return 100 - ageDifference;
+    const ageDifference = age1 >= age2 ? (age1 - age2) : (age2 - age1);
+    return 100 - (ageDifference * 1.5);
   }
 }

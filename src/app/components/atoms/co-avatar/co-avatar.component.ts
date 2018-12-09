@@ -13,7 +13,7 @@ export class CoAvatarComponent implements OnInit {
   @Input() size:string;
   @Input() clickable:boolean;
   @Input() id:string;
-  @Input() compatibility:number;
+  @Input() compatibility:string;
 
   constructor() {
     this.clickable = true;
@@ -24,6 +24,7 @@ export class CoAvatarComponent implements OnInit {
     if(this.photo == undefined || this.photo == '') {
       return this.photo = `../../../../assets/images/${this.genre}-user-icon.png`;
     }
+    console.log(this.compatibility);
   }
 
 }
