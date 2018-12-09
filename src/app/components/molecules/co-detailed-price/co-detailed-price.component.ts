@@ -15,10 +15,10 @@ export class CoDetailedPriceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.total = this.rent.value;
+    this.total = Number(this.rent.value);
+    
     for(let i in this.expenses) {
       this.total += Number(this.expenses[i].value);
-      console.log(typeof this.expenses[i].value)
     }
   }
 

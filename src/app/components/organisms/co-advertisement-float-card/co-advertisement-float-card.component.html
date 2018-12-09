@@ -19,11 +19,17 @@
       </div>
     </div>
     <co-divider></co-divider>
-    <div class="co-advertisement-float-card__interested-button">
+    <div class="co-advertisement-float-card__interested-button" *ngIf="!myAd">
       <co-button [title]="'Tenho interesse'"></co-button>
     </div>
-    <div class="co-advertisement-float-card__message-button" (click)="toggleModal()">
+    <div class="co-advertisement-float-card__interested-button" *ngIf="myAd">
+        <co-button [title]="'Editar Anúncio'"></co-button>
+    </div>
+    <div class="co-advertisement-float-card__message-button" (click)="toggleModal()" *ngIf="!myAd">
       <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
+    </div>
+    <div class="co-advertisement-float-card__message-button" (click)="toggleModal()" *ngIf="myAd">
+        <co-button [title]="'Excluir'" [icon]="'delete'" [type]="'secondary'"></co-button>
     </div>
   </co-card>
 </div>
@@ -47,13 +53,22 @@
   <div class="co-advertisement-float-card--mobile__price">
     <co-price [price]="price" [size]="'big'"></co-price><span>por mês</span>
   </div>
-  <div class="co-advertisement-float-card--mobile__rounded-message-button">
+  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="myAd">
     <co-rounded-button [icon]="'message'"></co-rounded-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__interested-button">
+  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="myAd == true">
+      <co-rounded-button [icon]="'delete'"></co-rounded-button>
+  </div>
+  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="myAd == false">
     <co-button [title]="'Tenho interesse'"></co-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__message-button">
+  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="myAd == true">
+      <co-button [title]="'Editar Anúncio'"></co-button>
+    </div>
+  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="myAd == false">
     <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
+  </div>
+  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="myAd == true">
+      <co-button [title]="'Excluir'" [icon]="'delete'" [type]="'secondary'"></co-button>
   </div>
 </div>

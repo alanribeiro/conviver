@@ -16,11 +16,12 @@ export class CoAdvertisementFloatCardComponent {
   @Input() numberOfPlaces:number;
   @Input() restrictions:Array<string>;
   @Input() rate:number;
+  @Input() myAd:boolean;
 
   isOpen = false;
 
   constructor() {
-
+    this.myAd = false;
   }
 
   toggleModal() {

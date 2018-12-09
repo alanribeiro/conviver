@@ -24,9 +24,9 @@
   <co-section [title]="'Preço detalhado'">
     <co-detailed-price [rent]="advertisement.rent" [expenses]="advertisement.expenses"></co-detailed-price>
   </co-section>
-  <co-section [title]="'Nas proximidades'">
+  <!-- <co-section [title]="'Nas proximidades'">
     Não vai ter nada aqui por enquanto.
-  </co-section>
+  </co-section> -->
   <co-section [title]="'Regras da casa'">
     <co-rules-list [rules]="advertisement.rules"></co-rules-list>
   </co-section>
@@ -50,6 +50,7 @@
     [numberOfResidents]="advertisement.getNumberOfResidents() + 1"
     [numberOfPlaces]="advertisement.getNumberOfPlaces()"
     [restrictions]="advertisement.getRestrictions()"
-    [rate]="advertisement.getRate()">
+    [rate]="advertisement.getRate()"
+    [myAd]="myAd">
   </co-advertisement-float-card>
 </article>

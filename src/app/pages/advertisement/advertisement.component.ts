@@ -17,6 +17,7 @@ export class AdvertisementComponent implements OnInit {
   residents:Array<any>
   totalPrice:number;
   compatibility:Array<number>;
+  myAd:boolean;
 
   constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute) {
     this.residents = [];
@@ -120,15 +121,16 @@ export class AdvertisementComponent implements OnInit {
           snapshot.advertisements == undefined ? [] : snapshot.advertisements,
           snapshot.comments == undefined ? [] : snapshot.comments
         )
+        this.myAd = this.advertisement.getOwnerId() == this.userService.currentUser.getId() ? true : false;
       },
       error => console.log(error)
     )
   }
 
   calculatePrice(rent, expenses) {
-    this.totalPrice = rent.value;
+    this.totalPrice = Number(rent.value);
     for(let i in expenses) {
-      this.totalPrice += expenses[i].value;
+      this.totalPrice += Number(expenses[i].value);
     }
   }
 }
