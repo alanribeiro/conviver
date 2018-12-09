@@ -1,10 +1,11 @@
 <section class="co-residents-list">
-  <div *ngFor="let resident of residents" class="co-residents-list__avatar">
+  <div *ngFor="let resident of residents; let i = index" class="co-residents-list__avatar">
     <co-avatar
       [photo]="resident.photo"
       [genre]="resident.genre"
       [title]="resident.name"
-      [id]="resident.id">
+      [id]="resident.id"
+      [compatibility]="compatibilityList[i]">
     </co-avatar>
   </div>
 </section>

@@ -12,6 +12,9 @@
     [since]="user.since">
   </co-user-profile-header>
   <article class="profile__container">
+    <div class="profile__container__compatibility">
+      <co-compatibility [compatibility]="83"></co-compatibility>
+    </div>
     <co-section [title]="'Sobre mim'">
       <div class="profile__container__description">{{user.description}}</div>
     </co-section>

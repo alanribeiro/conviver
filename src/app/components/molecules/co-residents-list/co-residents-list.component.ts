@@ -13,6 +13,7 @@ export class CoResidentsListComponent {
     photo:string,
     genre:string,
   }>;
+  @Input() compatibilityList:Array<number>;
 
   constructor() { }
 

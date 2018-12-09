@@ -128,6 +128,7 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { AdvertisementSearchPipe } from 'src/assets/js-utils/pipes/advertisement-search.pipe';
 import { CoRuleComponent } from './components/atoms/co-rule/co-rule.component';
 import { CoRulesListComponent } from './components/molecules/co-rules-list/co-rules-list.component';
+import { CoCompatibilityComponent } from './components/atoms/co-compatibility/co-compatibility.component';
 
 @NgModule({
   declarations: [
@@ -235,7 +236,8 @@ import { CoRulesListComponent } from './components/molecules/co-rules-list/co-ru
     TermsComponent,
     AdvertisementSearchPipe,
     CoRuleComponent,
-    CoRulesListComponent
+    CoRulesListComponent,
+    CoCompatibilityComponent
   ],
   imports: [
     BrowserModule,

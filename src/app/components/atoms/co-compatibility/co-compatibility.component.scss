@@ -1,0 +1,23 @@
+@import '../../../../assets/sass-utils/mixins.scss';
+@import '../../../../assets/sass-utils/variables.scss';
+
+.co-compatibility {
+  width: 159px;
+  font-size: $compatibility-perfil-page-font-size;
+  color: $primary-color;
+  @include flexbox(flex, initial, center);
+
+  &__percentage {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    font-family: $font-bold;
+    @include flexbox(flex, center, center);
+    margin-right: 10px;
+  }
+
+  &__text {
+    line-height: 1.2;
+  }
+}

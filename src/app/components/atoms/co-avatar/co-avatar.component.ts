@@ -13,6 +13,7 @@ export class CoAvatarComponent implements OnInit {
   @Input() size:string;
   @Input() clickable:boolean;
   @Input() id:string;
+  @Input() compatibility:number;
 
   constructor() {
     this.clickable = true;

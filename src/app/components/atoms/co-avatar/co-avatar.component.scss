@@ -1,3 +1,4 @@
+@import '../../../../assets/sass-utils/mixins.scss';
 @import '../../../../assets/sass-utils/variables.scss';
 
 .co-avatar {
@@ -9,6 +10,20 @@
     background-color: gray;
     border-radius: 50%;
     background-size: cover;
+    position: relative;
+
+    &__compatibility {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: black;
+      color: $compatibility-text-color;
+      font-size: $compatibility-font-size;
+      @include flexbox(flex, center, center);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
 
     &--small {
       width: 40px;

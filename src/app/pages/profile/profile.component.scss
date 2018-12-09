@@ -10,6 +10,14 @@
 
   &__container {
     padding-left: 190px;
+    padding-bottom: 40px;
+    position: relative;
+
+    &__compatibility {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   
     &__description {
       font-family: $common-text-font-family;

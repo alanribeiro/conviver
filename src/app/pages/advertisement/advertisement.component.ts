@@ -16,11 +16,13 @@ export class AdvertisementComponent implements OnInit {
   owner:User;
   residents:Array<any>
   totalPrice:number;
+  compatibility:Array<number>;
 
   constructor(private advertisementService:AdvertisementService, private userService:UserService, private activatedRoute:ActivatedRoute) {
     this.residents = [];
     this.owner = new User("id", "", "", "", "", 0, "", [], "", "", "", "", "", "", 1, [], []);
     this.totalPrice = 0;
+    this.compatibility = [];
   }
 
   ngOnInit() {

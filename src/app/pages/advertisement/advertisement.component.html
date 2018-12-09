@@ -35,7 +35,7 @@
       <div class="advertisement-page-container__resident-list__owner">
         <co-avatar [photo]="owner.photo" [genre]="owner.genre" [title]="owner.firstName" [id]="owner.id"></co-avatar>
       </div>
-      <co-residents-list [residents]="residents"></co-residents-list>
+      <co-residents-list [residents]="residents" [compatibilityList]="compatibility"></co-residents-list>
     </div>  
   </co-section>
   <div *ngIf="advertisement.experienceReports != undefined" class="advertisement-page-container__experience-reports">
