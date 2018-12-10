@@ -28,7 +28,7 @@
     <div class="co-advertisement-float-card__message-button" (click)="toggleModal()" *ngIf="!myAd">
       <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
     </div>
-    <div class="co-advertisement-float-card__delete-button" (click)="toggleModal()" *ngIf="myAd">
+    <div class="co-advertisement-float-card__delete-button" *ngIf="myAd">
         <co-button [title]="'Excluir'" [icon]="'delete'" [type]="'secondary'"></co-button>
     </div>
   </co-card>
