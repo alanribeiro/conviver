@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   @include flexbox(flex, center, center);
+  @include animation(background-move, 1s, 0, initial, linear);
 
   &__footer {
     width: 100vw;
@@ -26,5 +27,14 @@
 
   @include mqMaxWidth('mdx') {
     align-items: flex-start;
+  }
+}
+
+@include keyframe(background-move) {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
   }
 }
