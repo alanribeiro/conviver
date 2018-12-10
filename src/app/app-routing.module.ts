@@ -22,6 +22,11 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'search',
+        pathMatch: 'full'
+      },
+      {
         path: 'my-ads',
         component: MyAdsComponent
       },
