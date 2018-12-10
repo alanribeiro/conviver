@@ -2,7 +2,6 @@
 @import '../../../../assets/sass-utils/variables.scss';
 
 .co-compatibility {
-  width: 159px;
   font-size: $compatibility-perfil-page-font-size;
   color: $primary-color;
   @include flexbox(flex, initial, center);
@@ -11,13 +10,37 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 2px solid $primary-color;
+    @include default-gradient(30deg);
+    color: $compatibility-text-color;
     font-family: $font-bold;
     @include flexbox(flex, center, center);
     margin-right: 10px;
+    transform: scale(0);
+    @include animation(percentage-appear, 0.5s, 1s, initial, ease);
   }
 
   &__text {
+    width: 100px;
     line-height: 1.2;
+    opacity: 0;
+    @include animation(text-appear, 1s, 1.5s, initial, ease);
+  }
+}
+
+@include keyframe(percentage-appear) {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include keyframe(text-appear) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

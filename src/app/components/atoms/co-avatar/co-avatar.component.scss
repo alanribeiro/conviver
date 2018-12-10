@@ -17,7 +17,6 @@
       width: 30px;
       border-radius: 50%;
       @include default-gradient(30deg);
-      background-color: $primary-color;
       color: $compatibility-text-color;
       font-size: $compatibility-font-size;
       @include flexbox(flex, center, center);

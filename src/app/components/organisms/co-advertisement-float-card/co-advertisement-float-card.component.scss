@@ -1,172 +1,208 @@
 @import '../../../../assets/sass-utils/mixins.scss';
 @import '../../../../assets/sass-utils/variables.scss';
 
-  .modal {
-      position: fixed;
-      height: 300px;
-      width: 300px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      background-color: #fff;
-      box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
-      padding-top: 30px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  
-      &__close {
-        @include default-gradient(30deg);
-        width: 25px;
-        height: 25px;
-        border-radius: 0 10px 0 10px;
-        position: absolute;
-        top: 0px;
-        left: calc(300px - 25px);
-        @include flexbox(flex, center, center);
-        font: 14px $title-font-family;
-        color: #eee;
-  
-        &:hover {
-          @include default-gradient(30deg);
-          cursor: pointer;
-        }
-      }
-  
-      & h1 {
-        font: 20px $title-font-family;
-        padding-bottom: 10px;
-        text-align: center;
-        color: $section-title-color;
-      }
+.message-modal {
+	width: 700px;
+	padding: 20px;
+	border-radius: 6px;
+	background-color: $white;
+	box-shadow: 0 0 15px rgba($color: $black, $alpha: 0.1);
+	opacity: 0;
+	transform: translateY(-50px);
+	@include animation(message-modal-appear, $default-animation-duration, $default-animation-duration, initial, ease);
 
-      &__textarea {
-          margin-top: 10px;
-          margin-bottom: 30px;
+	&--overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba($color: $black, $alpha: 0.5);
+		@include flexbox(flex, center, center);
+		@include animation(message-modal-overlay-appear, $default-animation-duration, 0, initial, ease);
+	}
 
-      }
-    }
+	&__header {
+		margin-bottom: 20px;
+		@include flexbox(flex, initial, center);
+
+		&__title {
+			font-family: $title-font-family;
+			font-size: $title-font-size;
+			color: $section-title-color;
+			text-align: center;
+			flex-grow: 1;
+			margin-left: 40px;
+		}
+	}
+
+	&__textarea {
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		padding: 0 230px;
+	}
+}
 
 .co-advertisement-float-card {
-    width: 332px;
-    position: fixed;
-    top: 110px;
-    margin-left: 548px;
+	width: 332px;
+	position: fixed;
+	top: 110px;
+	margin-left: 548px;
+	opacity: 0;
+	transform: translateX(50px);
+	@include animation(card-appear, 0.5s, 0.5s, initial, ease);
 
-    &__price {
-        margin-bottom: 5px;
-        @include flexbox(flex, initial, baseline);
+	&__price {
+		margin-bottom: 5px;
+		@include flexbox(flex, initial, baseline);
 
-        span {
-            margin-left: 5px;
-            font-size: $font-size-extra-small;
-            font-family: $price-font-family;
-            color: $black;
-        }
-    }
+		span {
+			margin-left: 5px;
+			font-size: $font-size-extra-small;
+			font-family: $price-font-family;
+			color: $black;
+		}
+	}
 
-    &__address {
-        font-size: $common-text-font-size;
-        font-family: $font-medium;
-        margin-bottom: 10px;
-    }
+	&__address {
+		font-size: $common-text-font-size;
+		font-family: $font-medium;
+		margin-bottom: 10px;
+	}
 
-    &__features {
-        &__title {
-            font-size: $section-title-font-size;
-            font-family: $font-medium;
-            margin-bottom: 5px;
-        }
-    }
+	&__features {
+		&__title {
+			font-size: $section-title-font-size;
+			font-family: $font-medium;
+			margin-bottom: 5px;
+		}
+	}
 
-    &__rate {
-        &__title {
-            font-size: $section-title-font-size;
-            font-family: $font-medium;
-            margin-top: 10px;
-        }
+	&__rate {
+		&__title {
+			font-size: $section-title-font-size;
+			font-family: $font-medium;
+			margin-top: 10px;
+		}
 
-        &__description {
-            margin-top: 5px;
-            font-size: $font-size-super-small;
-        }
-    }
+		&__description {
+			margin-top: 5px;
+			font-size: $font-size-super-small;
+		}
+	}
 
-    &__message-button {
-        margin-top: 10px;
-        padding: 0 64px;
-    }
+	&__message-button {
+		margin-top: 10px;
+		padding: 0 64px;
+	}
 
-    @include mqMaxWidth('lg') {
-        display: none;
-    }
+	&__delete-button {
+		margin-top: 10px;
+		padding: 0 100px;
+	}
 
-    &--mobile {
-        height: 70px;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        padding: 0 30px;
-        background-color: white;
-        border-top: 1px solid $border-color;
-        display: none;
+	@include mqMaxWidth('lg') {
+		display: none;
+	}
 
-        &__price {
-            flex-grow: 1;
-            @include flexbox(flex, initial, baseline);
+	&--mobile {
+		height: 70px;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding: 0 30px;
+		background-color: white;
+		border-top: 1px solid $border-color;
+		display: none;
 
-            span {
-                margin-left: 5px;
-                font-size: $font-size-extra-small;
-                font-family: $price-font-family;
-                color: $black;
+		&__price {
+			flex-grow: 1;
+			@include flexbox(flex, initial, baseline);
 
-                @include mqMaxWidth('mdx') {
-                    margin-left: 0;
-                }
-            }
+			span {
+				margin-left: 5px;
+				font-size: $font-size-extra-small;
+				font-family: $price-font-family;
+				color: $black;
 
-            @include mqMaxWidth('mdx') {
-                display: block;
-                line-height: 1;
-            }
-        }
+				@include mqMaxWidth('mdx') {
+					margin-left: 0;
+				}
+			}
 
-        &__rounded-message-button {
-            display: none;
-            margin-right: 15px;
+			@include mqMaxWidth('mdx') {
+				display: block;
+				line-height: 1;
+			}
+		}
 
-            @include mqMaxWidth('md') {
-                display: block;
-            }
+		&__rounded-message-button {
+			display: none;
+			margin-right: 15px;
 
-            @include mqMaxWidth('sm') {
-                display: none;
-            }
-        }
+			@include mqMaxWidth('md') {
+				display: block;
+			}
 
-        &__interested-button {
-            margin-right: 30px;
+			@include mqMaxWidth('sm') {
+				display: none;
+			}
+		}
 
-            @include mqMaxWidth('md') {
-                margin-right: 0;
-            }
-        }
+		&__interested-button {
+			margin-right: 30px;
 
-        &__message-button {
-            @include mqMaxWidth('md') {
-                display: none;
-            }
-        }
+			@include mqMaxWidth('md') {
+				margin-right: 0;
+			}
+		}
 
-        @include mqMaxWidth('lg') {
-            @include flexbox(flex, initial, center);
-        }
+		&__message-button {
+			@include mqMaxWidth('md') {
+				display: none;
+			}
+		}
 
-        @include mqMaxWidth('md') {
-            padding: 0 21px;
-        }
-    }
+		@include mqMaxWidth('lg') {
+			@include flexbox(flex, initial, center);
+		}
+
+		@include mqMaxWidth('md') {
+			padding: 0 21px;
+		}
+	}
+}
+
+@include keyframe(card-appear) {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@include keyframe(message-modal-overlay-appear) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@include keyframe(message-modal-appear) {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }

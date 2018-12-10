@@ -22,30 +22,37 @@
     <div class="co-advertisement-float-card__interested-button" *ngIf="!myAd">
       <co-button [title]="'Tenho interesse'"></co-button>
     </div>
-    <div class="co-advertisement-float-card__interested-button" *ngIf="myAd">
+    <div class="co-advertisement-float-card__edit-button" *ngIf="myAd">
         <co-button [title]="'Editar Anúncio'"></co-button>
     </div>
     <div class="co-advertisement-float-card__message-button" (click)="toggleModal()" *ngIf="!myAd">
       <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
     </div>
-    <div class="co-advertisement-float-card__message-button" (click)="toggleModal()" *ngIf="myAd">
+    <div class="co-advertisement-float-card__delete-button" (click)="toggleModal()" *ngIf="myAd">
         <co-button [title]="'Excluir'" [icon]="'delete'" [type]="'secondary'"></co-button>
     </div>
   </co-card>
 </div>
 
-<div class="modal" *ngIf="isOpen">
-  <div class="modal__close" (click)="toggleModal()">X</div>
-  <h1>Digite sua Mensagem</h1>
-  <div class="modal__textarea">
-    <co-textarea
-      [placeholder]="'Digite sua mensagem aqui.'"
-      [rows]="4"
-      [fullWidth]="'true'"
-      [error]="description == ''">
-    </co-textarea>
+<div *ngIf="isOpen" class="message-modal--overlay">
+  <div class="message-modal">
+    <header class="message-modal__header">
+      <div class="message-modal__header__title">Enviar mensagem</div>
+      <div class="message-modal__header__close-button">
+        <co-rounded-button [icon]="'close'" (click)="toggleModal()"></co-rounded-button>
+      </div>
+    </header>
+    <div class="message-modal__textarea">
+      <co-textarea
+        [placeholder]="'Aproveite este espaço para tirar dúvidas sobre o imóvel...'"
+        [rows]="4"
+        [error]="description == ''">
+      </co-textarea>
+    </div>
+    <div class="message-modal__button">
+      <co-button [title]="'Enviar Mensagem'" (click)="toggleModal()"></co-button>
+    </div>
   </div>
-  <co-button [title]="'Enviar Mensagem'" (click)="toggleModal()"></co-button>
 </div>
 
 
@@ -53,22 +60,22 @@
   <div class="co-advertisement-float-card--mobile__price">
     <co-price [price]="price" [size]="'big'"></co-price><span>por mês</span>
   </div>
-  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="myAd">
+  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="!myAd">
     <co-rounded-button [icon]="'message'"></co-rounded-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="myAd == true">
+  <div class="co-advertisement-float-card--mobile__rounded-message-button" *ngIf="myAd">
       <co-rounded-button [icon]="'delete'"></co-rounded-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="myAd == false">
+  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="!myAd">
     <co-button [title]="'Tenho interesse'"></co-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="myAd == true">
+  <div class="co-advertisement-float-card--mobile__interested-button" *ngIf="myAd">
       <co-button [title]="'Editar Anúncio'"></co-button>
     </div>
-  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="myAd == false">
+  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="!myAd">
     <co-button [title]="'Enviar mensagem'" [icon]="'message'" [type]="'secondary'"></co-button>
   </div>
-  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="myAd == true">
+  <div class="co-advertisement-float-card--mobile__message-button" *ngIf="myAd">
       <co-button [title]="'Excluir'" [icon]="'delete'" [type]="'secondary'"></co-button>
   </div>
 </div>

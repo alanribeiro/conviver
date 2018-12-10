@@ -24,7 +24,6 @@ export class CoAvatarComponent implements OnInit {
     if(this.photo == undefined || this.photo == '') {
       return this.photo = `../../../../assets/images/${this.genre}-user-icon.png`;
     }
-    console.log(this.compatibility);
   }
 
 }

@@ -2,8 +2,7 @@
 @import '../../../assets/sass-utils/mixins.scss';
 
 .advertisement-page-container {
-  padding-top: 40px;
-  padding-right: 362px;
+  padding: 40px 362px 40px 0;
 
   &__loading {
     height: calc(100vh - 70px);
